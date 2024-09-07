@@ -1,7 +1,7 @@
 import React from "react";
 import { FieldError, UseFormRegister } from "react-hook-form";
-import CheckboxActive from "../../../public/checkbox-active.svg";
-import Checkbox from "../../../public/checkbox.svg";
+import CheckboxActive from "../../../public/checkbox-active.svg?react";
+import Checkbox from "../../../public/checkbox.svg?react";
 
 interface CheckboxFormProps {
   label: string;
