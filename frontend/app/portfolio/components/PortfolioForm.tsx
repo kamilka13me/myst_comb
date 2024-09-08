@@ -69,7 +69,6 @@ export default function PortfolioForm() {
             name="firstName"
             placeholder="Ім'я"
             register={register}
-            required={true}
             error={errors.firstName}
           />
           <InputForm
@@ -77,7 +76,6 @@ export default function PortfolioForm() {
             name="lastName"
             placeholder="Прізвище"
             register={register}
-            required={true}
             error={errors.lastName}
           />
         </span>
@@ -97,7 +95,6 @@ export default function PortfolioForm() {
             placeholder="example@gmail.com"
             type="email"
             register={register}
-            required={true}
             error={errors.email}
           />
           <span className="w-full">
@@ -154,7 +151,7 @@ export default function PortfolioForm() {
             name="agreeToProcess"
             register={register}
             error={errors.agreeToProcess}
-            onChange={handleCheckboxChange} // Updated to use onChange
+            onChange={handleCheckboxChange}
           />
         </span>
         <button

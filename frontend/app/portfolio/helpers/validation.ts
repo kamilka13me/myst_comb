@@ -19,5 +19,7 @@ export const schema = yup.object({
   selectedBrick: yup
     .array()
     .of(yup.string())
-    .required("Оберіть щонайменше один елемент"),
+    .required("Оберіть щонайменше один елемент")
+    .min(1, "Оберіть щонайменше один елемент")
+    .max(3, "Можна обрати максимум 3 елементи"),
 });

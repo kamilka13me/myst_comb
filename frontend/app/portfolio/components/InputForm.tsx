@@ -1,13 +1,13 @@
 "use client";
 import React from "react";
-import { FieldError, RegisterOptions, UseFormRegister } from "react-hook-form";
+import { FieldError, UseFormRegister } from "react-hook-form";
+import { FormInputs } from "./PortfolioForm";
 
 interface InputFormProps {
   label: string;
-  name: string;
+  name: keyof FormInputs;
   type?: string;
-  register: UseFormRegister<any>;
-  required?: boolean;
+  register: UseFormRegister<FormInputs>;
   error?: FieldError | undefined;
   placeholder?: string;
 }
@@ -17,14 +17,9 @@ const InputForm: React.FC<InputFormProps> = ({
   name,
   type = "text",
   register,
-  required,
   error,
   placeholder,
 }) => {
-  
-  const registerOptions: RegisterOptions = required
-    ? { required: "Це поле є обов'язковим" }
-    : {};
 
   return (
     <div className="relative mb-4 w-full">
@@ -35,7 +30,7 @@ const InputForm: React.FC<InputFormProps> = ({
         type={type}
         placeholder={placeholder}
         id={name}
-        {...register(name, registerOptions)}
+        {...register(name)}
       />
       <label
         className={`absolute top-[-20px] left-3 text-sm transform translate-y-1/2 pointer-events-none bg-black px-1 ${
