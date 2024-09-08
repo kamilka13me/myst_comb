@@ -1,12 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import { FieldError, UseFormRegister } from "react-hook-form";
 import CheckboxActive from "../../../public/checkbox-active.svg?react";
 import Checkbox from "../../../public/checkbox.svg?react";
+import { FormInputs } from "./PortfolioForm";
 
 interface CheckboxFormProps {
   label: string;
-  name: string;
-  register: UseFormRegister<any>;
+  name: keyof FormInputs;
+  register: UseFormRegister<FormInputs>;
   required?: boolean;
   error?: FieldError | undefined;
   onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
@@ -20,7 +21,7 @@ const CheckboxForm: React.FC<CheckboxFormProps> = ({
   error,
   onChange,
 }) => {
-  const [isChecked, setIsChecked] = React.useState(false);
+  const [isChecked, setIsChecked] = useState<boolean>(false);
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setIsChecked(event.target.checked);
