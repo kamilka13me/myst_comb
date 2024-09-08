@@ -1,48 +1,48 @@
-// import {
-//   IsOptional,
-//   IsString,
-//   IsEmail,
-//   IsBoolean,
-//   IsArray,
-// } from "class-validator";
+import {
+  IsOptional,
+  IsString,
+  IsEmail,
+  IsBoolean,
+  IsArray,
+} from "class-validator";
 
-// export class CreatePortfolioDto {
-//   @IsString()
-//   firstName: string;
+export class CreatePortfolioDto {
+  @IsString()
+  firstName: string;
 
-//   @IsString()
-//   lastName: string;
+  @IsString()
+  lastName: string;
 
-//   @IsOptional()
-//   @IsString()
-//   organization?: string;
+  @IsOptional()
+  @IsString()
+  organization?: string;
 
-//   @IsEmail()
-//   email: string;
+  @IsEmail()
+  email: string;
 
-//   @IsOptional()
-//   @IsString()
-//   phone?: string;
+  @IsOptional()
+  @IsString()
+  phone?: string;
 
-//   @IsOptional()
-//   @IsString()
-//   profession?: string;
+  @IsOptional()
+  @IsString()
+  profession?: string;
 
-//   @IsOptional()
-//   @IsString()
-//   expert?: string;
+  @IsOptional()
+  @IsString()
+  expert?: string;
 
-//   @IsBoolean()
-//   agreeToTelegram: boolean;
+  @IsBoolean()
+  agreeToTelegram: boolean;
 
-//   @IsBoolean()
-//   agreeToViber: boolean;
+  @IsBoolean()
+  agreeToViber: boolean;
 
-//   @IsBoolean()
-//   agreeToProcess: boolean;
+  @IsBoolean()
+  agreeToProcess: boolean;
 
-//   @IsOptional()
-//   @IsArray() // Вказуємо, що це масив
-//   @IsString({ each: true }) // Валідуємо кожен елемент як рядок
-//   selectedBrick?: string[]; // Змінено на просто масив рядків
-// }
+  @IsOptional()
+  @IsArray()
+  @IsString({ each: true })
+  selectedBrick?: string[];
+}
