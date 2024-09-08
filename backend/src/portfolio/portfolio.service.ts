@@ -1,40 +1,44 @@
-// import { Injectable } from '@nestjs/common'
-// import { PrismaService } from './prisma.service';
+import { Injectable } from "@nestjs/common";
+import { PrismaService } from "./prisma.service";
+import { CreatePortfolioDto } from "./dto/portfolio.dto";
 
-// @Injectable()
-// export class PortfolioService {
-//   constructor(private prisma: PrismaService) {}
+@Injectable()
+export class PortfolioService {
+  constructor(private prisma: PrismaService) {}
 
-//   async createForm(createPortfolioDto: createPortfolioDto, userId: number) {
-//     const {
-//       firstName,
-//       lastName,
-//       organization,
-//       email,
-//       phone,
-//       profession,
-//       expert,
-//       agreeToTelegram,
-//       agreeToViber,
-//       agreeToProcess,
-//       selectedBrick,
-//     } = createPortfolioDto;
+  async createForm(createPortfolioDto: CreatePortfolioDto) {
+    const {
+      firstName,
+      lastName,
+      organization,
+      email,
+      phone,
+      profession,
+      expert,
+      agreeToTelegram,
+      agreeToViber,
+      agreeToProcess,
+      selectedBrick,
+    } = createPortfolioDto;
 
-//     return this.prisma.portfolio.create({
-//       data: {
-//         firstName,
-//         lastName,
-//         organization,
-//         email,
-//         phone,
-//         profession,
-//         expert,
-//         agreeToTelegram,
-//         agreeToViber,
-//         agreeToProcess,
-//         selectedBrick,
-//         userId, 
-//       },
-//     });
-//   }
-// }
+    try {
+      return await this.prisma.portfolio.create({
+        data: {
+          firstName,
+          lastName,
+          organization,
+          email,
+          phone,
+          profession,
+          expert,
+          agreeToTelegram,
+          agreeToViber,
+          agreeToProcess,
+          selectedBrick,
+        },
+      });
+    } catch {
+      throw new Error('Помилка при створенні запису портфоліо');
+    }
+  }
+}
