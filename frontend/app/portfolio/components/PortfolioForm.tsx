@@ -57,10 +57,11 @@ export default function PortfolioForm() {
       <p className="text-center text-xl font-medium text-gray-500 mb-4">
         Портфоліо-рев&apos;ю:
       </p>
-
-      <h1 className="flex justify-center text-4xl mb-20">
-        Заповніть анкету нижче, щоб ми могли якнайшвидше звʼязатись із вами
-      </h1>
+      <div className="w-full flex justify-center  mb-20">
+        <h1 className="max-w-[896px] text-4xl">
+          Заповніть анкету нижче, щоб ми могли якнайшвидше звʼязатись із вами
+        </h1>
+      </div>
       <form onSubmit={handleSubmit(onSubmit)} className="">
         <span className="flex gap-4">
           <InputForm
@@ -89,38 +90,41 @@ export default function PortfolioForm() {
           error={errors.organization}
         />
 
-        <span className="flex gap-[14px]">
-          <CheckboxForm
-            label="Я є у Телеграмі"
-            name="agreeToTelegram"
+        <span className="w-full flex flex- gap-4">
+          <InputForm
+            label="Email"
+            name="email"
+            placeholder="example@gmail.com"
+            type="email"
             register={register}
-            error={errors.agreeToTelegram}
+            required={true}
+            error={errors.email}
           />
-          <CheckboxForm
-            label="Я є у Viber"
-            name="agreeToViber"
-            register={register}
-            error={errors.agreeToViber}
-          />
+          <span className="w-full">
+            <InputForm
+              label="Телефон"
+              name="phone"
+              placeholder="+380__-___-__-__"
+              type="tel"
+              register={register}
+              error={errors.phone}
+            />
+            <span className="flex gap-[14px]">
+              <CheckboxForm
+                label="Я є у Телеграмі"
+                name="agreeToTelegram"
+                register={register}
+                error={errors.agreeToTelegram}
+              />
+              <CheckboxForm
+                label="Я є у Viber"
+                name="agreeToViber"
+                register={register}
+                error={errors.agreeToViber}
+              />
+            </span>
+          </span>
         </span>
-
-        <InputForm
-          label="Email"
-          name="email"
-          placeholder="example@gmail.com"
-          type="email"
-          register={register}
-          required={true}
-          error={errors.email}
-        />
-        <InputForm
-          label="Телефон"
-          name="phone"
-          placeholder="+380__-___-__-__"
-          type="tel"
-          register={register}
-          error={errors.phone}
-        />
         <InputForm
           label="Ваша професія"
           name="profession"
@@ -144,13 +148,15 @@ export default function PortfolioForm() {
           register={register}
           error={errors.expert}
         />
-        <CheckboxForm
-          label="Я погоджуюсь надати свої персональні дані"
-          name="agreeToProcess"
-          register={register}
-          error={errors.agreeToProcess}
-          onChange={handleCheckboxChange} // Updated to use onChange
-        />
+        <span className="flex justify-center">
+          <CheckboxForm
+            label="Я погоджуюсь надати свої персональні дані"
+            name="agreeToProcess"
+            register={register}
+            error={errors.agreeToProcess}
+            onChange={handleCheckboxChange} // Updated to use onChange
+          />
+        </span>
         <button
           type="submit"
           disabled={!checkedSubmit}

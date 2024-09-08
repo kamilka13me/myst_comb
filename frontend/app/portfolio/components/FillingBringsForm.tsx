@@ -39,15 +39,17 @@ const FallingBricks: React.FC<FallingBricksProps> = ({
 
   return (
     <>
-      <div className="flex justify-center items-center relative h-[500px] mt-3 mb-2 z-10 overflow-hidden">
-        <div className="flex justify-center flex-wrap gap-5 w-full max-w-[1350px]">
+      <div className="mb-6">
+        <h2 className="flex justify-start text-2xl mb-[14px]">
+          В яких медіа працюєте:
+        </h2>
+        <div className="w-full flex flex-wrap gap-[9px]">
           {bricksData.map((brick, index) => (
             <div
               key={brick.text}
               onClick={() => toggleBrickSelection(index, brick.text)}
-              className={`flex items-center justify-center font-bold text-[#151515] rounded-lg cursor-pointer transition-opacity duration-300 ease-in-out`}
+              className={`flex items-center justify-center font-bold text-[#151515] rounded-lg cursor-pointer transition-opacity duration-300 ease-in-out py-[14px]`}
               style={{
-                height: `${brick.height}px`,
                 width: `${brick.width}px`,
                 backgroundColor: brick.color,
                 opacity: selectedBricks.has(index) ? 1 : 0.4,
