@@ -48,11 +48,12 @@ const FallingBricks: React.FC<FallingBricksProps> = ({
             <div
               key={brick.text}
               onClick={() => toggleBrickSelection(index, brick.text)}
-              className={`flex items-center justify-center font-bold text-[#151515] rounded-lg cursor-pointer transition-opacity duration-300 ease-in-out py-[14px]`}
+              className={`flex items-center justify-center font-bold text-[#151515] rounded-lg cursor-pointer transition-opacity duration-300 ease-in-out py-[14px] hover:opacity-80 ${
+                selectedBricks.has(index) ? "opacity-100" : "opacity-40"
+              }`}
               style={{
                 width: `${brick.width}px`,
                 backgroundColor: brick.color,
-                opacity: selectedBricks.has(index) ? 1 : 0.4,
               }}
             >
               {brick.text}

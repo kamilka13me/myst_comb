@@ -1,14 +1,11 @@
 import React, { useState } from "react";
 import { FieldError, UseFormRegister } from "react-hook-form";
-import CheckboxActive from "../../../public/checkbox-active.svg?react";
-import Checkbox from "../../../public/checkbox.svg?react";
 import { FormInputs } from "./PortfolioForm";
 
 interface CheckboxFormProps {
   label: string;
   name: keyof FormInputs;
   register: UseFormRegister<FormInputs>;
-  required?: boolean;
   error?: FieldError | undefined;
   onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }
@@ -17,7 +14,6 @@ const CheckboxForm: React.FC<CheckboxFormProps> = ({
   label,
   name,
   register,
-  required,
   error,
   onChange,
 }) => {
@@ -35,13 +31,31 @@ const CheckboxForm: React.FC<CheckboxFormProps> = ({
       <input
         id={name}
         type="checkbox"
-        {...register(name, { required })}
+        {...register(name)}
         className="hidden"
         checked={isChecked}
         onChange={handleChange}
       />
-      <div className="w-[18px] h-[18px]">
-        {isChecked ? <CheckboxActive /> : <Checkbox />}
+      <div
+        className={`w-[18px] h-[18px] border-2 rounded-sm flex items-center justify-center cursor-pointer ${
+          isChecked ? "border-[#E7FF00]" : "border-[#B6B6B6]"
+        }`}
+        onClick={() => setIsChecked(!isChecked)}
+      >
+        {isChecked && (
+          <svg
+            className="w-4 h-4 text-[#E7FF00]"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <path d="M20 6L9 17l-5-5" />
+          </svg>
+        )}
       </div>
       <label
         htmlFor={name}
