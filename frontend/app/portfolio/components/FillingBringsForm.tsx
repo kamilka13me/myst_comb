@@ -43,6 +43,7 @@ const FallingBricks: React.FC<FallingBricksProps> = ({
         <h2 className="flex justify-start text-2xl mb-[14px]">
           В яких медіа працюєте:
         </h2>
+        {error && <p className="text-red-500 text-xs mb-2">{error.message}</p>}
         <div className="w-full flex flex-wrap gap-[9px]">
           {bricksData.map((brick, index) => (
             <div
@@ -61,7 +62,6 @@ const FallingBricks: React.FC<FallingBricksProps> = ({
           ))}
         </div>
       </div>
-      {error && <p className="text-red-500 text-xs mb-2">{error.message}</p>}
     </>
   );
 };
