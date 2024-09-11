@@ -27,8 +27,7 @@ export const schema = yup.object({
       ukrEngLettersNumbersSymbols,
       "Назва організації має містити лише літери, цифри та символи"
     )
-    .max(60, "Назва організації не може бути більше 60 символів")
-    .optional(),
+    .max(60, "Назва організації не може бути більше 60 символів"),
   email: yup
     .string()
     .required("Email є обов'язковим")
@@ -40,8 +39,7 @@ export const schema = yup.object({
     .matches(
       /^\+380\d{9}$/,
       "Невірний формат телефону. Має бути в форматі +380XXXXXXXXX"
-    )
-    .optional(),
+    ),
   profession: yup
     .string()
     .required("Професія є обов'язковою")
@@ -49,18 +47,18 @@ export const schema = yup.object({
       ukrEngLettersNumbersSymbols,
       "Професія має містити лише літери та цифри"
     )
-    .max(60, "Професія не може бути більше 60 символів")
-    .optional(),
+    .max(60, "Професія не може бути більше 60 символів"),
   expert: yup
     .string()
+    .required("Консультація є обов'язковою")
     .matches(
       ukrEngLettersNumbersSymbols,
       "Консультація має містити лише літери, цифри та символи"
     )
-    .max(100, "Консультація не може бути більше 100 символів")
-    .optional(),
+    .max(100, "Консультація не може бути більше 100 символів"),
   agreeToTelegram: yup.boolean().optional(),
   agreeToViber: yup.boolean().optional(),
+  agreeToProcess: yup.boolean().optional(),
   selectedBrick: yup
     .array()
     .of(yup.string())

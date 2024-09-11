@@ -9,11 +9,11 @@ import { schema } from "../helpers/validation";
 export interface FormInputs {
   firstName: string;
   lastName: string;
-  organization?: string;
+  organization: string;
   email: string;
-  phone?: string;
-  profession?: string;
-  expert?: string;
+  phone: string;
+  profession: string;
+  expert: string;
   agreeToTelegram?: boolean;
   agreeToViber?: boolean;
   agreeToProcess?: boolean;
@@ -30,6 +30,7 @@ export default function PortfolioForm() {
     setValue,
     reset,
     formState: { errors },
+    getValues,
   } = useForm<FormInputs>({
     resolver: yupResolver(schema),
     mode: "all",
@@ -40,7 +41,11 @@ export default function PortfolioForm() {
   };
 
   const handleCheckboxChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setCheckedSubmit(event.target.checked);
+    const { name, checked } = event.target;
+    setValue(name as keyof FormInputs, checked, { shouldValidate: true });
+    if (name === "agreeToProcess") {
+      setCheckedSubmit(checked);
+    }
   };
 
   const onSubmit: SubmitHandler<FormInputs> = (data) => {
@@ -57,7 +62,7 @@ export default function PortfolioForm() {
       <p className="text-center text-xl font-medium text-gray-500 mb-4">
         Портфоліо-рев&apos;ю:
       </p>
-      <div className="w-full flex justify-center  mb-20">
+      <div className="w-full flex justify-center mb-20">
         <h1 className="max-w-[896px] text-4xl">
           Заповніть анкету нижче, щоб ми могли якнайшвидше звʼязатись із вами
         </h1>
@@ -111,13 +116,17 @@ export default function PortfolioForm() {
                 label="Я є у Телеграмі"
                 name="agreeToTelegram"
                 register={register}
+                checked={getValues("agreeToTelegram") || false}
                 error={errors.agreeToTelegram}
+                onChange={handleCheckboxChange}
               />
               <CheckboxForm
                 label="Я є у Viber"
                 name="agreeToViber"
                 register={register}
+                checked={getValues("agreeToViber") || false}
                 error={errors.agreeToViber}
+                onChange={handleCheckboxChange}
               />
             </span>
           </span>
@@ -145,15 +154,15 @@ export default function PortfolioForm() {
           register={register}
           error={errors.expert}
         />
-        <span className="flex justify-center">
-          <CheckboxForm
-            label="Я погоджуюсь надати свої персональні дані"
-            name="agreeToProcess"
-            register={register}
-            error={errors.agreeToProcess}
-            onChange={handleCheckboxChange}
-          />
-        </span>
+        <CheckboxForm
+          label="Я погоджуюсь надати свої персональні дані"
+          name="agreeToProcess"
+          register={register}
+          checked={getValues("agreeToProcess") || false}
+          error={errors.agreeToProcess}
+          onChange={handleCheckboxChange}
+          classMain="flex justify-center"
+        />
         <button
           type="submit"
           disabled={!checkedSubmit}
