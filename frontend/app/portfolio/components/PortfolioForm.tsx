@@ -55,6 +55,7 @@ export default function PortfolioForm() {
     setValue("selectedBrick", []);
     setClearBricks(true);
     setTimeout(() => setClearBricks(false), 100);
+    setCheckedSubmit(false)
   };
 
   return (
