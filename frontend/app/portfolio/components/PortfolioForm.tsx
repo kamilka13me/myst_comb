@@ -64,8 +64,8 @@ export default function PortfolioForm() {
       <p className="text-center text-xl font-medium text-gray-500 mb-4 mt-[152px]">
         Портфоліо-рев&apos;ю:
       </p>
-      <div className="w-full flex justify-center mb-20">
-        <h1 className="max-w-[896px] text-4xl">
+      <div className="flex justify-center text-center px-5 mb-20">
+        <h1 className="text-3xl">
           Заповніть анкету нижче, щоб ми могли якнайшвидше звʼязатись із вами
         </h1>
       </div>
@@ -144,6 +144,7 @@ export default function PortfolioForm() {
         <FallingBricks
           onSelect={handleBrickSelect}
           clearSelection={clearBricks}
+          title="В яких медіа працюєте:"
           error={
             Array.isArray(errors.selectedBrick)
               ? errors.selectedBrick[0]
