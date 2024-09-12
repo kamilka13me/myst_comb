@@ -1,5 +1,6 @@
 "use client";
 import LogoDark from "@/shared/assets/icons/LogoDark.svg?react";
+import LogoWhite from "@/shared/assets/icons/LogoWhite.svg?react";
 import { ButtonLink } from "@/shared/ui/ButtonLink";
 import { Icon } from "@/shared/ui/Icon";
 import { LanguageSwitcher } from "@/shared/ui/LanguageSwitcher";
@@ -13,11 +14,11 @@ const Header = () => {
 
   return (
     <header
-      className={`absolute ${pathname === "/" ? "top-[100px]" : "top-0"} z-30 w-full flex justify-center`}
+      className={`absolute ${pathname === "/" ? "top-[100px]" : "top-6"} z-30 w-full flex justify-center`}
     >
       <div className="max-w-[1340px] w-full">
         <VStack justify="between" align="center">
-          <Icon Svg={LogoDark} height={42} width={162} />
+          <Icon Svg={pathname === "/" ? LogoDark : LogoWhite} height={42} width={162} />
           <nav className="flex gap-9 items-center">
             {/* Language switcher */}
             <LanguageSwitcher languages={["УКР", "ENG"]} />

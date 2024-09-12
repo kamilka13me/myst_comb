@@ -5,6 +5,7 @@ import FallingBricks from "./FillingBringsForm";
 import CheckboxForm from "./CheckboxForm";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { schema } from "../helpers/validation";
+import { ButtonLink } from "@/shared/ui/ButtonLink";
 
 export interface FormInputs {
   firstName: string;
@@ -55,12 +56,12 @@ export default function PortfolioForm() {
     setValue("selectedBrick", []);
     setClearBricks(true);
     setTimeout(() => setClearBricks(false), 100);
-    setCheckedSubmit(false)
+    setCheckedSubmit(false);
   };
 
   return (
     <>
-      <p className="text-center text-xl font-medium text-gray-500 mb-4">
+      <p className="text-center text-xl font-medium text-gray-500 mb-4 mt-[152px]">
         Портфоліо-рев&apos;ю:
       </p>
       <div className="w-full flex justify-center mb-20">
@@ -68,7 +69,7 @@ export default function PortfolioForm() {
           Заповніть анкету нижче, щоб ми могли якнайшвидше звʼязатись із вами
         </h1>
       </div>
-      <form onSubmit={handleSubmit(onSubmit)} className="">
+      <form onSubmit={handleSubmit(onSubmit)} className=" mb-[180px]">
         <span className="flex gap-4">
           <InputForm
             label="Ім'я"
@@ -162,9 +163,9 @@ export default function PortfolioForm() {
           checked={getValues("agreeToProcess") || false}
           error={errors.agreeToProcess}
           onChange={handleCheckboxChange}
-          classMain="flex justify-center"
+          classMain="flex justify-center mt-6 mb-6"
         />
-        <button
+        {/* <button
           type="submit"
           disabled={!checkedSubmit}
           className={`mt-4 w-full py-2 px-4 rounded ${
@@ -174,7 +175,9 @@ export default function PortfolioForm() {
           }`}
         >
           Надіслати
-        </button>
+        </button> */}
+
+        <ButtonLink variant="arrowTextBlue" text="Подати заявку" to="/404" />
       </form>
     </>
   );
