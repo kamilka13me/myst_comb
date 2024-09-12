@@ -165,12 +165,7 @@ export default function PortfolioForm() {
           error={errors.agreeToProcess}
           onChange={handleCheckboxChange}
           classMain="flex justify-center"
-        />
-
-        
-
-
-        
+        />  
         {/* <button
           type="submit"
           disabled={!checkedSubmit}
