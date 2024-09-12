@@ -175,7 +175,7 @@ export default function PortfolioForm() {
               : "bg-gray-500 text-gray-300 cursor-not-allowed"
           }`}
         >
-          Подати заявку
+          Надіслати
         </button> */}
         
         <ButtonLink variant="arrowTextBlue" text="Подати заявку" to="/404" />
