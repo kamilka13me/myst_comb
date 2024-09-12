@@ -166,7 +166,7 @@ export default function PortfolioForm() {
           onChange={handleCheckboxChange}
           classMain="flex justify-center"
         />
-        <button
+        {/* <button
           type="submit"
           disabled={!checkedSubmit}
           className={`mt-4 w-full py-2 px-4 rounded ${
@@ -176,7 +176,9 @@ export default function PortfolioForm() {
           }`}
         >
           Подати заявку
-        </button>
+        </button> */}
+        
+        <ButtonLink variant="arrowTextBlue" text="Подати заявку" to="/404" />
       </form>
     </>
   );
