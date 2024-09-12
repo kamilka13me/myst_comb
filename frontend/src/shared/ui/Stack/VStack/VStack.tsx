@@ -1,8 +1,8 @@
-import { forwardRef } from 'react';
+import { forwardRef } from "react";
 
-import Flex, { FlexProps } from '../Flex/Flex';
+import Flex, { FlexProps } from "../Flex/Flex";
 
-type Props = Omit<FlexProps, 'direction'>;
+type Props = Omit<FlexProps, "direction">;
 
 const VStack = forwardRef<HTMLDivElement, Props>((props, ref) => {
   const { children } = props;
@@ -13,5 +13,7 @@ const VStack = forwardRef<HTMLDivElement, Props>((props, ref) => {
     </Flex>
   );
 });
+
+VStack.displayName = "Vstack";
 
 export default VStack;

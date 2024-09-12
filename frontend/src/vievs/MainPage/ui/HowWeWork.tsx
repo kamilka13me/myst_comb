@@ -10,7 +10,8 @@ const HowWeWork = () => {
         Tag="h2"
         text="Як ми працюємо"
         textType="Desktop/Body"
-        className="font-medium text-[#B6B6B6]"
+        className="font-medium"
+        color="base/stroke_btn_act"
       />
       <Text
         Tag="h1"
@@ -18,7 +19,8 @@ const HowWeWork = () => {
         textType="Desktop/H3"
         font="serif"
         align="center"
-        className=" text-[#151515] mt-3 "
+        color="base/text_accent"
+        className="mt-3 "
       />
       <ButtonLink
         variant="arrowTextBlue"

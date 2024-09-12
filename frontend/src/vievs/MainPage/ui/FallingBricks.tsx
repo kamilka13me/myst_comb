@@ -354,7 +354,10 @@ const FallingBricks: React.FC = () => {
           <div
             key={index}
             // eslint-disable-next-line no-return-assign
-            ref={(el) => (bricksRefs.current[index] = el!)}
+            // ref={(el) => (bricksRefs.current[index] = el!)}
+            ref={(el) => {
+              if (el) bricksRefs.current[index] = el;
+            }}
             style={{
               position: "absolute",
               width: `${brick.width - 2}px`,

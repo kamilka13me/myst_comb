@@ -1,48 +1,48 @@
-import { DetailedHTMLProps, forwardRef, HTMLAttributes, ReactNode } from 'react';
+import { DetailedHTMLProps, forwardRef, HTMLAttributes, ReactNode } from "react";
 
-type FlexDirection = 'row' | 'col';
-type AlignItems = 'start' | 'center' | 'end' | 'stretch';
-type JustifyContent = 'start' | 'center' | 'end' | 'between' | 'around' | 'evenly';
-type FlexWrap = 'wrap' | 'no-wrap';
-type FlexGap = '0' | '1' | '2' | '4' | '5' | '6' | '8' | '10' | '14' | '20';
+type FlexDirection = "row" | "col";
+type AlignItems = "start" | "center" | "end" | "stretch";
+type JustifyContent = "start" | "center" | "end" | "between" | "around" | "evenly";
+type FlexWrap = "wrap" | "no-wrap";
+type FlexGap = "0" | "1" | "2" | "4" | "5" | "6" | "8" | "10" | "14" | "20";
 
 const directionClasses: Record<FlexDirection, string> = {
-  row: 'flex-row',
-  col: 'flex-col',
+  row: "flex-row",
+  col: "flex-col",
 };
 
 const alignClasses: Record<AlignItems, string> = {
-  start: 'items-start',
-  end: 'items-end',
-  center: 'items-center',
-  stretch: 'items-stretch',
+  start: "items-start",
+  end: "items-end",
+  center: "items-center",
+  stretch: "items-stretch",
 };
 
 const justifyClasses: Record<JustifyContent, string> = {
-  start: 'justify-start',
-  center: 'justify-center',
-  end: 'justify-end',
-  around: 'justify-around',
-  between: 'justify-between',
-  evenly: 'justify-evenly',
+  start: "justify-start",
+  center: "justify-center",
+  end: "justify-end",
+  around: "justify-around",
+  between: "justify-between",
+  evenly: "justify-evenly",
 };
 
 const wrapClasses: Record<FlexWrap, string> = {
-  wrap: 'flex-wrap',
-  'no-wrap': 'flex-nowrap',
+  wrap: "flex-wrap",
+  "no-wrap": "flex-nowrap",
 };
 
 const gapClasses: Record<FlexGap, string> = {
-  '0': 'gap-0',
-  '1': 'gap-1',
-  '2': 'gap-2',
-  '4': 'gap-4',
-  '5': 'gap-5',
-  '6': 'gap-6',
-  '8': 'gap-8',
-  '10': 'gap-10',
-  '14': 'gap-14',
-  '20': 'gap-20',
+  "0": "gap-0",
+  "1": "gap-1",
+  "2": "gap-2",
+  "4": "gap-4",
+  "5": "gap-5",
+  "6": "gap-6",
+  "8": "gap-8",
+  "10": "gap-10",
+  "14": "gap-14",
+  "20": "gap-20",
 };
 
 type DivProps = DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>;
@@ -62,10 +62,10 @@ const Flex = forwardRef<HTMLDivElement, FlexProps>((props, ref) => {
     children,
     className,
     direction,
-    align = 'start',
-    justify = 'start',
-    wrap = 'no-wrap',
-    gap = '0',
+    align = "start",
+    justify = "start",
+    wrap = "no-wrap",
+    gap = "0",
     ...otherProps
   } = props;
 
@@ -87,4 +87,5 @@ const Flex = forwardRef<HTMLDivElement, FlexProps>((props, ref) => {
   );
 });
 
+Flex.displayName = "Flex";
 export default Flex;

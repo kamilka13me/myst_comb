@@ -5,7 +5,7 @@ import Arrow from "@/shared/assets/icons/ArrowInCircleBlueLeft.svg?react";
 
 const ConnectToday = () => {
   return (
-    <div className="flex justify-center  border-t-2 border-t-[#DCDCDC] mx-[156px] mb-[180px] max-w-[1128px] ">
+    <div className="flex justify-center  border-t-2 border-t-[#DCDCDC] mx-[156px] pb-[180px] max-w-[1128px] ">
       <div className="flex justify-between w-full  mt-10 gap-[60px] ">
         <div className="w-full">
           <Text
@@ -13,6 +13,7 @@ const ConnectToday = () => {
             textType="Desktop/H3"
             text="Приєднуйся до спільноти вже сьогодні."
             font="sans"
+            color="base/text_accent"
             className="font-medium"
           />
           <Text
@@ -20,7 +21,8 @@ const ConnectToday = () => {
             textType="Desktop/Body"
             text="Підписуйся на нашу розсилку корисних новин."
             font="sans"
-            className="text-[#474747] mt-2"
+            className="mt-2"
+            color="base/text_dark"
           />
         </div>
         <div className="w-full flex items-center">

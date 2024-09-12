@@ -1,16 +1,21 @@
-import { HStack } from '@/shared/ui/Stack';
-import { Text } from '@/shared/ui/Text';
+import { HStack } from "@/shared/ui/Stack";
+import { Text } from "@/shared/ui/Text";
 
 const WhoAreWe = () => {
   return (
     <HStack justify="center" align="center" className="mt-44">
       <HStack justify="center" align="center" className="max-w-[822px]">
-        <Text Tag="p" size="lg" text="Хто ми такі?" color="gray-light" />
         <Text
           Tag="p"
-          size="5xl"
+          textType="Desktop/Body"
+          text="Хто ми такі?"
+          color="base/stroke_btn_act"
+        />
+        <Text
+          Tag="p"
+          textType="Desktop/H3"
           text="Благодійний фонд “Мистецький Комбінат” – організація підтримки підприємництва у сфері візуального мистецтва"
-          color="white"
+          color="base/BG_block"
           align="center"
           className="mt-3"
         />
@@ -20,5 +25,3 @@ const WhoAreWe = () => {
 };
 
 export default WhoAreWe;
-
-

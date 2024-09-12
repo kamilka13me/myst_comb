@@ -56,7 +56,9 @@ const ButtonLink = forwardRef<HTMLButtonElement, Props>((props, ref) => {
           <Icon Svg={ArrowInCircle} width={45} height={45} className="min-w-[45px]" />
         ) : variant === "textBlue" ? (
           <div className="flex items-center gap-3">
-            <span className="font-sans font-medium text-[#151515]">{text}</span>
+            <span className={`font-sans font-medium text-[#151515] ${className}`}>
+              {text}
+            </span>
             <Icon
               Svg={ArrowInCircleBlue}
               width={size || 45}
@@ -95,5 +97,7 @@ const ButtonLink = forwardRef<HTMLButtonElement, Props>((props, ref) => {
     </Link>
   );
 });
+
+ButtonLink.displayName = "ButtonLink";
 
 export default ButtonLink;

@@ -1,68 +1,61 @@
-import {
-  FC,
-  ImgHTMLAttributes,
-  memo,
-  ReactElement,
-  useLayoutEffect,
-  useState,
-} from 'react';
+"use client";
+import { FC, ReactElement, useState } from "react";
+import Image, { StaticImageData } from "next/image";
 
-interface Props extends ImgHTMLAttributes<HTMLImageElement> {
-  src: string;
+interface Props {
+  src: string | StaticImageData;
   alt: string;
-  width?: string;
-  height?: string;
+  width?: number;
+  height?: number;
   loadingFallback?: ReactElement;
-  objectFit?: 'cover' | 'contain';
+  objectFit?: "cover" | "contain";
   className?: string;
 }
 
-const AppImage: FC<Props> = (props) => {
-  const {
-    src,
-    alt,
-    height,
-    width,
-    loadingFallback,
-    objectFit = 'cover',
-    className,
-    ...otherProps
-  } = props;
-
+const AppImage: FC<Props> = ({
+  src,
+  alt,
+  width,
+  height,
+  loadingFallback,
+  objectFit = "cover",
+  className,
+  ...otherProps
+}) => {
   const [isLoading, setIsLoading] = useState(true);
   const [hasError, setHasError] = useState(false);
 
-  useLayoutEffect(() => {
-    const img = new Image();
+  const handleLoadingComplete = () => {
+    setIsLoading(false);
+  };
 
-    img.src = src || '';
-    img.onload = () => {
-      setIsLoading(false);
-    };
-    img.onerror = () => {
-      setIsLoading(false);
-      setHasError(true);
-    };
-  }, [src]);
+  const handleError = () => {
+    setIsLoading(false);
+    setHasError(true);
+  };
 
-  if (isLoading) {
+  if (isLoading && loadingFallback) {
     return loadingFallback;
   }
 
   if (hasError) {
-    return <div>err</div>;
+    return <div>Error loading image</div>;
   }
 
   return (
-    <img
+    <Image
       src={src}
       alt={alt}
       width={width}
       height={height}
-      className={`${objectFit === 'cover' ? 'object-cover' : 'object-contain'} ${className}`}
+      className={`${objectFit === "cover" ? "object-cover" : "object-contain"} ${className}`}
+      onLoadingComplete={handleLoadingComplete}
+      onError={handleError}
       {...otherProps}
     />
   );
 };
 
-export default memo(AppImage);
+AppImage.displayName = "AppImage";
+
+export default AppImage;
