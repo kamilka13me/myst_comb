@@ -1,3 +1,4 @@
+"use client"
 import React, { useState, useEffect } from "react";
 import useMediaQuery from "../hooks/useMediaQuery";
 import { bricksData, bricksDataPhone } from "../helpers/brings-data";
