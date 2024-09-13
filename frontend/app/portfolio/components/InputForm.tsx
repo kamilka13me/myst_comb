@@ -25,12 +25,12 @@ const InputForm: React.FC<InputFormProps> = ({
   placeholder,
   rows,
 }) => {
-  const commonStyles = `peer block bg-black w-full px-[14px] py-[23px] border border-[#616161] text-gray-50 placeholder-[#616161] ${
+  const commonStyles = `peer block bg-black w-full px-[14px] py-[16px] md:py-[23px] border border-[#616161] text-gray-50 placeholder-[#616161] ${
     error ? "border-red-500" : "border-gray-300"
   } rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500`;
 
   return (
-    <div className="relative mb-4 w-full">
+    <div className="relative mb-5 md:mb-4 w-full">
       {elementType === "textarea" ? (
         <textarea
           id={name}
@@ -49,7 +49,7 @@ const InputForm: React.FC<InputFormProps> = ({
         />
       )}
       <label
-        className={`absolute top-[-20px] left-3 text-sm transform translate-y-1/2 pointer-events-none bg-black px-1 ${
+        className={`absolute top-[-20px] left-3 text-xs md:text-sm transform translate-y-1/2 pointer-events-none bg-black px-1 ${
           error ? "text-red-500" : ""
         }`}
         htmlFor={name}

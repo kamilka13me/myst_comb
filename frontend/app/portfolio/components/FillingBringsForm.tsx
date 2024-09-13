@@ -1,5 +1,6 @@
-import React, { useState } from "react";
-import { bricksData } from "../helpers/brings-data";
+import React, { useState, useEffect } from "react";
+import useMediaQuery from "../hooks/useMediaQuery";
+import { bricksData, bricksDataPhone } from "../helpers/brings-data";
 import { FieldError } from "react-hook-form";
 
 interface FallingBricksProps {
@@ -16,8 +17,9 @@ const FallingBricks: React.FC<FallingBricksProps> = ({
   title,
 }) => {
   const [selectedBricks, setSelectedBricks] = useState<Set<number>>(new Set());
+  const isPhone = useMediaQuery("(max-width: 640px)");
 
-  React.useEffect(() => {
+  useEffect(() => {
     if (clearSelection) {
       setSelectedBricks(new Set());
       onSelect([]);
@@ -34,20 +36,24 @@ const FallingBricks: React.FC<FallingBricksProps> = ({
         updatedSelection.add(index);
       }
 
-      onSelect(Array.from(updatedSelection).map((i) => bricksData[i].text));
+      onSelect(
+        Array.from(updatedSelection).map((i) =>
+          isPhone ? bricksDataPhone[i].text : bricksData[i].text
+        )
+      );
       return updatedSelection;
     });
   };
 
+  const bricks = isPhone ? bricksDataPhone : bricksData;
+
   return (
     <>
       <div className="mb-6 w-full">
-        <h2 className="flex justify-start text-[24px] mb-[14px]">
-          {title}
-        </h2>
+        <h2 className="flex justify-start text-[24px] mb-[14px]">{title}</h2>
         {error && <p className="text-red-500 text-xs mb-2">{error.message}</p>}
-        <div className="flex flex-wrap gap-[9px]">
-          {bricksData.map((brick, index) => (
+        <div className="flex justify-center flex-wrap gap-[9px]">
+          {bricks.map((brick, index) => (
             <div
               key={brick.text}
               onClick={() => toggleBrickSelection(index, brick.text)}
