@@ -4,7 +4,7 @@ import PortfolioForm from "./components/PortfolioForm";
 
 export default function Portfolio() {
   return (
-    <div className="w-[896px] mx-auto pt-20 pb-[180px]">
+    <div className="w-[896px] mx-auto">
       <PortfolioForm />
     </div>
   );
