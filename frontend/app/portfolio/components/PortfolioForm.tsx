@@ -166,19 +166,15 @@ export default function PortfolioForm() {
           onChange={handleCheckboxChange}
           classMain="flex justify-center mt-6 mb-6"
         />
-        {/* <button
-          type="submit"
-          disabled={!checkedSubmit}
-          className={`mt-4 w-full py-2 px-4 rounded ${
-            checkedSubmit
-              ? "bg-blue-500 text-white hover:bg-blue-600"
-              : "bg-gray-500 text-gray-300 cursor-not-allowed"
-          }`}
-        >
-          Надіслати
-        </button> */}
-
-        <ButtonLink variant="arrowTextBlue" text="Подати заявку" to="/404" />
+        <div className="flex justify-center">
+          <ButtonLink
+            type="submit"
+            variant="arrowTextBlue"
+            text="Подати заявку"
+            className="flex justify-center"
+            disabled={!checkedSubmit}
+          />
+        </div>
       </form>
     </>
   );
