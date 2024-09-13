@@ -1,8 +1,10 @@
 "use client"
-import React, { useState, useEffect } from "react";
-import useMediaQuery from "../hooks/useMediaQuery";
+
 import { bricksData, bricksDataPhone } from "../helpers/brings-data";
+
 import { FieldError } from "react-hook-form";
+import useMediaQuery from "../hooks/useMediaQuery";
+import { useEffect, useState } from "react";
 
 interface FallingBricksProps {
   onSelect: (text: string[]) => void;
