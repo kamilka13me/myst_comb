@@ -61,16 +61,16 @@ export default function PortfolioForm() {
 
   return (
     <>
-      <p className="text-center text-xl font-medium text-gray-500 mb-4 mt-[152px]">
+      <p className="text-center text-base md:text-xl font-medium text-gray-500 mb-3 md:mb-4 mt-[152px]">
         Портфоліо-рев&apos;ю:
       </p>
-      <div className="flex justify-center text-center px-5 mb-20">
-        <h1 className="text-3xl">
+      <div className="flex justify-center text-center px-0 md:px-5 mb-10 md:mb-20">
+        <h1 className="text-[28px] md:text-3xl">
           Заповніть анкету нижче, щоб ми могли якнайшвидше звʼязатись із вами
         </h1>
       </div>
       <form onSubmit={handleSubmit(onSubmit)} className=" mb-[180px]">
-        <span className="flex gap-4">
+        <span className="flex flex-col md:flex-row gap-4">
           <InputForm
             label="Ім'я"
             name="firstName"
@@ -95,7 +95,7 @@ export default function PortfolioForm() {
           error={errors.organization}
         />
 
-        <span className="w-full flex flex- gap-4">
+        <span className="w-full flex flex-col md:flex-row gap-4">
           <InputForm
             label="Email"
             name="email"
@@ -164,7 +164,7 @@ export default function PortfolioForm() {
           checked={getValues("agreeToProcess") || false}
           error={errors.agreeToProcess}
           onChange={handleCheckboxChange}
-          classMain="flex justify-center mt-6 mb-6"
+          classMain="flex justify-center mt-5 mb-5 md:mt-6 md:mb-6"
         />
         <div className="flex justify-center">
           <ButtonLink
@@ -173,6 +173,7 @@ export default function PortfolioForm() {
             text="Подати заявку"
             className="flex justify-center"
             disabled={!checkedSubmit}
+            arrowTextBlueStyles="px-[88px] md:px-[37px]"
           />
         </div>
       </form>
