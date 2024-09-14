@@ -32,6 +32,7 @@ const config: Config = {
         "fixel-display": ['"Fixel Display"', "sans-serif"],
       },
       fontSize: {
+        "3xs": ["12px", "13.2px"],
         "2xs": ["14px", "18.9px"],
         s: "18px",
         l: "24px",

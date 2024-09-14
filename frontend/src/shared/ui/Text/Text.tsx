@@ -8,6 +8,7 @@ export type TextTypes =
   | "Desktop/title-s"
   | "Desktop/Body"
   | "Desktop/Subtitle"
+  | "Desktop/Subtext"
   | "Desktop/Button-menu"
   | "Desktop/H2"
   | "Desktop/title-l"
@@ -61,6 +62,7 @@ const TextType: Record<TextTypes, string> = {
     " font-semibold font-fixel-display text-l  leading-[135%] tracking-[-0.24px]",
   "Desktop/Button-menu":
     "text-[#474747] text-sm font-semibold leading-[17.50px] font-ibm-plex-sans",
+  "Desktop/Subtext": "text-3xs  font-ibm-plex-sans font-normal  tracking-[-0.24px]",
 };
 
 const TextAlignClass: Record<TextAlign, string> = {
