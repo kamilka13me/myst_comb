@@ -47,13 +47,11 @@ const CheckboxForm: React.FC<CheckboxFormProps> = ({
         }`}
         onClick={handleClick}
       >
-        {checked && (
-          <Icon className="w-4 h-4" />
-        )}
+        {checked && <Icon className="w-4 h-4" />}
       </div>
       <label
         htmlFor={name}
-        className={`ml-2 text-sm text-gray-700 ${error ? "text-red-500" : ""}`}
+        className={`ml-2 text-sm text-base-stroke-btn-act ${error ? "text-red-500" : "text-base-stroke-btn-act"}`}
       >
         {label}
       </label>
