@@ -5,6 +5,7 @@ import Facebook from "@/shared/assets/icons/SocialFacebook.svg?react";
 import Instagram from "@/shared/assets/icons/SocialInstagram.svg?react";
 import YouTube from "@/shared/assets/icons/SocialYouTube.svg?react";
 import { Icon } from "@/shared/ui/Icon";
+import { Text } from "@/shared/ui/Text";
 import Link from "next/link";
 // import { Link } from '@/shared/ui/Link';
 
@@ -23,15 +24,36 @@ const Footer = () => {
         <div className="flex-1 gap-10 flex justify-between">
           <div className=" w-full  flex flex-col">
             <Icon Svg={LogoWhite} width={128} height={33} />
-            <div className="text-sm text-base/text font-medium mt-10">
+            {/* <div className="text-sm text-base/text font-medium mt-10">
               +380-50-111-22-33
-            </div>
-            <div className="text-xs text-base/text font-regular mt-[14px]">
+            </div> */}
+            <Text
+              Tag="p"
+              textType="Desktop/Subtitle"
+              color="base/text"
+              text="+380-50-111-22-33"
+              className="mt-10"
+            />
+            {/* <div className="text-xs text-base/text font-regular mt-[14px]">
               mystetskykombinat@gmail.com
-            </div>
+            </div> */}
+            <Text
+              Tag="p"
+              textType="Desktop/Subtext"
+              color="base/text"
+              text="mystetskykombinat@gmail.com"
+              className="mt-[14px]"
+            />
           </div>
           <div className="w-full  flex flex-col">
-            <p className="text-base/text font-semibold text-lg">Про нас</p>
+            {/* <p className="text-base/text font-semibold text-lg">Про нас</p> */}
+            <Text
+              Tag="h6"
+              textType="Desktop/Body"
+              color="base/text"
+              className="font-semibold"
+              text="Про нас"
+            />
             <div className="flex flex-col gap-3 mt-6 ">
               {About.map((link, index) => (
                 <Link
@@ -39,7 +61,13 @@ const Footer = () => {
                   className="text-base/text font-medium text-sm"
                   key={index}
                 >
-                  {link.title}
+                  <Text
+                    Tag="p"
+                    textType="Desktop/Subtitle"
+                    color="base/text_light"
+                    text={link.title}
+                  />
+                  {/* {link.title} */}
                 </Link>
               ))}
             </div>
@@ -48,7 +76,13 @@ const Footer = () => {
             <DonutChart />
           </div>
           <div className="w-full  flex flex-col">
-            <div className="font-semibold text-base/text text-lg">Слідкуйте за нами</div>
+            <Text
+              Tag="h6"
+              textType="Desktop/Body"
+              color="base/text"
+              className="font-semibold"
+              text="Слідкуй за нами"
+            />
             <div className="flex gap-[18px] mt-6">
               <Icon Svg={Instagram} height={40} width={40} />
               <Icon Svg={Facebook} height={40} width={40} />
@@ -61,9 +95,16 @@ const Footer = () => {
             2024, БФ “Мистецький комбінат” <br />
             Київ, Україна
           </div>
-          <div className="text-right text-[#606060] text-sm font-medium ">
+          {/* <div className="text-right text-[#606060] text-sm font-medium ">
             © Всі права захищені
-          </div>
+          </div> */}
+          <Text
+            Tag="h6"
+            textType="Desktop/Subtitle"
+            color="base/text_light_2"
+            className="font-medium"
+            text="© Всі права захищені"
+          />
         </div>
       </div>
     </footer>
