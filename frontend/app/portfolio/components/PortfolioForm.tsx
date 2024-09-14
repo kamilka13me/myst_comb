@@ -63,7 +63,7 @@ export default function PortfolioForm() {
 
   return (
     <>
-      <p className="text-center text-base md:text-xl font-medium text-gray-500 mb-3 md:mb-4 mt-[152px]">
+      <p className="text-center text-base md:text-xl font-medium text-base-stroke-btn-act mb-3 md:mb-4 mt-[152px] font-ibm-plex-sans">
         Портфоліо-рев&apos;ю:
       </p>
       <div className="flex justify-center text-center px-0 md:px-5 mb-10 md:mb-20">
@@ -76,9 +76,13 @@ export default function PortfolioForm() {
           color="base/BG_block"
           text="Заповніть анкету нижче, щоб ми могли якнайшвидше звʼязатись із вами"
           align="center"
+          className="text-[28px] md:text-3xl"
         />
       </div>
-      <form onSubmit={handleSubmit(onSubmit)} className=" mb-[180px]">
+      <form
+        onSubmit={handleSubmit(onSubmit)}
+        className=" mb-[180px] font-ibm-plex-sans"
+      >
         <span className="flex flex-col md:flex-row gap-4">
           <InputForm
             label="Ім'я"
