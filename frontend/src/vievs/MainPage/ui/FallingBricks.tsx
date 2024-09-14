@@ -212,6 +212,16 @@ const FallingBricks: React.FC = () => {
       radius: 10,
       angle: 0,
     },
+    {
+      x: 320,
+      y: -2100,
+      width: 240,
+      height: 64,
+      color: "transparent",
+      text: "Ми співпрацюємо з:",
+      radius: 10,
+      angle: 0,
+    },
   ];
 
   useEffect(() => {
@@ -260,6 +270,7 @@ const FallingBricks: React.FC = () => {
           angle,
           mass: 20,
           friction: 0.4,
+          // isStatic: true,
           isStatic: false,
           render: {
             opacity: 0,
@@ -341,7 +352,8 @@ const FallingBricks: React.FC = () => {
   }, []);
 
   return (
-    <div className="flex justify-center items-center relative h-[500px] mt-3 mb-10 z-10 overflow-hidden">
+    // <div className="flex justify-center items-center relative h-[500px] mt-3 mb-10 z-10 overflow-hidden">
+    <div className="flex justify-center items-center relative h-[500px] mt-3 mb-10 z-10 ">
       <div
         ref={scene}
         style={{
@@ -360,18 +372,25 @@ const FallingBricks: React.FC = () => {
             }}
             style={{
               position: "absolute",
-              width: `${brick.width - 2}px`,
-              height: `${brick.height - 2}px`,
-              color: "#151515",
+              width: `${brick.width - 3}px`,
+              height: `${brick.height - 3}px`,
+              color: brick.text === "Ми співпрацюємо з:" ? "#DCDCDC" : "#151515",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
               fontWeight: "bold",
               pointerEvents: "none",
               background: brick.color,
-              opacity: highlightedBrick === index ? 1 : 0.5,
+              opacity:
+                brick.text === "Ми співпрацюємо з:"
+                  ? 1
+                  : highlightedBrick === index
+                    ? 1
+                    : 0.5,
               transition: "opacity 0.3s ease",
               borderRadius: 10,
+              fontSize: "24px",
+              fontFamily: "sans-serif",
             }}
           >
             {brick.text}

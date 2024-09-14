@@ -17,20 +17,21 @@ export const MainPage: React.FC = () => {
     <div className="bg-white mt-10 flex flex-col items-center w-full">
       <div className="w-full h-full bg-base-text_accent rounded-b-[60px] flex flex-col items-center">
         <div className="max-w-[1440px]">
-          <Hero />
-          <Donors />
-          <WhoAreWe />
-          <OurServices />
+          <div className="h-[4000px]"></div>
+          {/* <Hero /> */}
+          {/* <Donors /> */}
+          {/* <WhoAreWe /> */}
+          {/* <OurServices /> */}
           <FallingBricks />
-          <OurProjects />
-          <News />
+          {/* <OurProjects /> */}
+          {/* <News /> */}
         </div>
       </div>
       <div className="max-w-[1440px]">
-        <Strategi />
-        <OurValues />
-        <HowWeWork />
-        <ConnectToday />
+        {/* <Strategi /> */}
+        {/* <OurValues /> */}
+        {/* <HowWeWork /> */}
+        {/* <ConnectToday /> */}
       </div>
     </div>
   );
