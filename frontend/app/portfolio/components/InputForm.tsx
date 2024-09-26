@@ -9,7 +9,7 @@ interface InputFormProps {
   name: keyof FormInputs;
   elementType?: "input" | "textarea";
   type?: string;
-  register: UseFormRegister<FormInputs>;
+  register: UseFormRegister<any>;
   error?: FieldError | undefined;
   placeholder?: string;
   rows?: number;

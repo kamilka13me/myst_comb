@@ -6,7 +6,7 @@ import Icon from "../../../public/checkbox.svg?react"
 interface CheckboxFormProps {
   label: string;
   name: keyof FormInputs;
-  register: UseFormRegister<FormInputs>;
+  register: UseFormRegister<any>;
   error?: FieldError | undefined;
   checked: boolean;
   onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;

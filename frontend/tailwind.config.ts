@@ -25,6 +25,7 @@ const config: Config = {
         "base-text_dark": "#474747",
         "base-text": "#E8E8E8",
         "icons_symbols-blue_500": "#2C05F2",
+        "white-translucent": "rgba(255, 255, 255, 0.03)",
       },
       fontFamily: {
         "ibm-plex-sans": ["IBM Plex Sans", "sans-serif"],

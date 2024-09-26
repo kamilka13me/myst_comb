@@ -1,4 +1,4 @@
-export const bricksData = [
+export const data = [
   { width: 170, color: "#FF9566", text: "живопис" },
   { width: 190, color: "#9E92EE", text: "скульптура" },
   { width: 160, color: "#EB99FF", text: "графіка" },
@@ -13,7 +13,7 @@ export const bricksData = [
   { width: 262, color: "#EB99FF", text: "текстильне мистецтво" },
   { width: 172, color: "#F1FF66", text: "ілюстрація" }
 ]
-export const bricksDataPhone = [
+export const dataPhone = [
   { width: 159, color: "#FF9566", text: "живопис" },
   { width: 181, color: "#9E92EE", text: "скульптура" },
   { width: 174, color: "#F1FF66", text: "графічний дизайн" },

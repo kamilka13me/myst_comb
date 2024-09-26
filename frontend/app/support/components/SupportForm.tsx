@@ -1,17 +1,17 @@
-"use client";
 import React, { useState } from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
-import InputForm from "./InputForm";
-import FallingBricks from "./FillingBringsForm";
-import CheckboxForm from "./CheckboxForm";
 import { yupResolver } from "@hookform/resolvers/yup";
-import { schema } from "../helpers/validation";
 import { ButtonLink } from "@/shared/ui/ButtonLink";
 import { Text } from "@/shared/ui/Text";
-import Dropdown from "./DropdownForm";
-import { data, dataPhone } from "../helpers/brings-data";
+import InputForm from "../../portfolio/components/InputForm";
+import CheckboxForm from "../../portfolio/components/CheckboxForm";
+import Dropdown from "../../portfolio/components/DropdownForm";
+import FallingBricks from "../../portfolio/components/FillingBringsForm";
+import { data, dataPhone } from "../../portfolio/helpers/brings-data";
+import { supportData, supportDataPhone } from "../helpers/support-data";
+import { schema } from "../helpers/validation";
 
-export interface FormInputs {
+export interface FormInputsSupport {
   firstName: string;
   lastName: string;
   organization: string;
@@ -23,9 +23,11 @@ export interface FormInputs {
   agreeToViber?: boolean;
   agreeToProcess?: boolean;
   selectedBrick: (string | undefined)[];
+  selectedSupport: (string | undefined)[];
+  services: string;
 }
 
-export default function PortfolioForm() {
+export default function SupportForm() {
   const [clearBricks, setClearBricks] = useState(false);
   const [checkedSubmit, setCheckedSubmit] = useState(false);
 
@@ -36,7 +38,7 @@ export default function PortfolioForm() {
     reset,
     formState: { errors },
     getValues,
-  } = useForm<FormInputs>({
+  } = useForm<FormInputsSupport>({
     resolver: yupResolver(schema),
     mode: "all",
   });
@@ -45,19 +47,24 @@ export default function PortfolioForm() {
     setValue("selectedBrick", selectedBricks);
   };
 
+  const handleSupportSelect = (selectedSupport: string[]) => {
+    setValue("selectedSupport", selectedSupport);
+  };
+
   const handleCheckboxChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const { name, checked } = event.target;
-    setValue(name as keyof FormInputs, checked, { shouldValidate: true });
+    setValue(name as keyof FormInputsSupport, checked, { shouldValidate: true });
     if (name === "agreeToProcess") {
       setCheckedSubmit(checked);
     }
   };
 
-  const onSubmit: SubmitHandler<FormInputs> = (data) => {
+  const onSubmit: SubmitHandler<FormInputsSupport> = (data) => {
     console.log(data);
 
     reset();
     setValue("selectedBrick", []);
+    setValue("selectedSupport", []);
     setClearBricks(true);
     setTimeout(() => setClearBricks(false), 100);
     setCheckedSubmit(false);
@@ -69,9 +76,6 @@ export default function PortfolioForm() {
         Портфоліо-рев&apos;ю:
       </p>
       <div className="flex justify-center text-center px-0 md:px-5 mb-10 md:mb-20">
-        {/* <h1 className="text-[28px] md:text-3xl ">
-          Заповніть анкету нижче, щоб ми могли якнайшвидше звʼязатись із вами
-        </h1> */}
         <Text
           Tag="h1"
           textType="Desktop/H3"
@@ -83,7 +87,7 @@ export default function PortfolioForm() {
       </div>
       <form
         onSubmit={handleSubmit(onSubmit)}
-        className=" mb-[180px] font-ibm-plex-sans"
+        className="mb-[180px] font-ibm-plex-sans"
       >
         <span className="flex flex-col md:flex-row gap-4">
           <InputForm
@@ -168,11 +172,37 @@ export default function PortfolioForm() {
               : errors.selectedBrick
           }
         />
+        <FallingBricks
+          onSelect={handleSupportSelect} // Використовуємо функцію для supportData
+          clearSelection={clearBricks}
+          data={supportData}
+          dataPhone={supportDataPhone}
+          title="Яка саме допомога вам потрібна:"
+          error={
+            Array.isArray(errors.selectedSupport)
+              ? errors.selectedSupport[0]
+              : errors.selectedSupport
+          }
+        />
         <InputForm
           label="Консультація від якого експерта ви хотіли б отримати?"
           name="expert"
           register={register}
           error={errors.expert}
+        />
+
+        <Dropdown
+          label="Тип послуги:"
+          placeholder="Оберіть послугу"
+          options={[
+            "річна підписка (до 30 хв усних консультацій на місяць, 3 короткі консультації у письмовій формі по електронній пошті, пошук та надання нормативних документів з питань оподаткування та бухгалтерського обліку на запит (до 3-х в місяць), доступ до шаблонів документів);",
+            "одноразова послуга (письмова відповідь/ 60 хв усної консультації).",
+          ]}
+          register={register}
+          setValue={setValue}
+          name="services"
+          resetDropdown={clearBricks}
+          error={errors.services}
         />
 
         <CheckboxForm
