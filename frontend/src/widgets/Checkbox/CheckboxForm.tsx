@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import { FieldError, UseFormRegister } from "react-hook-form";
-import { FormInputs } from "./PortfolioForm";
-import Icon from "../../../public/checkbox.svg?react"
+import { FormInputs } from "../../../app/portfolio/components/PortfolioForm";
+import Icon from "../../../public/checkbox.svg?react";
 
 interface CheckboxFormProps {
   label: string;

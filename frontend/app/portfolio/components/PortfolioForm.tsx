@@ -1,14 +1,14 @@
 "use client";
 import React, { useState } from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
-import InputForm from "./InputForm";
-import FallingBricks from "./FillingBringsForm";
-import CheckboxForm from "./CheckboxForm";
+import InputForm from "../../../src/widgets/Input/InputForm";
+import FallingBricks from "../../../src/widgets/CardForm/FillingBringsForm";
+import CheckboxForm from "../../../src/widgets/Checkbox/CheckboxForm";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { schema } from "../helpers/validation";
 import { ButtonLink } from "@/shared/ui/ButtonLink";
 import { Text } from "@/shared/ui/Text";
-import Dropdown from "./DropdownForm";
+import Dropdown from "../../../src/widgets/DropDown/DropdownForm";
 import { data, dataPhone } from "../helpers/brings-data";
 
 export interface FormInputs {
