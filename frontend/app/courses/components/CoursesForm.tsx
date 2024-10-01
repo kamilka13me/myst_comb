@@ -8,26 +8,24 @@ import CheckboxForm from "../../../src/widgets/Checkbox/CheckboxForm";
 import Dropdown from "../../../src/widgets/DropDown/DropdownForm";
 import FallingBricks from "../../../src/widgets/CardForm/FillingBringsForm";
 import { data, dataPhone } from "../../portfolio/helpers/brings-data";
-import { supportData, supportDataPhone } from "../helpers/support-data";
 import { schema } from "../helpers/validation";
 
-export interface FormInputsSupport {
+export interface FormInputsCourses {
   firstName: string;
   lastName: string;
   organization: string;
   email: string;
   phone: string;
   profession: string;
-  expert: string;
   agreeToTelegram?: boolean;
   agreeToViber?: boolean;
   agreeToProcess?: boolean;
   selectedBrick: (string | undefined)[];
-  selectedSupport: (string | undefined)[];
   services: string;
+  description: string;
 }
 
-export default function SupportForm() {
+export default function CoursesForm() {
   const [clearBricks, setClearBricks] = useState(false);
   const [checkedSubmit, setCheckedSubmit] = useState(false);
 
@@ -38,7 +36,7 @@ export default function SupportForm() {
     reset,
     formState: { errors },
     getValues,
-  } = useForm<FormInputsSupport>({
+  } = useForm<FormInputsCourses>({
     resolver: yupResolver(schema),
     mode: "all",
   });
@@ -47,13 +45,9 @@ export default function SupportForm() {
     setValue("selectedBrick", selectedBricks);
   };
 
-  const handleSupportSelect = (selectedSupport: string[]) => {
-    setValue("selectedSupport", selectedSupport);
-  };
-
   const handleCheckboxChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const { name, checked } = event.target;
-    setValue(name as keyof FormInputsSupport, checked, {
+    setValue(name as keyof FormInputsCourses, checked, {
       shouldValidate: true,
     });
     if (name === "agreeToProcess") {
@@ -61,12 +55,11 @@ export default function SupportForm() {
     }
   };
 
-  const onSubmit: SubmitHandler<FormInputsSupport> = (data) => {
+  const onSubmit: SubmitHandler<FormInputsCourses> = (data) => {
     console.log(data);
 
     reset();
     setValue("selectedBrick", []);
-    setValue("selectedSupport", []);
     setClearBricks(true);
     setTimeout(() => setClearBricks(false), 100);
     setCheckedSubmit(false);
@@ -75,7 +68,7 @@ export default function SupportForm() {
   return (
     <>
       <p className="text-center text-base md:text-xl font-medium text-base-stroke-btn-act mb-3 md:mb-4 mt-[152px] font-ibm-plex-sans">
-        Бухгалтерська та юридична допомога:
+        Курси англійської:
       </p>
       <div className="flex justify-center text-center px-0 md:px-5 mb-10 md:mb-20">
         <Text
@@ -174,36 +167,29 @@ export default function SupportForm() {
               : errors.selectedBrick
           }
         />
-        <FallingBricks
-          onSelect={handleSupportSelect}
-          clearSelection={clearBricks}
-          data={supportData}
-          dataPhone={supportDataPhone}
-          title="Яка саме допомога вам потрібна:"
-          error={
-            Array.isArray(errors.selectedSupport)
-              ? errors.selectedSupport[0]
-              : errors.selectedSupport
-          }
-        />
-        <InputForm
-          label="Консультація від якого експерта ви хотіли б отримати?"
-          name="expert"
-          register={register}
-          error={errors.expert}
-        />
 
         <Dropdown
-          label={{ title: "Тип послуги:" }}
+          label={{
+            title:
+              "Який рівень володіння англійською у вас наразі? (можете пройти ",
+            titleExtra: "безкоштовний тест від наших партнерів)",
+          }}
           placeholder="Оберіть послугу"
           options={[
             {
-              title: "річна підписка ",
-              text: "(до 30 хв усних консультацій на місяць, 3 короткі консультації у письмовій формі по електронній пошті, пошук та надання нормативних документів з питань оподаткування та бухгалтерського обліку на запит (до 3-х в місяць), доступ до шаблонів документів);",
+              title: "A0",
             },
             {
-              title: "одноразова послуга",
-              text: "(письмова відповідь/ 60 хв усної консультації).",
+              title: "A1",
+            },
+            {
+              title: "A2",
+            },
+            {
+              title: "B1",
+            },
+            {
+              title: "B2",
             },
           ]}
           register={register}
@@ -211,6 +197,16 @@ export default function SupportForm() {
           name="services"
           resetDropdown={clearBricks}
           error={errors.services}
+        />
+
+        <InputForm
+          label="Коротко опишіть вашу мотивацію до вивчення англійської мови."
+          placeholder="Ваш опис"
+          elementType="textarea"
+          rows={5}
+          name="description"
+          register={register}
+          error={errors.description}
         />
 
         <CheckboxForm

@@ -5,9 +5,14 @@ import { UseFormRegister, UseFormSetValue, FieldError } from "react-hook-form";
 import Arrow from "../../../public/arrow.svg?react";
 import ArrowUp from "../../../public/Arrow-up.svg?react";
 
+interface Opinion {
+  title: string;
+  text?: string;
+}
+
 interface DropdownProps {
-  options: string[];
-  label: string;
+  options: Opinion[];
+  label: { title: string; titleExtra?: string };
   register: UseFormRegister<any>;
   setValue: UseFormSetValue<any>;
   error?: FieldError | undefined;
@@ -33,10 +38,11 @@ const Dropdown: React.FC<DropdownProps> = ({
     defaultValue || null
   );
 
-  const handleOptionClick = (option: string) => {
-    setSelectedOption(option);
+  const handleOptionClick = (option: Opinion) => {
+    const fullOption = `${option.title} ${option.text}`;
+    setSelectedOption(fullOption);
     setIsOpen(false);
-    setValue(name, option);
+    setValue(name, fullOption);
   };
 
   useEffect(() => {
@@ -55,12 +61,13 @@ const Dropdown: React.FC<DropdownProps> = ({
   return (
     <>
       <div
-        className={`relative inline-block w-full rounded-md border ${isOpen ? "mb-[300px] md:mb-[150px]" : "mb-0"} ${
-          error ? "border-red-500" : "border-[#616161]"
-        }`}
+        className={`relative inline-block font-ibm-plex-sans w-full rounded-md border ${
+          isOpen ? "mb-[350px] md:mb-[150px]" : "mb-[14px]"
+        } ${error ? "border-red-500" : "border-[#616161]"}`}
       >
-        <label className="absolute top-[-14px] left-3 bg-base-text_accent text-white px-1 z-10">
-          {label}
+        <label className="absolute top-[-8px] text-xs left-3 bg-base-text_accent text-white px-1 z-10">
+          {label.title}
+          <span className="text-[#E7FF00]">{label.titleExtra}</span>
         </label>
 
         <button
@@ -69,16 +76,24 @@ const Dropdown: React.FC<DropdownProps> = ({
           }`}
           onClick={() => setIsOpen(!isOpen)}
         >
-          <span>{selectedOption ? selectedOption : placeholder}</span>
+          <span className="text-[14px] md:text-[16px]">
+            {selectedOption ? selectedOption : placeholder}
+          </span>
           <span
-            className={`z-10 transform transition-transform ${isOpen ? "rotate-180" : ""}`}
+            className={`z-10 transform transition-transform ${
+              isOpen ? "rotate-180" : ""
+            }`}
           >
             <Arrow />
           </span>
         </button>
 
         <ul
-          className={`absolute top-[-5px] left-0 w-full pt-[52px] pb-5 px-[14px] mb-[100px] border border-gray-300 rounded-md shadow-lg bg-[#151515] transition-all duration-500 ease-in-out ${isOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0 overflow-hidden"}`}
+          className={`absolute top-[-5px] left-0 w-full pt-[52px] pb-5 px-[14px] mb-[100px] border border-gray-300 rounded-md shadow-lg bg-[#151515] transition-all duration-500 ease-in-out ${
+            isOpen
+              ? "max-h-[500px] opacity-100"
+              : "max-h-0 opacity-0 overflow-hidden"
+          }`}
         >
           {options.map((option, index) => (
             <li
@@ -89,7 +104,10 @@ const Dropdown: React.FC<DropdownProps> = ({
               <div className="flex justify-center items-center">
                 <ArrowUp />
               </div>
-              <p className="max-w-[740px] text-[#B6B6B6]">{option}</p>
+              <p className="max-w-[740px] text-[#B6B6B6]">
+                <span className="text-white">{option.title} </span>
+                {option.text}
+              </p>
             </li>
           ))}
         </ul>

@@ -1,7 +1,7 @@
 "use client";
 
 import { FieldError } from "react-hook-form";
-import useMediaQuery from "../hooks/useMediaQuery";
+import useMediaQuery from "../../../app/portfolio/hooks/useMediaQuery";
 import { useEffect, useState } from "react";
 
 interface BrickData {
@@ -15,7 +15,7 @@ interface FallingBricksProps {
   clearSelection: boolean;
   error?: FieldError | undefined;
   title?: string;
-  data: BrickData[]; 
+  data: BrickData[];
   dataPhone: BrickData[];
 }
 
