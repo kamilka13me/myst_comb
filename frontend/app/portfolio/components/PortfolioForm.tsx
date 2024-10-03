@@ -8,7 +8,6 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { schema } from "../helpers/validation";
 import { ButtonLink } from "@/shared/ui/ButtonLink";
 import { Text } from "@/shared/ui/Text";
-import Dropdown from "../../../src/widgets/DropDown/DropdownForm";
 import { data, dataPhone } from "../helpers/brings-data";
 
 export interface FormInputs {
@@ -69,9 +68,6 @@ export default function PortfolioForm() {
         Портфоліо-рев&apos;ю:
       </p>
       <div className="flex justify-center text-center px-0 md:px-5 mb-10 md:mb-20">
-        {/* <h1 className="text-[28px] md:text-3xl ">
-          Заповніть анкету нижче, щоб ми могли якнайшвидше звʼязатись із вами
-        </h1> */}
         <Text
           Tag="h1"
           textType="Desktop/H3"
