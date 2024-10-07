@@ -20,7 +20,14 @@ type IconProps = NonClickableIconProps | ClickableBaseProps;
 
 const Icon: FC<IconProps> = (props) => {
   // eslint-disable-next-line no-empty-pattern
-  const { Svg, width = 24, height = 24, clickable, className, ...otherProps } = props;
+  const {
+    Svg,
+    width = 24,
+    height = 24,
+    clickable,
+    className,
+    ...otherProps
+  } = props;
 
   const icon = (
     <Svg

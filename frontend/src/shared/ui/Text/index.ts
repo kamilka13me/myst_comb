@@ -1,4 +1,10 @@
-import Text, { HeaderTagType, TextAlign, TextColors, TextFonts, TextTypes } from "./Text";
+import Text, {
+  HeaderTagType,
+  TextAlign,
+  TextColors,
+  TextFonts,
+  TextTypes,
+} from './Text';
 
 export { Text };
 

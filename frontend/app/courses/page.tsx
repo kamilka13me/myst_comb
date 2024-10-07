@@ -1,10 +1,10 @@
-"use client";
-import React from "react";
-import CoursesForm from "./components/CoursesForm";
+'use client';
+import React from 'react';
+import CoursesForm from './components/CoursesForm';
 
 export default function Portfolio() {
   return (
-    <div className="max-w-[896px] mx-auto">
+    <div className="mx-auto max-w-[896px]">
       <CoursesForm />
     </div>
   );

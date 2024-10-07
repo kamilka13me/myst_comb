@@ -1,7 +1,7 @@
-import React, { useRef } from "react";
-import { FieldError, UseFormRegister } from "react-hook-form";
-import { FormInputs } from "../../../app/portfolio/components/PortfolioForm";
-import Icon from "../../../public/checkbox.svg?react";
+import React, { useRef } from 'react';
+import { FieldError, UseFormRegister } from 'react-hook-form';
+import { FormInputs } from '../../../app/portfolio/components/PortfolioForm';
+import Icon from '../../../public/checkbox.svg?react';
 
 interface CheckboxFormProps {
   label: string;
@@ -31,7 +31,7 @@ const CheckboxForm: React.FC<CheckboxFormProps> = ({
   };
 
   return (
-    <div className={`flex items-center mb-4 ${classMain}`}>
+    <div className={`mb-4 flex items-center ${classMain}`}>
       <input
         id={name}
         type="checkbox"
@@ -42,20 +42,20 @@ const CheckboxForm: React.FC<CheckboxFormProps> = ({
         ref={inputRef}
       />
       <div
-        className={`w-[18px] h-[18px] border-2 rounded-sm flex items-center justify-center cursor-pointer ${
-          checked ? "border-[#E7FF00]" : "border-[#B6B6B6]"
+        className={`flex h-[18px] w-[18px] cursor-pointer items-center justify-center rounded-sm border-2 ${
+          checked ? 'border-[#E7FF00]' : 'border-[#B6B6B6]'
         }`}
         onClick={handleClick}
       >
-        {checked && <Icon className="w-4 h-4" />}
+        {checked && <Icon className="h-4 w-4" />}
       </div>
       <label
         htmlFor={name}
-        className={`ml-2 text-sm text-base-stroke-btn-act ${error ? "text-red-500" : "text-base-stroke-btn-act"}`}
+        className={`ml-2 text-sm text-base-stroke-btn-act ${error ? 'text-red-500' : 'text-base-stroke-btn-act'}`}
       >
         {label}
       </label>
-      {error && <p className="text-red-500 text-xs mt-1">{error.message}</p>}
+      {error && <p className="mt-1 text-xs text-red-500">{error.message}</p>}
     </div>
   );
 };

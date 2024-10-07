@@ -1,5 +1,5 @@
-import { HStack } from "@/shared/ui/Stack";
-import { Text } from "@/shared/ui/Text";
+import { HStack } from '@/shared/ui/Stack';
+import { Text } from '@/shared/ui/Text';
 
 const WhoAreWe = () => {
   return (
