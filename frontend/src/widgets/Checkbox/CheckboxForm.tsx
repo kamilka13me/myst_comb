@@ -1,12 +1,12 @@
 import React, { useRef } from "react";
 import { FieldError, UseFormRegister } from "react-hook-form";
-import { FormInputs } from "./PortfolioForm";
-import Icon from "../../../public/checkbox.svg?react"
+import { FormInputs } from "../../../app/portfolio/components/PortfolioForm";
+import Icon from "../../../public/checkbox.svg?react";
 
 interface CheckboxFormProps {
   label: string;
   name: keyof FormInputs;
-  register: UseFormRegister<FormInputs>;
+  register: UseFormRegister<any>;
   error?: FieldError | undefined;
   checked: boolean;
   onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
@@ -47,13 +47,11 @@ const CheckboxForm: React.FC<CheckboxFormProps> = ({
         }`}
         onClick={handleClick}
       >
-        {checked && (
-          <Icon className="w-4 h-4" />
-        )}
+        {checked && <Icon className="w-4 h-4" />}
       </div>
       <label
         htmlFor={name}
-        className={`ml-2 text-sm text-gray-700 ${error ? "text-red-500" : ""}`}
+        className={`ml-2 text-sm text-base-stroke-btn-act ${error ? "text-red-500" : "text-base-stroke-btn-act"}`}
       >
         {label}
       </label>
