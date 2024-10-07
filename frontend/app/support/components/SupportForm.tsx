@@ -10,6 +10,7 @@ import FallingBricks from '../../../src/widgets/CardForm/FillingBringsForm';
 import { data, dataPhone } from '../../portfolio/helpers/brings-data';
 import { supportData, supportDataPhone } from '../helpers/support-data';
 import { schema } from '../helpers/validation';
+import PhoneInput from '@/widgets/InputPhone/InputPhone';
 
 export interface FormInputsSupport {
   firstName: string;
@@ -126,11 +127,9 @@ export default function SupportForm() {
             error={errors.email}
           />
           <span className="w-full">
-            <InputForm
+         <PhoneInput
               label="Телефон"
               name="phone"
-              placeholder="+380__-___-__-__"
-              type="tel"
               register={register}
               error={errors.phone}
             />

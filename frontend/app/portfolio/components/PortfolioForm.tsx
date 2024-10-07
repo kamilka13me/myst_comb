@@ -10,6 +10,7 @@ import { ButtonLink } from '@/shared/ui/ButtonLink';
 import { Text } from '@/shared/ui/Text';
 // import Dropdown from '../../../src/widgets/DropDown/DropdownForm';
 import { data, dataPhone } from '../helpers/brings-data';
+import PhoneInput from '@/widgets/InputPhone/InputPhone';
 
 export interface FormInputs {
   firstName: string;
@@ -120,11 +121,9 @@ export default function PortfolioForm() {
             error={errors.email}
           />
           <span className="w-full">
-            <InputForm
+            <PhoneInput
               label="Телефон"
               name="phone"
-              placeholder="+380__-___-__-__"
-              type="tel"
               register={register}
               error={errors.phone}
             />
