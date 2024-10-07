@@ -6,10 +6,9 @@ import { Text } from "@/shared/ui/Text";
 import InputForm from "../../../src/widgets/Input/InputForm";
 import CheckboxForm from "../../../src/widgets/Checkbox/CheckboxForm";
 import Dropdown from "../../../src/widgets/DropDown/DropdownForm";
-import FallingBricks from "../../../src/widgets/CardForm/FillingBringsForm";
-import { data, dataPhone } from "../../portfolio/helpers/brings-data";
 import { schema } from "../helpers/validation";
 import FileUpload from "@/widgets/FormFile/FormFile";
+import PhoneInput from "@/widgets/InputPhone/InputPhone";
 
 export interface FormInputsCooperation {
   firstName: string;
@@ -18,13 +17,12 @@ export interface FormInputsCooperation {
   email: string;
   phone: string;
   profession: string;
-  expert: string;
   agreeToTelegram?: boolean;
   agreeToViber?: boolean;
   agreeToProcess?: boolean;
-  selectedBrick: (string | undefined)[];
-  selectedSupport: (string | undefined)[];
-  services: string;
+  project: string;
+  offer: string;
+  documents?: File[];
 }
 
 export default function CooperationForm() {
@@ -43,14 +41,6 @@ export default function CooperationForm() {
     mode: "all",
   });
 
-  const handleBrickSelect = (selectedBricks: string[]) => {
-    setValue("selectedBrick", selectedBricks);
-  };
-
-  const handleSupportSelect = (selectedSupport: string[]) => {
-    setValue("selectedSupport", selectedSupport);
-  };
-
   const handleCheckboxChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const { name, checked } = event.target;
     setValue(name as keyof FormInputsCooperation, checked, {
@@ -61,12 +51,9 @@ export default function CooperationForm() {
     }
   };
 
-  const onSubmit: SubmitHandler<FormInputsCooperation> = (data) => {
+  const onSubmit: SubmitHandler<FormInputsCooperation> = async (data) => {
     console.log(data);
-
     reset();
-    setValue("selectedBrick", []);
-    setValue("selectedSupport", []);
     setClearBricks(true);
     setTimeout(() => setClearBricks(false), 100);
     setCheckedSubmit(false);
@@ -75,18 +62,27 @@ export default function CooperationForm() {
   return (
     <>
       <p className="text-center text-base md:text-xl font-medium text-base-stroke-btn-act mb-3 md:mb-4 mt-[152px] font-ibm-plex-sans">
-        Бухгалтерська та юридична допомога:
+        Долучитися як професіонал
       </p>
-      <div className="flex justify-center text-center px-0 md:px-5 mb-10 md:mb-20">
+      <div className="flex justify-center text-center px-0 md:px-5 mb-6 md:mb-[14px]">
         <Text
           Tag="h1"
           textType="Desktop/H3"
           color="base/BG_block"
-          text="Заповніть анкету нижче, щоб ми могли якнайшвидше звʼязатись із вами"
+          text="Тут ви можете залишити свої пропозиції щодо співпраці."
           align="center"
           className="text-[28px] md:text-3xl"
         />
       </div>
+      <Text
+        Tag="p"
+        textType="Desktop/Body"
+        color="base/BG_block"
+        text="Ми раді розширювати нашу команду для втілення амбітної мети спільними зусиллями."
+        align="center"
+        className="!text-[18px] md:text-base mb-20 max-w-[666px] m-auto"
+      />
+
       <form
         onSubmit={handleSubmit(onSubmit)}
         className="mb-[180px] font-ibm-plex-sans"
@@ -126,11 +122,9 @@ export default function CooperationForm() {
             error={errors.email}
           />
           <span className="w-full">
-            <InputForm
+            <PhoneInput
               label="Телефон"
               name="phone"
-              placeholder="+380__-___-__-__"
-              type="tel"
               register={register}
               error={errors.phone}
             />
@@ -162,51 +156,49 @@ export default function CooperationForm() {
           error={errors.profession}
         />
 
-        <FallingBricks
-          onSelect={handleBrickSelect}
-          clearSelection={clearBricks}
-          data={data}
-          dataPhone={dataPhone}
-          title="В яких медіа працюєте:"
-          error={
-            Array.isArray(errors.selectedBrick)
-              ? errors.selectedBrick[0]
-              : errors.selectedBrick
-          }
-        />
-        <InputForm
-          label="Консультація від якого експерта ви хотіли б отримати?"
-          name="expert"
-          register={register}
-          error={errors.expert}
-        />
-
         <Dropdown
-          label={{ title: "Тип послуги:" }}
-          placeholder="Оберіть послугу"
+          label={{ title: "До якого проєкту хочете долучитись?" }}
+          placeholder="Оберіть проєкт"
           options={[
             {
-              title: "річна підписка ",
-              text: "(до 30 хв усних консультацій на місяць, 3 короткі консультації у письмовій формі по електронній пошті, пошук та надання нормативних документів з питань оподаткування та бухгалтерського обліку на запит (до 3-х в місяць), доступ до шаблонів документів);",
+              title: "",
+              text: "Унікальні особини;",
             },
             {
-              title: "одноразова послуга",
-              text: "(письмова відповідь/ 60 хв усної консультації).",
+              title: "",
+              text: "Cultbit: Інтелектуальна пригода у форматі AR;",
+            },
+            {
+              title: "",
+              text: "Жито: проєкт соціальної адаптації внутрішньо переміщеним особам засобами мистецтва.",
             },
           ]}
           register={register}
           setValue={setValue}
-          name="services"
+          name="project"
           resetDropdown={clearBricks}
-          error={errors.services}
+          error={errors.project}
+        />
+
+        <h2 className="mb-[14px] text-white text-[24px]">
+          Пропозиція щодо співпраці:
+        </h2>
+
+        <InputForm
+          label="Ваш пропозиція"
+          placeholder="Чим могли б допомогти?"
+          elementType="textarea"
+          rows={5}
+          name="offer"
+          register={register}
+          error={errors.offer}
         />
 
         <FileUpload
-          label="Завантажити документи"
           name="documents"
           register={register}
-          setValue={setValue} // Передаємо setValue
-          error={errors.documents}
+          setValue={setValue}
+          clearFiles={clearBricks}
         />
 
         <CheckboxForm

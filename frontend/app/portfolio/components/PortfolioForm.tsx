@@ -9,6 +9,7 @@ import { schema } from "../helpers/validation";
 import { ButtonLink } from "@/shared/ui/ButtonLink";
 import { Text } from "@/shared/ui/Text";
 import { data, dataPhone } from "../helpers/brings-data";
+import PhoneInput from "@/widgets/InputPhone/InputPhone";
 
 export interface FormInputs {
   firstName: string;
@@ -68,9 +69,6 @@ export default function PortfolioForm() {
         Портфоліо-рев&apos;ю:
       </p>
       <div className="flex justify-center text-center px-0 md:px-5 mb-10 md:mb-20">
-        {/* <h1 className="text-[28px] md:text-3xl ">
-          Заповніть анкету нижче, щоб ми могли якнайшвидше звʼязатись із вами
-        </h1> */}
         <Text
           Tag="h1"
           textType="Desktop/H3"
@@ -119,11 +117,9 @@ export default function PortfolioForm() {
             error={errors.email}
           />
           <span className="w-full">
-            <InputForm
+            <PhoneInput
               label="Телефон"
               name="phone"
-              placeholder="+380__-___-__-__"
-              type="tel"
               register={register}
               error={errors.phone}
             />

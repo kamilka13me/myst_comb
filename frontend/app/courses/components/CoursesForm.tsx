@@ -9,6 +9,7 @@ import Dropdown from "../../../src/widgets/DropDown/DropdownForm";
 import FallingBricks from "../../../src/widgets/CardForm/FillingBringsForm";
 import { data, dataPhone } from "../../portfolio/helpers/brings-data";
 import { schema } from "../helpers/validation";
+import PhoneInput from "@/widgets/InputPhone/InputPhone";
 
 export interface FormInputsCourses {
   firstName: string;
@@ -119,11 +120,9 @@ export default function CoursesForm() {
             error={errors.email}
           />
           <span className="w-full">
-            <InputForm
+            <PhoneInput
               label="Телефон"
               name="phone"
-              placeholder="+380__-___-__-__"
-              type="tel"
               register={register}
               error={errors.phone}
             />
@@ -178,18 +177,23 @@ export default function CoursesForm() {
           options={[
             {
               title: "A0",
+              text: "",
             },
             {
               title: "A1",
+              text: "",
             },
             {
               title: "A2",
+              text: "",
             },
             {
               title: "B1",
+              text: "",
             },
             {
               title: "B2",
+              text: "",
             },
           ]}
           register={register}

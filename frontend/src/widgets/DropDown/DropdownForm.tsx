@@ -6,7 +6,7 @@ import Arrow from "../../../public/arrow.svg?react";
 import ArrowUp from "../../../public/Arrow-up.svg?react";
 
 interface Opinion {
-  title: string;
+  title?: string;
   text?: string;
 }
 

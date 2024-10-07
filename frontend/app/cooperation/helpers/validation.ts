@@ -48,27 +48,10 @@ export const schema = yup.object({
       "Професія має містити лише літери та цифри"
     )
     .max(60, "Професія не може бути більше 60 символів"),
-  expert: yup
-    .string()
-    .required("Консультація є обов'язковою")
-    .matches(
-      ukrEngLettersNumbersSymbols,
-      "Консультація має містити лише літери, цифри та символи"
-    )
-    .max(100, "Консультація не може бути більше 100 символів"),
   agreeToTelegram: yup.boolean().optional(),
   agreeToViber: yup.boolean().optional(),
   agreeToProcess: yup.boolean().optional(),
-  selectedBrick: yup
-    .array()
-    .of(yup.string())
-    .required("Оберіть щонайменше один елемент")
-    .min(1, "Оберіть щонайменше один елемент")
-    .max(3, "Можна обрати максимум 3 елементи"),
-  selectedSupport: yup
-    .array()
-    .of(yup.string())
-    .required("Оберіть щонайменше один елемент")
-    .min(1, "Оберіть щонайменше один елемент"),
-  services: yup.string().required("Виберіть послугу"),
+  project: yup.string().required("Виберіть проект"),
+  offer: yup.string().required("Виберіть пропозицію"),
+  documents: yup.array()
 });
