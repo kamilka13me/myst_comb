@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { useForm, SubmitHandler } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
@@ -127,9 +126,11 @@ export default function SupportForm() {
             error={errors.email}
           />
           <span className="w-full">
-            <PhoneInput
+            <InputForm
               label="Телефон"
               name="phone"
+              placeholder="+380__-___-__-__"
+              type="tel"
               register={register}
               error={errors.phone}
             />

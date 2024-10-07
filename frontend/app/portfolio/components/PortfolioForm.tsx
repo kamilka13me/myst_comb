@@ -120,9 +120,11 @@ export default function PortfolioForm() {
             error={errors.email}
           />
           <span className="w-full">
-            <PhoneInput
+            <InputForm
               label="Телефон"
               name="phone"
+              placeholder="+380__-___-__-__"
+              type="tel"
               register={register}
               error={errors.phone}
             />

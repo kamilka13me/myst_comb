@@ -119,9 +119,11 @@ export default function CoursesForm() {
             error={errors.email}
           />
           <span className="w-full">
-            <PhoneInput
+            <InputForm
               label="Телефон"
               name="phone"
+              placeholder="+380__-___-__-__"
+              type="tel"
               register={register}
               error={errors.phone}
             />
@@ -174,6 +176,7 @@ export default function CoursesForm() {
           }}
           placeholder="Оберіть послугу"
           options={[
+            {
               title: 'A0',
             },
             {
