@@ -1,12 +1,11 @@
-import { ButtonLink } from "@/shared/ui/ButtonLink";
-import { Icon } from "@/shared/ui/Icon";
-import { Text } from "@/shared/ui/Text";
-import Arrow from "@/shared/assets/icons/ArrowInCircleBlueLeft.svg?react";
+import { Icon } from '@/shared/ui/Icon';
+import { Text } from '@/shared/ui/Text';
+import Arrow from '@/shared/assets/icons/ArrowInCircleBlueLeft.svg?react';
 
 const ConnectToday = () => {
   return (
-    <div className="flex justify-center  border-t-2 border-t-[#DCDCDC] mx-[156px] pb-[180px] max-w-[1128px] ">
-      <div className="flex justify-between w-full  mt-10 gap-[60px] ">
+    <div className="mx-[156px] flex max-w-[1128px] justify-center border-t-2 border-t-[#DCDCDC] pb-[180px]">
+      <div className="mt-10 flex w-full justify-between gap-[60px]">
         <div className="w-full">
           <Text
             Tag="h3"
@@ -25,11 +24,11 @@ const ConnectToday = () => {
             color="base/text_dark"
           />
         </div>
-        <div className="w-full flex items-center">
-          <div className="bg-[#ededed] px-6 py-2 rounded-[30px] flex justify-between items-center w-full min-h-[55px]">
+        <div className="flex w-full items-center">
+          <div className="flex min-h-[55px] w-full items-center justify-between rounded-[30px] bg-[#ededed] px-6 py-2">
             <input
               placeholder="Ваш email"
-              className="bg-transparent placeholder:base/stroke_btn_act placeholder:font-normal"
+              className="placeholder:base/stroke_btn_act bg-transparent placeholder:font-normal"
             />
             <Icon Svg={Arrow} width={28} height={28} />
           </div>

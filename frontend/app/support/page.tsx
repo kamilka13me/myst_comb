@@ -1,11 +1,11 @@
-"use client";
-import React from "react";
-import SupportForm from "./components/SupportForm";
+'use client';
+import React from 'react';
+import SupportForm from './components/SupportForm';
 
 export default function Portfolio() {
   return (
-    <div className="max-w-[896px] mx-auto">
-    <SupportForm />
+    <div className="mx-auto max-w-[896px]">
+      <SupportForm />
     </div>
   );
 }

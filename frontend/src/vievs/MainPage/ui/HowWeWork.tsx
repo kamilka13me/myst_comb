@@ -1,11 +1,11 @@
-import React from "react";
+import React from 'react';
 
-import { ButtonLink } from "@/shared/ui/ButtonLink";
-import { Text } from "@/shared/ui/Text";
+import { ButtonLink } from '@/shared/ui/ButtonLink';
+import { Text } from '@/shared/ui/Text';
 
 const HowWeWork = () => {
   return (
-    <div className="mt-[244px] flex justify-center items-center flex-col  mx-auto max-w-[822px] pb-[180px]">
+    <div className="mx-auto mt-[244px] flex max-w-[822px] flex-col items-center justify-center pb-[180px]">
       <Text
         Tag="h2"
         text="Як ми працюємо"
@@ -20,7 +20,7 @@ const HowWeWork = () => {
         font="serif"
         align="center"
         color="base/text_accent"
-        className="mt-3 "
+        className="mt-3"
       />
       <ButtonLink
         variant="arrowTextBlue"
