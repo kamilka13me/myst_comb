@@ -105,7 +105,12 @@ const OurProjects = () => {
   return (
     <HStack className="w-full">
       <VStack className="ml-[156px]">
-        <Text Tag="h1" text="Наші проекти" color="base/BG_block" textType="Desktop/H2" />
+        <Text 
+          Tag="h2" 
+          text="Наші проекти" 
+          color="base/BG_block" 
+          textType="Desktop/H2" 
+          className="text-3xl md:text-4xl"/>
       </VStack>
       <HStack className="px-10 w-full gap-10 mt-10">
         {/* box */}
