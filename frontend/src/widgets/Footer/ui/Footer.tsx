@@ -21,12 +21,10 @@ const Footer = () => {
   return (
     <footer className="flex bg-[#151515] rounded-t-[40px] w-full px-10 pt-20 pb-10 h-[431px]">
       <div className="flex-1 flex flex-col justify-between">
-        <div className="flex-1 gap-10 flex justify-between">
-          <div className=" w-full  flex flex-col">
+        <div className="flex flex-wrap justify-around gap-5">
+          {/* <block1> */}
+          <div className=" flex flex-col ">
             <Icon Svg={LogoWhite} width={128} height={33} />
-            {/* <div className="text-sm text-base/text font-medium mt-10">
-              +380-50-111-22-33
-            </div> */}
             <Text
               Tag="p"
               textType="Desktop/Subtitle"
@@ -34,9 +32,7 @@ const Footer = () => {
               text="+380-50-111-22-33"
               className="mt-10"
             />
-            {/* <div className="text-xs text-base/text font-regular mt-[14px]">
-              mystetskykombinat@gmail.com
-            </div> */}
+
             <Text
               Tag="p"
               textType="Desktop/Subtext"
@@ -45,8 +41,8 @@ const Footer = () => {
               className="mt-[14px]"
             />
           </div>
-          <div className="w-full  flex flex-col">
-            {/* <p className="text-base/text font-semibold text-lg">Про нас</p> */}
+          {/* <block2 */}
+          <div className="  flex flex-col">
             <Text
               Tag="h6"
               textType="Desktop/Body"
@@ -67,15 +63,16 @@ const Footer = () => {
                     color="base/text_light"
                     text={link.title}
                   />
-                  {/* {link.title} */}
                 </Link>
               ))}
             </div>
           </div>
-          <div className="w-full  flex">
+          {/* <block 3 */}
+          <div className="flex">
             <DonutChart />
           </div>
-          <div className="w-full  flex flex-col">
+          {/* <block 4 */}
+          <div className="  flex flex-col">
             <Text
               Tag="h6"
               textType="Desktop/Body"
@@ -90,14 +87,13 @@ const Footer = () => {
             </div>
           </div>
         </div>
+
+        {/* bottom */}
         <div className="flex justify-between">
           <div className="text-[#606060] text-sm font-medium ">
             2024, БФ “Мистецький комбінат” <br />
             Київ, Україна
           </div>
-          {/* <div className="text-right text-[#606060] text-sm font-medium ">
-            © Всі права захищені
-          </div> */}
           <Text
             Tag="h6"
             textType="Desktop/Subtitle"

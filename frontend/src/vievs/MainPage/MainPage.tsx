@@ -15,7 +15,7 @@ import Hero from "./ui/Hero";
 export const MainPage: React.FC = () => {
   return (
     <div className="bg-white mt-10 flex flex-col items-center w-full">
-      <div className="w-full h-full bg-base-text_accent rounded-b-[60px] flex flex-col items-center">
+      <div className="w-full h-full bg-base-text_accent rounded-b-[60px] flex flex-col items-center pb-[160px]">
         <div className="max-w-[1440px]">
           <Hero />
           <Donors />
@@ -23,7 +23,7 @@ export const MainPage: React.FC = () => {
           <OurServices />
           <FallingBricks />
           <OurProjects />
-          <News />
+          {/* <News /> */}
         </div>
       </div>
       <div className="max-w-[1440px]">
