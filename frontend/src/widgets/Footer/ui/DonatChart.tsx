@@ -4,10 +4,10 @@
 import Diagram from '@/shared/assets/icons/diagram.svg?react';
 import { ButtonLink } from '@/shared/ui/ButtonLink';
 import { Icon } from '@/shared/ui/Icon';
-import useMediaQuery from '../../../../app/portfolio/hooks/useMediaQuery';
+// import useMediaQuery from '../../../../app/portfolio/hooks/useMediaQuery';
 
 const DonutChart = () => {
-  const isPhone = useMediaQuery('max-width:768px');
+  // const isPhone = useMediaQuery('max-width:768px');
   return (
     <div className="flex gap-6">
       <div className="flex flex-row gap-3">

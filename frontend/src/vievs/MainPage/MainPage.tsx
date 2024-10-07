@@ -1,11 +1,10 @@
-import { Text } from '@/shared/ui/Text';
 import React from 'react';
 import ConnectToday from './ui/ConnectToday';
 import HowWeWork from './ui/HowWeWork';
 import OurValues from './ui/OurValues';
 import Strategi from './ui/Strategi';
 import Donors from './ui/Donors';
-import News from './ui/News';
+// import News from './ui/News';
 import OurProjects from './ui/OurProjects';
 import FallingBricks from './ui/FallingBricks';
 import OurServices from './ui/OurServices';

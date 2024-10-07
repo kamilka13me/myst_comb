@@ -25,10 +25,12 @@ module.exports = {
   ],
   plugins: ['prettier', '@typescript-eslint', 'react', 'react-hooks'],
   rules: {
+    // other
+      "no-warning-comments": ["error", { "terms": ["todo", "fixme"], "location": "anywhere" }],
     // JavaScript rules
     'prefer-const': 'warn',
     'no-var': 'warn',
-    'no-unused-vars': 'warn',
+    // 'no-unused-vars': 'warn',
     'object-shorthand': 'warn',
     'quote-props': ['warn', 'as-needed'],
     // TypeScript rules

@@ -1,4 +1,3 @@
-import { ButtonLink } from '@/shared/ui/ButtonLink';
 import { Icon } from '@/shared/ui/Icon';
 import { Text } from '@/shared/ui/Text';
 import Arrow from '@/shared/assets/icons/ArrowInCircleBlueLeft.svg?react';

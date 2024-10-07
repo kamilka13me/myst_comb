@@ -1,5 +1,3 @@
-import { FC } from 'react';
-
 export type TextAlign = 'right' | 'left' | 'center';
 export type HeaderTagType =
   | 'h1'

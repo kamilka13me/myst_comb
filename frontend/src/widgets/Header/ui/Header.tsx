@@ -1,5 +1,5 @@
 'use client';
-import LogoDark from '@/shared/assets/icons/LogoDark.svg?react';
+// import LogoDark from '@/shared/assets/icons/LogoDark.svg?react';
 import LogoWhite from '@/shared/assets/icons/LogoWhite.svg?react';
 import ButtonMenu from '@/shared/assets/icons/buttonMenu.svg?react';
 import { ButtonLink } from '@/shared/ui/ButtonLink';

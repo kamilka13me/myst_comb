@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+
 import React, { useRef } from 'react';
 import { FieldError, UseFormRegister } from 'react-hook-form';
 import { FormInputs } from '../../../app/portfolio/components/PortfolioForm';

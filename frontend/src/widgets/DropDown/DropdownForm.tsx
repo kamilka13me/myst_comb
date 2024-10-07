@@ -1,4 +1,5 @@
 'use client';
+/* eslint-disable @typescript-eslint/no-explicit-any */
 
 import React, { useEffect, useState } from 'react';
 import { UseFormRegister, UseFormSetValue, FieldError } from 'react-hook-form';
@@ -26,7 +27,7 @@ const Dropdown: React.FC<DropdownProps> = ({
   options,
   label,
   placeholder,
-  register,
+  // register,
   setValue,
   name,
   defaultValue,

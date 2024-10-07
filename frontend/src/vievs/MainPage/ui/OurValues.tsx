@@ -1,5 +1,5 @@
 import { Text } from '@/shared/ui/Text';
-import { FC, SVGProps, VFC } from 'react';
+import { SVGProps, VFC } from 'react';
 import Coop from '@/shared/assets/icons/coop.svg?react';
 import MIcon from '@/shared/assets/icons/mIcon.svg?react';
 import KIcon from '@/shared/assets/icons/kIcon.svg?react';

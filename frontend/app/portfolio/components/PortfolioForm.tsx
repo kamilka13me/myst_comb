@@ -8,7 +8,7 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import { schema } from '../helpers/validation';
 import { ButtonLink } from '@/shared/ui/ButtonLink';
 import { Text } from '@/shared/ui/Text';
-import Dropdown from '../../../src/widgets/DropDown/DropdownForm';
+// import Dropdown from '../../../src/widgets/DropDown/DropdownForm';
 import { data, dataPhone } from '../helpers/brings-data';
 
 export interface FormInputs {

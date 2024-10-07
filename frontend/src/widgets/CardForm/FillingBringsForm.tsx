@@ -1,5 +1,4 @@
 'use client';
-
 import { FieldError } from 'react-hook-form';
 import useMediaQuery from '../../../app/portfolio/hooks/useMediaQuery';
 import { useEffect, useState } from 'react';
@@ -38,6 +37,7 @@ const FallingBricks: React.FC<FallingBricksProps> = ({
   }, [clearSelection, onSelect]);
 
   // Функція для обробки вибору/зняття вибору цеглинки
+  /* eslint-disable @typescript-eslint/no-unused-vars */
   const toggleBrickSelection = (index: number, text: string) => {
     setSelectedBricks((prevSelected) => {
       const updatedSelection = new Set(prevSelected);
