@@ -1,4 +1,4 @@
-"use-client";
+"use client";
 // DonutChart.js
 
 import Diagram from "@/shared/assets/icons/diagram.svg?react";
