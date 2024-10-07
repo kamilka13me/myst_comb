@@ -1,13 +1,13 @@
-import Rye from "@/shared/assets/img/rye.png";
-import Cultbit from "@/shared/assets/img/Cultbit.png";
-import UIP from "@/shared/assets/img/Unique_individuals_photo.png";
-import Arrow from "@/shared/assets/icons/Arrow.svg?react";
-import { Image } from "@/shared/ui/Image";
-import { HStack, VStack } from "@/shared/ui/Stack";
-import { Text } from "@/shared/ui/Text";
-import { Icon } from "@/shared/ui/Icon";
-import { ButtonLink } from "@/shared/ui/ButtonLink";
-import { StaticImageData } from "next/image";
+import Rye from '@/shared/assets/img/rye.png';
+import Cultbit from '@/shared/assets/img/Cultbit.png';
+import UIP from '@/shared/assets/img/Unique_individuals_photo.png';
+import Arrow from '@/shared/assets/icons/Arrow.svg?react';
+import { Image } from '@/shared/ui/Image';
+import { HStack, VStack } from '@/shared/ui/Stack';
+import { Text } from '@/shared/ui/Text';
+import { Icon } from '@/shared/ui/Icon';
+import { ButtonLink } from '@/shared/ui/ButtonLink';
+import { StaticImageData } from 'next/image';
 
 interface BoxProps {
   src: string | StaticImageData;
@@ -16,13 +16,13 @@ interface BoxProps {
 }
 const Box = ({ src, title, subTitle }: BoxProps) => {
   return (
-    <VStack className="w-full h-[477px] bg-white rounded-[30px]">
-      <div className="grid grid-cols-[auto_1fr] grid-flow-col gap-[30px]  w-full">
+    <VStack className="h-[477px] w-full rounded-[30px] bg-white">
+      <div className="grid w-full grid-flow-col grid-cols-[auto_1fr] gap-[30px]">
         <div>
           <Image src={src} alt="rye " />
         </div>
-        <div className="grid grid-rows-2 h-full pt-10 ">
-          <div className="grid grid-cols-[50%_1fr] gap-[30px] mr-10 ">
+        <div className="grid h-full grid-rows-2 pt-10">
+          <div className="mr-10 grid grid-cols-[50%_1fr] gap-[30px]">
             <Text
               Tag="h1"
               text={title}
@@ -30,7 +30,7 @@ const Box = ({ src, title, subTitle }: BoxProps) => {
               className="leading-10"
               color="base/text_accent"
             />
-            <div className="gap-10 flex flex-col">
+            <div className="flex flex-col gap-10">
               <Text
                 className="leading-5"
                 Tag="h6"
@@ -44,21 +44,21 @@ const Box = ({ src, title, subTitle }: BoxProps) => {
                   text="Деталі проєкту"
                   textType="Desktop/Body"
                   color="base/text_dark"
-                  className="font-[600] leading-5 "
+                  className="font-[600] leading-5"
                 />
                 <Icon Svg={Arrow} width={12} height={12} />
               </div>
             </div>
           </div>
-          <div className="grid grid-cols-[50%_1fr] pb-10 gap-[30px]  mr-10 ">
+          <div className="mr-10 grid grid-cols-[50%_1fr] gap-[30px] pb-10">
             <div className="flex flex-col justify-end">
-              <div className="w-full bg-gray-300 rounded-full h-[10px] overflow-hidden">
+              <div className="h-[10px] w-full overflow-hidden rounded-full bg-gray-300">
                 <div
-                  className="bg-[#FF4E00] h-full rounded-full"
-                  style={{ width: "30%" }}
+                  className="h-full rounded-full bg-[#FF4E00]"
+                  style={{ width: '30%' }}
                 />
               </div>
-              <div className="flex justify-between mt-2">
+              <div className="mt-2 flex justify-between">
                 <div className="flex flex-col">
                   <Text
                     Tag="h6"
@@ -91,8 +91,12 @@ const Box = ({ src, title, subTitle }: BoxProps) => {
                 </div>
               </div>
             </div>
-            <div className="flex flex-col justify-end items-end">
-              <ButtonLink to="/404" variant="arrowTextBlue" text="Підтримати проєкт" />
+            <div className="flex flex-col items-end justify-end">
+              <ButtonLink
+                to="/404"
+                variant="arrowTextBlue"
+                text="Підтримати проєкт"
+              />
             </div>
           </div>
         </div>
@@ -105,9 +109,14 @@ const OurProjects = () => {
   return (
     <HStack className="w-full">
       <VStack className="ml-[156px]">
-        <Text Tag="h1" text="Наші проекти" color="base/BG_block" textType="Desktop/H2" />
+        <Text
+          Tag="h1"
+          text="Наші проекти"
+          color="base/BG_block"
+          textType="Desktop/H2"
+        />
       </VStack>
-      <HStack className="px-10 w-full gap-10 mt-10">
+      <HStack className="mt-10 w-full gap-10 px-10">
         {/* box */}
         <Box
           src={UIP}

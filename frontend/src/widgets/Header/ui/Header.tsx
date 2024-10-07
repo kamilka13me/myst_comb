@@ -1,27 +1,32 @@
-"use client";
-import LogoDark from "@/shared/assets/icons/LogoDark.svg?react";
-import LogoWhite from "@/shared/assets/icons/LogoWhite.svg?react";
-import { ButtonLink } from "@/shared/ui/ButtonLink";
-import { Icon } from "@/shared/ui/Icon";
-import { LanguageSwitcher } from "@/shared/ui/LanguageSwitcher";
-import { VStack } from "@/shared/ui/Stack";
-import { Text } from "@/shared/ui/Text";
-import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
+'use client';
+// import LogoDark from '@/shared/assets/icons/LogoDark.svg?react';
+import LogoWhite from '@/shared/assets/icons/LogoWhite.svg?react';
+import ButtonMenu from '@/shared/assets/icons/buttonMenu.svg?react';
+import { ButtonLink } from '@/shared/ui/ButtonLink';
+import { Icon } from '@/shared/ui/Icon';
+import { LanguageSwitcher } from '@/shared/ui/LanguageSwitcher';
+import { VStack } from '@/shared/ui/Stack';
+import { Text } from '@/shared/ui/Text';
+import { usePathname } from 'next/navigation';
 
 const Header = () => {
   const pathname = usePathname();
 
+  if (pathname === '/') {
+    return (
+      <div>
+        <div>header</div>
+      </div>
+    );
+  }
   return (
-    <header
-      className={`absolute ${pathname === "/" ? "top-[100px]" : "top-6"} z-30 w-full flex justify-center`}
-    >
-      <div className="max-w-[1340px] w-full">
+    <header className={`z-30 mt-6 flex w-full justify-center px-5 lg:px-20`}>
+      <div className="w-full max-w-[1340px]">
         <VStack justify="between" align="center">
-          <Icon Svg={pathname === "/" ? LogoDark : LogoWhite} height={42} width={162} />
-          <nav className="flex gap-9 items-center">
+          <Icon Svg={LogoWhite} height={42} width={162} />
+          <nav className="hidden items-center gap-9 lg:flex">
             {/* Language switcher */}
-            <LanguageSwitcher languages={["УКР", "ENG"]} />
+            <LanguageSwitcher languages={['УКР', 'ENG']} />
             <Text
               Tag="h5"
               text="Проєкти"
@@ -52,7 +57,15 @@ const Header = () => {
             />
           </nav>
 
-          <ButtonLink variant="arrowTextBlue" text="Підтримати фонд" to="/404" />
+          <ButtonLink
+            variant="arrowTextBlue"
+            text="Підтримати фонд"
+            to="/404"
+            className="hidden lg:flex"
+          />
+          <button>
+            <Icon Svg={ButtonMenu} height={48} width={48} />
+          </button>
         </VStack>
       </div>
     </header>

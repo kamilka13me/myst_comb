@@ -1,1 +1,1 @@
-export { MainPage as default } from "@/vievs/MainPage";
+export { MainPage as default } from '@/vievs/MainPage';

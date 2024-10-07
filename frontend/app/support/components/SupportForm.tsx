@@ -1,16 +1,16 @@
-import React, { useState } from "react";
-import { useForm, SubmitHandler } from "react-hook-form";
-import { yupResolver } from "@hookform/resolvers/yup";
-import { ButtonLink } from "@/shared/ui/ButtonLink";
-import { Text } from "@/shared/ui/Text";
-import InputForm from "../../../src/widgets/Input/InputForm";
-import CheckboxForm from "../../../src/widgets/Checkbox/CheckboxForm";
-import Dropdown from "../../../src/widgets/DropDown/DropdownForm";
-import FallingBricks from "../../../src/widgets/CardForm/FillingBringsForm";
-import { data, dataPhone } from "../../portfolio/helpers/brings-data";
-import { supportData, supportDataPhone } from "../helpers/support-data";
-import { schema } from "../helpers/validation";
-import PhoneInput from "@/widgets/InputPhone/InputPhone";
+
+import React, { useState } from 'react';
+import { useForm, SubmitHandler } from 'react-hook-form';
+import { yupResolver } from '@hookform/resolvers/yup';
+import { ButtonLink } from '@/shared/ui/ButtonLink';
+import { Text } from '@/shared/ui/Text';
+import InputForm from '../../../src/widgets/Input/InputForm';
+import CheckboxForm from '../../../src/widgets/Checkbox/CheckboxForm';
+import Dropdown from '../../../src/widgets/DropDown/DropdownForm';
+import FallingBricks from '../../../src/widgets/CardForm/FillingBringsForm';
+import { data, dataPhone } from '../../portfolio/helpers/brings-data';
+import { supportData, supportDataPhone } from '../helpers/support-data';
+import { schema } from '../helpers/validation';
 
 export interface FormInputsSupport {
   firstName: string;
@@ -41,15 +41,15 @@ export default function SupportForm() {
     getValues,
   } = useForm<FormInputsSupport>({
     resolver: yupResolver(schema),
-    mode: "all",
+    mode: 'all',
   });
 
   const handleBrickSelect = (selectedBricks: string[]) => {
-    setValue("selectedBrick", selectedBricks);
+    setValue('selectedBrick', selectedBricks);
   };
 
   const handleSupportSelect = (selectedSupport: string[]) => {
-    setValue("selectedSupport", selectedSupport);
+    setValue('selectedSupport', selectedSupport);
   };
 
   const handleCheckboxChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -57,7 +57,7 @@ export default function SupportForm() {
     setValue(name as keyof FormInputsSupport, checked, {
       shouldValidate: true,
     });
-    if (name === "agreeToProcess") {
+    if (name === 'agreeToProcess') {
       setCheckedSubmit(checked);
     }
   };
@@ -66,8 +66,8 @@ export default function SupportForm() {
     console.log(data);
 
     reset();
-    setValue("selectedBrick", []);
-    setValue("selectedSupport", []);
+    setValue('selectedBrick', []);
+    setValue('selectedSupport', []);
     setClearBricks(true);
     setTimeout(() => setClearBricks(false), 100);
     setCheckedSubmit(false);
@@ -75,10 +75,10 @@ export default function SupportForm() {
 
   return (
     <>
-      <p className="text-center text-base md:text-xl font-medium text-base-stroke-btn-act mb-3 md:mb-4 mt-[152px] font-ibm-plex-sans">
+      <p className="mb-3 mt-[152px] text-center font-ibm-plex-sans text-base font-medium text-base-stroke-btn-act md:mb-4 md:text-xl">
         Бухгалтерська та юридична допомога:
       </p>
-      <div className="flex justify-center text-center px-0 md:px-5 mb-10 md:mb-20">
+      <div className="mb-10 flex justify-center px-0 text-center md:mb-20 md:px-5">
         <Text
           Tag="h1"
           textType="Desktop/H3"
@@ -92,7 +92,7 @@ export default function SupportForm() {
         onSubmit={handleSubmit(onSubmit)}
         className="mb-[180px] font-ibm-plex-sans"
       >
-        <span className="flex flex-col md:flex-row gap-4">
+        <span className="flex flex-col gap-4 md:flex-row">
           <InputForm
             label="Ім'я"
             name="firstName"
@@ -117,7 +117,7 @@ export default function SupportForm() {
           error={errors.organization}
         />
 
-        <span className="w-full flex flex-col md:flex-row gap-4">
+        <span className="flex w-full flex-col gap-4 md:flex-row">
           <InputForm
             label="Email"
             name="email"
@@ -138,7 +138,7 @@ export default function SupportForm() {
                 label="Я є у Телеграмі"
                 name="agreeToTelegram"
                 register={register}
-                checked={getValues("agreeToTelegram") || false}
+                checked={getValues('agreeToTelegram') || false}
                 error={errors.agreeToTelegram}
                 onChange={handleCheckboxChange}
               />
@@ -146,7 +146,7 @@ export default function SupportForm() {
                 label="Я є у Viber"
                 name="agreeToViber"
                 register={register}
-                checked={getValues("agreeToViber") || false}
+                checked={getValues('agreeToViber') || false}
                 error={errors.agreeToViber}
                 onChange={handleCheckboxChange}
               />
@@ -193,16 +193,16 @@ export default function SupportForm() {
         />
 
         <Dropdown
-          label={{ title: "Тип послуги:" }}
+          label={{ title: 'Тип послуги:' }}
           placeholder="Оберіть послугу"
           options={[
             {
-              title: "річна підписка ",
-              text: "(до 30 хв усних консультацій на місяць, 3 короткі консультації у письмовій формі по електронній пошті, пошук та надання нормативних документів з питань оподаткування та бухгалтерського обліку на запит (до 3-х в місяць), доступ до шаблонів документів);",
+              title: 'річна підписка ',
+              text: '(до 30 хв усних консультацій на місяць, 3 короткі консультації у письмовій формі по електронній пошті, пошук та надання нормативних документів з питань оподаткування та бухгалтерського обліку на запит (до 3-х в місяць), доступ до шаблонів документів);',
             },
             {
-              title: "одноразова послуга",
-              text: "(письмова відповідь/ 60 хв усної консультації).",
+              title: 'одноразова послуга',
+              text: '(письмова відповідь/ 60 хв усної консультації).',
             },
           ]}
           register={register}
@@ -216,7 +216,7 @@ export default function SupportForm() {
           label="Я погоджуюсь надати свої персональні дані"
           name="agreeToProcess"
           register={register}
-          checked={getValues("agreeToProcess") || false}
+          checked={getValues('agreeToProcess') || false}
           error={errors.agreeToProcess}
           onChange={handleCheckboxChange}
           classMain="flex justify-center mt-5 mb-5 md:mt-6 md:mb-6"
