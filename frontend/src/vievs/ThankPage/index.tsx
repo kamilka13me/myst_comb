@@ -1,0 +1,1 @@
+export { ThankPage } from './ThankPage'
