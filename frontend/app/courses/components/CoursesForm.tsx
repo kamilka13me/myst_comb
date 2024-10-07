@@ -1,31 +1,31 @@
-"use client";
 import React, { useState } from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
-import InputForm from "../../../src/widgets/Input/InputForm";
-import FallingBricks from "../../../src/widgets/CardForm/FillingBringsForm";
-import CheckboxForm from "../../../src/widgets/Checkbox/CheckboxForm";
 import { yupResolver } from "@hookform/resolvers/yup";
-import { schema } from "../helpers/validation";
 import { ButtonLink } from "@/shared/ui/ButtonLink";
 import { Text } from "@/shared/ui/Text";
+import InputForm from "../../../src/widgets/Input/InputForm";
+import CheckboxForm from "../../../src/widgets/Checkbox/CheckboxForm";
 import Dropdown from "../../../src/widgets/DropDown/DropdownForm";
-import { data, dataPhone } from "../helpers/brings-data";
+import FallingBricks from "../../../src/widgets/CardForm/FillingBringsForm";
+import { data, dataPhone } from "../../portfolio/helpers/brings-data";
+import { schema } from "../helpers/validation";
 
-export interface FormInputs {
+export interface FormInputsCourses {
   firstName: string;
   lastName: string;
   organization: string;
   email: string;
   phone: string;
   profession: string;
-  expert: string;
   agreeToTelegram?: boolean;
   agreeToViber?: boolean;
   agreeToProcess?: boolean;
   selectedBrick: (string | undefined)[];
+  services: string;
+  description: string;
 }
 
-export default function PortfolioForm() {
+export default function CoursesForm() {
   const [clearBricks, setClearBricks] = useState(false);
   const [checkedSubmit, setCheckedSubmit] = useState(false);
 
@@ -36,7 +36,7 @@ export default function PortfolioForm() {
     reset,
     formState: { errors },
     getValues,
-  } = useForm<FormInputs>({
+  } = useForm<FormInputsCourses>({
     resolver: yupResolver(schema),
     mode: "all",
   });
@@ -47,13 +47,15 @@ export default function PortfolioForm() {
 
   const handleCheckboxChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const { name, checked } = event.target;
-    setValue(name as keyof FormInputs, checked, { shouldValidate: true });
+    setValue(name as keyof FormInputsCourses, checked, {
+      shouldValidate: true,
+    });
     if (name === "agreeToProcess") {
       setCheckedSubmit(checked);
     }
   };
 
-  const onSubmit: SubmitHandler<FormInputs> = (data) => {
+  const onSubmit: SubmitHandler<FormInputsCourses> = (data) => {
     console.log(data);
 
     reset();
@@ -66,12 +68,9 @@ export default function PortfolioForm() {
   return (
     <>
       <p className="text-center text-base md:text-xl font-medium text-base-stroke-btn-act mb-3 md:mb-4 mt-[152px] font-ibm-plex-sans">
-        Портфоліо-рев&apos;ю:
+        Курси англійської:
       </p>
       <div className="flex justify-center text-center px-0 md:px-5 mb-10 md:mb-20">
-        {/* <h1 className="text-[28px] md:text-3xl ">
-          Заповніть анкету нижче, щоб ми могли якнайшвидше звʼязатись із вами
-        </h1> */}
         <Text
           Tag="h1"
           textType="Desktop/H3"
@@ -83,7 +82,7 @@ export default function PortfolioForm() {
       </div>
       <form
         onSubmit={handleSubmit(onSubmit)}
-        className=" mb-[180px] font-ibm-plex-sans"
+        className="mb-[180px] font-ibm-plex-sans"
       >
         <span className="flex flex-col md:flex-row gap-4">
           <InputForm
@@ -168,11 +167,46 @@ export default function PortfolioForm() {
               : errors.selectedBrick
           }
         />
-        <InputForm
-          label="Консультація від якого експерта ви хотіли б отримати?"
-          name="expert"
+
+        <Dropdown
+          label={{
+            title:
+              "Який рівень володіння англійською у вас наразі? (можете пройти ",
+            titleExtra: "безкоштовний тест від наших партнерів)",
+          }}
+          placeholder="Оберіть послугу"
+          options={[
+            {
+              title: "A0",
+            },
+            {
+              title: "A1",
+            },
+            {
+              title: "A2",
+            },
+            {
+              title: "B1",
+            },
+            {
+              title: "B2",
+            },
+          ]}
           register={register}
-          error={errors.expert}
+          setValue={setValue}
+          name="services"
+          resetDropdown={clearBricks}
+          error={errors.services}
+        />
+
+        <InputForm
+          label="Коротко опишіть вашу мотивацію до вивчення англійської мови."
+          placeholder="Ваш опис"
+          elementType="textarea"
+          rows={5}
+          name="description"
+          register={register}
+          error={errors.description}
         />
 
         <CheckboxForm
