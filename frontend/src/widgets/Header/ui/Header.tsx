@@ -1,18 +1,18 @@
-"use client";
-import LogoDark from "@/shared/assets/icons/LogoDark.svg?react";
-import LogoWhite from "@/shared/assets/icons/LogoWhite.svg?react";
-import ButtonMenu from "@/shared/assets/icons/buttonMenu.svg?react";
-import { ButtonLink } from "@/shared/ui/ButtonLink";
-import { Icon } from "@/shared/ui/Icon";
-import { LanguageSwitcher } from "@/shared/ui/LanguageSwitcher";
-import { VStack } from "@/shared/ui/Stack";
-import { Text } from "@/shared/ui/Text";
-import { usePathname } from "next/navigation";
+'use client';
+// import LogoDark from '@/shared/assets/icons/LogoDark.svg?react';
+import LogoWhite from '@/shared/assets/icons/LogoWhite.svg?react';
+import ButtonMenu from '@/shared/assets/icons/buttonMenu.svg?react';
+import { ButtonLink } from '@/shared/ui/ButtonLink';
+import { Icon } from '@/shared/ui/Icon';
+import { LanguageSwitcher } from '@/shared/ui/LanguageSwitcher';
+import { VStack } from '@/shared/ui/Stack';
+import { Text } from '@/shared/ui/Text';
+import { usePathname } from 'next/navigation';
 
 const Header = () => {
   const pathname = usePathname();
 
-  if (pathname === "/") {
+  if (pathname === '/') {
     return (
       <div>
         <div>header</div>
@@ -20,13 +20,13 @@ const Header = () => {
     );
   }
   return (
-    <header className={`mt-6 px-5 lg:px-20  z-30 w-full flex justify-center`}>
-      <div className="max-w-[1340px] w-full">
+    <header className={`z-30 mt-6 flex w-full justify-center px-5 lg:px-20`}>
+      <div className="w-full max-w-[1340px]">
         <VStack justify="between" align="center">
           <Icon Svg={LogoWhite} height={42} width={162} />
-          <nav className="gap-9 items-center hidden lg:flex">
+          <nav className="hidden items-center gap-9 lg:flex">
             {/* Language switcher */}
-            <LanguageSwitcher languages={["УКР", "ENG"]} />
+            <LanguageSwitcher languages={['УКР', 'ENG']} />
             <Text
               Tag="h5"
               text="Проєкти"

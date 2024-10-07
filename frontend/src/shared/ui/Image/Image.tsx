@@ -1,6 +1,6 @@
-"use client";
-import { FC, ReactElement, useState } from "react";
-import Image, { StaticImageData } from "next/image";
+'use client';
+import { FC, ReactElement, useState } from 'react';
+import Image, { StaticImageData } from 'next/image';
 
 interface Props {
   src: string | StaticImageData;
@@ -8,7 +8,7 @@ interface Props {
   width?: number;
   height?: number;
   loadingFallback?: ReactElement;
-  objectFit?: "cover" | "contain";
+  objectFit?: 'cover' | 'contain';
   className?: string;
 }
 
@@ -18,7 +18,7 @@ const AppImage: FC<Props> = ({
   width,
   height,
   loadingFallback,
-  objectFit = "cover",
+  objectFit = 'cover',
   className,
   ...otherProps
 }) => {
@@ -48,7 +48,7 @@ const AppImage: FC<Props> = ({
       alt={alt}
       width={width}
       height={height}
-      className={`${objectFit === "cover" ? "object-cover" : "object-contain"} ${className}`}
+      className={`${objectFit === 'cover' ? 'object-cover' : 'object-contain'} ${className}`}
       onLoadingComplete={handleLoadingComplete}
       onError={handleError}
       {...otherProps}
@@ -56,6 +56,6 @@ const AppImage: FC<Props> = ({
   );
 };
 
-AppImage.displayName = "AppImage";
+AppImage.displayName = 'AppImage';
 
 export default AppImage;

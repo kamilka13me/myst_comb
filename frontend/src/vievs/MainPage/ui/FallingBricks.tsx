@@ -1,7 +1,9 @@
-"use client";
-import React, { useEffect, useRef, useState } from "react";
+'use client';
 
-import Matter from "matter-js";
+/* eslint-disable react-hooks/exhaustive-deps */
+import React, { useEffect, useRef, useState } from 'react';
+
+import Matter from 'matter-js';
 
 const FallingBricks: React.FC = () => {
   const scene = useRef<HTMLDivElement>(null);
@@ -14,8 +16,8 @@ const FallingBricks: React.FC = () => {
       y: -1100,
       width: 356,
       height: 64,
-      color: "#FFB899",
-      text: "Історики мистецтва",
+      color: '#FFB899',
+      text: 'Історики мистецтва',
       radius: 10,
       angle: 0,
     },
@@ -24,8 +26,8 @@ const FallingBricks: React.FC = () => {
       y: -1100,
       width: 202,
       height: 64,
-      color: "#F1FF66",
-      text: "Стріт-арт",
+      color: '#F1FF66',
+      text: 'Стріт-арт',
       radius: 10,
       angle: 0,
     },
@@ -34,8 +36,8 @@ const FallingBricks: React.FC = () => {
       y: -1165,
       width: 243,
       height: 64,
-      color: "#EB99FF",
-      text: "Арт-дилери",
+      color: '#EB99FF',
+      text: 'Арт-дилери',
       radius: 10,
       angle: 0,
     },
@@ -44,8 +46,8 @@ const FallingBricks: React.FC = () => {
       y: -1165,
       width: 284,
       height: 64,
-      color: "#9E92EE",
-      text: "Скульптура",
+      color: '#9E92EE',
+      text: 'Скульптура',
       radius: 10,
       angle: 0,
     },
@@ -54,8 +56,8 @@ const FallingBricks: React.FC = () => {
       y: -1100,
       width: 257,
       height: 64,
-      color: "#FFB899",
-      text: "Архітектура",
+      color: '#FFB899',
+      text: 'Архітектура',
       radius: 10,
       angle: 0,
     },
@@ -64,8 +66,8 @@ const FallingBricks: React.FC = () => {
       y: -1100,
       width: 283,
       height: 64,
-      color: "#9E92EE",
-      text: "Digital-art",
+      color: '#9E92EE',
+      text: 'Digital-art',
       radius: 10,
       angle: 0,
     },
@@ -74,8 +76,8 @@ const FallingBricks: React.FC = () => {
       y: -1165,
       width: 356,
       height: 64,
-      color: "#F1FF66",
-      text: "Графічний дизайн",
+      color: '#F1FF66',
+      text: 'Графічний дизайн',
       radius: 10,
       angle: 0,
     },
@@ -84,8 +86,8 @@ const FallingBricks: React.FC = () => {
       y: -1230,
       width: 338,
       height: 64,
-      color: "#FFB899",
-      text: "Фотографія",
+      color: '#FFB899',
+      text: 'Фотографія',
       radius: 10,
       angle: 0,
     },
@@ -94,8 +96,8 @@ const FallingBricks: React.FC = () => {
       y: -1400,
       width: 239,
       height: 64,
-      color: "#EB99FF",
-      text: "Мозаїка",
+      color: '#EB99FF',
+      text: 'Мозаїка',
       radius: 10,
       angle: 0,
     },
@@ -104,8 +106,8 @@ const FallingBricks: React.FC = () => {
       y: -1465,
       width: 239,
       height: 64,
-      color: "#FFB899",
-      text: "Кераміка",
+      color: '#FFB899',
+      text: 'Кераміка',
       radius: 10,
       angle: 0,
     },
@@ -114,8 +116,8 @@ const FallingBricks: React.FC = () => {
       y: -1625,
       width: 276,
       height: 64,
-      color: "#9E92EE",
-      text: "Графіка",
+      color: '#9E92EE',
+      text: 'Графіка',
       radius: 10,
       angle: 0,
     },
@@ -124,8 +126,8 @@ const FallingBricks: React.FC = () => {
       y: -1800,
       width: 404,
       height: 64,
-      color: "#EB99FF",
-      text: "Текстильне мистецтво",
+      color: '#EB99FF',
+      text: 'Текстильне мистецтво',
       radius: 10,
       angle: 0,
     },
@@ -134,8 +136,8 @@ const FallingBricks: React.FC = () => {
       y: -1400,
       width: 287,
       height: 64,
-      color: "#EB99FF",
-      text: "Мистецтвознавці",
+      color: '#EB99FF',
+      text: 'Мистецтвознавці',
       radius: 10,
       angle: 0,
     },
@@ -144,8 +146,8 @@ const FallingBricks: React.FC = () => {
       y: -1400,
       width: 258,
       height: 64,
-      color: "#FFB899",
-      text: "живопис",
+      color: '#FFB899',
+      text: 'живопис',
       radius: 10,
       angle: 0,
     },
@@ -155,8 +157,8 @@ const FallingBricks: React.FC = () => {
       y: -1400,
       width: 257,
       height: 64,
-      color: "#F1FF66",
-      text: "Куратори",
+      color: '#F1FF66',
+      text: 'Куратори',
       radius: 10,
       angle: 0,
     },
@@ -165,8 +167,8 @@ const FallingBricks: React.FC = () => {
       y: -1600,
       width: 273,
       height: 64,
-      color: "#F1FF66",
-      text: "Ілюстрація",
+      color: '#F1FF66',
+      text: 'Ілюстрація',
       radius: 10,
       angle: 0,
     },
@@ -175,8 +177,8 @@ const FallingBricks: React.FC = () => {
       y: -1700,
       width: 279,
       height: 64,
-      color: "#9E92EE",
-      text: "Культурологи",
+      color: '#9E92EE',
+      text: 'Культурологи',
       radius: 10,
       angle: 0,
     },
@@ -185,8 +187,8 @@ const FallingBricks: React.FC = () => {
       y: -1800,
       width: 240,
       height: 64,
-      color: "#FFB899",
-      text: "Митці",
+      color: '#FFB899',
+      text: 'Митці',
       radius: 10,
       angle: 0,
     },
@@ -196,8 +198,8 @@ const FallingBricks: React.FC = () => {
       y: -1900,
       width: 252,
       height: 64,
-      color: "#EB99FF",
-      text: "мистецькі ЗМІ",
+      color: '#EB99FF',
+      text: 'мистецькі ЗМІ',
       radius: 10,
       angle: 0,
     },
@@ -207,8 +209,8 @@ const FallingBricks: React.FC = () => {
       y: -2100,
       width: 395,
       height: 64,
-      color: "#FFB899",
-      text: "Декоративне мистецтво",
+      color: '#FFB899',
+      text: 'Декоративне мистецтво',
       radius: 10,
       angle: 0,
     },
@@ -224,7 +226,7 @@ const FallingBricks: React.FC = () => {
         width: 1350,
         height: 400,
         wireframes: false, // Не відображає каркасні лінії
-        background: "transparent",
+        background: 'transparent',
       },
     });
 
@@ -263,14 +265,14 @@ const FallingBricks: React.FC = () => {
           isStatic: false,
           render: {
             opacity: 0,
-            fillStyle: "transparent",
-            strokeStyle: "transparent",
+            fillStyle: 'transparent',
+            strokeStyle: 'transparent',
             lineWidth: 2,
           },
           chamfer: { radius },
         });
 
-        Matter.Events.on(engine, "afterUpdate", () => {
+        Matter.Events.on(engine, 'afterUpdate', () => {
           const { x, y } = brick.position;
           const ref = bricksRefs.current[index];
 
@@ -280,7 +282,7 @@ const FallingBricks: React.FC = () => {
         });
 
         return brick;
-      }
+      },
     );
 
     Matter.World.add(engine.world, [...walls, ...bricks]);
@@ -295,7 +297,12 @@ const FallingBricks: React.FC = () => {
       bricks.forEach((brick, index) => {
         const { min, max } = brick.bounds;
 
-        if (mouseX >= min.x && mouseX <= max.x && mouseY >= min.y && mouseY <= max.y) {
+        if (
+          mouseX >= min.x &&
+          mouseX <= max.x &&
+          mouseY >= min.y &&
+          mouseY <= max.y
+        ) {
           foundBrickIndex = index;
         }
       });
@@ -317,18 +324,18 @@ const FallingBricks: React.FC = () => {
       },
       {
         threshold: 0.1,
-      }
+      },
     );
 
     observer.observe(scene.current!);
-    scene.current!.addEventListener("mousemove", handleMouseMove);
+    scene.current!.addEventListener('mousemove', handleMouseMove);
 
     return () => {
       Matter.Render.stop(render);
       Matter.Runner.stop(runner);
 
       if (scene.current) {
-        scene.current.removeEventListener("mousemove", handleMouseMove);
+        scene.current.removeEventListener('mousemove', handleMouseMove);
       }
 
       observer.disconnect();
@@ -341,13 +348,13 @@ const FallingBricks: React.FC = () => {
   }, []);
 
   return (
-    <div className="flex justify-center items-center relative h-[500px] mt-3 mb-10 z-10 overflow-hidden">
+    <div className="relative z-10 mb-10 mt-3 flex h-[500px] items-center justify-center overflow-hidden">
       <div
         ref={scene}
         style={{
-          position: "relative",
-          width: "1350px",
-          height: "400px",
+          position: 'relative',
+          width: '1350px',
+          height: '400px',
         }}
       >
         {bricksData.map((brick, index) => (
@@ -359,18 +366,18 @@ const FallingBricks: React.FC = () => {
               if (el) bricksRefs.current[index] = el;
             }}
             style={{
-              position: "absolute",
+              position: 'absolute',
               width: `${brick.width - 2}px`,
               height: `${brick.height - 2}px`,
-              color: "#151515",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              fontWeight: "bold",
-              pointerEvents: "none",
+              color: '#151515',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              fontWeight: 'bold',
+              pointerEvents: 'none',
               background: brick.color,
               opacity: highlightedBrick === index ? 1 : 0.5,
-              transition: "opacity 0.3s ease",
+              transition: 'opacity 0.3s ease',
               borderRadius: 10,
             }}
           >

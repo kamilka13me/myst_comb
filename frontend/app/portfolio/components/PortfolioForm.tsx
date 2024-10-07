@@ -1,15 +1,15 @@
-"use client";
-import React, { useState } from "react";
-import { useForm, SubmitHandler } from "react-hook-form";
-import InputForm from "../../../src/widgets/Input/InputForm";
-import FallingBricks from "../../../src/widgets/CardForm/FillingBringsForm";
-import CheckboxForm from "../../../src/widgets/Checkbox/CheckboxForm";
-import { yupResolver } from "@hookform/resolvers/yup";
-import { schema } from "../helpers/validation";
-import { ButtonLink } from "@/shared/ui/ButtonLink";
-import { Text } from "@/shared/ui/Text";
-import Dropdown from "../../../src/widgets/DropDown/DropdownForm";
-import { data, dataPhone } from "../helpers/brings-data";
+'use client';
+import React, { useState } from 'react';
+import { useForm, SubmitHandler } from 'react-hook-form';
+import InputForm from '../../../src/widgets/Input/InputForm';
+import FallingBricks from '../../../src/widgets/CardForm/FillingBringsForm';
+import CheckboxForm from '../../../src/widgets/Checkbox/CheckboxForm';
+import { yupResolver } from '@hookform/resolvers/yup';
+import { schema } from '../helpers/validation';
+import { ButtonLink } from '@/shared/ui/ButtonLink';
+import { Text } from '@/shared/ui/Text';
+// import Dropdown from '../../../src/widgets/DropDown/DropdownForm';
+import { data, dataPhone } from '../helpers/brings-data';
 
 export interface FormInputs {
   firstName: string;
@@ -38,17 +38,17 @@ export default function PortfolioForm() {
     getValues,
   } = useForm<FormInputs>({
     resolver: yupResolver(schema),
-    mode: "all",
+    mode: 'all',
   });
 
   const handleBrickSelect = (selectedBricks: string[]) => {
-    setValue("selectedBrick", selectedBricks);
+    setValue('selectedBrick', selectedBricks);
   };
 
   const handleCheckboxChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const { name, checked } = event.target;
     setValue(name as keyof FormInputs, checked, { shouldValidate: true });
-    if (name === "agreeToProcess") {
+    if (name === 'agreeToProcess') {
       setCheckedSubmit(checked);
     }
   };
@@ -57,7 +57,7 @@ export default function PortfolioForm() {
     console.log(data);
 
     reset();
-    setValue("selectedBrick", []);
+    setValue('selectedBrick', []);
     setClearBricks(true);
     setTimeout(() => setClearBricks(false), 100);
     setCheckedSubmit(false);
@@ -65,10 +65,10 @@ export default function PortfolioForm() {
 
   return (
     <>
-      <p className="text-center text-base md:text-xl font-medium text-base-stroke-btn-act mb-3 md:mb-4 mt-[152px] font-ibm-plex-sans">
+      <p className="mb-3 mt-[152px] text-center font-ibm-plex-sans text-base font-medium text-base-stroke-btn-act md:mb-4 md:text-xl">
         Портфоліо-рев&apos;ю:
       </p>
-      <div className="flex justify-center text-center px-0 md:px-5 mb-10 md:mb-20">
+      <div className="mb-10 flex justify-center px-0 text-center md:mb-20 md:px-5">
         {/* <h1 className="text-[28px] md:text-3xl ">
           Заповніть анкету нижче, щоб ми могли якнайшвидше звʼязатись із вами
         </h1> */}
@@ -83,9 +83,9 @@ export default function PortfolioForm() {
       </div>
       <form
         onSubmit={handleSubmit(onSubmit)}
-        className=" mb-[180px] font-ibm-plex-sans"
+        className="mb-[180px] font-ibm-plex-sans"
       >
-        <span className="flex flex-col md:flex-row gap-4">
+        <span className="flex flex-col gap-4 md:flex-row">
           <InputForm
             label="Ім'я"
             name="firstName"
@@ -110,7 +110,7 @@ export default function PortfolioForm() {
           error={errors.organization}
         />
 
-        <span className="w-full flex flex-col md:flex-row gap-4">
+        <span className="flex w-full flex-col gap-4 md:flex-row">
           <InputForm
             label="Email"
             name="email"
@@ -133,7 +133,7 @@ export default function PortfolioForm() {
                 label="Я є у Телеграмі"
                 name="agreeToTelegram"
                 register={register}
-                checked={getValues("agreeToTelegram") || false}
+                checked={getValues('agreeToTelegram') || false}
                 error={errors.agreeToTelegram}
                 onChange={handleCheckboxChange}
               />
@@ -141,7 +141,7 @@ export default function PortfolioForm() {
                 label="Я є у Viber"
                 name="agreeToViber"
                 register={register}
-                checked={getValues("agreeToViber") || false}
+                checked={getValues('agreeToViber') || false}
                 error={errors.agreeToViber}
                 onChange={handleCheckboxChange}
               />
@@ -179,7 +179,7 @@ export default function PortfolioForm() {
           label="Я погоджуюсь надати свої персональні дані"
           name="agreeToProcess"
           register={register}
-          checked={getValues("agreeToProcess") || false}
+          checked={getValues('agreeToProcess') || false}
           error={errors.agreeToProcess}
           onChange={handleCheckboxChange}
           classMain="flex justify-center mt-5 mb-5 md:mt-6 md:mb-6"

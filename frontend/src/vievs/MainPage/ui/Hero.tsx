@@ -1,14 +1,14 @@
-import OrangeArch from "@/shared/assets/icons/orange-arch.svg?react";
-import PurpleElipse from "@/shared/assets/icons/purple-elipse.svg?react";
-import YellowSphere from "@/shared/assets/icons/yellow-spheres.svg?react";
-import { Icon } from "@/shared/ui/Icon";
-import { VStack } from "@/shared/ui/Stack";
-import { Text } from "@/shared/ui/Text";
+import OrangeArch from '@/shared/assets/icons/orange-arch.svg?react';
+import PurpleElipse from '@/shared/assets/icons/purple-elipse.svg?react';
+import YellowSphere from '@/shared/assets/icons/yellow-spheres.svg?react';
+import { Icon } from '@/shared/ui/Icon';
+import { VStack } from '@/shared/ui/Stack';
+import { Text } from '@/shared/ui/Text';
 
 const Hero = () => {
   return (
-    <VStack className="py-10 px-10">
-      <div className="bg-white h-[600px] w-full rounded-[30px] flex justify-center items-center flex-col px-5 ">
+    <VStack className="px-10 py-10">
+      <div className="flex h-[600px] w-full flex-col items-center justify-center rounded-[30px] bg-white px-5">
         <div className="mb-4 max-w-[893px]">
           <div className="inline-flex w-auto items-baseline">
             <Icon Svg={YellowSphere} width={89} height="auto" />
@@ -32,7 +32,7 @@ const Hero = () => {
               font="serif"
             />
           </div>
-          <div className="flex w-auto gap-4 text-7xl items-end flex-wrap">
+          <div className="flex w-auto flex-wrap items-end gap-4 text-7xl">
             {/* <div> незалежну </div>
             <div> культуру </div> */}
             <Text
@@ -45,7 +45,7 @@ const Hero = () => {
             <Icon Svg={PurpleElipse} width={153} height={59} />
           </div>
         </div>
-        <VStack className="max-w-[726px] mt-[14px]">
+        <VStack className="mt-[14px] max-w-[726px]">
           <Text
             Tag="p"
             textType="Desktop/title-s"
