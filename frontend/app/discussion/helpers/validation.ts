@@ -57,6 +57,13 @@ export const schema = yup.object({
     .required('Оберіть щонайменше один елемент')
     .min(1, 'Оберіть щонайменше один елемент')
     .max(3, 'Можна обрати максимум 3 елементи'),
-  offer: yup.string().required('Виберіть пропозицію'),
+  description: yup
+    .string()
+    .required("Опис є обов'язковою")
+    .matches(
+      ukrEngLettersNumbersSymbols,
+      'Опис має містити лише літери, цифри та символи',
+    )
+    .max(500, 'Опис не може бути більше 500 символів'),
   documents: yup.array(),
 });

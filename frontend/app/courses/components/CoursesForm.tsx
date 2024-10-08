@@ -67,7 +67,7 @@ export default function CoursesForm() {
   };
 
   return (
-    <>
+    <div className="px-5 lg:px-0">
       <p className="mb-3 mt-[152px] text-center font-ibm-plex-sans text-base font-medium text-base-stroke-btn-act md:mb-4 md:text-xl">
         Курси англійської:
       </p>
@@ -201,7 +201,7 @@ export default function CoursesForm() {
           name="services"
           resetDropdown={clearBricks}
           error={errors.services}
-          labelStyle="top-[-17px] md:top-[-8px]"
+          labelStyle="top-[-20px] md:top-[-8px]"
         />
 
         <InputForm
@@ -235,6 +235,6 @@ export default function CoursesForm() {
           />
         </div>
       </form>
-    </>
+    </div>
   );
 }
