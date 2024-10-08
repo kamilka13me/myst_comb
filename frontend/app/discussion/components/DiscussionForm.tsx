@@ -5,12 +5,13 @@ import { ButtonLink } from '@/shared/ui/ButtonLink';
 import { Text } from '@/shared/ui/Text';
 import InputForm from '../../../src/widgets/Input/InputForm';
 import CheckboxForm from '../../../src/widgets/Checkbox/CheckboxForm';
-import Dropdown from '../../../src/widgets/DropDown/DropdownForm';
 import { schema } from '../helpers/validation';
 import FileUpload from '@/widgets/FormFile/FormFile';
 import PhoneInput from '@/widgets/InputPhone/InputPhone';
+import FallingBricks from '@/widgets/CardForm/FillingBringsForm';
+import { data, dataPhone } from '../../portfolio/helpers/brings-data';
 
-export interface FormInputsCooperation {
+export interface FormInputsDiscussion {
   firstName: string;
   lastName: string;
   organization: string;
@@ -20,12 +21,12 @@ export interface FormInputsCooperation {
   agreeToTelegram?: boolean;
   agreeToViber?: boolean;
   agreeToProcess?: boolean;
-  project: string;
+  selectedBrick: (string | undefined)[];
   offer: string;
   documents?: File[];
 }
 
-export default function CooperationForm() {
+export default function DiscussionForm() {
   const [clearBricks, setClearBricks] = useState(false);
   const [checkedSubmit, setCheckedSubmit] = useState(false);
 
@@ -36,14 +37,14 @@ export default function CooperationForm() {
     reset,
     formState: { errors },
     getValues,
-  } = useForm<FormInputsCooperation>({
+  } = useForm<FormInputsDiscussion>({
     resolver: yupResolver(schema),
     mode: 'all',
   });
 
   const handleCheckboxChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const { name, checked } = event.target;
-    setValue(name as keyof FormInputsCooperation, checked, {
+    setValue(name as keyof FormInputsDiscussion, checked, {
       shouldValidate: true,
     });
     if (name === 'agreeToProcess') {
@@ -51,9 +52,14 @@ export default function CooperationForm() {
     }
   };
 
-  const onSubmit: SubmitHandler<FormInputsCooperation> = async (data) => {
+  const handleBrickSelect = (selectedBricks: string[]) => {
+    setValue('selectedBrick', selectedBricks);
+  };
+
+  const onSubmit: SubmitHandler<FormInputsDiscussion> = async (data) => {
     console.log(data);
     reset();
+    setValue('selectedBrick', []);
     setClearBricks(true);
     setTimeout(() => setClearBricks(false), 100);
     setCheckedSubmit(false);
@@ -62,14 +68,14 @@ export default function CooperationForm() {
   return (
     <>
       <p className="mb-3 mt-[152px] text-center font-ibm-plex-sans text-base font-medium text-base-stroke-btn-act md:mb-4 md:text-xl">
-        Долучитися як професіонал
+        Відкрите обговорення
       </p>
       <div className="mb-6 flex justify-center px-0 text-center md:mb-[14px] md:px-5">
         <Text
           Tag="h1"
           textType="Desktop/H3"
           color="base/BG_block"
-          text="Тут ви можете залишити свої пропозиції щодо співпраці."
+          text="Тут ви можете залишити свої пропозиції щодо роботи Мистецького Комбінату."
           align="center"
           className="text-[28px] md:text-3xl"
         />
@@ -78,7 +84,7 @@ export default function CooperationForm() {
         Tag="p"
         textType="Desktop/Body"
         color="base/BG_block"
-        text="Ми раді розширювати нашу команду для втілення амбітної мети спільними зусиллями."
+        text="Ми здійснюємо перегляд стратегії раз на рік, тому заповнюйте форму і ми обов’язково розглянемо ваші коментарі під час наступної стратегічної сесії."
         align="center"
         className="m-auto mb-20 max-w-[666px] !text-[18px] md:text-base"
       />
@@ -156,37 +162,26 @@ export default function CooperationForm() {
           error={errors.profession}
         />
 
-        <Dropdown
-          label={{ title: 'До якого проєкту хочете долучитись?' }}
-          placeholder="Оберіть проєкт"
-          options={[
-            {
-              title: '',
-              text: 'Унікальні особини;',
-            },
-            {
-              title: '',
-              text: 'Cultbit: Інтелектуальна пригода у форматі AR;',
-            },
-            {
-              title: '',
-              text: 'Жито: проєкт соціальної адаптації внутрішньо переміщеним особам засобами мистецтва.',
-            },
-          ]}
-          register={register}
-          setValue={setValue}
-          name="project"
-          resetDropdown={clearBricks}
-          error={errors.project}
+        <FallingBricks
+          onSelect={handleBrickSelect}
+          clearSelection={clearBricks}
+          data={data}
+          dataPhone={dataPhone}
+          title="В яких медіа працюєте:"
+          error={
+            Array.isArray(errors.selectedBrick)
+              ? errors.selectedBrick[0]
+              : errors.selectedBrick
+          }
         />
 
         <h2 className="mb-[14px] text-[24px] text-white">
-          Пропозиція щодо співпраці:
+          Пропозиція щодо роботи Фонду:
         </h2>
 
         <InputForm
-          label="Ваш пропозиція"
-          placeholder="Чим могли б допомогти?"
+          label="Ваш опис"
+          placeholder="Обѓрунтування актуальності пропозиції (будь ласка, додайте посилання на статистичні звіти, дослідження та інші джерела даних, спираючись на які ви сформулювали свою пропозицію)."
           elementType="textarea"
           rows={5}
           name="offer"

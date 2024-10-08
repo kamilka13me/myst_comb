@@ -1,11 +1,11 @@
 'use client';
 import React from 'react';
-import SupportForm from './components/CooperationForm';
+import DiscussionForm from './components/DiscussionForm';
 
 export default function Portfolio() {
   return (
     <div className="mx-auto max-w-[896px]">
-      <SupportForm />
+      <DiscussionForm />
     </div>
   );
 }
