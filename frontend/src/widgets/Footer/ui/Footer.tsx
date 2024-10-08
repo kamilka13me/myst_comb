@@ -1,3 +1,4 @@
+'use client';
 import DonutChart from './DonatChart';
 
 import LogoWhite from '@/shared/assets/icons/LogoWhite.svg?react';
@@ -7,9 +8,14 @@ import YouTube from '@/shared/assets/icons/SocialYouTube.svg?react';
 import { Icon } from '@/shared/ui/Icon';
 import { Text } from '@/shared/ui/Text';
 import Link from 'next/link';
+import useMediaQuery from '../../../../app/portfolio/hooks/useMediaQuery';
 // import { Link } from '@/shared/ui/Link';
 
 const Footer = () => {
+  const isPhone = useMediaQuery('(max-width: 640px)');
+  if (isPhone) {
+    return <div>no redy yet</div>;
+  }
   const About = [
     { title: 'Проєкти', link: '/404' },
     { title: 'Послуги', link: '/404' },
