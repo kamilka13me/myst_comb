@@ -11,7 +11,7 @@ import PhoneInput from '@/widgets/InputPhone/InputPhone';
 import FallingBricks from '@/widgets/CardForm/FillingBringsForm';
 import { data, dataPhone } from '../../portfolio/helpers/brings-data';
 
-export interface FormInputsDiscussion{
+export interface FormInputsDiscussion {
   firstName: string;
   lastName: string;
   organization: string;
@@ -52,14 +52,14 @@ export default function DiscussionForm() {
     }
   };
 
-   const handleBrickSelect = (selectedBricks: string[]) => {
+  const handleBrickSelect = (selectedBricks: string[]) => {
     setValue('selectedBrick', selectedBricks);
   };
 
   const onSubmit: SubmitHandler<FormInputsDiscussion> = async (data) => {
     console.log(data);
     reset();
-     setValue('selectedBrick', []);
+    setValue('selectedBrick', []);
     setClearBricks(true);
     setTimeout(() => setClearBricks(false), 100);
     setCheckedSubmit(false);
@@ -162,7 +162,7 @@ export default function DiscussionForm() {
           error={errors.profession}
         />
 
-              <FallingBricks
+        <FallingBricks
           onSelect={handleBrickSelect}
           clearSelection={clearBricks}
           data={data}

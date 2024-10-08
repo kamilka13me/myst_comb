@@ -201,7 +201,7 @@ export default function CoursesForm() {
           name="services"
           resetDropdown={clearBricks}
           error={errors.services}
-          labelStyle='top-[-17px] md:top-[-8px]'
+          labelStyle="top-[-17px] md:top-[-8px]"
         />
 
         <InputForm
