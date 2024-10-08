@@ -1,3 +1,4 @@
+'use client';
 import DonutChart from './DonatChart';
 
 import LogoWhite from '@/shared/assets/icons/LogoWhite.svg?react';
@@ -7,9 +8,12 @@ import YouTube from '@/shared/assets/icons/SocialYouTube.svg?react';
 import { Icon } from '@/shared/ui/Icon';
 import { Text } from '@/shared/ui/Text';
 import Link from 'next/link';
+import useMediaQuery from '../../../../app/portfolio/hooks/useMediaQuery';
 // import { Link } from '@/shared/ui/Link';
 
 const Footer = () => {
+  const isPhone = useMediaQuery('(max-width: 640px)');
+
   const About = [
     { title: 'Проєкти', link: '/404' },
     { title: 'Послуги', link: '/404' },
@@ -17,7 +21,9 @@ const Footer = () => {
     { title: 'Про нас', link: '/404' },
     { title: 'Контакти', link: '/404' },
   ];
-
+  if (isPhone) {
+    return <div>not redy yet</div>;
+  }
   return (
     <footer className="flex h-[431px] w-full rounded-t-[40px] bg-[#151515] px-10 pb-10 pt-20">
       <div className="flex flex-1 flex-col justify-between">
