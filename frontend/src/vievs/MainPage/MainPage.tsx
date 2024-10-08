@@ -16,11 +16,11 @@ export const MainPage: React.FC = () => {
     <div className="mt-10 flex w-full flex-col items-center bg-white">
       <div className="flex h-full w-full flex-col items-center rounded-b-[60px] bg-base-text_accent pb-[160px]">
         <div className="max-w-[1440px]">
-          <Hero />
+          {/* <Hero />
           <Donors />
           <WhoAreWe />
           <OurServices />
-          <FallingBricks />
+          <FallingBricks /> */}
           <OurProjects />
           {/* <News /> */}
         </div>

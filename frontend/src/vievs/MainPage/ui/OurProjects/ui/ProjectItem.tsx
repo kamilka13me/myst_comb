@@ -16,18 +16,15 @@ export function ProjectItem({ src, title, subTitle }: BoxProps): React.JSX.Eleme
   return (
     <li className="w-full 
       rounded-[30px] 
+      min-h-[470px]
       bg-white 
       overflow-hidden 
       flex flex-col gap-2.5 lg:flex-row ">
 
       <div className='relative 
-        h-auto min-w-[320px] min-h-[280px] 
-        md:min-w-[430px] md:min-h-[360px]'>
-        {/* <Image 
-          src={src} 
-          fill 
-          alt={title} 
-          className='object-cover object-center'/> */}
+        h-auto min-w-[300px]  
+        md:min-w-[430px] 
+        min-h-[190px] md:min-h-[360px]'>
         <Image 
           src={src} 
           fill ={true}
