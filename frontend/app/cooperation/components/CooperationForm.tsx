@@ -1,32 +1,31 @@
-'use client';
 import React, { useState } from 'react';
 import { useForm, SubmitHandler } from 'react-hook-form';
-import InputForm from '../../../src/widgets/Input/InputForm';
-import FallingBricks from '../../../src/widgets/CardForm/FillingBringsForm';
-import CheckboxForm from '../../../src/widgets/Checkbox/CheckboxForm';
 import { yupResolver } from '@hookform/resolvers/yup';
-import { schema } from '../helpers/validation';
 import { ButtonLink } from '@/shared/ui/ButtonLink';
 import { Text } from '@/shared/ui/Text';
-// import Dropdown from '../../../src/widgets/DropDown/DropdownForm';
-import { data, dataPhone } from '../helpers/brings-data';
+import InputForm from '../../../src/widgets/Input/InputForm';
+import CheckboxForm from '../../../src/widgets/Checkbox/CheckboxForm';
+import Dropdown from '../../../src/widgets/DropDown/DropdownForm';
+import { schema } from '../helpers/validation';
+import FileUpload from '@/widgets/FormFile/FormFile';
 import PhoneInput from '@/widgets/InputPhone/InputPhone';
 
-export interface FormInputs {
+export interface FormInputsCooperation {
   firstName: string;
   lastName: string;
   organization: string;
   email: string;
   phone: string;
   profession: string;
-  expert: string;
   agreeToTelegram?: boolean;
   agreeToViber?: boolean;
   agreeToProcess?: boolean;
-  selectedBrick: (string | undefined)[];
+  project: string;
+  offer: string;
+  documents?: File[];
 }
 
-export default function PortfolioForm() {
+export default function CooperationForm() {
   const [clearBricks, setClearBricks] = useState(false);
   const [checkedSubmit, setCheckedSubmit] = useState(false);
 
@@ -37,28 +36,24 @@ export default function PortfolioForm() {
     reset,
     formState: { errors },
     getValues,
-  } = useForm<FormInputs>({
+  } = useForm<FormInputsCooperation>({
     resolver: yupResolver(schema),
     mode: 'all',
   });
 
-  const handleBrickSelect = (selectedBricks: string[]) => {
-    setValue('selectedBrick', selectedBricks);
-  };
-
   const handleCheckboxChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const { name, checked } = event.target;
-    setValue(name as keyof FormInputs, checked, { shouldValidate: true });
+    setValue(name as keyof FormInputsCooperation, checked, {
+      shouldValidate: true,
+    });
     if (name === 'agreeToProcess') {
       setCheckedSubmit(checked);
     }
   };
 
-  const onSubmit: SubmitHandler<FormInputs> = (data) => {
+  const onSubmit: SubmitHandler<FormInputsCooperation> = async (data) => {
     console.log(data);
-
     reset();
-    setValue('selectedBrick', []);
     setClearBricks(true);
     setTimeout(() => setClearBricks(false), 100);
     setCheckedSubmit(false);
@@ -67,21 +62,27 @@ export default function PortfolioForm() {
   return (
     <>
       <p className="mb-3 mt-[152px] text-center font-ibm-plex-sans text-base font-medium text-base-stroke-btn-act md:mb-4 md:text-xl">
-        Портфоліо-рев&apos;ю:
+        Долучитися як професіонал
       </p>
-      <div className="mb-10 flex justify-center px-0 text-center md:mb-20 md:px-5">
-        {/* <h1 className="text-[28px] md:text-3xl ">
-          Заповніть анкету нижче, щоб ми могли якнайшвидше звʼязатись із вами
-        </h1> */}
+      <div className="mb-6 flex justify-center px-0 text-center md:mb-[14px] md:px-5">
         <Text
           Tag="h1"
           textType="Desktop/H3"
           color="base/BG_block"
-          text="Заповніть анкету нижче, щоб ми могли якнайшвидше звʼязатись із вами"
+          text="Тут ви можете залишити свої пропозиції щодо співпраці."
           align="center"
           className="text-[28px] md:text-3xl"
         />
       </div>
+      <Text
+        Tag="p"
+        textType="Desktop/Body"
+        color="base/BG_block"
+        text="Ми раді розширювати нашу команду для втілення амбітної мети спільними зусиллями."
+        align="center"
+        className="m-auto mb-20 max-w-[666px] !text-[18px] md:text-base"
+      />
+
       <form
         onSubmit={handleSubmit(onSubmit)}
         className="mb-[180px] font-ibm-plex-sans"
@@ -155,23 +156,49 @@ export default function PortfolioForm() {
           error={errors.profession}
         />
 
-        <FallingBricks
-          onSelect={handleBrickSelect}
-          clearSelection={clearBricks}
-          data={data}
-          dataPhone={dataPhone}
-          title="В яких медіа працюєте:"
-          error={
-            Array.isArray(errors.selectedBrick)
-              ? errors.selectedBrick[0]
-              : errors.selectedBrick
-          }
-        />
-        <InputForm
-          label="Консультація від якого експерта ви хотіли б отримати?"
-          name="expert"
+        <Dropdown
+          label={{ title: 'До якого проєкту хочете долучитись?' }}
+          placeholder="Оберіть проєкт"
+          options={[
+            {
+              title: '',
+              text: 'Унікальні особини;',
+            },
+            {
+              title: '',
+              text: 'Cultbit: Інтелектуальна пригода у форматі AR;',
+            },
+            {
+              title: '',
+              text: 'Жито: проєкт соціальної адаптації внутрішньо переміщеним особам засобами мистецтва.',
+            },
+          ]}
           register={register}
-          error={errors.expert}
+          setValue={setValue}
+          name="project"
+          resetDropdown={clearBricks}
+          error={errors.project}
+        />
+
+        <h2 className="mb-[14px] text-[24px] text-white">
+          Пропозиція щодо співпраці:
+        </h2>
+
+        <InputForm
+          label="Ваш пропозиція"
+          placeholder="Чим могли б допомогти?"
+          elementType="textarea"
+          rows={5}
+          name="offer"
+          register={register}
+          error={errors.offer}
+        />
+
+        <FileUpload
+          name="documents"
+          register={register}
+          setValue={setValue}
+          clearFiles={clearBricks}
         />
 
         <CheckboxForm
