@@ -5,7 +5,7 @@ import OurValues from './ui/OurValues';
 import Strategi from './ui/Strategi';
 import Donors from './ui/Donors';
 // import News from './ui/News';
-import OurProjects from './ui/OurProjects';
+import OurProjects from './ui/OurProjects/OurProjects';
 import FallingBricks from './ui/FallingBricks';
 import OurServices from './ui/OurServices';
 import WhoAreWe from './ui/WhoAreWe';
@@ -16,21 +16,21 @@ export const MainPage: React.FC = () => {
     <div className="mt-10 flex w-full flex-col items-center bg-white">
       <div className="flex h-full w-full flex-col items-center rounded-b-[60px] bg-base-text_accent pb-[160px]">
         <div className="max-w-[1440px]">
-          <Hero />
+          {/* <Hero />
           <Donors />
           <WhoAreWe />
           <OurServices />
-          <FallingBricks />
+          <FallingBricks /> */}
           <OurProjects />
           {/* <News /> */}
         </div>
       </div>
-      <div className="max-w-[1440px]">
+      {/* <div className="max-w-[1440px]">
         <Strategi />
         <OurValues />
         <HowWeWork />
         <ConnectToday />
-      </div>
+      </div> */}
     </div>
   );
 };

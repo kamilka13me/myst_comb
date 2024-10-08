@@ -18,9 +18,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="bg-base-text_accent">
-        <Header />
+        {/* <Header /> */}
         <main>{children}</main>
-        <Footer />
+        {/* <Footer /> */}
       </body>
     </html>
   );
