@@ -1,6 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-/* eslint-disable @typescript-eslint/no-unused-vars */
-
 import React, { useState, useCallback, useRef, useEffect } from 'react';
 import { UseFormRegister, FieldError, UseFormSetValue } from 'react-hook-form';
 import Close from '../../../public/close.svg?react';
@@ -8,6 +5,7 @@ import Clip from '../../../public/clip.svg?react';
 
 interface FileUploadProps {
   name: string;
+  /* eslint-disable @typescript-eslint/no-explicit-any */
   register: UseFormRegister<any>;
   error?: FieldError;
   setValue: UseFormSetValue<any>;
@@ -16,7 +14,7 @@ interface FileUploadProps {
 
 const FileUpload: React.FC<FileUploadProps> = ({
   name,
-  register,
+  register, // eslint-disable-line @typescript-eslint/no-unused-vars
   error,
   setValue,
   clearFiles,
@@ -99,14 +97,14 @@ const FileUpload: React.FC<FileUploadProps> = ({
         />
 
         {error && <p className="mt-1 text-xs text-red-500">{error.message}</p>}
-        {fileError && <p className="text-xs text-red-500">{fileError}</p>}
-        <div>
+        {fileError && <p className="mt-1 text-xs text-red-500">{fileError}</p>}
+        <div className="mt-4">
           {files.length > 0 && (
             <div className="flex gap-2">
               {files.map((file, index) => (
                 <div
                   key={index}
-                  className="flex items-center justify-between rounded-2xl bg-base-title px-[14px] py-[23px]"
+                  className="mt-1 flex items-center justify-between rounded-2xl bg-base-title px-[14px] py-[23px]"
                 >
                   <span className="max-w-[180px] text-[14px] text-white">
                     {file.name.length > 20

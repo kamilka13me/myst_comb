@@ -22,7 +22,7 @@ export interface FormInputsDiscussion {
   agreeToViber?: boolean;
   agreeToProcess?: boolean;
   selectedBrick: (string | undefined)[];
-  offer: string;
+  description: string;
   documents?: File[];
 }
 
@@ -66,7 +66,7 @@ export default function DiscussionForm() {
   };
 
   return (
-    <>
+    <div className="px-5 lg:px-0">
       <p className="mb-3 mt-[152px] text-center font-ibm-plex-sans text-base font-medium text-base-stroke-btn-act md:mb-4 md:text-xl">
         Відкрите обговорення
       </p>
@@ -184,9 +184,9 @@ export default function DiscussionForm() {
           placeholder="Обѓрунтування актуальності пропозиції (будь ласка, додайте посилання на статистичні звіти, дослідження та інші джерела даних, спираючись на які ви сформулювали свою пропозицію)."
           elementType="textarea"
           rows={5}
-          name="offer"
+          name="description"
           register={register}
-          error={errors.offer}
+          error={errors.description}
         />
 
         <FileUpload
@@ -217,6 +217,6 @@ export default function DiscussionForm() {
           />
         </div>
       </form>
-    </>
+    </div>
   );
 }

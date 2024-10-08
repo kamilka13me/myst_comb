@@ -1,5 +1,4 @@
 'use client';
-/* eslint-disable @typescript-eslint/no-explicit-any */
 
 import React, { useEffect, useState } from 'react';
 import { UseFormRegister, UseFormSetValue, FieldError } from 'react-hook-form';
@@ -14,6 +13,7 @@ interface Opinion {
 interface DropdownProps {
   options: Opinion[];
   label: { title: string; titleExtra?: string };
+  /* eslint-disable @typescript-eslint/no-explicit-any */
   register: UseFormRegister<any>;
   setValue: UseFormSetValue<any>;
   error?: FieldError | undefined;
