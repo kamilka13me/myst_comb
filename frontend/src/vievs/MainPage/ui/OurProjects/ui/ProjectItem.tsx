@@ -1,7 +1,9 @@
-import Image, { StaticImageData } from 'next/image';
+import React from 'react';
+import { StaticImageData } from 'next/image';
 import Arrow from '@/shared/assets/icons/Arrow.svg?react';
 import { ButtonLink } from '@/shared/ui/ButtonLink';
 import { Icon } from '@/shared/ui/Icon';
+import { Image } from '@/shared/ui/Image';
 import { Text } from '@/shared/ui/Text';
 
 export interface BoxProps {
@@ -10,7 +12,7 @@ export interface BoxProps {
   subTitle: string;
 }
 
-export function ProjectItem({ src, title, subTitle }: BoxProps){
+export function ProjectItem({ src, title, subTitle }: BoxProps): React.JSX.Element{
   return (
     <li className="w-full 
       rounded-[30px] 
@@ -21,11 +23,17 @@ export function ProjectItem({ src, title, subTitle }: BoxProps){
       <div className='relative 
         h-auto min-w-[320px] min-h-[280px] 
         md:min-w-[430px] md:min-h-[360px]'>
-        <Image 
+        {/* <Image 
           src={src} 
           fill 
           alt={title} 
-          className='object-cover object-center'/>
+          className='object-cover object-center'/> */}
+        <Image 
+          src={src} 
+          fill ={true}
+          alt={title} 
+          className='object-center'/>
+
       </div>
         
       <div className="min-h-full flex flex-col justify-between p-6 lg:p-10">
