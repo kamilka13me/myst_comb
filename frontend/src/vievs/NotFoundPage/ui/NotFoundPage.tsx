@@ -7,7 +7,7 @@ import content from './content.json';
 
 export const NotFoundPage: React.FC = () => {
   return (
-    <div className="fixed z-30 top-0 flex h-full w-full flex-col items-center justify-center gap-7 bg-base-text_accent p-4">
+    <div className="fixed top-0 z-30 flex h-full w-full flex-col items-center justify-center gap-7 bg-base-text_accent p-4">
       <Text
         Tag="h1"
         textType="Desktop/title-l"

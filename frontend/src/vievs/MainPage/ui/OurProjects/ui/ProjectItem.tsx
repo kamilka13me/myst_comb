@@ -10,37 +10,30 @@ export interface BoxProps {
   subTitle: string;
 }
 
-export function ProjectItem({ src, title, subTitle }: BoxProps){
+export function ProjectItem({ src, title, subTitle }: BoxProps) {
   return (
-    <li className="w-full 
-      rounded-[30px] 
-      bg-white 
-      overflow-hidden 
-      flex flex-col gap-2.5 lg:flex-row ">
-
-      <div className='relative 
-        h-auto min-w-[320px] min-h-[280px] 
-        md:min-w-[430px] md:min-h-[360px]'>
-        <Image 
-          src={src} 
-          fill 
-          alt={title} 
-          className='object-cover object-center'/>
+    <li className="flex w-full flex-col gap-2.5 overflow-hidden rounded-[30px] bg-white lg:flex-row">
+      <div className="relative h-auto min-h-[280px] min-w-[320px] md:min-h-[360px] md:min-w-[430px]">
+        <Image
+          src={src}
+          fill
+          alt={title}
+          className="object-cover object-center"
+        />
       </div>
-        
-      <div className="min-h-full flex flex-col justify-between p-6 lg:p-10">
-        <div className="grid grid-cols-[1fr] gap-[24px] 
-          xl:grid-cols-[50%_1fr] xl:gap-[30px] ">
+
+      <div className="flex min-h-full flex-col justify-between p-6 lg:p-10">
+        <div className="grid grid-cols-[1fr] gap-[24px] xl:grid-cols-[50%_1fr] xl:gap-[30px]">
           <Text
             Tag="h3"
             text={title}
             textType="Desktop/title-l"
-            className="leading-10 text-xl md:text-2xl"
+            className="text-xl leading-10 md:text-2xl"
             color="base/text_accent"
           />
-          <div className="flex flex-col gap-10 mb-10">
+          <div className="mb-10 flex flex-col gap-10">
             <Text
-              className="leading-5 text-[16px] md:text-[18px]"
+              className="text-[16px] leading-5 md:text-[18px]"
               Tag="p"
               text={subTitle}
               textType="Desktop/Body"
@@ -59,9 +52,7 @@ export function ProjectItem({ src, title, subTitle }: BoxProps){
           </div>
         </div>
 
-        <div className=" grid grid-cols-[1fr] gap-[24px] 
-          xl:grid-cols-[50%_1fr] xl:gap-[30px] ">
-
+        <div className="grid grid-cols-[1fr] gap-[24px] xl:grid-cols-[50%_1fr] xl:gap-[30px]">
           <div className="flex flex-col lg:justify-end">
             <div className="h-[8px] w-full overflow-hidden rounded-full bg-gray-300 md:h-[10px]">
               <div
@@ -83,7 +74,7 @@ export function ProjectItem({ src, title, subTitle }: BoxProps){
                   textType="Desktop/numeric-s"
                   color="base/text_accent"
                   text="5 000 USD"
-                  className="font-semibold text-black text-[22px] md:text-[24px]"
+                  className="text-[22px] font-semibold text-black md:text-[24px]"
                 />
               </div>
 
@@ -98,15 +89,14 @@ export function ProjectItem({ src, title, subTitle }: BoxProps){
                   Tag="p"
                   textType="Desktop/numeric-s"
                   color="base/text_accent"
-                  className="font-semibold text-[22px] md:text-[24px]"
+                  className="text-[22px] font-semibold md:text-[24px]"
                   text="45 000 USD"
                 />
               </div>
             </div>
           </div>
 
-          <div className="flex items-center justify-center
-            lg:items-end lg:justify-end">
+          <div className="flex items-center justify-center lg:items-end lg:justify-end">
             <ButtonLink
               to="/404"
               variant="arrowTextBlue"
@@ -116,5 +106,5 @@ export function ProjectItem({ src, title, subTitle }: BoxProps){
         </div>
       </div>
     </li>
-  )
+  );
 }
