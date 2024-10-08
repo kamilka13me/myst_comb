@@ -1,5 +1,7 @@
-import React from "react";
-import { FieldError, UseFormRegister } from "react-hook-form";
+/* eslint-disable @typescript-eslint/no-explicit-any */
+
+import React from 'react';
+import { FieldError, UseFormRegister } from 'react-hook-form';
 
 interface PhoneInputProps {
   label: string;
@@ -15,35 +17,35 @@ const PhoneInput: React.FC<PhoneInputProps> = ({
   error,
 }) => {
   return (
-    <div className="relative mb-5 md:mb-4 w-full">
+    <div className="relative mb-5 w-full md:mb-4">
       <label
-        className={`absolute top-[-16px] left-3 !text-xs md:text-sm transform translate-y-1/2 pointer-events-none bg-base-text_accent px-1 ${
-          error ? "text-red-500" : "text-base-bg-block"
+        className={`pointer-events-none absolute left-3 top-[-16px] translate-y-1/2 transform bg-base-text_accent px-1 !text-xs md:text-sm ${
+          error ? 'text-red-500' : 'text-base-bg-block'
         }`}
         htmlFor={name}
       >
         {label}
       </label>
-      <div className="flex border border-[#616161] rounded-md shadow-sm overflow-hidden">
+      <div className="flex overflow-hidden rounded-md border border-[#616161] shadow-sm">
         <input
           type="tel"
           placeholder="+380__-___-__-__"
           id={name}
-          className={`peer block bg-base-text_accent w-full px-[10px] py-[16px] md:py-[23px] text-gray-50 placeholder-[#616161] ${
-            error ? "border-red-500" : "border-none"
-          } focus:outline-none focus:ring-blue-500 focus:border-blue-500`}
+          className={`peer block w-full bg-base-text_accent px-[10px] py-[16px] text-gray-50 placeholder-[#616161] md:py-[23px] ${
+            error ? 'border-red-500' : 'border-none'
+          } focus:border-blue-500 focus:outline-none focus:ring-blue-500`}
           {...register(name, {
             onChange: (e) => {
               const { value } = e.target;
-              if (!value.startsWith("+380")) {
-                e.target.value = "+380" + value.replace(/^\+380/, "");
+              if (!value.startsWith('+380')) {
+                e.target.value = '+380' + value.replace(/^\+380/, '');
               }
               return value;
             },
           })}
         />
       </div>
-      {error && <p className="text-red-500 text-xs mt-1">{error.message}</p>}
+      {error && <p className="mt-1 text-xs text-red-500">{error.message}</p>}
     </div>
   );
 };

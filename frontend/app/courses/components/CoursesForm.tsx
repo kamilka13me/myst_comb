@@ -177,23 +177,23 @@ export default function CoursesForm() {
           options={[
             {
               title: 'A0',
-              text: ""
+              text: '',
             },
             {
               title: 'A1',
-              text: ""
+              text: '',
             },
             {
               title: 'A2',
-              text: ""
+              text: '',
             },
             {
               title: 'B1',
-              text: ""
+              text: '',
             },
             {
               title: 'B2',
-              text: ""
+              text: '',
             },
           ]}
           register={register}

@@ -127,7 +127,7 @@ export default function SupportForm() {
             error={errors.email}
           />
           <span className="w-full">
-         <PhoneInput
+            <PhoneInput
               label="Телефон"
               name="phone"
               register={register}

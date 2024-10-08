@@ -1,14 +1,14 @@
-import React, { useState } from "react";
-import { useForm, SubmitHandler } from "react-hook-form";
-import { yupResolver } from "@hookform/resolvers/yup";
-import { ButtonLink } from "@/shared/ui/ButtonLink";
-import { Text } from "@/shared/ui/Text";
-import InputForm from "../../../src/widgets/Input/InputForm";
-import CheckboxForm from "../../../src/widgets/Checkbox/CheckboxForm";
-import Dropdown from "../../../src/widgets/DropDown/DropdownForm";
-import { schema } from "../helpers/validation";
-import FileUpload from "@/widgets/FormFile/FormFile";
-import PhoneInput from "@/widgets/InputPhone/InputPhone";
+import React, { useState } from 'react';
+import { useForm, SubmitHandler } from 'react-hook-form';
+import { yupResolver } from '@hookform/resolvers/yup';
+import { ButtonLink } from '@/shared/ui/ButtonLink';
+import { Text } from '@/shared/ui/Text';
+import InputForm from '../../../src/widgets/Input/InputForm';
+import CheckboxForm from '../../../src/widgets/Checkbox/CheckboxForm';
+import Dropdown from '../../../src/widgets/DropDown/DropdownForm';
+import { schema } from '../helpers/validation';
+import FileUpload from '@/widgets/FormFile/FormFile';
+import PhoneInput from '@/widgets/InputPhone/InputPhone';
 
 export interface FormInputsCooperation {
   firstName: string;
@@ -38,7 +38,7 @@ export default function CooperationForm() {
     getValues,
   } = useForm<FormInputsCooperation>({
     resolver: yupResolver(schema),
-    mode: "all",
+    mode: 'all',
   });
 
   const handleCheckboxChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -46,7 +46,7 @@ export default function CooperationForm() {
     setValue(name as keyof FormInputsCooperation, checked, {
       shouldValidate: true,
     });
-    if (name === "agreeToProcess") {
+    if (name === 'agreeToProcess') {
       setCheckedSubmit(checked);
     }
   };
@@ -61,10 +61,10 @@ export default function CooperationForm() {
 
   return (
     <>
-      <p className="text-center text-base md:text-xl font-medium text-base-stroke-btn-act mb-3 md:mb-4 mt-[152px] font-ibm-plex-sans">
+      <p className="mb-3 mt-[152px] text-center font-ibm-plex-sans text-base font-medium text-base-stroke-btn-act md:mb-4 md:text-xl">
         Долучитися як професіонал
       </p>
-      <div className="flex justify-center text-center px-0 md:px-5 mb-6 md:mb-[14px]">
+      <div className="mb-6 flex justify-center px-0 text-center md:mb-[14px] md:px-5">
         <Text
           Tag="h1"
           textType="Desktop/H3"
@@ -80,14 +80,14 @@ export default function CooperationForm() {
         color="base/BG_block"
         text="Ми раді розширювати нашу команду для втілення амбітної мети спільними зусиллями."
         align="center"
-        className="!text-[18px] md:text-base mb-20 max-w-[666px] m-auto"
+        className="m-auto mb-20 max-w-[666px] !text-[18px] md:text-base"
       />
 
       <form
         onSubmit={handleSubmit(onSubmit)}
         className="mb-[180px] font-ibm-plex-sans"
       >
-        <span className="flex flex-col md:flex-row gap-4">
+        <span className="flex flex-col gap-4 md:flex-row">
           <InputForm
             label="Ім'я"
             name="firstName"
@@ -112,7 +112,7 @@ export default function CooperationForm() {
           error={errors.organization}
         />
 
-        <span className="w-full flex flex-col md:flex-row gap-4">
+        <span className="flex w-full flex-col gap-4 md:flex-row">
           <InputForm
             label="Email"
             name="email"
@@ -133,7 +133,7 @@ export default function CooperationForm() {
                 label="Я є у Телеграмі"
                 name="agreeToTelegram"
                 register={register}
-                checked={getValues("agreeToTelegram") || false}
+                checked={getValues('agreeToTelegram') || false}
                 error={errors.agreeToTelegram}
                 onChange={handleCheckboxChange}
               />
@@ -141,7 +141,7 @@ export default function CooperationForm() {
                 label="Я є у Viber"
                 name="agreeToViber"
                 register={register}
-                checked={getValues("agreeToViber") || false}
+                checked={getValues('agreeToViber') || false}
                 error={errors.agreeToViber}
                 onChange={handleCheckboxChange}
               />
@@ -157,20 +157,20 @@ export default function CooperationForm() {
         />
 
         <Dropdown
-          label={{ title: "До якого проєкту хочете долучитись?" }}
+          label={{ title: 'До якого проєкту хочете долучитись?' }}
           placeholder="Оберіть проєкт"
           options={[
             {
-              title: "",
-              text: "Унікальні особини;",
+              title: '',
+              text: 'Унікальні особини;',
             },
             {
-              title: "",
-              text: "Cultbit: Інтелектуальна пригода у форматі AR;",
+              title: '',
+              text: 'Cultbit: Інтелектуальна пригода у форматі AR;',
             },
             {
-              title: "",
-              text: "Жито: проєкт соціальної адаптації внутрішньо переміщеним особам засобами мистецтва.",
+              title: '',
+              text: 'Жито: проєкт соціальної адаптації внутрішньо переміщеним особам засобами мистецтва.',
             },
           ]}
           register={register}
@@ -180,7 +180,7 @@ export default function CooperationForm() {
           error={errors.project}
         />
 
-        <h2 className="mb-[14px] text-white text-[24px]">
+        <h2 className="mb-[14px] text-[24px] text-white">
           Пропозиція щодо співпраці:
         </h2>
 
@@ -205,7 +205,7 @@ export default function CooperationForm() {
           label="Я погоджуюсь надати свої персональні дані"
           name="agreeToProcess"
           register={register}
-          checked={getValues("agreeToProcess") || false}
+          checked={getValues('agreeToProcess') || false}
           error={errors.agreeToProcess}
           onChange={handleCheckboxChange}
           classMain="flex justify-center mt-5 mb-5 md:mt-6 md:mb-6"
