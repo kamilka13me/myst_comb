@@ -99,14 +99,14 @@ const FileUpload: React.FC<FileUploadProps> = ({
         />
 
         {error && <p className="mt-1 text-xs text-red-500">{error.message}</p>}
-        {fileError && <p className="mt-1 text-xs text-red-500">{fileError}</p>}
-        <div className="mt-4">
+        {fileError && <p className="text-xs text-red-500">{fileError}</p>}
+        <div>
           {files.length > 0 && (
             <div className="flex gap-2">
               {files.map((file, index) => (
                 <div
                   key={index}
-                  className="mt-1 flex items-center justify-between rounded-2xl bg-base-title px-[14px] py-[23px]"
+                  className="flex items-center justify-between rounded-2xl bg-base-title px-[14px] py-[23px]"
                 >
                   <span className="max-w-[180px] text-[14px] text-white">
                     {file.name.length > 20

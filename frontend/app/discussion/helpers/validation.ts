@@ -51,7 +51,12 @@ export const schema = yup.object({
   agreeToTelegram: yup.boolean().optional(),
   agreeToViber: yup.boolean().optional(),
   agreeToProcess: yup.boolean().optional(),
-  project: yup.string().required('Виберіть проект'),
+  selectedBrick: yup
+    .array()
+    .of(yup.string())
+    .required('Оберіть щонайменше один елемент')
+    .min(1, 'Оберіть щонайменше один елемент')
+    .max(3, 'Можна обрати максимум 3 елементи'),
   offer: yup.string().required('Виберіть пропозицію'),
   documents: yup.array(),
 });

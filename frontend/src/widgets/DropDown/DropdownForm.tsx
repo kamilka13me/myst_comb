@@ -21,18 +21,20 @@ interface DropdownProps {
   placeholder?: string;
   defaultValue?: string;
   resetDropdown?: boolean;
+  labelStyle?: string;
 }
 
 const Dropdown: React.FC<DropdownProps> = ({
   options,
   label,
   placeholder,
-  // register,
+  register,
   setValue,
   name,
   defaultValue,
   resetDropdown,
   error,
+  labelStyle
 }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState<string | null>(
@@ -66,7 +68,7 @@ const Dropdown: React.FC<DropdownProps> = ({
           isOpen ? 'mb-[350px] md:mb-[150px]' : 'mb-[14px]'
         } ${error ? 'border-red-500' : 'border-[#616161]'}`}
       >
-        <label className="absolute left-3 top-[-8px] z-10 bg-base-text_accent px-1 text-xs text-white">
+        <label  className={`absolute left-3 top-[-8px] z-10 bg-base-text_accent px-1 text-xs text-white ${labelStyle}`}>
           {label.title}
           <span className="text-[#E7FF00]">{label.titleExtra}</span>
         </label>
