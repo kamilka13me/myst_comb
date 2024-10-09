@@ -1,3 +1,4 @@
+import React from 'react';
 import Rye from '@/shared/assets/img/rye1.png';
 import Cultbit from '@/shared/assets/img/Cultbit1.png';
 import UIP from '@/shared/assets/img/Unique_individuals_photo1.png';
@@ -25,7 +26,7 @@ const items: BoxProps[] = [
   },
 ];
 
-const OurProjects = () => {
+const OurProjects: React.FC = () => {
   return (
     <section className="w-full p-5">
       <Text

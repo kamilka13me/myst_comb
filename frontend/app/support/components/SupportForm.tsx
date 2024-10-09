@@ -74,7 +74,7 @@ export default function SupportForm() {
   };
 
   return (
-    <>
+    <div className="px-5 lg:px-0">
       <p className="mb-3 mt-[152px] text-center font-ibm-plex-sans text-base font-medium text-base-stroke-btn-act md:mb-4 md:text-xl">
         Бухгалтерська та юридична допомога:
       </p>
@@ -233,6 +233,6 @@ export default function SupportForm() {
           />
         </div>
       </form>
-    </>
+    </div>
   );
 }

@@ -1,6 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-/* eslint-disable @typescript-eslint/no-unused-vars */
-
 import React, { useState, useCallback, useRef, useEffect } from 'react';
 import { UseFormRegister, FieldError, UseFormSetValue } from 'react-hook-form';
 import Close from '../../../public/close.svg?react';
@@ -8,6 +5,7 @@ import Clip from '../../../public/clip.svg?react';
 
 interface FileUploadProps {
   name: string;
+  /* eslint-disable @typescript-eslint/no-explicit-any */
   register: UseFormRegister<any>;
   error?: FieldError;
   setValue: UseFormSetValue<any>;
@@ -16,7 +14,7 @@ interface FileUploadProps {
 
 const FileUpload: React.FC<FileUploadProps> = ({
   name,
-  register,
+  register, // eslint-disable-line @typescript-eslint/no-unused-vars
   error,
   setValue,
   clearFiles,

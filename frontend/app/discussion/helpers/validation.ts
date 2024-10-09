@@ -51,7 +51,19 @@ export const schema = yup.object({
   agreeToTelegram: yup.boolean().optional(),
   agreeToViber: yup.boolean().optional(),
   agreeToProcess: yup.boolean().optional(),
-  project: yup.string().required('Виберіть проект'),
-  offer: yup.string().required('Виберіть пропозицію'),
+  selectedBrick: yup
+    .array()
+    .of(yup.string())
+    .required('Оберіть щонайменше один елемент')
+    .min(1, 'Оберіть щонайменше один елемент')
+    .max(3, 'Можна обрати максимум 3 елементи'),
+  description: yup
+    .string()
+    .required("Опис є обов'язковою")
+    .matches(
+      ukrEngLettersNumbersSymbols,
+      'Опис має містити лише літери, цифри та символи',
+    )
+    .max(500, 'Опис не може бути більше 500 символів'),
   documents: yup.array(),
 });

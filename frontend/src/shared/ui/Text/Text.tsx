@@ -20,6 +20,7 @@ export type TextTypes =
   | 'Desktop/title-l'
   | 'Desktop/Button'
   | 'Desktop/numeric-s'
+  | 'H3'
   | 'Desktop/H3';
 
 export type TextColors =
@@ -73,6 +74,7 @@ const TextType: Record<TextTypes, string> = {
     'text-[#474747] text-sm font-semibold leading-[17.50px] font-ibm-plex-sans',
   'Desktop/Subtext':
     'text-3xs  font-ibm-plex-sans font-normal  tracking-[-0.24px]',
+  H3: 'text-center text-base-BG_block font-normal text-[28px] leading-[115%] tracking-[-0.56px] font-serif md:text-[36px] md:tracking-[-0.72px] md:leading-[115%]',
 };
 
 const TextAlignClass: Record<TextAlign, string> = {
