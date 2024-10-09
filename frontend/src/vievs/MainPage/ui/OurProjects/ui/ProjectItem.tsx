@@ -1,7 +1,9 @@
-import Image, { StaticImageData } from 'next/image';
+import React from 'react';
+import { StaticImageData } from 'next/image';
 import Arrow from '@/shared/assets/icons/Arrow.svg?react';
 import { ButtonLink } from '@/shared/ui/ButtonLink';
 import { Icon } from '@/shared/ui/Icon';
+import { Image } from '@/shared/ui/Image';
 import { Text } from '@/shared/ui/Text';
 
 export interface BoxProps {
@@ -10,16 +12,17 @@ export interface BoxProps {
   subTitle: string;
 }
 
-export function ProjectItem({ src, title, subTitle }: BoxProps) {
+
+export function ProjectItem({
+  src,
+  title,
+  subTitle,
+}: BoxProps): React.JSX.Element {
   return (
-    <li className="flex w-full flex-col gap-2.5 overflow-hidden rounded-[30px] bg-white lg:flex-row">
-      <div className="relative h-auto min-h-[280px] min-w-[320px] md:min-h-[360px] md:min-w-[430px]">
-        <Image
-          src={src}
-          fill
-          alt={title}
-          className="object-cover object-center"
-        />
+    <li className="flex min-h-[470px] w-full flex-col gap-2.5 overflow-hidden rounded-[30px] bg-white lg:flex-row">
+      <div className="relative h-auto min-h-[190px] min-w-[280px] md:min-h-[360px] md:min-w-[430px]">
+        <Image src={src} fill={true} alt={title} className="object-center" />
+
       </div>
 
       <div className="flex min-h-full flex-col justify-between p-6 lg:p-10">
@@ -74,7 +77,9 @@ export function ProjectItem({ src, title, subTitle }: BoxProps) {
                   textType="Desktop/numeric-s"
                   color="base/text_accent"
                   text="5 000 USD"
-                  className="text-[22px] font-semibold text-black md:text-[24px]"
+
+                  className="text-lg font-semibold text-black sm:text-[22px] md:text-[24px]"
+
                 />
               </div>
 
@@ -89,7 +94,9 @@ export function ProjectItem({ src, title, subTitle }: BoxProps) {
                   Tag="p"
                   textType="Desktop/numeric-s"
                   color="base/text_accent"
-                  className="text-[22px] font-semibold md:text-[24px]"
+
+                  className="text-lg font-semibold sm:text-[22px] md:text-[24px]"
+
                   text="45 000 USD"
                 />
               </div>
