@@ -13,7 +13,9 @@ import useMediaQuery from '../../../../app/portfolio/hooks/useMediaQuery';
 
 const Footer = () => {
   const isPhone = useMediaQuery('(max-width: 640px)');
-
+  if (isPhone) {
+    return <div>no redy yet</div>;
+  }
   const About = [
     { title: 'Проєкти', link: '/404' },
     { title: 'Послуги', link: '/404' },
@@ -21,9 +23,7 @@ const Footer = () => {
     { title: 'Про нас', link: '/404' },
     { title: 'Контакти', link: '/404' },
   ];
-  if (isPhone) {
-    return <div>not redy yet</div>;
-  }
+
   return (
     <footer className="flex h-[431px] w-full rounded-t-[40px] bg-[#151515] px-10 pb-10 pt-20">
       <div className="flex flex-1 flex-col justify-between">

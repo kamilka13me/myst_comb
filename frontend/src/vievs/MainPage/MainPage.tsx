@@ -5,7 +5,7 @@ import OurValues from './ui/OurValues';
 import Strategi from './ui/Strategi';
 import Donors from './ui/Donors';
 // import News from './ui/News';
-import OurProjects from './ui/OurProjects';
+import OurProjects from './ui/OurProjects/OurProjects';
 import FallingBricks from './ui/FallingBricks';
 import OurServices from './ui/OurServices';
 import WhoAreWe from './ui/WhoAreWe';
