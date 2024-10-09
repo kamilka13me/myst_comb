@@ -10,6 +10,7 @@ import FallingBricks from '../../../src/widgets/CardForm/FillingBringsForm';
 import { data, dataPhone } from '../../portfolio/helpers/brings-data';
 import { supportData, supportDataPhone } from '../helpers/support-data';
 import { schema } from '../helpers/validation';
+import PhoneInput from '@/widgets/InputPhone/InputPhone';
 
 export interface FormInputsSupport {
   firstName: string;
@@ -73,7 +74,7 @@ export default function SupportForm() {
   };
 
   return (
-    <>
+    <div className="px-5 lg:px-0">
       <p className="mb-3 mt-[152px] text-center font-ibm-plex-sans text-base font-medium text-base-stroke-btn-act md:mb-4 md:text-xl">
         Бухгалтерська та юридична допомога:
       </p>
@@ -126,11 +127,9 @@ export default function SupportForm() {
             error={errors.email}
           />
           <span className="w-full">
-            <InputForm
+            <PhoneInput
               label="Телефон"
               name="phone"
-              placeholder="+380__-___-__-__"
-              type="tel"
               register={register}
               error={errors.phone}
             />
@@ -234,6 +233,6 @@ export default function SupportForm() {
           />
         </div>
       </form>
-    </>
+    </div>
   );
 }

@@ -5,13 +5,13 @@ import { ButtonLink } from '@/shared/ui/ButtonLink';
 import { Text } from '@/shared/ui/Text';
 import InputForm from '../../../src/widgets/Input/InputForm';
 import CheckboxForm from '../../../src/widgets/Checkbox/CheckboxForm';
-import Dropdown from '../../../src/widgets/DropDown/DropdownForm';
-import FallingBricks from '../../../src/widgets/CardForm/FillingBringsForm';
-import { data, dataPhone } from '../../portfolio/helpers/brings-data';
 import { schema } from '../helpers/validation';
+import FileUpload from '@/widgets/FormFile/FormFile';
 import PhoneInput from '@/widgets/InputPhone/InputPhone';
+import FallingBricks from '@/widgets/CardForm/FillingBringsForm';
+import { data, dataPhone } from '../../portfolio/helpers/brings-data';
 
-export interface FormInputsCourses {
+export interface FormInputsDiscussion {
   firstName: string;
   lastName: string;
   organization: string;
@@ -22,11 +22,11 @@ export interface FormInputsCourses {
   agreeToViber?: boolean;
   agreeToProcess?: boolean;
   selectedBrick: (string | undefined)[];
-  services: string;
   description: string;
+  documents?: File[];
 }
 
-export default function CoursesForm() {
+export default function DiscussionForm() {
   const [clearBricks, setClearBricks] = useState(false);
   const [checkedSubmit, setCheckedSubmit] = useState(false);
 
@@ -37,18 +37,14 @@ export default function CoursesForm() {
     reset,
     formState: { errors },
     getValues,
-  } = useForm<FormInputsCourses>({
+  } = useForm<FormInputsDiscussion>({
     resolver: yupResolver(schema),
     mode: 'all',
   });
 
-  const handleBrickSelect = (selectedBricks: string[]) => {
-    setValue('selectedBrick', selectedBricks);
-  };
-
   const handleCheckboxChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const { name, checked } = event.target;
-    setValue(name as keyof FormInputsCourses, checked, {
+    setValue(name as keyof FormInputsDiscussion, checked, {
       shouldValidate: true,
     });
     if (name === 'agreeToProcess') {
@@ -56,9 +52,12 @@ export default function CoursesForm() {
     }
   };
 
-  const onSubmit: SubmitHandler<FormInputsCourses> = (data) => {
-    console.log(data);
+  const handleBrickSelect = (selectedBricks: string[]) => {
+    setValue('selectedBrick', selectedBricks);
+  };
 
+  const onSubmit: SubmitHandler<FormInputsDiscussion> = async (data) => {
+    console.log(data);
     reset();
     setValue('selectedBrick', []);
     setClearBricks(true);
@@ -69,18 +68,27 @@ export default function CoursesForm() {
   return (
     <div className="px-5 lg:px-0">
       <p className="mb-3 mt-[152px] text-center font-ibm-plex-sans text-base font-medium text-base-stroke-btn-act md:mb-4 md:text-xl">
-        Курси англійської:
+        Відкрите обговорення
       </p>
-      <div className="mb-10 flex justify-center px-0 text-center md:mb-20 md:px-5">
+      <div className="mb-6 flex justify-center px-0 text-center md:mb-[14px] md:px-5">
         <Text
           Tag="h1"
           textType="Desktop/H3"
           color="base/BG_block"
-          text="Заповніть анкету нижче, щоб ми могли якнайшвидше звʼязатись із вами"
+          text="Тут ви можете залишити свої пропозиції щодо роботи Мистецького Комбінату."
           align="center"
           className="text-[28px] md:text-3xl"
         />
       </div>
+      <Text
+        Tag="p"
+        textType="Desktop/Body"
+        color="base/BG_block"
+        text="Ми здійснюємо перегляд стратегії раз на рік, тому заповнюйте форму і ми обов’язково розглянемо ваші коментарі під час наступної стратегічної сесії."
+        align="center"
+        className="m-auto mb-20 max-w-[666px] !text-[18px] md:text-base"
+      />
+
       <form
         onSubmit={handleSubmit(onSubmit)}
         className="mb-[180px] font-ibm-plex-sans"
@@ -167,51 +175,25 @@ export default function CoursesForm() {
           }
         />
 
-        <Dropdown
-          label={{
-            title:
-              'Який рівень володіння англійською у вас наразі? (можете пройти ',
-            titleExtra: 'безкоштовний тест від наших партнерів)',
-          }}
-          placeholder="Оберіть послугу"
-          options={[
-            {
-              title: 'A0',
-              text: '',
-            },
-            {
-              title: 'A1',
-              text: '',
-            },
-            {
-              title: 'A2',
-              text: '',
-            },
-            {
-              title: 'B1',
-              text: '',
-            },
-            {
-              title: 'B2',
-              text: '',
-            },
-          ]}
-          register={register}
-          setValue={setValue}
-          name="services"
-          resetDropdown={clearBricks}
-          error={errors.services}
-          labelStyle="top-[-20px] md:top-[-8px]"
-        />
+        <h2 className="mb-[14px] text-[24px] text-white">
+          Пропозиція щодо роботи Фонду:
+        </h2>
 
         <InputForm
-          label="Коротко опишіть вашу мотивацію до вивчення англійської мови."
-          placeholder="Ваш опис"
+          label="Ваш опис"
+          placeholder="Обѓрунтування актуальності пропозиції (будь ласка, додайте посилання на статистичні звіти, дослідження та інші джерела даних, спираючись на які ви сформулювали свою пропозицію)."
           elementType="textarea"
           rows={5}
           name="description"
           register={register}
           error={errors.description}
+        />
+
+        <FileUpload
+          name="documents"
+          register={register}
+          setValue={setValue}
+          clearFiles={clearBricks}
         />
 
         <CheckboxForm

@@ -10,6 +10,7 @@ import { ButtonLink } from '@/shared/ui/ButtonLink';
 import { Text } from '@/shared/ui/Text';
 // import Dropdown from '../../../src/widgets/DropDown/DropdownForm';
 import { data, dataPhone } from '../helpers/brings-data';
+import PhoneInput from '@/widgets/InputPhone/InputPhone';
 
 export interface FormInputs {
   firstName: string;
@@ -64,9 +65,9 @@ export default function PortfolioForm() {
   };
 
   return (
-    <>
+    <div className="px-5 lg:px-0">
       <p className="mb-3 mt-[152px] text-center font-ibm-plex-sans text-base font-medium text-base-stroke-btn-act md:mb-4 md:text-xl">
-        Портфоліо-рев&apos;ю:
+        Портфоліо-рев&apos;
       </p>
       <div className="mb-10 flex justify-center px-0 text-center md:mb-20 md:px-5">
         {/* <h1 className="text-[28px] md:text-3xl ">
@@ -120,11 +121,9 @@ export default function PortfolioForm() {
             error={errors.email}
           />
           <span className="w-full">
-            <InputForm
+            <PhoneInput
               label="Телефон"
               name="phone"
-              placeholder="+380__-___-__-__"
-              type="tel"
               register={register}
               error={errors.phone}
             />
@@ -196,6 +195,6 @@ export default function PortfolioForm() {
           />
         </div>
       </form>
-    </>
+    </div>
   );
 }
