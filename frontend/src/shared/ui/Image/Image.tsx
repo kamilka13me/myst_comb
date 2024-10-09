@@ -5,7 +5,7 @@ import Image, { StaticImageData } from 'next/image';
 interface Props {
   src: string | StaticImageData;
   alt: string;
-  fill?: boolean
+  fill?: boolean;
   width?: number;
   height?: number;
   loadingFallback?: ReactElement;
@@ -16,7 +16,7 @@ interface Props {
 const AppImage: FC<Props> = ({
   src,
   alt,
-  fill=false,
+  fill = false,
   width,
   height,
   loadingFallback,

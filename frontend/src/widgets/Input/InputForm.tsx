@@ -1,4 +1,5 @@
 'use client';
+import { Icon } from '@/shared/ui/Icon';
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
 import React from 'react';
@@ -13,6 +14,7 @@ interface InputFormProps {
   error?: FieldError | undefined;
   placeholder?: string;
   rows?: number;
+  icon?: string;
 }
 
 const InputForm: React.FC<InputFormProps> = ({
@@ -24,6 +26,7 @@ const InputForm: React.FC<InputFormProps> = ({
   error,
   placeholder,
   rows,
+  icon,
 }) => {
   const commonStyles = `peer block bg-base-text_accent w-full px-[10px] py-[16px] md:py-[23px] border border-[#616161] text-gray-50 placeholder-[#616161] placeholder:text-[14px] md:placeholder:text-[16px] ${
     error ? 'border-red-500' : 'border-[#616161]'
@@ -44,7 +47,7 @@ const InputForm: React.FC<InputFormProps> = ({
           type={type}
           placeholder={placeholder}
           id={name}
-          className={commonStyles}
+          className={`${commonStyles} ${icon ? 'pl-10' : ''}`}
           {...register(name)}
         />
       )}
@@ -56,6 +59,13 @@ const InputForm: React.FC<InputFormProps> = ({
       >
         {label}
       </label>
+      {icon ? (
+        <Icon
+          className="absolute left-3 top-[5px] translate-y-1/2 transform md:top-[12px]"
+          Svg={icon}
+        />
+      ) : null}
+
       {error && <p className="mt-1 text-xs text-red-500">{error.message}</p>}
     </div>
   );
