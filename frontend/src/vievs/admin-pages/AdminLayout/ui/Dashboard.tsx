@@ -68,7 +68,9 @@ export default function Dashboard(): JSX.Element {
     return (  
       <li>
         <Link href={href} 
-          className={`px-4 py-2.5 flex gap-2.5 duration-300 hover:bg-icons_symbols-blue_500 hover:opacity-70 rounded-[40px] ${isActive(pathName) ? 'bg-icons_symbols-blue_500 hover:opacity-70' : ""}`}>
+          className={`px-4 py-2.5 flex gap-2.5 duration-300 hover:bg-icons_symbols-blue_500 hover:opacity-70 
+          rounded-[40px] 
+          ${isActive(pathName) ? 'bg-icons_symbols-blue_500 hover:opacity-70' : ""}`}>
           <Icon Svg={icon} width={24} height={24} />
           <Text
             Tag="span"
@@ -84,39 +86,41 @@ export default function Dashboard(): JSX.Element {
   }
 
   return(
-    <ul className='w-full flex flex-col gap-4'>
-      <li>
-        <Text
-          Tag="h2"
-          textType="Desktop/title-s"
-          text='Адмін панель'
-          font="sans"
-          align="center"
-          color="base/BG_block"
-          className="font-normal"
-        />
-      </li>
-
-      { items.map((el:ItemProps)=>{
-          return <ItemLinks {...el} key={el.pathName}/>
-        })
-      }
-      
-      <li>
-        <button type="button" 
-          className='w-full rounded-[40px] px-4 py-2.5
-            duration-300 hover:bg-icons_symbols-blue_500 hover:opacity-80'>
+    <div className='w-[236px] bg-base-text_dark rounded-[30px] p-6 hidden lg:block'>
+      <ul className='w-full flex flex-col gap-4'>
+        <li>
           <Text
-              Tag="span"
-              textType="Desktop/Subtitle"
-              text='Вихід'
-              font="sans"
-              align='center'
-              color="base/BG_block"
-              className="font-normal"
-            />
-        </button>
-      </li>
-    </ul>
+            Tag="h2"
+            textType="Desktop/title-s"
+            text='Адмін панель'
+            font="sans"
+            align="center"
+            color="base/BG_block"
+            className="font-normal"
+          />
+        </li>
+
+        { items.map((el:ItemProps)=>{
+            return <ItemLinks {...el} key={el.pathName}/>
+          })
+        }
+        
+        <li>
+          <button type="button" 
+            className='w-full rounded-[40px] px-4 py-2.5
+              duration-300 hover:bg-icons_symbols-blue_500 hover:opacity-80'>
+            <Text
+                Tag="span"
+                textType="Desktop/Subtitle"
+                text='Вихід'
+                font="sans"
+                align='center'
+                color="base/BG_block"
+                className="font-normal"
+              />
+          </button>
+        </li>
+      </ul>
+    </div>
   )
 }
