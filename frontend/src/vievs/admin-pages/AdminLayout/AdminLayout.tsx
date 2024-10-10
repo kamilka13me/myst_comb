@@ -8,7 +8,7 @@ export function AdminLayout({children}
   }): React.JSX.Element
   {
   return (
-    <div className='min-h-[90vh] flex flex-row gap-8 p-10'>
+    <div className='flex flex-row gap-8 p-10 '>
       <div className='w-[236px] bg-base-text_dark rounded-[30px] p-6'>
         <Dashboard/>
         {/* <ul className='w-full flex flex-col gap-4 items-center'>
@@ -23,7 +23,10 @@ export function AdminLayout({children}
           </li>
         </ul> */}
       </div>
-      {children}
+
+      <div className='mim-h-full w-full'>
+       {children}
+      </div>
     </div>
   )
 }
