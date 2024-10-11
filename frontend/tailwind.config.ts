@@ -54,6 +54,10 @@ const config: Config = {
         "135": "135%",
         "115": "115%",
       },
+      boxShadow: {
+        'calendar': '0 2px 2px 0 rgba(0, 0, 0, 0.25)',
+        'user-card': '0 4px 4px 0 rgba(0, 0, 0, 0.25)',
+      }
     },
   },
   plugins: [],
