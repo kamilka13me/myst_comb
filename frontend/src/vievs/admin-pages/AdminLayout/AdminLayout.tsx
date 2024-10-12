@@ -10,9 +10,9 @@ export function AdminLayout({children}
   return (
     <div className='flex flex-row gap-8 p-5 lg:p-10'>
       <Dashboard/>
-      <div className='mim-h-full w-full'>
+      <section className='mim-h-full w-full'>
        {children}
-      </div>
+      </section>
     </div>
   )
 }

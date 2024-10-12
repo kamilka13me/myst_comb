@@ -7,7 +7,7 @@ import { Text } from "@/shared/ui/Text";
 import services from '@/shared/assets/icons/icon_services.svg?react';
 import news from '@/shared/assets/icons/icon_news.svg?react';
 import projects from '@/shared/assets/icons/icon_projects.svg?react';
-import people from '@/shared/assets/icons/icon_people.svg?react';
+import users from '@/shared/assets/icons/icon_people.svg?react';
 import content from '@/shared/assets/icons/icon_content.svg?react';
 import settings from '@/shared/assets/icons/icon_settings.svg?react';
 
@@ -41,10 +41,10 @@ export default function Dashboard(): JSX.Element {
       icon: projects
     },
     {
-      pathName:'people',
-      href: '/admin/people',
+      pathName:'users',
+      href: '/admin/users',
       text: 'Отримувачі',
-      icon: people
+      icon: users
     },
     {
       pathName:'content',
@@ -86,7 +86,7 @@ export default function Dashboard(): JSX.Element {
   }
 
   return(
-    <div className='w-[236px] bg-base-text_dark rounded-[30px] p-6 hidden lg:block'>
+    <nav className='w-[236px] bg-base-text_dark rounded-[30px] p-6 hidden lg:block'>
       <ul className='w-full flex flex-col gap-4'>
         <li>
           <Text
@@ -121,6 +121,6 @@ export default function Dashboard(): JSX.Element {
           </button>
         </li>
       </ul>
-    </div>
+    </nav>
   )
 }
