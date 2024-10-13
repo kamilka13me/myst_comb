@@ -68,9 +68,9 @@ export default function Dashboard(): JSX.Element {
     return (  
       <li>
         <Link href={href} 
-          className={`px-4 py-2.5 flex gap-2.5 duration-300 hover:bg-icons_symbols-blue_500 hover:opacity-70 
+          className={`px-4 py-2.5 flex gap-2.5 duration-300  hover:shadow-hover_btn
           rounded-[40px] 
-          ${isActive(pathName) ? 'bg-icons_symbols-blue_500 hover:opacity-70' : ""}`}>
+          ${isActive(pathName) ? 'bg-icons_symbols-blue_500' : ""}`}>
           <Icon Svg={icon} width={24} height={24} />
           <Text
             Tag="span"
@@ -108,7 +108,7 @@ export default function Dashboard(): JSX.Element {
         <li>
           <button type="button" 
             className='w-full rounded-[40px] px-4 py-2.5
-              duration-300 hover:bg-icons_symbols-blue_500 hover:opacity-80'>
+              duration-300 active:bg-icons_symbols-blue_500 hover:shadow-hover_btn'>
             <Text
                 Tag="span"
                 textType="Desktop/Subtitle"

@@ -22,7 +22,7 @@ export function UsersList(): JSX.Element {
         />
         <button 
           className="rounded-[30px] py-3 px-8 flex gap-2 
-          border border-transparent items-center duration-300 hover:shadow-calendar  focus:border-base-text_light" 
+          border border-transparent items-center duration-300 hover:shadow-hover_btn focus:border-base-text_light" 
           type="button">
           <Icon Svg={calendar} width={24} height={24} />
           <Text
