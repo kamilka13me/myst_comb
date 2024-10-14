@@ -52,10 +52,6 @@ export default function Pagination(): JSX.Element{
           className="min-w-[48px]"
         />
       </button>
- 
-{/* 
-      <ButtonLink variant='textBlue' className="rotate-[-135deg]"/>
-      <ButtonLink variant='textBlue'/> */}
     </div>
   )
 }
