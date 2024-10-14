@@ -1,4 +1,4 @@
-import { UnderDevelopment } from "@/vievs/admin-pages/UnderDevelopment";
+import { UnderDevelopment } from "@/vievs/AdminPages/UnderDevelopment";
 
 export default function ServicesPage(): JSX.Element {
   // Замінити на готові сторінки

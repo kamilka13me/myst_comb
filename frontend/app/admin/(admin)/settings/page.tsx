@@ -1,4 +1,4 @@
-import { UnderDevelopment } from "@/vievs/admin-pages/UnderDevelopment";
+import { UnderDevelopment } from "@/vievs/AdminPages/UnderDevelopment";
 
 // Settings
 export default function SettingsPage(): JSX.Element {

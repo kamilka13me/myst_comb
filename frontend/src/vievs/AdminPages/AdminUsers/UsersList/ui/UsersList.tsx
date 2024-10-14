@@ -122,7 +122,7 @@ export function UsersList(): JSX.Element {
           { data.users.map((user)=>{
               return (
                 <>
-                  <tr key={user.id} className="rounded-[24px] duration-300 hover:shadow-user-card">
+                  <tr key={user.id} className="rounded-[24px] overflow-visible duration-300 hover:shadow-user-card hover:bg-base-text_accent">
                   {UserListItem(user)}
                   </tr>
                   <tr className="h-[16px]"></tr>

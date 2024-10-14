@@ -16,15 +16,22 @@ import minus from '@/shared/assets/icons/icon_minus.svg?react';
 export function UserListItem(user:User) {
   const[ isOpen, setIsOpen ] = useState<boolean>(false);
 
-  const mediaDropDownList = ({media}:MediaProps) :JSX.Element =>{
+  const getBborderColor = (name:string): string =>{
+    if(name === "Рев’ю"){ return '#0f9' };
+    if(name === "Послуги"){ return '#d633ff' };
+    if(name === "Англійська"){ return '#ff4e00' };
+    if(name === "Обговорення"){ return '#e7ff00' };
+    if(name === "Долучитись"){ return '#9e92ee' };
+    return '#9e92ee'
+  }
 
-    const colors: string[] = ["#f1ff66",'#E066FF','#9E92EE','#FFB899'];
+  const mediaDropDownList = ({media}: MediaProps) :JSX.Element =>{
+
+    const colors: string[] = ["#f1ff66",'#E066FF','#9E92EE'];
 
     const getBgColor = (id:number): string =>{
-      if(colors.length > id && colors[id]){
+      if(colors[id]){
         return colors[id]
-      }else if(colors.length <= id && colors[id - colors.length] ) {
-         return colors[id - colors.length]
       }else return colors[0]
     }
 
@@ -105,24 +112,24 @@ export function UserListItem(user:User) {
 
   return(
     <>
-      <td className={clsx(isOpen && "align-top")}>
+      <td className={clsx(isOpen && "align-top", "rounded-bl-[24px] rounded-tl-[24px]")}>
         <Text
-          Tag="span"
+          Tag="p"
           textType="Desktop/Body"
           text={user.name}
           font="sans"
           color="base/text"
-          className="font-normal block py-6 px-3"
+          className="font-normal py-6 px-3"
         />
       </td>
       <td className={clsx(isOpen && "align-top")}>
         <Text
-          Tag="span"
+          Tag="p"
           textType="Desktop/Body"
           text={user.date}
           font="sans"
           color="base/text"
-          className="font-normal block py-6 px-3"
+          className="font-normal py-6 px-3"
         />
       </td>
       <td className={clsx(isOpen && "align-top")}>
@@ -130,24 +137,28 @@ export function UserListItem(user:User) {
       </td>
       <td className={clsx(isOpen && "align-top")}>
         <Text
-          Tag="span"
+          Tag="p"
           textType="Desktop/Body"
           text={user.email}
           font="sans"
           color="base/text"
-          className="font-normal block py-6 px-3"
+          className="font-normal py-6 px-3"
         />
       </td>
-      <td className={clsx('py-5 px-3', isOpen && "align-top")}>
-        <Text
-          Tag="span"
-          textType="Desktop/Button"
-          text={user.type_services}
-          font="sans"
-          align="center"
-          color="base/text"
-          className={"font-normal block border rounded-[30px] w-[132px] py-2 mx-auto"}
-        />
+      <td className={clsx('py-5 px-3 rounded-br-[24px] rounded-tr-[24px]', isOpen && "align-top")}>
+
+        <div style={{borderColor: getBborderColor(user.type_services)}}   
+          className="border rounded-[30px] w-[132px] py-2 mx-auto">
+          <Text
+            Tag="p"
+            textType="Desktop/Button"
+            text={user.type_services}
+            font="sans"
+            align="center"
+            color="base/text"
+            className={"font-normal"}
+          />
+        </div>
       </td>
     </> 
   )
