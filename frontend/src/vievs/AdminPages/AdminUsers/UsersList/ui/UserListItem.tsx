@@ -137,40 +137,40 @@ export function UserListItem(user: User) {
 
   return (
     <>
-      <td className={clsx(isOpen && "align-top", "rounded-bl-[24px] rounded-tl-[24px]")}>
+      <div className={clsx(isOpen ? "align-top" : "align-center")}>
         <Text
           Tag="p"
           textType="Desktop/Body"
           text={user.name}
           font="sans"
           color="base/text"
-          className="font-normal py-6 px-3"
+          className="font-normal py-6"
         />
-      </td>
-      <td className={clsx(isOpen && 'align-top')}>
+      </div>
+      <div className={clsx(isOpen ? "align-top" : "align-center")}>
         <Text
           Tag="p"
           textType="Desktop/Body"
           text={user.date}
           font="sans"
           color="base/text"
-          className="font-normal py-6 px-3"
+          className="font-normal py-6"
         />
-      </td>
-      <td className={clsx(isOpen && 'align-top')}>
+      </div>
+      <div className={clsx(isOpen && "align-top")}>
         {mediaDropDownList({ media: user.media })}
-      </td>
-      <td className={clsx(isOpen && 'align-top')}>
+      </div>
+      <div className={clsx('overflow-hidden', isOpen ? "align-top" : "align-center")}>
         <Text
           Tag="p"
           textType="Desktop/Body"
           text={user.email}
           font="sans"
           color="base/text"
-          className="font-normal py-6 px-3"
+          className="font-normal py-6"
         />
-      </td>
-      <td className={clsx('py-5 px-3 rounded-br-[24px] rounded-tr-[24px]', isOpen && "align-top")}>
+      </div>
+      <div className={clsx('py-4', isOpen ? "align-top" : "align-center")}>
 
         <div style={{borderColor: getBborderColor(user.type_services)}}   
           className="border rounded-[30px] w-[132px] py-2 mx-auto">
@@ -184,7 +184,7 @@ export function UserListItem(user: User) {
             className={"font-normal"}
           />
         </div>
-      </td>
+      </div>
     </>
   );
 }
