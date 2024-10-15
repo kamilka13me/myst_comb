@@ -8,9 +8,9 @@ export function AdminLayout({
   children: React.ReactNode;
 }): React.JSX.Element {
   return (
-    <div className="flex flex-row gap-8 p-5 lg:p-10">
+    <div className="flex flex-row items-start gap-8 p-5 lg:p-10">
       <Dashboard />
-      <section className="mim-h-full w-full">{children}</section>
+      <section className="min-h-[70vh] w-full">{children}</section>
     </div>
   );
 }

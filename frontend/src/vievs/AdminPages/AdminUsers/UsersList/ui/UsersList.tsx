@@ -1,5 +1,4 @@
 "use client"
-//import { useState } from "react";
 import { Text } from "@/shared/ui/Text";
 import { Icon } from '@/shared/ui/Icon';
 import { UserListItem } from "./UserListItem";
@@ -9,23 +8,38 @@ import sort from '@/shared/assets/icons/yellow_sort.svg?react';
 import data from './fake-data-users.json'
 import Pagination from "./Pagination";
 
+interface User {
+  id: string;
+  name: string;
+  date: string;
+  media: string[];
+  email: string;
+  type_services: string;
+}
+
+interface DataProps{
+  data:User[]
+}
+
+
+function ListItem({data}: DataProps): JSX.Element {
+  return (
+    <>
+    {data.map((user)=>{
+        return (
+          <li key={user.id} className="rounded-[24px] px-3 grid 
+          grid-cols-[minmax(160px,_185px)_minmax(80px,_120px)_minmax(235px,_250px)_minmax(70px,_1fr)_minmax(128px,_165px)] gap-1
+          duration-300 hover:shadow-user-card hover:bg-base-text_accent">
+          {UserListItem(user)}
+          </li>
+        )
+      })
+    }
+  </>
+  )
+}
+
 export function UsersList(): JSX.Element {
-//  interface User {
-//     id: string;
-//     name: string;
-//     date: string;
-//     media: string[];
-//     email: string;
-//     type_services: string;
-//   }
-
-
-  // const[ pages, setPages ] = useState<[User[]] | null>(null);
-
-  // const createPages =(data: User[]): void =>{
-  //   const newData 
-
-  //  }
 
   return (
     <div>
@@ -55,102 +69,80 @@ export function UsersList(): JSX.Element {
           </button>
         </header>
 
-        <table className="w-full">
-          <thead>
-            <tr className=" h-[56px] border-b border-base-text_ligh">
-              <th className="w-[200px] py-6 px-3">
-                <div className="flex gap-3">
-                  <Text
-                    Tag="span"
-                    textType="Desktop/Body"
-                    text={'Ім’я та прізвище'}
-                    font="sans"
-                    color="base/BG_block"
-                    className="font-medium"
-                  />
-                  <button type="button">
-                    <Icon Svg={arrow_down} width={24} height={24} />
-                  </button>
-                </div>
-              </th>
-              <th className="py-6 px-3">
-                <div className="flex gap-3 min-w-[100px]">
-                  <Text
-                    Tag="span"
-                    textType="Desktop/Body"
-                    text={'Дата'}
-                    font="sans"
-                    color="base/BG_block"
-                    className="font-medium"
-                  />
-                  <button type="button">
-                    <Icon Svg={sort} width={24} height={24} />
-                  </button>
-                </div>
-              </th>
-              <th className="py-6 px-3">
-                <div className="flex gap-3">
-                  <Text
-                    Tag="span"
-                    textType="Desktop/Body"
-                    text={'Медіа'}
-                    font="sans"
-                    color="base/BG_block"
-                    className="font-medium"
-                  />
-                  <button type="button">
-                    <Icon Svg={arrow_down} width={24} height={24} />
-                  </button>
-                </div>
-              </th>
-              <th className="py-6 px-3">
-                <div className="flex gap-3 ">
-                  <Text
-                    Tag="span"
-                    textType="Desktop/Body"
-                    text={'Email'}
-                    font="sans"
-                    color="base/BG_block"
-                    className="font-medium"
-                  />
-                  <button type="button">
-                    <Icon Svg={arrow_down} width={24} height={24} />
-                  </button>
-                </div>
-              </th>
-              <th className="py-6 px-3">
-                <div className="flex gap-3 ">
-                  <Text
-                    Tag="span"
-                    textType="Desktop/Body"
-                    text={'Тип послуг'}
-                    font="sans"
-                    color="base/BG_block"
-                    className="font-medium"
-                  />
-                  <button type="button">
-                    <Icon Svg={arrow_down} width={24} height={24}/>
-                  </button>
-                </div> 
-              </th>
-            </tr>
-          </thead>
+        <ul className="w-full flex flex-col gap-4">
+          <li className=" grid grid px-3
+          grid-cols-[minmax(170px,_185px)_minmax(80px,_120px)_minmax(235px,_250px)_minmax(70px,_1fr)_minmax(128px,_165px)] gap-3
+          border-b border-base-text_ligh">
+            <div className="flex gap-3 w-[200px] py-6">
+              <Text
+                Tag="span"
+                textType="Desktop/Body"
+                text={'Ім’я та прізвище'}
+                font="sans"
+                color="base/BG_block"
+                className="font-medium"
+              />
+              <button type="button">
+                <Icon Svg={arrow_down} width={24} height={24} />
+              </button>
+            </div>
 
-          <tbody className="my-6 mx-3 ">
-            <tr className="h-[16px]"></tr>
-            { data.users.map((user)=>{
-                return (
-                  <>
-                    <tr key={user.id} className="rounded-[24px] overflow-visible duration-300 hover:shadow-user-card hover:bg-base-text_accent">
-                    {UserListItem(user)}
-                    </tr>
-                    <tr className="h-[16px]"></tr>
-                  </>
-                )
-              })
-            }
-          </tbody>
-        </table>
+            <div className="flex gap-3 max-w-[100px] py-6">
+              <Text
+                Tag="span"
+                textType="Desktop/Body"
+                text={'Дата'}
+                font="sans"
+                color="base/BG_block"
+                className="font-medium"
+              />
+              <button type="button">
+                <Icon Svg={sort} width={24} height={24} />
+              </button>
+            </div>
+
+            <div className="flex gap-3 py-6">
+              <Text
+                Tag="span"
+                textType="Desktop/Body"
+                text={'Медіа'}
+                font="sans"
+                color="base/BG_block"
+                className="font-medium"
+              />
+              <button type="button">
+                <Icon Svg={arrow_down} width={24} height={24} />
+              </button>
+            </div>
+            <div className="flex gap-3 py-6">
+              <Text
+                Tag="span"
+                textType="Desktop/Body"
+                text={'Email'}
+                font="sans"
+                color="base/BG_block"
+                className="font-medium"
+              />
+              <button type="button">
+                <Icon Svg={arrow_down} width={24} height={24} />
+              </button>
+            </div>
+            <div className="flex gap-3 py-6">
+              <Text
+                Tag="span"
+                textType="Desktop/Body"
+                text={'Тип послуг'}
+                font="sans"
+                color="base/BG_block"
+                className="font-medium"
+              />
+              <button type="button">
+                <Icon Svg={arrow_down} width={24} height={24}/>
+              </button>
+            </div>
+          </li>
+          <ListItem data={data.users}/>
+        </ul>
       </div>
       <Pagination/>
     </div>
