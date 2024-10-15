@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useForm, SubmitHandler } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { ButtonLink } from '@/shared/ui/ButtonLink';
@@ -10,6 +10,8 @@ import FileUpload from '@/widgets/FormFile/FormFile';
 import PhoneInput from '@/widgets/InputPhone/InputPhone';
 import FallingBricks from '@/widgets/CardForm/FillingBringsForm';
 import { data, dataPhone } from '../../portfolio/helpers/brings-data';
+import { apiRequest } from '@/shared/lib/api';
+import { useRouter } from 'next/navigation';
 
 export interface FormInputsDiscussion {
   firstName: string;
@@ -27,8 +29,16 @@ export interface FormInputsDiscussion {
 }
 
 export default function DiscussionForm() {
+  const router = useRouter();
   const [clearBricks, setClearBricks] = useState(false);
   const [checkedSubmit, setCheckedSubmit] = useState(false);
+  const [success, setSuccess] = useState(false);
+
+  useEffect(() => {
+    if (success) {
+      router.push('/thank');
+    }
+  }, [success, router]);
 
   const {
     register,
@@ -58,6 +68,20 @@ export default function DiscussionForm() {
 
   const onSubmit: SubmitHandler<FormInputsDiscussion> = async (data) => {
     console.log(data);
+
+    try {
+      const createdData = await apiRequest<FormInputsDiscussion>(
+        'post',
+        '/discussions',
+        data,
+      );
+      console.log(createdData);
+      setSuccess(true);
+    } catch (error) {
+      console.error('Error creating data:', error);
+      router.push('/thank');
+    }
+
     reset();
     setValue('selectedBrick', []);
     setClearBricks(true);
