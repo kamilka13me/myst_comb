@@ -1,1 +1,1 @@
-export { UsersList } from './ui/UsersList'
+export { UsersList } from './ui/UsersList';

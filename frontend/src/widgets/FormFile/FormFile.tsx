@@ -78,7 +78,7 @@ const FileUpload: React.FC<FileUploadProps> = ({
 
   return (
     <div className="mb-5 flex w-full flex-col gap-6">
-      <div className="mt-2 flex flex-wrap gap-6">
+      <div className="flex flex-wrap gap-[18px] md:gap-6">
         <button
           type="button"
           aria-label="Прикріпити файл"
@@ -96,11 +96,11 @@ const FileUpload: React.FC<FileUploadProps> = ({
           multiple
         />
 
-        {error && <p className="mt-1 text-xs text-red-500">{error.message}</p>}
-        {fileError && <p className="mt-1 text-xs text-red-500">{fileError}</p>}
-        <div className="mt-4">
+        {error && <p className="text-xs text-red-500">{error.message}</p>}
+        {fileError && <p className="text-xs text-red-500">{fileError}</p>}
+        <div className="">
           {files.length > 0 && (
-            <div className="flex gap-2">
+            <div className="flex flex-wrap gap-2">
               {files.map((file, index) => (
                 <div
                   key={index}

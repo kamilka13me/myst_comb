@@ -1,1 +1,1 @@
-export { UnderDevelopment } from './ui/UnderDevelopment'
+export { UnderDevelopment } from './ui/UnderDevelopment';

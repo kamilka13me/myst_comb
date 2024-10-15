@@ -1,7 +1,6 @@
-export interface MediaProps{
-  media: string[]
+export interface MediaProps {
+  media: string[];
 }
-
 
 export interface User {
   id: string;
