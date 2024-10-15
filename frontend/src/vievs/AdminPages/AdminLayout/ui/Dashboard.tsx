@@ -110,19 +110,18 @@ export default function Dashboard(): JSX.Element {
         })}
 
         <li>
-          <button
-            type="button"
-            className="w-full rounded-[40px] px-4 py-2.5 duration-300 hover:shadow-hover_btn active:bg-icons_symbols-blue_500"
-          >
-            <Text
-              Tag="span"
-              textType="Desktop/Subtitle"
-              text="Вихід"
-              font="sans"
-              align="center"
-              color="base/BG_block"
-              className="font-normal"
-            />
+          <button type="button" 
+            className='w-full rounded-[40px] px-4 py-2.5
+              duration-300 active:bg-icons_symbols-blue_500 hover:shadow-hover_btn'>
+              <Text
+                Tag="span"
+                textType="Desktop/Subtitle"
+                text='Вихід'
+                font="sans"
+                align='center'
+                color="base/BG_block"
+                className="font-normal"
+              />
           </button>
         </li>
       </ul>

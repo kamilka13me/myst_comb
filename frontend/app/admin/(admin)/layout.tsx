@@ -1,6 +1,6 @@
 import React from 'react';
 import { Metadata } from 'next';
-import { AdminLayout } from '@/vievs/admin-pages/AdminLayout';
+import { AdminLayout } from '@/vievs/AdminPages/AdminLayout';
 
 export const metadata: Metadata = {
   title: 'Адмін панель',
