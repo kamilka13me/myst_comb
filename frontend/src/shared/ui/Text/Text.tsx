@@ -13,14 +13,17 @@ export type TextTypes =
   | 'Desktop/H1'
   | 'Desktop/title-s'
   | 'Desktop/Body'
+  | 'Body'
   | 'Desktop/Subtitle'
   | 'Desktop/Subtext'
   | 'Desktop/Button-menu'
   | 'Desktop/H2'
+  | 'H2'
   | 'Desktop/title-l'
   | 'Desktop/Button'
   | 'Desktop/numeric-s'
   | 'H3'
+  | 'Title/L-S'
   | 'Desktop/H3';
 
 export type TextColors =
@@ -74,7 +77,11 @@ const TextType: Record<TextTypes, string> = {
     'text-[#474747] text-sm font-semibold leading-[17.50px] font-ibm-plex-sans',
   'Desktop/Subtext':
     'text-3xs  font-ibm-plex-sans font-normal  tracking-[-0.24px]',
+  H2: 'font-ibm-plex-serif text-3xl font-normal leading-[1.1]  tracking-[-0.72px]   md:text-5xl md:tracking-[-0.96px]  ',
   H3: 'text-center text-base-BG_block font-normal text-[28px] leading-[115%] tracking-[-0.56px] font-serif md:text-[36px] md:tracking-[-0.72px] md:leading-[115%]',
+  Body: 'text-center text-xs font-normal leading-[1.4]  tracking-[-0.16px] md:text-s   md:leading-[1.35]   md:tracking-[-0.18px] ',
+  'Title/L-S':
+    'text-l leading-[1.25] tracking-[-0.48px] md:text-2xl font-ibm-plex-sans font-medium md:leading-10 break-words',
 };
 
 const TextAlignClass: Record<TextAlign, string> = {

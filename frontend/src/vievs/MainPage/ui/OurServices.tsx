@@ -4,12 +4,14 @@ import ArrowInCircle from '@/shared/assets/icons/ArrowInCircle.svg?react';
 import Bricks from '@/shared/assets/icons/bricks.svg?react';
 import Heart from '@/shared/assets/icons/heart.svg?react';
 import SphereSqure from '@/shared/assets/icons/sphereSqure.svg?react';
-// import Star1 from '@/shared/assets/icons/star.svg?react';
 import Star from '@/shared/assets/icons/star.svg?react';
 import { Icon } from '@/shared/ui/Icon';
 import { VStack, HStack } from '@/shared/ui/Stack';
 import { Text } from '@/shared/ui/Text';
-import { ButtonLink } from '@/shared/ui/ButtonLink';
+
+import ArrowInCircleBlue from '@/shared/assets/icons/ArrowInCircleBlue.svg?react';
+
+import Link from 'next/link';
 
 export type TextColors =
   | 'primary'
@@ -19,7 +21,7 @@ export type TextColors =
   | 'red'
   | 'green'
   | 'white'
-  | 'dark'; // Переконайтеся, що всі значення включені
+  | 'dark';
 
 interface ServiceBrickProps {
   opacity: string;
@@ -117,24 +119,26 @@ const OurServices = () => {
   ];
 
   return (
-    <HStack className="relative z-20 mt-44 px-[156px]">
-      <VStack justify="between" align="center" className="container">
+    <HStack className="relative z-20 mt-44 px-5 md:px-[156px]">
+      <div className="flex w-full flex-col justify-between md:flex-row md:items-center">
         <Text
-          text="Послуги, які ми надаємо"
-          textType="Desktop/H2"
-          Tag="p"
+          text="Послуги, які  ми надаємо"
+          textType="H2"
+          Tag="h2"
           color="base/BG_block"
         />
-        <VStack>
-          {/* <Text text="Послуга на запит" size="md" Tag="p" color="white" /> */}
-          <ButtonLink
-            to="/services"
-            variant="textBlue"
-            text="Послуга на запит"
-            className="text-base-bg-block"
-          />
-        </VStack>
-      </VStack>
+        {/* btn */}
+        <Link
+          href="/services"
+          className="mt-6 flex items-center justify-between gap-6 md:mt-0 md:justify-end"
+        >
+          <span className="items-center font-ibm-plex-sans text-base text-xs font-medium leading-tight text-white">
+            Послуга на запит
+          </span>
+          <Icon Svg={ArrowInCircleBlue} className="h-12 w-12" />
+        </Link>
+      </div>
+
       <div className="flex w-full justify-center">
         <div className="mt-10 grid auto-rows-auto grid-cols-1 items-center justify-center gap-[30px] xl:grid-cols-2">
           {blocksData.map((block, index) => (

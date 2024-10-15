@@ -5,15 +5,14 @@ import Okko from '@/shared/assets/icons/okko.svg?react';
 import Projector from '@/shared/assets/icons/projector.svg?react';
 import Skellar from '@/shared/assets/icons/skellar.svg?react';
 import { Icon } from '@/shared/ui/Icon';
-import { HStack, VStack } from '@/shared/ui/Stack';
+import { VStack } from '@/shared/ui/Stack';
 import { Text } from '@/shared/ui/Text';
 
 const Donors = () => {
   return (
-    <HStack align="center" className="w-full px-10" justify="start">
-      {/* <VStack align="center" justify="around" className="w-full" wrap="wrap"> */}
+    <section className="flex w-full flex-col items-center justify-start px-10">
       <Text
-        Tag="p"
+        Tag="h2"
         textType="Desktop/Body"
         text="Наші донори:"
         color="base/stroke_btn_act"
@@ -49,7 +48,7 @@ const Donors = () => {
           <Icon className="h-5 w-[80px] md:h-[24px] md:w-[90px]" Svg={Numu} />
         </div>
       </VStack>
-    </HStack>
+    </section>
   );
 };
 
