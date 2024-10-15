@@ -23,9 +23,9 @@ export function UsersList(): JSX.Element {
   // const[ pages, setPages ] = useState<[User[]] | null>(null);
 
   // const createPages =(data: User[]): void =>{
-  //   const newData = []
+    const newData 
 
-  // }
+   }
 
   return (
     <div>
