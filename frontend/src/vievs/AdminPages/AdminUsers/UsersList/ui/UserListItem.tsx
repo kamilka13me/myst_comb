@@ -16,7 +16,7 @@ import minus from '@/shared/assets/icons/icon_minus.svg?react';
 export function UserListItem(user: User) {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
-  const getBborderColor = (name:string): string =>{
+  const getBborderColor = (name: string): string =>{
     if(name === "Рев’ю"){ return '#0f9' };
     if(name === "Послуги"){ return '#d633ff' };
     if(name === "Англійська"){ return '#ff4e00' };

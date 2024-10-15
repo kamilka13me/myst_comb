@@ -1,5 +1,5 @@
 "use client"
-import { useState } from "react";
+//import { useState } from "react";
 import { Text } from "@/shared/ui/Text";
 import { Icon } from '@/shared/ui/Icon';
 import { UserListItem } from "./UserListItem";
@@ -10,22 +10,22 @@ import data from './fake-data-users.json'
 import Pagination from "./Pagination";
 
 export function UsersList(): JSX.Element {
- interface User {
-    id: string;
-    name: string;
-    date: string;
-    media: string[];
-    email: string;
-    type_services: string;
-  }
+//  interface User {
+//     id: string;
+//     name: string;
+//     date: string;
+//     media: string[];
+//     email: string;
+//     type_services: string;
+//   }
 
 
-  const[ pages, setPages ] = useState<[User[]] | null>(null);
+  // const[ pages, setPages ] = useState<[User[]] | null>(null);
 
-  const createPages =(data: User[]): void =>{
-    const newData = []
+  // const createPages =(data: User[]): void =>{
+  //   const newData = []
 
-  }
+  // }
 
   return (
     <div>
