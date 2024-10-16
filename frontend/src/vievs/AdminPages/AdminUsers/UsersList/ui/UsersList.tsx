@@ -7,15 +7,7 @@ import arrow_down from '@/shared/assets/icons/yellow_arrow_down.svg?react';
 import sort from '@/shared/assets/icons/yellow_sort.svg?react';
 import data from './fake-data-users.json';
 import Pagination from './Pagination';
-
-interface User {
-  id: string;
-  name: string;
-  date: string;
-  media: string[];
-  email: string;
-  type_services: string;
-}
+import { User } from './TypesProps';
 
 interface DataProps {
   data: User[];
