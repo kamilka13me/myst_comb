@@ -7,10 +7,37 @@ import { Icon } from '@/shared/ui/Icon';
 import { LanguageSwitcher } from '@/shared/ui/LanguageSwitcher';
 import { VStack } from '@/shared/ui/Stack';
 import { Text } from '@/shared/ui/Text';
+import clsx from 'clsx';
+import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
 const Header = () => {
   const pathname = usePathname();
+
+  const isPathName = (name: string): boolean => {
+    return pathname.split('/').includes(name);
+  };
+
+  // Header admin та login сторінок
+  if (isPathName('admin') || isPathName('login')) {
+    return (
+      <header className={`z-30 flex w-full justify-center p-5 lg:p-5 xl:p-10`}>
+        <div className="w-full">
+          <VStack justify="between" align="center">
+            <Link href={'/'}>
+              <Icon Svg={LogoWhite} height={33} width={128} />
+            </Link>
+            <button
+              type="button"
+              className={clsx('lg:hidden', isPathName('login') && 'hidden')}
+            >
+              <Icon Svg={ButtonMenu} height={48} width={48} />
+            </button>
+          </VStack>
+        </div>
+      </header>
+    );
+  }
 
   if (pathname === '/') {
     return (

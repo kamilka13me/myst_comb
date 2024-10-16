@@ -21,7 +21,7 @@ export default function Pagination(): JSX.Element {
 
   return (
     <div className="flex w-full items-center justify-between">
-      <div className='min-w-[28px]'>
+      <div className="min-w-[28px]">
         <button
           type="button"
           className={clsx(
