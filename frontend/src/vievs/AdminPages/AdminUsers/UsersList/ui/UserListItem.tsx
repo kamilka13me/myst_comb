@@ -16,30 +16,39 @@ import minus from '@/shared/assets/icons/icon_minus.svg?react';
 export function UserListItem(user: User) {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
-  const getBorderColor = (name: string): string =>{
-    if(name === "Рев’ю"){ return '#0f9' };
-    if(name === "Послуги"){ return '#d633ff' };
-    if(name === "Англійська"){ return '#ff4e00' };
-    if(name === "Обговорення"){ return '#e7ff00' };
-    if(name === "Долучитись"){ return '#9e92ee' };
-    return '#9e92ee'
-  }
-
-  const mediaDropDownList = ({media}: MediaProps) :JSX.Element =>{
-
-  const bgColors: TypeBgColors = {
-    yellow:'#f1ff66',
-    purple:'#eb99ff',
-    orange:'#ffb899',
-    blue:'#9e92ee'
-  }
-
-  const getBgColor = (name: string): string => {
-    if (bgColors[name as keyof typeof bgColors]) {
-      return bgColors[name as keyof typeof bgColors];
+  const getBorderColor = (name: string): string => {
+    if (name === 'Рев’ю') {
+      return '#0f9';
     }
-    return bgColors['yellow'];
+    if (name === 'Послуги') {
+      return '#d633ff';
+    }
+    if (name === 'Англійська') {
+      return '#ff4e00';
+    }
+    if (name === 'Обговорення') {
+      return '#e7ff00';
+    }
+    if (name === 'Долучитись') {
+      return '#9e92ee';
+    }
+    return '#9e92ee';
   };
+
+  const mediaDropDownList = ({ media }: MediaProps): JSX.Element => {
+    const bgColors: TypeBgColors = {
+      yellow: '#f1ff66',
+      purple: '#eb99ff',
+      orange: '#ffb899',
+      blue: '#9e92ee',
+    };
+
+    const getBgColor = (name: string): string => {
+      if (bgColors[name as keyof typeof bgColors]) {
+        return bgColors[name as keyof typeof bgColors];
+      }
+      return bgColors['yellow'];
+    };
 
     return (
       <ul className="flex flex-col items-start justify-start gap-0.5 px-3 py-6">
@@ -143,43 +152,49 @@ export function UserListItem(user: User) {
 
   return (
     <>
-      <div className={clsx(isOpen ? "align-top" : "align-center")}>
+      <div className={clsx(isOpen ? 'align-top' : 'align-center')}>
         <Text
           Tag="p"
           textType="Desktop/Body"
           text={user.name}
           font="sans"
           color="base/text"
-          className="font-normal text-[16px] xl:text-[18px] py-6"
+          className="py-6 text-[16px] font-normal xl:text-[18px]"
         />
       </div>
-      <div className={clsx(isOpen ? "align-top" : "align-center")}>
+      <div className={clsx(isOpen ? 'align-top' : 'align-center')}>
         <Text
           Tag="p"
           textType="Desktop/Body"
           text={user.date}
           font="sans"
           color="base/text"
-          className="font-normal py-6"
+          className="py-6 font-normal"
         />
       </div>
-      <div className={clsx(isOpen && "align-top")}>
+      <div className={clsx(isOpen && 'align-top')}>
         {mediaDropDownList({ media: user.media })}
       </div>
-      <div className={clsx('overflow-hidden', isOpen ? "align-top" : "align-center")}>
+      <div
+        className={clsx(
+          'overflow-hidden',
+          isOpen ? 'align-top' : 'align-center',
+        )}
+      >
         <Text
           Tag="p"
           textType="Desktop/Body"
           text={user.email}
           font="sans"
           color="base/text"
-          className="font-normal py-6"
+          className="py-6 font-normal"
         />
       </div>
-      <div className={clsx('py-4', isOpen ? "align-top" : "align-center")}>
-
-        <div style={{borderColor: getBorderColor(user.type_services)}}   
-          className="border rounded-[30px] w-[132px] py-2 mx-auto">
+      <div className={clsx('py-4', isOpen ? 'align-top' : 'align-center')}>
+        <div
+          style={{ borderColor: getBorderColor(user.type_services) }}
+          className="mx-auto w-[132px] rounded-[30px] border py-2"
+        >
           <Text
             Tag="p"
             textType="Desktop/Button"

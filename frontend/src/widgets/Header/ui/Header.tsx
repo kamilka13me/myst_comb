@@ -19,7 +19,7 @@ const Header = () => {
   };
 
   // Header admin та login сторінок
-  if(isPathName('admin') || isPathName('login')){
+  if (isPathName('admin') || isPathName('login')) {
     return (
       <header className={`z-30 flex w-full justify-center p-5 lg:p-5 xl:p-10`}>
         <div className="w-full">
@@ -27,14 +27,16 @@ const Header = () => {
             <Link href={'/'}>
               <Icon Svg={LogoWhite} height={33} width={128} />
             </Link>
-            <button type='button' 
-              className={clsx('lg:hidden',isPathName('login') && 'hidden')}>
+            <button
+              type="button"
+              className={clsx('lg:hidden', isPathName('login') && 'hidden')}
+            >
               <Icon Svg={ButtonMenu} height={48} width={48} />
             </button>
           </VStack>
         </div>
       </header>
-    )
+    );
   }
 
   if (pathname === '/') {
