@@ -31,7 +31,7 @@ const AdminLoginPage: React.FC = () => {
   };
 
   return (
-    <div className="flex min-h-screen w-full flex-col items-center justify-center px-5">
+    <div className="flex min-h-[70vh] w-full flex-col items-center justify-center px-5">
       <div className="mb-[30px] flex flex-col items-center justify-center">
         <Text
           textType="H3"

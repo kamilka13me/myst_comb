@@ -1,7 +1,7 @@
 'use client';
 import React, { useState } from 'react';
 import clsx from 'clsx';
-import { MediaProps, User } from './TypesProps';
+import { MediaProps, TypeBgColors, User } from './TypesProps';
 import { Icon } from '@/shared/ui/Icon';
 import { Text } from '@/shared/ui/Text';
 import icon_add from '@/shared/assets/icons/icon_add.svg?react';
@@ -16,7 +16,7 @@ import minus from '@/shared/assets/icons/icon_minus.svg?react';
 export function UserListItem(user: User) {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
-  const getBborderColor = (name: string): string =>{
+  const getBorderColor = (name: string): string =>{
     if(name === "Рев’ю"){ return '#0f9' };
     if(name === "Послуги"){ return '#d633ff' };
     if(name === "Англійська"){ return '#ff4e00' };
@@ -27,26 +27,32 @@ export function UserListItem(user: User) {
 
   const mediaDropDownList = ({media}: MediaProps) :JSX.Element =>{
 
-    const colors: string[] = ["#f1ff66",'#E066FF','#9E92EE'];
+  const bgColors: TypeBgColors = {
+    yellow:'#f1ff66',
+    purple:'#eb99ff',
+    orange:'#ffb899',
+    blue:'#9e92ee'
+  }
 
-    const getBgColor = (id:number): string =>{
-      if(colors[id]){
-        return colors[id]
-      }else return colors[0]
+  const getBgColor = (name: string): string => {
+    if (bgColors[name as keyof typeof bgColors]) {
+      return bgColors[name as keyof typeof bgColors];
     }
+    return bgColors['yellow'];
+  };
 
     return (
       <ul className="flex flex-col items-start justify-start gap-0.5 px-3 py-6">
         {media?.length == 1 ? (
           <li className="flex items-center gap-0.5">
             <div
-              style={{ background: getBgColor(0) }}
+              style={{ background: getBgColor(media[0].idColor) }}
               className="rounded-[6px]"
             >
               <Text
                 Tag="p"
                 textType="Desktop/Button-menu"
-                text={media[0]}
+                text={media[0].name}
                 align="center"
                 font="sans"
                 color="base/text_accent"
@@ -62,13 +68,13 @@ export function UserListItem(user: User) {
                 return (
                   <li key={i} className="flex items-center gap-0.5">
                     <div
-                      style={{ background: getBgColor(i) }}
+                      style={{ background: getBgColor(media[i].idColor) }}
                       className={'rounded-[6px]'}
                     >
                       <Text
                         Tag="p"
                         textType="Desktop/Button-menu"
-                        text={el}
+                        text={el.name}
                         align="center"
                         font="sans"
                         color="base/text_accent"
@@ -99,13 +105,13 @@ export function UserListItem(user: User) {
                     )}
                   >
                     <div
-                      style={{ background: getBgColor(i) }}
+                      style={{ background: getBgColor(media[i].idColor) }}
                       className={'rounded-[6px]'}
                     >
                       <Text
                         Tag="p"
                         textType="Desktop/Button-menu"
-                        text={el}
+                        text={el.name}
                         align="center"
                         font="sans"
                         color="base/text_accent"
@@ -144,7 +150,7 @@ export function UserListItem(user: User) {
           text={user.name}
           font="sans"
           color="base/text"
-          className="font-normal py-6"
+          className="font-normal text-[16px] xl:text-[18px] py-6"
         />
       </div>
       <div className={clsx(isOpen ? "align-top" : "align-center")}>
@@ -172,7 +178,7 @@ export function UserListItem(user: User) {
       </div>
       <div className={clsx('py-4', isOpen ? "align-top" : "align-center")}>
 
-        <div style={{borderColor: getBborderColor(user.type_services)}}   
+        <div style={{borderColor: getBorderColor(user.type_services)}}   
           className="border rounded-[30px] w-[132px] py-2 mx-auto">
           <Text
             Tag="p"
@@ -181,7 +187,7 @@ export function UserListItem(user: User) {
             font="sans"
             align="center"
             color="base/text"
-            className={"font-normal"}
+            className="font-normal"
           />
         </div>
       </div>

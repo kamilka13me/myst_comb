@@ -91,40 +91,42 @@ export default function Dashboard(): JSX.Element {
   };
 
   return (
-    <nav className="hidden w-[236px] rounded-[30px] bg-base-text_dark p-6 lg:block">
-      <ul className="flex w-full flex-col gap-4">
-        <li>
-          <Text
-            Tag="h2"
-            textType="Desktop/title-s"
-            text="Адмін панель"
-            font="sans"
-            align="center"
-            color="base/BG_block"
-            className="font-normal"
-          />
-        </li>
+    <div className='hidden overflow-hidden min-w-[230px] lg:block'>
+      <nav className=" rounded-[30px] bg-base-text_dark p-6">
+        <ul className="flex w-full flex-col gap-4">
+          <li>
+            <Text
+              Tag="h2"
+              textType="Desktop/title-s"
+              text="Адмін панель"
+              font="sans"
+              align="center"
+              color="base/BG_block"
+              className="font-normal"
+            />
+          </li>
 
-        {items.map((el: ItemProps) => {
-          return <ItemLinks {...el} key={el.pathName} />;
-        })}
+          {items.map((el: ItemProps) => {
+            return <ItemLinks {...el} key={el.pathName} />;
+          })}
 
-        <li>
-          <button type="button" 
-            className='w-full rounded-[40px] px-4 py-2.5
-              duration-300 active:bg-icons_symbols-blue_500 hover:shadow-hover_btn'>
-              <Text
-                Tag="span"
-                textType="Desktop/Subtitle"
-                text='Вихід'
-                font="sans"
-                align='center'
-                color="base/BG_block"
-                className="font-normal"
-              />
-          </button>
-        </li>
-      </ul>
-    </nav>
+          <li>
+            <button type="button" 
+              className='w-full rounded-[40px] px-4 py-2.5
+                duration-300 active:bg-icons_symbols-blue_500 hover:shadow-hover_btn'>
+                <Text
+                  Tag="span"
+                  textType="Desktop/Subtitle"
+                  text='Вихід'
+                  font="sans"
+                  align='center'
+                  color="base/BG_block"
+                  className="font-normal"
+                />
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </div>
   );
 }

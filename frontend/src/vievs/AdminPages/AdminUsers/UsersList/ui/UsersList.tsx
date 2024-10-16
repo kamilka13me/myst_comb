@@ -28,7 +28,7 @@ function ListItem({data}: DataProps): JSX.Element {
     {data.map((user)=>{
         return (
           <li key={user.id} className="rounded-[24px] px-3 grid 
-          grid-cols-[minmax(160px,_185px)_minmax(80px,_120px)_minmax(235px,_250px)_minmax(70px,_1fr)_minmax(128px,_165px)] gap-1
+          grid-cols-[minmax(160px,_185px)_minmax(80px,_120px)_minmax(200px,_250px)_minmax(70px,_1fr)_minmax(128px,_165px)] gap-1
           duration-300 hover:shadow-user-card hover:bg-base-text_accent">
           {UserListItem(user)}
           </li>
@@ -43,7 +43,7 @@ export function UsersList(): JSX.Element {
 
   return (
     <div>
-      <div className="rounded-[30px] bg-base-text_dark p-6 mb-6">
+      <div className="rounded-[30px] bg-base-text_dark p-4 lg:p-4 xl:p-6 mb-6">
         <header className="flex items-center justify-between mb-5">
           <Text
             Tag="h1"
@@ -69,9 +69,9 @@ export function UsersList(): JSX.Element {
           </button>
         </header>
 
-        <ul className="w-full flex flex-col gap-4">
+        <ul className="w-full flex flex-col gap-3 xl:gap-4">
           <li className=" grid grid px-3
-          grid-cols-[minmax(170px,_185px)_minmax(80px,_120px)_minmax(235px,_250px)_minmax(70px,_1fr)_minmax(128px,_165px)] gap-3
+          grid-cols-[minmax(170px,_185px)_minmax(80px,_120px)_minmax(200px,_250px)_minmax(80px,_1fr)_minmax(128px,_165px)] gap-1 xl:gap-3
           border-b border-base-text_ligh">
             <div className="flex gap-3 w-[200px] py-6">
               <Text
