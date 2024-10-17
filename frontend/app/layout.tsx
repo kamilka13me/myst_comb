@@ -6,10 +6,10 @@ import { Header } from '@/widgets/Header';
 import { Footer } from '@/widgets/Footer';
 
 export const metadata: Metadata = {
-  title: 'My App',
-  description: 'Description of my app',
+  title: 'Мистецький Комбінат',
+  description: 'Благодійний фонд “Мистецький Комбінат” – організація підтримки підприємництвау сфері візуального мистецтва',
   icons: {
-    icon: ['/LogoDark.svg'],
+    icon: ['/favicon.svg'],
   },
 };
 
