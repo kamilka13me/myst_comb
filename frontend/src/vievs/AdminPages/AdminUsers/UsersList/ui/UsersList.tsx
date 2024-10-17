@@ -44,7 +44,7 @@ export function UsersList(): JSX.Element {
             className="block text-[28px] font-normal"
           />
           <button
-            className="flex items-center gap-2 rounded-[30px] border border-transparent px-8 py-3 duration-300 hover:shadow-hover_btn focus:border-base-text_light"
+            className="flex items-center gap-2 rounded-[30px] border border-base-text_dark px-8 py-3 duration-300 hover:shadow-hover_btn focus:border-base-text_light"
             type="button"
           >
             <Icon Svg={calendar} width={24} height={24} />

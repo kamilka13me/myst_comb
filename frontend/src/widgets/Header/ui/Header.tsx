@@ -10,18 +10,30 @@ import { Text } from '@/shared/ui/Text';
 import clsx from 'clsx';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { useAdminMenuStore } from '@/store/useAdminMenuStore';
 
 const Header = () => {
+  // Стан меню адмінки
+  const isOpen = useAdminMenuStore((state) => state.isOpen)
+  const openMenuAdmin = useAdminMenuStore((state) => state.open)
+  const closeMenuAdmin = useAdminMenuStore((state) => state.close)
+
   const pathname = usePathname();
 
   const isPathName = (name: string): boolean => {
     return pathname.split('/').includes(name);
   };
+  // відчинити/зачинити меню адмінки
+  const openCloseMenuAdmin=():void=>{
+    if(isOpen){
+      closeMenuAdmin()
+    }else openMenuAdmin()
+  }
 
   // Header admin та login сторінок
   if (isPathName('admin') || isPathName('login')) {
     return (
-      <header className={`z-30 flex w-full justify-center p-5 lg:p-5 xl:p-10`}>
+      <header className={`z-30 bg-base-text_accent relative flex w-full justify-center p-5 lg:p-5 xl:p-10`}>
         <div className="w-full">
           <VStack justify="between" align="center">
             <Link href={'/'}>
@@ -29,8 +41,8 @@ const Header = () => {
             </Link>
             <button
               type="button"
-              className={clsx('lg:hidden', isPathName('login') && 'hidden')}
-            >
+              className={clsx('lg:hidden duration-300 hover:opacity-70', isPathName('login') && 'hidden')}
+              onClick={openCloseMenuAdmin}>
               <Icon Svg={ButtonMenu} height={48} width={48} />
             </button>
           </VStack>
