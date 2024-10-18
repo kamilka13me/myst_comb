@@ -5,7 +5,7 @@ import { Text } from '@/shared/ui/Text';
 
 export function UnderDevelopment(): JSX.Element {
   return (
-    <div className="flex h-full w-full flex-col items-center justify-center gap-4 p-4">
+    <div className="flex min-h-[70vh] w-full flex-col items-center justify-center gap-4 p-4">
       <Text
         Tag="h1"
         textType="Desktop/H2"

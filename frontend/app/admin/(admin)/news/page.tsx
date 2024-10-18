@@ -1,4 +1,4 @@
-import { UnderDevelopment } from "@/vievs/AdminPages/UnderDevelopment";
+import { UnderDevelopment } from '@/vievs/AdminPages/UnderDevelopment';
 
 //News
 export default function NewsPage(): JSX.Element {
