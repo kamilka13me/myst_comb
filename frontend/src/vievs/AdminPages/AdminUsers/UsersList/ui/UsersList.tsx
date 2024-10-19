@@ -3,11 +3,11 @@ import { Text } from '@/shared/ui/Text';
 import { Icon } from '@/shared/ui/Icon';
 import { UserListItem } from './UserListItem';
 import arrow_down from '@/shared/assets/icons/yellow_arrow_down.svg?react';
-import sort from '@/shared/assets/icons/yellow_sort.svg?react';
 import data from './fake-data-users.json';
-import Pagination from './Pagination';
+import Pagination from './components/Pagination';
 import { User } from './TypesProps';
 import { Calendar } from './Calendar';
+import SelectDate from './components/SelectDate';
 
 interface DataProps {
   data: User[];
@@ -43,21 +43,6 @@ export function UsersList(): JSX.Element {
             color="base/BG_block"
             className="block text-[28px] font-normal"
           />
-          {/* <button
-            className="flex items-center gap-2 rounded-[30px] border border-base-text_dark px-8 py-3 duration-300 hover:shadow-hover_btn focus:border-base-text_light"
-            type="button"
-          >
-            <Icon Svg={calendar} width={24} height={24} />
-            <Text
-              Tag="span"
-              textType="Desktop/Subtitle"
-              text={'16.09.2024 - 22.09.2024'}
-              font="sans"
-              color="base/text"
-              className="font-normal"
-            />
-          </button> */}
-
           <Calendar />
         </header>
 
@@ -77,19 +62,7 @@ export function UsersList(): JSX.Element {
               </button>
             </div>
 
-            <div className="flex max-w-[100px] gap-3 py-6">
-              <Text
-                Tag="span"
-                textType="Desktop/Body"
-                text={'Дата'}
-                font="sans"
-                color="base/BG_block"
-                className="font-medium"
-              />
-              <button type="button">
-                <Icon Svg={sort} width={24} height={24} />
-              </button>
-            </div>
+            <SelectDate/>
 
             <div className="flex gap-3 py-6">
               <Text

@@ -78,7 +78,7 @@ export const Calendar: FC = () => {
       </button>
 
       {calendarIsOpened && (
-        <div className="absolute right-0 top-[110%] z-20 w-[250px]">
+        <div className="absolute right-0 top-[105%] z-20 w-[250px]">
           <DateRange
             locale={uk}
             className="w-full rounded-[30px] p-4"
