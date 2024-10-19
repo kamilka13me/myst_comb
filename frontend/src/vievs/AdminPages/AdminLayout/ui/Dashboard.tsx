@@ -13,12 +13,13 @@ import projects from '@/shared/assets/icons/icon_projects.svg?react';
 import users from '@/shared/assets/icons/icon_people.svg?react';
 import content from '@/shared/assets/icons/icon_content.svg?react';
 import settings from '@/shared/assets/icons/icon_settings.svg?react';
+import { createKey } from '@/shared/hooks/createKey';
 
 export default function Dashboard(): JSX.Element {
   const pathname = usePathname();
   // Стан меню адмінки
-  const isOpen = useAdminMenuStore((state) => state.isOpen)
-  const close = useAdminMenuStore((state) => state.close)
+  const isOpen = useAdminMenuStore((state) => state.isOpen);
+  const close = useAdminMenuStore((state) => state.close);
   // Блокування прокрутки сторінки.
   useBodyLock(isOpen);
 
@@ -27,7 +28,7 @@ export default function Dashboard(): JSX.Element {
     href: string;
     text: string;
     icon: FC<SVGProps<SVGSVGElement>>;
-    close?:()=>void;
+    close?: () => void;
   }
 
   const items: ItemProps[] = [
@@ -85,8 +86,10 @@ export default function Dashboard(): JSX.Element {
         <Link
           href={href}
           onClick={close}
-          className={clsx('flex gap-2.5 rounded-[40px] px-4 py-2.5 duration-300 hover:shadow-hover_btn', 
-            isActive(pathName) && 'bg-icons_symbols-blue_500')}
+          className={clsx(
+            'flex gap-2.5 rounded-[40px] px-4 py-2.5 duration-300 hover:shadow-hover_btn',
+            isActive(pathName) && 'bg-icons_symbols-blue_500',
+          )}
         >
           <Icon Svg={icon} width={24} height={24} />
           <Text
@@ -103,11 +106,14 @@ export default function Dashboard(): JSX.Element {
   };
 
   return (
-    <div className={clsx("z-20 items-center w-full fixed top-0  bg-base-text_accent overflow-hidden min-w-[230px] lg:max-w-fit lg:relative  lg:block duration-700", 
-    isOpen ? 'h-[100vh]' : 'h-0 lg:h-full')}>
-
-      <div className='overflow-x-auto max-h-full pb-20 pt-24 lg:max-h-fit lg:pb-0 lg:pt-0'>
-        <nav className="max-w-[90vw] sm:max-w-[350px] rounded-[30px] bg-base-text_dark p-6">
+    <div
+      className={clsx(
+        'fixed top-0 z-20 w-full min-w-[230px] items-center overflow-hidden bg-base-text_accent duration-700 lg:relative lg:block lg:max-w-fit',
+        isOpen ? 'h-[100vh]' : 'h-0 lg:h-full',
+      )}
+    >
+      <div className="max-h-full overflow-x-auto pb-20 pt-24 lg:max-h-fit lg:pb-0 lg:pt-0">
+        <nav className="max-w-[90vw] rounded-[30px] bg-base-text_dark p-6 sm:max-w-[350px]">
           <ul className="flex w-full flex-col gap-4">
             <li>
               <Text
@@ -122,11 +128,12 @@ export default function Dashboard(): JSX.Element {
             </li>
 
             {items.map((el: ItemProps) => {
-              return <ItemLinks {...el} close={close} key={el.pathName} />;
+              return <ItemLinks {...el} close={close} key={createKey()} />;
             })}
 
             <li>
               <button
+                onClick={close}
                 type="button"
                 className="w-full rounded-[40px] px-4 py-2.5 duration-300 hover:shadow-hover_btn active:bg-icons_symbols-blue_500"
               >

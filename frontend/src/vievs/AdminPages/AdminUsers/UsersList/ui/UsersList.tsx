@@ -2,7 +2,6 @@
 import { Text } from '@/shared/ui/Text';
 import { Icon } from '@/shared/ui/Icon';
 import { UserListItem } from './UserListItem';
-import calendar from '@/shared/assets/icons/calendar.svg?react';
 import arrow_down from '@/shared/assets/icons/yellow_arrow_down.svg?react';
 import sort from '@/shared/assets/icons/yellow_sort.svg?react';
 import data from './fake-data-users.json';
@@ -32,14 +31,6 @@ function ListItem({ data }: DataProps): JSX.Element {
 }
 
 export function UsersList(): JSX.Element {
-const dates:any=[{
-    startDate: new Date(0),
-    endDate: new Date(),
-    key: 'selection',
-  },
-]
-
-
   return (
     <div>
       <div className="mb-6 rounded-[30px] bg-base-text_dark p-4 lg:p-4 xl:p-6">
@@ -67,7 +58,7 @@ const dates:any=[{
             />
           </button> */}
 
-          <Calendar/>
+          <Calendar />
         </header>
 
         <ul className="flex w-full flex-col gap-3 xl:gap-4">
