@@ -8,6 +8,7 @@ import sort from '@/shared/assets/icons/yellow_sort.svg?react';
 import data from './fake-data-users.json';
 import Pagination from './Pagination';
 import { User } from './TypesProps';
+import { Calendar } from './Calendar';
 
 interface DataProps {
   data: User[];
@@ -31,6 +32,14 @@ function ListItem({ data }: DataProps): JSX.Element {
 }
 
 export function UsersList(): JSX.Element {
+const dates:any=[{
+    startDate: new Date(0),
+    endDate: new Date(),
+    key: 'selection',
+  },
+]
+
+
   return (
     <div>
       <div className="mb-6 rounded-[30px] bg-base-text_dark p-4 lg:p-4 xl:p-6">
@@ -43,7 +52,7 @@ export function UsersList(): JSX.Element {
             color="base/BG_block"
             className="block text-[28px] font-normal"
           />
-          <button
+          {/* <button
             className="flex items-center gap-2 rounded-[30px] border border-base-text_dark px-8 py-3 duration-300 hover:shadow-hover_btn focus:border-base-text_light"
             type="button"
           >
@@ -56,7 +65,9 @@ export function UsersList(): JSX.Element {
               color="base/text"
               className="font-normal"
             />
-          </button>
+          </button> */}
+
+          <Calendar/>
         </header>
 
         <ul className="flex w-full flex-col gap-3 xl:gap-4">
