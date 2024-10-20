@@ -5,7 +5,6 @@ import { useState } from "react";
 import clsx from "clsx";
 import { createKey } from "@/shared/hooks/createKey";
 
-
 interface Props{
   filterName: string;
   hendleSetFilterName:(name?: string)=>void

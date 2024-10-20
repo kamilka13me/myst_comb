@@ -70,7 +70,7 @@ export const Calendar: FC<Props> = ({ filterName, hendleSetFilterName }) => {
           openClose();
         }}
         className={clsx(
-          'flex items-center gap-2 rounded-[30px] border px-8 py-3 duration-300 hover:shadow-hover_btn',
+          'flex items-center gap-2 rounded-[30px] border px-3 min-[900px]:px-8 py-3 duration-300 hover:shadow-hover_btn',
           filterName === 'calendar'
             ? 'border-base-stroke-btn-act shadow-hover_btn'
             : 'border-[#505050]',
@@ -89,7 +89,7 @@ export const Calendar: FC<Props> = ({ filterName, hendleSetFilterName }) => {
       </button>
 
       {filterName === 'calendar' && (
-        <div className="absolute right-0 top-[105%] z-20 w-[250px]">
+        <div className="absolute left-0 min-[900px]:right-0 top-[108%] z-20 w-[250px]">
           <DateRange
             locale={uk}
             className="w-full rounded-[30px] p-4"

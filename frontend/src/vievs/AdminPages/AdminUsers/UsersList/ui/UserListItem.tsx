@@ -51,7 +51,7 @@ export function UserListItem(user: User) {
     };
 
     return (
-      <ul className="flex flex-col items-start justify-start gap-0.5 px-3 py-6">
+      <ul className="flex min-[900px]:flex-col flex-wrap items-start justify-start gap-0.5 min-[900px]:px-3 py-6">
         {media?.length == 1 ? (
           <li className="flex items-center gap-0.5">
             <div
@@ -159,7 +159,7 @@ export function UserListItem(user: User) {
           text={user.name}
           font="sans"
           color="base/text"
-          className="py-6 text-[16px] font-normal xl:text-[18px]"
+          className="py-4 min-[900px]:py-6 text-[16px] font-normal xl:text-[18px]"
         />
       </div>
       <div className={clsx(isOpen ? 'align-top' : 'align-center')}>
@@ -169,7 +169,7 @@ export function UserListItem(user: User) {
           text={user.date}
           font="sans"
           color="base/text"
-          className="py-6 font-normal"
+          className="py-4 min-[900px]:py-6 font-normal"
         />
       </div>
       <div className={clsx(isOpen && 'align-top')}>
@@ -187,13 +187,13 @@ export function UserListItem(user: User) {
           text={user.email}
           font="sans"
           color="base/text"
-          className="py-6 font-normal"
+          className="py-4 min-[900px]:py-6 font-normal"
         />
       </div>
       <div className={clsx('py-4', isOpen ? 'align-top' : 'align-center')}>
         <div
           style={{ borderColor: getBorderColor(user.type_services) }}
-          className="mx-auto w-[132px] rounded-[30px] border py-2"
+          className="min-[900px]:mx-auto w-[132px] rounded-[30px] border py-2"
         >
           <Text
             Tag="p"
