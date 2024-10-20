@@ -4,10 +4,11 @@ import { Icon } from '@/shared/ui/Icon';
 import { UserListItem } from './UserListItem';
 import arrow_down from '@/shared/assets/icons/yellow_arrow_down.svg?react';
 import data from './fake-data-users.json';
-import Pagination from './components/Pagination';
+import Pagination from '../../components/Pagination';
 import { User } from './TypesProps';
-import { Calendar } from './Calendar';
-import SelectDate from './components/SelectDate';
+import { Calendar } from '../../components/Calendar';
+import SelectDate from '../../components/SelectDate';
+import { useState } from 'react';
 
 interface DataProps {
   data: User[];
@@ -31,6 +32,12 @@ function ListItem({ data }: DataProps): JSX.Element {
 }
 
 export function UsersList(): JSX.Element {
+  const [ filterName, setFilterName ] = useState<string>('close');
+
+  const hendleSetFilterName =(name?: string):void=>{
+    setFilterName(name ? name : 'close')
+  }
+
   return (
     <div>
       <div className="mb-6 rounded-[30px] bg-base-text_dark p-4 lg:p-4 xl:p-6">
@@ -43,7 +50,9 @@ export function UsersList(): JSX.Element {
             color="base/BG_block"
             className="block text-[28px] font-normal"
           />
-          <Calendar />
+          <Calendar 
+            filterName={filterName} 
+            hendleSetFilterName={hendleSetFilterName}/>
         </header>
 
         <ul className="flex w-full flex-col gap-3 xl:gap-4">
@@ -62,7 +71,9 @@ export function UsersList(): JSX.Element {
               </button>
             </div>
 
-            <SelectDate/>
+            <SelectDate 
+              filterName={filterName} 
+              hendleSetFilterName={hendleSetFilterName}/>
 
             <div className="flex gap-3 py-6">
               <Text

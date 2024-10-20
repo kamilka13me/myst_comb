@@ -12,6 +12,7 @@ import news from '@/shared/assets/icons/icon_news.svg?react';
 import projects from '@/shared/assets/icons/icon_projects.svg?react';
 import users from '@/shared/assets/icons/icon_people.svg?react';
 import content from '@/shared/assets/icons/icon_content.svg?react';
+import mailing from '@/shared/assets/icons/icon_mailing.svg?react';
 import settings from '@/shared/assets/icons/icon_settings.svg?react';
 import { createKey } from '@/shared/hooks/createKey';
 
@@ -61,6 +62,12 @@ export default function Dashboard(): JSX.Element {
       href: '/admin/content',
       text: 'Контент',
       icon: content,
+    },
+    {
+      pathName: 'mailing',
+      href: '/admin/mailing',
+      text: 'Розсилка',
+      icon: mailing,
     },
     {
       pathName: 'settings',

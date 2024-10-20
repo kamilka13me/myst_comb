@@ -5,7 +5,13 @@ import { useState } from "react";
 import clsx from "clsx";
 import { createKey } from "@/shared/hooks/createKey";
 
-export default function SelectDate(): JSX.Element {
+
+interface Props{
+  filterName: string;
+  hendleSetFilterName:(name?: string)=>void
+}
+
+export default function SelectDate({filterName, hendleSetFilterName }: Props): JSX.Element {
 
   interface Opption{
     name: string;
@@ -23,8 +29,13 @@ export default function SelectDate(): JSX.Element {
     },
   ]
 
+  const openClose =(close:boolean = false): void=>{
+    if(close){
+      hendleSetFilterName()
+    }else hendleSetFilterName(filterName ==='select-date'?'close':'select-date')
+  }
 
-  const [isOpened, setIsOpened] = useState<boolean>(false);
+  // const [isOpened, setIsOpened] = useState<boolean>(false);
   const [select, setSelect] = useState<string>('min-max');
 
   return (
@@ -37,17 +48,18 @@ export default function SelectDate(): JSX.Element {
         color="base/BG_block"
         className="font-medium"
       />
-      <button type="button" onClick={()=>{setIsOpened(!isOpened)}}>
+      <button type="button" onClick={()=>{
+        openClose()}}>
         <Icon Svg={sort} width={24} height={24} />
       </button>
 
-      { isOpened && <ul className="absolute left-[-130%] top-[102%] z-20 min-w-fit bg-base-text_accent rounded-[30px] p-4 flex flex-col gap-2">
+      { filterName==='select-date' && <ul className="absolute left-[-130%] top-[102%] z-20 min-w-fit bg-base-text_accent rounded-[30px] p-4 flex flex-col gap-2">
         {options.map((el)=>{
           return (
             <li key={createKey()} className={clsx("px-6 py-2.5 rounded-[40px] text-nowrap cursor-pointer duration-300 hover:shadow-hover_btn hover:bg-[#616161] hover:opacity-70", select == el.key && 'bg-[#616161]')}  
             onClick={()=>{
               setSelect(el.key)
-              setIsOpened(false)
+              openClose(true)
               }}>
               <Text
                 Tag="p"

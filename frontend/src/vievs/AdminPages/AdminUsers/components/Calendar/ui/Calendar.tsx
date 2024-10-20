@@ -18,8 +18,12 @@ interface IRangeDate {
 //   calendarIsOpened?: boolean;
 //   setDates?: (dates: IRangeDate[]) => void;
 // }
+interface Props{
+  filterName: string;
+  hendleSetFilterName:(name?: string)=>void
+}
 
-export const Calendar: FC = () => {
+export const Calendar: FC<Props> = ({ filterName, hendleSetFilterName }) => {
   const dates: IRangeDate[] = [
     {
       startDate: new Date(
@@ -29,8 +33,15 @@ export const Calendar: FC = () => {
       key: 'selection',
     },
   ];
-  const [calendarIsOpened, setCalendarIsOpened] = useState<boolean>(false);
+  // const [calendarIsOpened, setCalendarIsOpened] = useState<boolean>(false);
   const [date, setDate] = useState<IRangeDate[]>(dates);
+
+  const openClose =(close:boolean = false): void=>{
+    if(close){
+      hendleSetFilterName()
+    }else hendleSetFilterName(filterName ==='calendar'?'close':'calendar')
+  }
+
 
   const handleOnChange = (ranges: RangeKeyDict): void => {
     if (!ranges.selection.startDate || !ranges.selection.endDate) {
@@ -56,11 +67,11 @@ export const Calendar: FC = () => {
     <div className="relative">
       <button
         onClick={() => {
-          setCalendarIsOpened(!calendarIsOpened);
+          openClose();
         }}
         className={clsx(
           'flex items-center gap-2 rounded-[30px] border px-8 py-3 duration-300 hover:shadow-hover_btn',
-          calendarIsOpened
+          filterName === 'calendar'
             ? 'border-base-stroke-btn-act shadow-hover_btn'
             : 'border-[#505050]',
         )}
@@ -77,7 +88,7 @@ export const Calendar: FC = () => {
         />
       </button>
 
-      {calendarIsOpened && (
+      {filterName === 'calendar' && (
         <div className="absolute right-0 top-[105%] z-20 w-[250px]">
           <DateRange
             locale={uk}
