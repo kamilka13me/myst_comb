@@ -91,3 +91,21 @@ body.lock {
   touch-action: none;
   overscroll-behavior: none;
 }
+
+@layer utilities {
+  .scrollbar::-webkit-scrollbar {
+    @apply w-3;
+  }
+
+  .scrollbar::-webkit-scrollbar-track {
+    @apply rounded-full bg-transparent;
+  }
+
+  .scrollbar::-webkit-scrollbar-thumb {
+    @apply rounded-md bg-base-text_dark;
+  }
+
+  .scrollbar::-webkit-scrollbar-thumb:hover {
+    @apply bg-base-text_dark;
+  }
+}

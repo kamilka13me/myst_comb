@@ -10,6 +10,8 @@ import { User } from './TypesProps';
 import { Calendar } from '../../components/Calendar';
 import SelectDate from '../../components/SelectDate';
 import { useState } from 'react';
+import SelectMedia from '../../components/SelectMedia';
+import SelectTypeServices from '../../components/SelectTypeServices';
 
 interface DataProps {
   data: User[];
@@ -98,19 +100,9 @@ export function UsersList(): JSX.Element {
               filterName={filterName} 
               hendleSetFilterName={hendleSetFilterName}/>
 
-            <div className="flex gap-3 py-6">
-              <Text
-                Tag="span"
-                textType="Desktop/Body"
-                text={'Медіа'}
-                font="sans"
-                color="base/BG_block"
-                className="font-medium"
-              />
-              <button type="button">
-                <Icon Svg={arrow_down} width={24} height={24} />
-              </button>
-            </div>
+            <SelectMedia filterName={filterName} 
+              hendleSetFilterName={hendleSetFilterName}/>
+
             <div className="flex gap-3 py-6">
               <Text
                 Tag="span"
@@ -124,7 +116,12 @@ export function UsersList(): JSX.Element {
                 <Icon Svg={arrow_down} width={24} height={24} />
               </button>
             </div>
-            <div className="flex gap-3 py-6">
+            
+            <SelectTypeServices  
+              filterName={filterName} 
+              hendleSetFilterName={hendleSetFilterName}/>
+
+            {/* <div className="flex gap-3 py-6">
               <Text
                 Tag="span"
                 textType="Desktop/Body"
@@ -136,7 +133,7 @@ export function UsersList(): JSX.Element {
               <button type="button">
                 <Icon Svg={arrow_down} width={24} height={24} />
               </button>
-            </div>
+            </div> */}
           </li>
           <ListItem data={data.users} />
         </ul>
