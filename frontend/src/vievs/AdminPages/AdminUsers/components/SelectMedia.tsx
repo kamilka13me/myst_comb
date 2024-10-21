@@ -52,7 +52,7 @@ export default function SelectMedia({filterName, hendleSetFilterName }: Props): 
         <Icon className={clsx(isName() && "rotate-180")} Svg={arrow_down} width={24} height={24} />
       </button>
 
-     { isName() && <div className="absolute left-[-50%] top-[102%] z-20 rounded-[30px] p-4 flex flex-col gap-2 w-[320px]  bg-base-text_accent">
+    { isName() && <div className="absolute left-[-50%] top-[102%] z-20 rounded-[30px] p-4 flex flex-col gap-2  bg-base-text_accent">
 
         <InputSerch 
           serchValue={serchValue} 
@@ -92,7 +92,6 @@ export default function SelectMedia({filterName, hendleSetFilterName }: Props): 
               />
             </li>
           }
-
         </ul>
       </div>
     }
