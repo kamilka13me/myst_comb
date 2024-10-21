@@ -11,7 +11,8 @@ interface Props{
 }
 
 export default function SelectDate({filterName, hendleSetFilterName }: Props): JSX.Element {
-
+  const name = 'select-date'
+  
   interface Opption{
     name: string;
     key: string;
@@ -27,14 +28,16 @@ export default function SelectDate({filterName, hendleSetFilterName }: Props): J
       key:'min-max'
     },
   ]
-
-  const openClose =(close:boolean = false): void=>{
-    if(close){
-      hendleSetFilterName()
-    }else hendleSetFilterName(filterName ==='select-date'?'close':'select-date')
+  const isName = (): boolean =>{
+    return filterName === name
   }
 
-  // const [isOpened, setIsOpened] = useState<boolean>(false);
+  const openClose =(close: boolean = false): void=>{
+    if(close){
+      hendleSetFilterName()
+    }else hendleSetFilterName(isName() ? 'close': name)
+  }
+
   const [select, setSelect] = useState<string>('min-max');
 
   return (
@@ -52,7 +55,7 @@ export default function SelectDate({filterName, hendleSetFilterName }: Props): J
         <Icon Svg={sort} width={24} height={24} />
       </button>
 
-      { filterName==='select-date' && <ul className="absolute left-[-130%] top-[102%] z-20 min-w-fit bg-base-text_accent rounded-[30px] p-4 flex flex-col gap-2">
+      { isName() && <ul className="absolute left-[-130%] top-[102%] z-20 min-w-fit bg-base-text_accent rounded-[30px] p-4 flex flex-col gap-2">
         {options.map((el)=>{
           return (
             <li key={createKey()} className={clsx("px-6 py-2.5 rounded-[40px] text-nowrap cursor-pointer duration-300 hover:shadow-hover_btn hover:bg-[#616161] hover:opacity-70", select == el.key && 'bg-[#616161]')}  

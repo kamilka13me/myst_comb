@@ -24,6 +24,8 @@ interface Props{
 }
 
 export const Calendar: FC<Props> = ({ filterName, hendleSetFilterName }) => {
+  const name = 'calendar'
+
   const dates: IRangeDate[] = [
     {
       startDate: new Date(
@@ -33,15 +35,18 @@ export const Calendar: FC<Props> = ({ filterName, hendleSetFilterName }) => {
       key: 'selection',
     },
   ];
-  // const [calendarIsOpened, setCalendarIsOpened] = useState<boolean>(false);
+
   const [date, setDate] = useState<IRangeDate[]>(dates);
 
-  const openClose =(close:boolean = false): void=>{
-    if(close){
-      hendleSetFilterName()
-    }else hendleSetFilterName(filterName ==='calendar'?'close':'calendar')
+  const isName = (): boolean =>{
+    return filterName === name
   }
 
+  const openClose =(close: boolean = false): void=>{
+    if(close){
+      hendleSetFilterName()
+    }else hendleSetFilterName(isName() ? 'close': name)
+  }
 
   const handleOnChange = (ranges: RangeKeyDict): void => {
     if (!ranges.selection.startDate || !ranges.selection.endDate) {
@@ -88,7 +93,7 @@ export const Calendar: FC<Props> = ({ filterName, hendleSetFilterName }) => {
         />
       </button>
 
-      {filterName === 'calendar' && (
+      {isName() && (
         <div className="absolute left-0 min-[900px]:right-0 top-[108%] z-20 w-[250px]">
           <DateRange
             locale={uk}
