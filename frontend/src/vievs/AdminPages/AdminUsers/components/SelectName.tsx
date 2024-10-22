@@ -11,9 +11,30 @@ interface Props{
   hendleSetFilterName:(name?: string)=>void
 }
 
-export default function SelectMedia({filterName, hendleSetFilterName }: Props): JSX.Element {
-  const name = 'select-media'
-  const options: string[] = ['Куратори', 'Культурологи', 'Митці', 'Історики мистецтва', 'Скульптура', 'Стріт арт', 'Живопис', 'Архітектура', 'Графічний дизайн', 'Арт-директори', 'Декоративне мистецтво', 'Графіка', 'Мозаїка', 'Ілюстрація', 'Digital-art', 'Арт-дилери', 'Текстильне мистецтво', 'Мистецтвознавці', 'Кераміка']
+export default function SelectName({filterName, hendleSetFilterName }: Props): JSX.Element {
+  const name = 'select-name'
+  const options: string[] = [   
+    "Віктор Шевченко",
+    "Ольга Петренко",
+    "Андрій Бондаренко",
+    "Марина Коваленко",
+    "Микола Ткаченко",
+    "Тетяна Іванова",
+    "Олександр Кравченко",
+    "Катерина Сидоренко",
+    "Богдан Мельник",
+    "Наталія Данилюк",
+    "Ірина Коваль",
+    "Юрій Поліщук",
+    "Василь Дорошенко",
+    "Софія Лисенко",
+    "Ігор Романенко",
+    "Людмила Гаврилюк",
+    "Максим Олійник",
+    "Марія Вороніна",
+    "Дмитро Левченко",
+    "Ганна Павленко"
+  ]
 
   const [select, setSelect] = useState<string | null>(null);
 
@@ -39,11 +60,11 @@ export default function SelectMedia({filterName, hendleSetFilterName }: Props): 
   }
 
   return (
-    <div className="relative flex gap-3 py-6">
+    <div className="relative flex w-[200px] gap-3 py-6">
       <Text
         Tag="span"
         textType="Desktop/Body"
-        text={'Медіа'}
+        text={'Ім’я та прізвище'}
         font="sans"
         color="base/BG_block"
         className="font-medium"
@@ -52,7 +73,7 @@ export default function SelectMedia({filterName, hendleSetFilterName }: Props): 
         <Icon className={clsx(isName() && "rotate-180")} Svg={arrow_down} width={24} height={24} />
       </button>
 
-    { isName() && <div className="absolute left-[-50%] top-[102%] z-20 rounded-[30px] p-4 flex flex-col gap-2  bg-base-text_accent">
+    { isName() && <div className="absolute left-[-10%] top-[102%] z-20 rounded-[30px] p-4 flex flex-col gap-2 bg-base-text_accent">
 
         <InputSerch 
           serchValue={serchValue} 

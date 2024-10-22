@@ -12,6 +12,8 @@ import SelectDate from '../../components/SelectDate';
 import { useState } from 'react';
 import SelectMedia from '../../components/SelectMedia';
 import SelectTypeServices from '../../components/SelectTypeServices';
+import SelectName from '../../components/SelectName';
+import SelectEmail from '../../components/SelectEmail';
 
 interface DataProps {
   data: User[];
@@ -82,19 +84,10 @@ export function UsersList(): JSX.Element {
 
         <ul className="flex w-full flex-col gap-3 xl:gap-4 max-[900px]:bg-[#1C1C1C] max-[900px]:rounded-[30px] max-[900px]:px-3 max-[900px]:py-6">
           <li className="hidden min-[900px]:grid grid-cols-[minmax(170px,_185px)_minmax(80px,_120px)_minmax(200px,_250px)_minmax(80px,_1fr)_minmax(128px,_165px)] gap-1 border-base-text_ligh border-b px-3 xl:gap-3">
-            <div className="flex w-[200px] gap-3 py-6">
-              <Text
-                Tag="span"
-                textType="Desktop/Body"
-                text={'Ім’я та прізвище'}
-                font="sans"
-                color="base/BG_block"
-                className="font-medium"
-              />
-              <button type="button">
-                <Icon Svg={arrow_down} width={24} height={24} />
-              </button>
-            </div>
+
+            <SelectName  
+              filterName={filterName} 
+              hendleSetFilterName={hendleSetFilterName}/>
 
             <SelectDate 
               filterName={filterName} 
@@ -103,7 +96,10 @@ export function UsersList(): JSX.Element {
             <SelectMedia filterName={filterName} 
               hendleSetFilterName={hendleSetFilterName}/>
 
-            <div className="flex gap-3 py-6">
+            <SelectEmail filterName={filterName} 
+              hendleSetFilterName={hendleSetFilterName}/>  
+
+            {/* <div className="flex gap-3 py-6">
               <Text
                 Tag="span"
                 textType="Desktop/Body"
@@ -115,25 +111,11 @@ export function UsersList(): JSX.Element {
               <button type="button">
                 <Icon Svg={arrow_down} width={24} height={24} />
               </button>
-            </div>
+            </div> */}
             
             <SelectTypeServices  
               filterName={filterName} 
               hendleSetFilterName={hendleSetFilterName}/>
-
-            {/* <div className="flex gap-3 py-6">
-              <Text
-                Tag="span"
-                textType="Desktop/Body"
-                text={'Тип послуг'}
-                font="sans"
-                color="base/BG_block"
-                className="font-medium"
-              />
-              <button type="button">
-                <Icon Svg={arrow_down} width={24} height={24} />
-              </button>
-            </div> */}
           </li>
           <ListItem data={data.users} />
         </ul>
