@@ -45,7 +45,7 @@ export default function SelectTypeServices({filterName, hendleSetFilterName }: P
 
       { isName() && <div className="absolute left-[-10%] top-[102%] z-20 rounded-[30px] p-4 flex flex-col gap-2  bg-base-text_accent">
 
-          <ul className=" flex flex-col gap-2 max-h-[275px] overflow-y-auto scrollbar">
+        <ul className=" flex flex-col gap-2 max-h-[275px] overflow-y-auto scrollbar">
 
           {options.length && options.map((el)=>{
               return (

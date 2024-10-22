@@ -11,9 +11,19 @@ interface Props{
   hendleSetFilterName:(name?: string)=>void
 }
 
-export default function SelectMedia({filterName, hendleSetFilterName }: Props): JSX.Element {
-  const name = 'select-media'
-  const options: string[] = ['Куратори', 'Культурологи', 'Митці', 'Історики мистецтва', 'Скульптура', 'Стріт арт', 'Живопис', 'Архітектура', 'Графічний дизайн', 'Арт-директори', 'Декоративне мистецтво', 'Графіка', 'Мозаїка', 'Ілюстрація', 'Digital-art', 'Арт-дилери', 'Текстильне мистецтво', 'Мистецтвознавці', 'Кераміка']
+export default function SelectEmail({filterName, hendleSetFilterName }: Props): JSX.Element {
+  const name = 'select-email'
+  const options: string[] = [ "ivan.kovalenko@example.com",
+    "olena.shevchenko@mail.com",
+    "andriy.bondarenko@test.com",
+    "kateryna.zhuk@domain.com",
+    "mykola.petriv@webmail.com",
+    "anastasiya.ivanova@service.com",
+    "oleh.kravchuk@site.com",
+    "yulia.tkachuk@provider.com",
+    "serhiy.danilenko@mailservice.com",
+    "natalia.melnyk@inbox.com"
+  ]
 
   const [select, setSelect] = useState<string | null>(null);
 
@@ -43,16 +53,17 @@ export default function SelectMedia({filterName, hendleSetFilterName }: Props): 
       <Text
         Tag="span"
         textType="Desktop/Body"
-        text={'Медіа'}
+        text={'Email'}
         font="sans"
         color="base/BG_block"
         className="font-medium"
       />
       <button type="button" onClick={()=>{openClose()}}>
-        <Icon className={clsx(isName() && "rotate-180")} Svg={arrow_down} width={24} height={24} />
+        <Icon className={clsx(isName() && "rotate-180")} 
+          Svg={arrow_down} width={24} height={24} />
       </button>
 
-    { isName() && <div className="absolute left-[-50%] top-[102%] z-20 rounded-[30px] p-4 flex flex-col gap-2  bg-base-text_accent">
+    { isName() && <div className="absolute left-[-50%] top-[102%] z-20 rounded-[30px] p-4 flex flex-col gap-2 bg-base-text_accent">
 
         <InputSerch 
           serchValue={serchValue} 
@@ -64,7 +75,7 @@ export default function SelectMedia({filterName, hendleSetFilterName }: Props): 
             return (
               <li className="" key={createKey()}>
                 <button type="button" 
-                  className={clsx("w-full rounded-[30px] px-6 py-3 duration-300 hover:bg-base-text_light_2",select===el && 'bg-base-text_light_2')}
+                  className={clsx("w-full rounded-[30px] px-6 py-3 duration-300 hover:bg-base-text_light_2", select===el && 'bg-base-text_light_2')}
                   onClick={()=>{
                     setSelect(el)
                     openClose(true)
