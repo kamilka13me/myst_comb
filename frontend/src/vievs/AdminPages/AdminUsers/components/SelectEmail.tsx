@@ -22,7 +22,8 @@ export default function SelectEmail({filterName, hendleSetFilterName }: Props): 
     "oleh.kravchuk@site.com",
     "yulia.tkachuk@provider.com",
     "serhiy.danilenko@mailservice.com",
-    "natalia.melnyk@inbox.com"]
+    "natalia.melnyk@inbox.com"
+  ]
 
   const [select, setSelect] = useState<string | null>(null);
 

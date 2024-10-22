@@ -2,7 +2,6 @@
 import { Text } from '@/shared/ui/Text';
 import { Icon } from '@/shared/ui/Icon';
 import { UserListItem } from './UserListItem';
-import arrow_down from '@/shared/assets/icons/yellow_arrow_down.svg?react';
 import filter from '@/shared/assets/icons/icon_filter.svg?react';
 import data from './fake-data-users.json';
 import Pagination from '../../components/Pagination';
@@ -98,20 +97,6 @@ export function UsersList(): JSX.Element {
 
             <SelectEmail filterName={filterName} 
               hendleSetFilterName={hendleSetFilterName}/>  
-
-            {/* <div className="flex gap-3 py-6">
-              <Text
-                Tag="span"
-                textType="Desktop/Body"
-                text={'Email'}
-                font="sans"
-                color="base/BG_block"
-                className="font-medium"
-              />
-              <button type="button">
-                <Icon Svg={arrow_down} width={24} height={24} />
-              </button>
-            </div> */}
             
             <SelectTypeServices  
               filterName={filterName} 
