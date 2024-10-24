@@ -5,6 +5,7 @@ import { Text } from "@/shared/ui/Text";
 import arrow_down from '@/shared/assets/icons/yellow_arrow_down.svg?react';
 import { createKey } from "@/shared/hooks/createKey";
 import InputSerch from "./InputSerch";
+import { useSelectedFiltersStore } from "@/store/useSelectedFiltersStore";
 
 interface Props{
   filterName: string;
@@ -15,7 +16,12 @@ export default function SelectMedia({filterName, hendleSetFilterName }: Props): 
   const name = 'select-media'
   const options: string[] = ['Куратори', 'Культурологи', 'Митці', 'Історики мистецтва', 'Скульптура', 'Стріт арт', 'Живопис', 'Архітектура', 'Графічний дизайн', 'Арт-директори', 'Декоративне мистецтво', 'Графіка', 'Мозаїка', 'Ілюстрація', 'Digital-art', 'Арт-дилери', 'Текстильне мистецтво', 'Мистецтвознавці', 'Кераміка']
 
-  const [select, setSelect] = useState<string | null>(null);
+  const addItem = useSelectedFiltersStore((state) => state.addItem)
+  const filters = useSelectedFiltersStore((state) => state.filters)
+
+  const isActive = (name: string): boolean=>{
+    return filters.includes(name)
+  }
 
   const [ optionsData, setOptionsData ] = useState<string[]>(options);
 
@@ -27,6 +33,12 @@ export default function SelectMedia({filterName, hendleSetFilterName }: Props): 
       setOptionsData(newArr)
     }else setOptionsData(options)
   },[serchValue])
+
+  useEffect(()=>{
+    if(filterName !== name){
+      setSerchValue('')
+    }
+  },[filterName])
 
   const isName = (): boolean =>{
     return filterName === name
@@ -64,9 +76,9 @@ export default function SelectMedia({filterName, hendleSetFilterName }: Props): 
             return (
               <li className="" key={createKey()}>
                 <button type="button" 
-                  className={clsx("w-full rounded-[30px] px-6 py-3 duration-300 hover:bg-base-text_light_2",select===el && 'bg-base-text_light_2')}
+                  className={clsx("w-full rounded-[30px] px-6 py-3 duration-300 hover:bg-base-text_light_2", isActive(el) && 'bg-base-text_light_2')}
                   onClick={()=>{
-                    setSelect(el)
+                    addItem(el)
                     openClose(true)
                   }}>
                   <Text

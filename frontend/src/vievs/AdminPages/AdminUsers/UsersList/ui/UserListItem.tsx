@@ -7,40 +7,34 @@ import { Text } from '@/shared/ui/Text';
 import icon_add from '@/shared/assets/icons/icon_add.svg?react';
 import minus from '@/shared/assets/icons/icon_minus.svg?react';
 
-// "Рев’ю": '#0f9',
-// "Послуги": '#d633ff',
-// "Англійська": '#ff4e00',
-// "Обговорення": '#e7ff00',
-// "Долучитись": '#9e92ee',
-
 export function UserListItem(user: User) {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
   const getBorderColor = (name: string): string => {
     if (name === 'Рев’ю') {
-      return '#0f9';
+      return 'border-icons-symbols-mint-500';
     }
     if (name === 'Послуги') {
-      return '#d633ff';
+      return 'border-icons-symbols-purple-400';
     }
     if (name === 'Англійська') {
-      return '#ff4e00';
+      return 'border-icons-symbols-orange-500';
     }
     if (name === 'Обговорення') {
-      return '#e7ff00';
+      return 'border-icons-symbols-yellow-500';
     }
     if (name === 'Долучитись') {
-      return '#9e92ee';
+      return 'border-icons-symbols-blue-200';
     }
-    return '#9e92ee';
+    return '';
   };
 
   const mediaDropDownList = ({ media }: MediaProps): JSX.Element => {
     const bgColors: TypeBgColors = {
-      yellow: '#f1ff66',
-      purple: '#eb99ff',
-      orange: '#ffb899',
-      blue: '#9e92ee',
+      yellow: 'bg-icons-symbols-yellow-300',
+      purple: 'bg-icons-symbols-purple-300',
+      orange: 'bg-icons-symbols-orange-200',
+      blue: 'bg-icons-symbols-blue-200',
     };
 
     const getBgColor = (name: string): string => {
@@ -55,8 +49,7 @@ export function UserListItem(user: User) {
         {media?.length == 1 ? (
           <li className="flex items-center gap-0.5">
             <div
-              style={{ background: getBgColor(media[0].idColor) }}
-              className="rounded-[6px]"
+              className={clsx("rounded-[6px]", getBgColor(media[0].idColor))}
             >
               <Text
                 Tag="p"
@@ -77,8 +70,7 @@ export function UserListItem(user: User) {
                 return (
                   <li key={i} className="flex items-center gap-0.5">
                     <div
-                      style={{ background: getBgColor(media[i].idColor) }}
-                      className={'rounded-[6px]'}
+                      className={clsx("rounded-[6px]", getBgColor(media[i].idColor))}
                     >
                       <Text
                         Tag="p"
@@ -93,7 +85,7 @@ export function UserListItem(user: User) {
                     <button
                       type="button"
                       className={clsx(
-                        'flex h-[32px] w-[32px] items-center justify-center rounded-[6px] bg-[#9e92ee] duration-300 hover:opacity-70',
+                        'flex h-[32px] w-[32px] items-center justify-center rounded-[6px] bg-icons-symbols-blue-200 duration-300 hover:opacity-70',
                         isOpen && 'hidden',
                       )}
                       onClick={() => {
@@ -114,8 +106,7 @@ export function UserListItem(user: User) {
                     )}
                   >
                     <div
-                      style={{ background: getBgColor(media[i].idColor) }}
-                      className={'rounded-[6px]'}
+                      className={clsx("rounded-[6px]", getBgColor(media[i].idColor))}
                     >
                       <Text
                         Tag="p"
@@ -131,7 +122,7 @@ export function UserListItem(user: User) {
                       <button
                         type="button"
                         className={clsx(
-                          'flex h-[32px] w-[32px] items-center justify-center rounded-[6px] bg-[#9e92ee] duration-300 hover:opacity-70',
+                          'flex h-[32px] w-[32px] items-center justify-center rounded-[6px] bg-icons-symbols-blue-200 duration-300 hover:opacity-70',
                           !isOpen && 'hidden',
                         )}
                         onClick={() => {
@@ -192,8 +183,7 @@ export function UserListItem(user: User) {
       </div>
       <div className={clsx('py-4', isOpen ? 'align-top' : 'align-center')}>
         <div
-          style={{ borderColor: getBorderColor(user.type_services) }}
-          className="min-[900px]:mx-auto w-[132px] rounded-[30px] border py-2"
+          className={clsx("min-[900px]:mx-auto w-[132px] rounded-[30px] border py-2", getBorderColor(user.type_services))}
         >
           <Text
             Tag="p"
