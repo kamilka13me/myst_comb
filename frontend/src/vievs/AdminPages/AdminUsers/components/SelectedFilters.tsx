@@ -1,16 +1,13 @@
+import clsx from "clsx";
 import { Icon } from "@/shared/ui/Icon";
 import { Text } from "@/shared/ui/Text";
 import icon_close from '@/shared/assets/icons/icon_close.svg?react';
-import clsx from "clsx";
-import { useState } from "react";
 import { useSelectedFiltersStore } from "@/store/useSelectedFiltersStore";
 
 interface Props{
   key: string | number;
   name: string;
 }
-
-const items: string[] = ['picture@example.com','Кераміка', 'Мистецтвознавці', 'Митці', 'Email','Рев’ю', 'Обговорення', 'Англійська']
 
 function SelectedElement ({ name}: Props): JSX.Element {
   const removeItem = useSelectedFiltersStore((state) => state.removeItem)
@@ -61,11 +58,6 @@ interface PropsFilters{
 
 export default function SelectedFilters ({items}: PropsFilters): JSX.Element {
   const clean = useSelectedFiltersStore((state) => state.clean)
-  // const [ dataItems, setDataItems ] = useState<string[]>(items)
-
-  // const removeItem = (name: string): void => {
-  //   setDataItems(items.filter((e)=> e !== name))
-  // }
 
   return (
     <div className='flex w-full justify-between gap-6 items-end'>
