@@ -1,19 +1,27 @@
 import { create } from 'zustand';
 // State types
+
+export interface Item {
+  title: string;
+  type: string;
+}
+
 interface State {
-  filters: string[];
-  addItem: (item: string) => void;
-  removeItem:(name: string) => void;
-  clean: ()=> void
+  media: Item[];
+  services: Item[];
+  email: Item | null;
+  addItem: (item: Item) => void;
+  removeItem:(name: Item) => void;
+  clean: ()=> void;
 }
 
 interface Props{
-  data:string[];
-  item:string
+  data: Item[];
+  item: Item;
 }
 
-const addNewItem = ({data, item}:Props):string[] =>{
-  if(data.includes(item)){
+const addNewItem = ({data, item}: Props):Item[] =>{
+  if(data.find(el=> el.title === item.title)){
     return [...data]
   }else{
     return [...data, item]
@@ -21,8 +29,34 @@ const addNewItem = ({data, item}:Props):string[] =>{
 }
 
 export const useSelectedFiltersStore = create<State>((set, get) => ({
-  filters: [],
-  addItem: (item) => set({filters: addNewItem({data:get().filters,item})}),
-  removeItem:(name) => set({filters: get().filters.filter((el) => el !==name )}),
-  clean: ()=> set({filters: []})
+  media: [],
+  services: [],
+  email: null,
+  addItem: (item) => {
+    if(item.type === 'media'){
+      set({media: addNewItem({data: get().media, item})})
+    }
+    if(item.type === 'services'){
+      set({services: addNewItem({data: get().services, item})})
+    }
+    if(item.type === 'email'){
+      set({email: item})
+    }
+  },
+  removeItem:(name) => {
+    if(name.type === 'media'){
+      set({media: get().media.filter((el) => el.title !==name.title  )})
+    }
+    if(name.type === 'services'){ 
+      set({services: get().services.filter((el) => el.title !==name.title  )})
+    }
+    if(name.type === 'email'){
+      set({email: null})
+    }
+  },
+  clean: ()=>{ 
+    set({media: []})
+    set({services: []})
+    set({email: null})
+  }
 }));

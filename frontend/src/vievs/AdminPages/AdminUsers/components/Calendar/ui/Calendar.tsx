@@ -94,7 +94,7 @@ export const Calendar: FC<Props> = ({ filterName, hendleSetFilterName }) => {
       </button>
 
       {isName() && (
-        <div className="absolute left-0 min-[900px]:right-0 top-[108%] z-20 w-[250px]">
+        <div className="absolute left-0 min-[900px]:right-0 top-[108%] z-20 w-[280px] min-[900px]:w-[250px]">
           <DateRange
             locale={uk}
             className="w-full rounded-[30px] p-4"

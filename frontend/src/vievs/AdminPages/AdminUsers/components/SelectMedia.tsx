@@ -5,7 +5,8 @@ import { Text } from "@/shared/ui/Text";
 import arrow_down from '@/shared/assets/icons/yellow_arrow_down.svg?react';
 import { createKey } from "@/shared/hooks/createKey";
 import InputSerch from "./InputSerch";
-import { useSelectedFiltersStore } from "@/store/useSelectedFiltersStore";
+import { Item, useSelectedFiltersStore } from "@/store/useSelectedFiltersStore";
+import checkbox from '@/shared/assets/icons/checkbox.svg?react';
 
 interface Props{
   filterName: string;
@@ -14,22 +15,43 @@ interface Props{
 
 export default function SelectMedia({filterName, hendleSetFilterName }: Props): JSX.Element {
   const name = 'select-media'
-  const options: string[] = ['Куратори', 'Культурологи', 'Митці', 'Історики мистецтва', 'Скульптура', 'Стріт арт', 'Живопис', 'Архітектура', 'Графічний дизайн', 'Арт-директори', 'Декоративне мистецтво', 'Графіка', 'Мозаїка', 'Ілюстрація', 'Digital-art', 'Арт-дилери', 'Текстильне мистецтво', 'Мистецтвознавці', 'Кераміка']
-
+  const options: Item[] = [
+    {title:'Куратори',type:'media'}, 
+    {title:'Культурологи',type:'media'},
+    {title: 'Митці',type:'media'}, 
+    {title:'Історики мистецтва',type:'media'},
+    {title:'Скульптура',type:'media'}, 
+    {title:'Стріт арт',type:'media'},
+    {title: 'Живопис',type:'media'}, 
+    {title:'Архітектура',type:'media'},
+    {title:'Графічний дизайн',type:'media'}, 
+    {title:'Арт-директори',type:'media'},
+    {title: 'Декоративне мистецтво',type:'media'}, 
+    {title:'Графіка',type:'media'},
+    {title:'Мозаїка',type:'media'}, 
+    {title:'Ілюстрація',type:'media'},
+    {title: 'Digital-art',type:'media'}, 
+    {title: 'Арт-дилери',type:'media'},
+    {title:'Текстильне мистецтво',type:'media'},
+    {title: 'Мистецтвознавці',type:'media'}, 
+    {title: 'Кераміка',type:'media'},
+ ]
+  const removeItem = useSelectedFiltersStore((state) => state.removeItem)
   const addItem = useSelectedFiltersStore((state) => state.addItem)
-  const filters = useSelectedFiltersStore((state) => state.filters)
+  const media = useSelectedFiltersStore((state) => state.media)
 
-  const isActive = (name: string): boolean=>{
-    return filters.includes(name)
+  const isActive = (name: Item): boolean=>{
+    if(media.find(el=> el.title === name.title)){
+      return true
+    }else return false
   }
-
-  const [ optionsData, setOptionsData ] = useState<string[]>(options);
+  const [ optionsData, setOptionsData ] = useState<Item[]>(options);
 
   const [ serchValue, setSerchValue ] = useState<string>('');
 
   useEffect(()=>{
     if(serchValue){
-      const newArr = options.filter((el)=>(el.toUpperCase().includes(serchValue.toUpperCase())))
+      const newArr = options.filter((el)=>(el.title.toUpperCase().includes(serchValue.toUpperCase())))
       setOptionsData(newArr)
     }else setOptionsData(options)
   },[serchValue])
@@ -49,6 +71,15 @@ export default function SelectMedia({filterName, hendleSetFilterName }: Props): 
       hendleSetFilterName()
     }else hendleSetFilterName(isName() ? 'close': name)
   }
+
+  const hendleCheckbox = (name: Item): void =>{
+    if(media.find(el=> el.title === name.title)){
+      removeItem(name)
+    }else if(media.length < 3){
+      addItem(name)
+    }
+  }
+
 
   return (
     <div className="relative flex gap-3 py-6">
@@ -76,15 +107,17 @@ export default function SelectMedia({filterName, hendleSetFilterName }: Props): 
             return (
               <li className="" key={createKey()}>
                 <button type="button" 
-                  className={clsx("w-full rounded-[30px] px-6 py-3 duration-300 hover:bg-base-text_light_2", isActive(el) && 'bg-base-text_light_2')}
+                  className={clsx("w-full flex items-center gap-2 rounded-[30px] px-6 py-3 duration-300 hover:bg-base-text_light_2", isActive(el) && 'bg-base-text_light_2')}
                   onClick={()=>{
-                    addItem(el)
-                    openClose(true)
+                    hendleCheckbox(el)
                   }}>
+                    <span className={clsx("w-[20px] h-[18px] flex items-center justify-center border rounded-[4px] hover:shadow-hover_btn", isActive(el) ? 'border-icons-symbols-yellow-500': 'border-base-stroke-btn-act')}>
+                      <Icon className={clsx(!isActive(el) && 'hidden')} Svg={checkbox} width={10} height={6} />
+                    </span>
                   <Text
                   Tag="span"
                   textType="Desktop/Body"
-                  text={el}
+                  text={el.title}
                   font="sans"
                   color="base/text"
                   className="font-medium block w-full text-nowrap max-w-[250px] overflow-hidden"

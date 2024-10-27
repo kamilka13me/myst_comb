@@ -43,6 +43,12 @@ export default function SelectName({filterName, hendleSetFilterName }: Props): J
   const [ serchValue, setSerchValue ] = useState<string>('');
 
   useEffect(()=>{
+    if(filterName !== name){
+      setSerchValue('')
+    }
+  },[filterName])
+
+  useEffect(()=>{
     if(serchValue){
       const newArr = options.filter((el)=>(el.toUpperCase().includes(serchValue.toUpperCase())))
       setOptionsData(newArr)

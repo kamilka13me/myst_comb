@@ -5,6 +5,7 @@ import { Text } from "@/shared/ui/Text";
 import arrow_down from '@/shared/assets/icons/yellow_arrow_down.svg?react';
 import { createKey } from "@/shared/hooks/createKey";
 import InputSerch from "./InputSerch";
+import { Item, useSelectedFiltersStore } from "@/store/useSelectedFiltersStore";
 
 interface Props{
   filterName: string;
@@ -13,27 +14,39 @@ interface Props{
 
 export default function SelectEmail({filterName, hendleSetFilterName }: Props): JSX.Element {
   const name = 'select-email'
-  const options: string[] = [ "ivan.kovalenko@example.com",
-    "olena.shevchenko@mail.com",
-    "andriy.bondarenko@test.com",
-    "kateryna.zhuk@domain.com",
-    "mykola.petriv@webmail.com",
-    "anastasiya.ivanova@service.com",
-    "oleh.kravchuk@site.com",
-    "yulia.tkachuk@provider.com",
-    "serhiy.danilenko@mailservice.com",
-    "natalia.melnyk@inbox.com"
+  const options: Item[] = [ 
+    {title:"ivan.kovalenko@example.com",type:'email'},
+    {title:"olena.shevchenko@mail.com",type:'email'},
+    {title:"andriy.bondarenko@test.com",type:'email'},
+    {title:"kateryna.zhuk@domain.com",type:'email'},
+    {title:"mykola.petriv@webmail.com",type:'email'},
+    {title:"anastasiya.ivanova@service.com",type:'email'},
+    {title:"oleh.kravchuk@site.com",type:'email'},
+    {title:"yulia.tkachuk@provider.com",type:'email'},
+    {title:"serhiy.danilenko@mailservice.com",type:'email'},
+    {title: "natalia.melnyk@inbox.com",type:'email'}
   ]
+  const removeItem = useSelectedFiltersStore((state) => state.removeItem)
+  const addItem = useSelectedFiltersStore((state) => state.addItem)
+  const email = useSelectedFiltersStore((state) => state.email)
 
-  const [select, setSelect] = useState<string | null>(null);
-
-  const [ optionsData, setOptionsData ] = useState<string[]>(options);
+  const [ optionsData, setOptionsData ] = useState<Item[]>(options);
 
   const [ serchValue, setSerchValue ] = useState<string>('');
 
+  const isActive = (name: Item): boolean=>{
+    return email?.title === name.title
+  }
+
+  useEffect(()=>{
+    if(filterName !== name){
+      setSerchValue('')
+    }
+  },[filterName])
+  
   useEffect(()=>{
     if(serchValue){
-      const newArr = options.filter((el)=>(el.toUpperCase().includes(serchValue.toUpperCase())))
+      const newArr = options.filter((el)=>(el.title.toUpperCase().includes(serchValue.toUpperCase())))
       setOptionsData(newArr)
     }else setOptionsData(options)
   },[serchValue])
@@ -48,6 +61,13 @@ export default function SelectEmail({filterName, hendleSetFilterName }: Props): 
     }else hendleSetFilterName(isName() ? 'close': name)
   }
 
+  const hendleCheckbox = (name: Item): void =>{
+    if(email?.title=== name.title){
+      removeItem(name)
+    }else {
+      addItem(name)
+    }
+  }
   return (
     <div className="relative flex gap-3 py-6">
       <Text
@@ -75,15 +95,15 @@ export default function SelectEmail({filterName, hendleSetFilterName }: Props): 
             return (
               <li className="" key={createKey()}>
                 <button type="button" 
-                  className={clsx("w-full rounded-[30px] px-6 py-3 duration-300 hover:bg-base-text_light_2", select===el && 'bg-base-text_light_2')}
+                  className={clsx("w-full rounded-[30px] px-6 py-3 duration-300 hover:bg-base-text_light_2", isActive(el) && 'bg-base-text_light_2')}
                   onClick={()=>{
-                    setSelect(el)
+                    hendleCheckbox(el)
                     openClose(true)
                   }}>
                   <Text
                   Tag="span"
                   textType="Desktop/Body"
-                  text={el}
+                  text={el.title}
                   font="sans"
                   color="base/text"
                   className="font-medium block w-full text-nowrap max-w-[250px] overflow-hidden"

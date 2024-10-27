@@ -39,7 +39,6 @@ function ListItem({ data }: DataProps): JSX.Element {
 }
 
 export function UsersList(): JSX.Element {
-  const filters = useSelectedFiltersStore((state) => state.filters)
   const [ filterName, setFilterName ] = useState<string>('close');
 
   const hendleSetFilterName =(name?: string):void=>{
@@ -85,7 +84,7 @@ export function UsersList(): JSX.Element {
           </div>  
         </header>
 
-       {filters.length ? <SelectedFilters items={filters}/> : null}
+        <SelectedFilters/>
 
         <ul className="flex w-full flex-col gap-3 xl:gap-4 max-[900px]:bg-[#1C1C1C] max-[900px]:rounded-[30px] max-[900px]:px-3 max-[900px]:py-6">
           <li className="hidden min-[900px]:grid grid-cols-[minmax(170px,_185px)_minmax(80px,_120px)_minmax(200px,_250px)_minmax(80px,_1fr)_minmax(128px,_165px)] gap-1 border-base-text_ligh border-b px-3 xl:gap-3">
