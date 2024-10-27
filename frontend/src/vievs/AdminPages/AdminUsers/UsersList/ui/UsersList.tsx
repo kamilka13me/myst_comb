@@ -3,6 +3,7 @@ import { Text } from '@/shared/ui/Text';
 import { Icon } from '@/shared/ui/Icon';
 import { UserListItem } from './UserListItem';
 import filter from '@/shared/assets/icons/icon_filter.svg?react';
+
 import data from './fake-data-users.json';
 import Pagination from '../../components/Pagination';
 import { User } from './TypesProps';
@@ -13,6 +14,7 @@ import SelectMedia from '../../components/SelectMedia';
 import SelectTypeServices from '../../components/SelectTypeServices';
 import SelectName from '../../components/SelectName';
 import SelectEmail from '../../components/SelectEmail';
+import SelectedFilters from '../../components/SelectedFilters';
 
 interface DataProps {
   data: User[];
@@ -80,6 +82,8 @@ export function UsersList(): JSX.Element {
             </button>  
           </div>  
         </header>
+
+        <SelectedFilters/>
 
         <ul className="flex w-full flex-col gap-3 xl:gap-4 max-[900px]:bg-[#1C1C1C] max-[900px]:rounded-[30px] max-[900px]:px-3 max-[900px]:py-6">
           <li className="hidden min-[900px]:grid grid-cols-[minmax(170px,_185px)_minmax(80px,_120px)_minmax(200px,_250px)_minmax(80px,_1fr)_minmax(128px,_165px)] gap-1 border-base-text_ligh border-b px-3 xl:gap-3">
