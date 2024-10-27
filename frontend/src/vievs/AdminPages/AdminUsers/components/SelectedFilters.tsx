@@ -57,7 +57,7 @@ function SelectedElement ({ name}: Props): JSX.Element {
   )
 }
 
-export default function SelectedFilters (): JSX.Element |null{
+export default function SelectedFilters (): JSX.Element | null{
   const clean = useSelectedFiltersStore((state) => state.clean)
   const media = useSelectedFiltersStore((state) => state.media)
   const services = useSelectedFiltersStore((state) => state.services)

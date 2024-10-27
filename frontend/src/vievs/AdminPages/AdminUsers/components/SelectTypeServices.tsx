@@ -1,4 +1,3 @@
-import { useState } from "react";
 import clsx from "clsx";
 import { Icon } from "@/shared/ui/Icon";
 import { Text } from "@/shared/ui/Text";
@@ -30,8 +29,6 @@ export default function SelectTypeServices({filterName, hendleSetFilterName }: P
     {title:'Англійська', type:'services'},
     {title:'Долучитись', type:'services'},
   ]
-
-  const [select, setSelect] = useState<string | null>(null);
 
   const isName = (): boolean =>{
     return filterName === name

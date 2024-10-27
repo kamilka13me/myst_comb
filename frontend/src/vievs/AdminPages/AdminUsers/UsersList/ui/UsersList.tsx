@@ -15,7 +15,6 @@ import SelectTypeServices from '../../components/SelectTypeServices';
 import SelectName from '../../components/SelectName';
 import SelectEmail from '../../components/SelectEmail';
 import SelectedFilters from '../../components/SelectedFilters';
-import { useSelectedFiltersStore } from '@/store/useSelectedFiltersStore';
 
 interface DataProps {
   data: User[];
