@@ -15,19 +15,12 @@ import SelectTypeServices from '../../components/SelectTypeServices';
 import SelectName from '../../components/SelectName';
 import SelectEmail from '../../components/SelectEmail';
 import SelectedFilters from '../../components/SelectedFilters';
-import { useRouter } from 'next/navigation';
 
 interface DataProps {
   data: User[];
 }
 
 function ListItem({ data }: DataProps): JSX.Element {
-  const router = useRouter()
-
-  const toUserPage =(id:string): void=>{
-    router.push(`/admin/users/${id}`)
-  }
-
   return (
     <>
       {data.map((user) => {
