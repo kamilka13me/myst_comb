@@ -6,8 +6,14 @@ import { Icon } from '@/shared/ui/Icon';
 import { Text } from '@/shared/ui/Text';
 import icon_add from '@/shared/assets/icons/icon_add.svg?react';
 import minus from '@/shared/assets/icons/icon_minus.svg?react';
+import { useRouter } from 'next/navigation';
 
 export function UserListItem(user: User) {
+  const router = useRouter()
+
+  const toUserPage =(id:string): void=>{
+    router.push(`/admin/users/${id}`)
+  }
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
   const getBorderColor = (name: string): string => {
@@ -45,7 +51,7 @@ export function UserListItem(user: User) {
     };
 
     return (
-      <ul className="flex min-[900px]:flex-col flex-wrap items-start justify-start gap-0.5 min-[900px]:px-3 py-6">
+      <ul className="flex min-[900px]:flex-col flex-wrap items-start justify-start gap-0.5 min-[900px]:px-3 py-2 min-[900px]:py-6">
         {media?.length == 1 ? (
           <li className="flex items-center gap-0.5">
             <div
@@ -143,14 +149,15 @@ export function UserListItem(user: User) {
 
   return (
     <>
-      <div className={clsx(isOpen ? 'align-top' : 'align-center')}>
+      <div className={clsx(isOpen ? 'align-top' : 'align-center')} 
+        onClick={()=>{toUserPage(user.id)}}>
         <Text
           Tag="p"
           textType="Desktop/Body"
           text={user.name}
           font="sans"
           color="base/text"
-          className="py-4 min-[900px]:py-6 text-[16px] font-normal xl:text-[18px]"
+          className="py-1 min-[900px]:py-6 text-[16px] font-normal xl:text-[18px]"
         />
       </div>
       <div className={clsx(isOpen ? 'align-top' : 'align-center')}>
@@ -160,7 +167,7 @@ export function UserListItem(user: User) {
           text={user.date}
           font="sans"
           color="base/text"
-          className="py-4 min-[900px]:py-6 font-normal"
+          className="py-1 min-[900px]:py-6 font-normal"
         />
       </div>
       <div className={clsx(isOpen && 'align-top')}>
@@ -178,10 +185,10 @@ export function UserListItem(user: User) {
           text={user.email}
           font="sans"
           color="base/text"
-          className="py-4 min-[900px]:py-6 font-normal"
+          className="py-1 min-[900px]:py-6 font-normal"
         />
       </div>
-      <div className={clsx('py-4', isOpen ? 'align-top' : 'align-center')}>
+      <div className={clsx('py-2 min-[900px]:py-4', isOpen ? 'align-top' : 'align-center')}>
         <div
           className={clsx("min-[900px]:mx-auto w-[132px] rounded-[30px] border py-2", getBorderColor(user.type_services))}
         >

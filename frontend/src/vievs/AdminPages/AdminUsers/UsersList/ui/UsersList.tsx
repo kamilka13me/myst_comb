@@ -15,12 +15,19 @@ import SelectTypeServices from '../../components/SelectTypeServices';
 import SelectName from '../../components/SelectName';
 import SelectEmail from '../../components/SelectEmail';
 import SelectedFilters from '../../components/SelectedFilters';
+import { useRouter } from 'next/navigation';
 
 interface DataProps {
   data: User[];
 }
 
 function ListItem({ data }: DataProps): JSX.Element {
+  const router = useRouter()
+
+  const toUserPage =(id:string): void=>{
+    router.push(`/admin/users/${id}`)
+  }
+
   return (
     <>
       {data.map((user) => {
@@ -28,6 +35,7 @@ function ListItem({ data }: DataProps): JSX.Element {
           <li
             key={user.id}
             className="flex flex-col p-4 min-[900px]:grid grid-cols-[minmax(160px,_185px)_minmax(80px,_120px)_minmax(200px,_250px)_minmax(70px,_1fr)_minmax(128px,_165px)] min-[900px]:gap-1 rounded-[24px] min-[900px]:px-3 duration-300 hover:bg-base-text_accent hover:shadow-user-card"
+            // onClick={()=>{toUserPage(user.id)}}
           >
             {UserListItem(user)}
           </li>

@@ -63,7 +63,8 @@ export default function SelectedFilters (): JSX.Element | null{
   const services = useSelectedFiltersStore((state) => state.services)
   const email = useSelectedFiltersStore((state) => state.email)
 
-  const itemsData = [...media, ...services, email ]
+  const itemsData = [...media, ...services]
+  if(email){itemsData.push(email)}
 
   if(!itemsData.length){return null}
 
@@ -71,7 +72,7 @@ export default function SelectedFilters (): JSX.Element | null{
     <div className='flex w-full justify-between gap-6 items-end'>
       <ul className='flex gap-1 flex-wrap'>
         {itemsData && itemsData.map((el,i)=>{
-            return (el ? <SelectedElement key={i} name={el} /> : null)
+            return (<SelectedElement key={i} name={el} />)
           })
         }
       </ul>
