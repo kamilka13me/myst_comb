@@ -45,11 +45,11 @@ export function UserListItem(user: User) {
     };
 
     return (
-      <ul className="flex min-[900px]:flex-col flex-wrap items-start justify-start gap-0.5 min-[900px]:px-3 py-6">
+      <ul className="flex flex-wrap items-start justify-start gap-0.5 py-6 min-[900px]:flex-col min-[900px]:px-3">
         {media?.length == 1 ? (
           <li className="flex items-center gap-0.5">
             <div
-              className={clsx("rounded-[6px]", getBgColor(media[0].idColor))}
+              className={clsx('rounded-[6px]', getBgColor(media[0].idColor))}
             >
               <Text
                 Tag="p"
@@ -70,7 +70,10 @@ export function UserListItem(user: User) {
                 return (
                   <li key={i} className="flex items-center gap-0.5">
                     <div
-                      className={clsx("rounded-[6px]", getBgColor(media[i].idColor))}
+                      className={clsx(
+                        'rounded-[6px]',
+                        getBgColor(media[i].idColor),
+                      )}
                     >
                       <Text
                         Tag="p"
@@ -106,7 +109,10 @@ export function UserListItem(user: User) {
                     )}
                   >
                     <div
-                      className={clsx("rounded-[6px]", getBgColor(media[i].idColor))}
+                      className={clsx(
+                        'rounded-[6px]',
+                        getBgColor(media[i].idColor),
+                      )}
                     >
                       <Text
                         Tag="p"
@@ -150,7 +156,7 @@ export function UserListItem(user: User) {
           text={user.name}
           font="sans"
           color="base/text"
-          className="py-4 min-[900px]:py-6 text-[16px] font-normal xl:text-[18px]"
+          className="py-4 text-[16px] font-normal min-[900px]:py-6 xl:text-[18px]"
         />
       </div>
       <div className={clsx(isOpen ? 'align-top' : 'align-center')}>
@@ -160,7 +166,7 @@ export function UserListItem(user: User) {
           text={user.date}
           font="sans"
           color="base/text"
-          className="py-4 min-[900px]:py-6 font-normal"
+          className="py-4 font-normal min-[900px]:py-6"
         />
       </div>
       <div className={clsx(isOpen && 'align-top')}>
@@ -178,12 +184,15 @@ export function UserListItem(user: User) {
           text={user.email}
           font="sans"
           color="base/text"
-          className="py-4 min-[900px]:py-6 font-normal"
+          className="py-4 font-normal min-[900px]:py-6"
         />
       </div>
       <div className={clsx('py-4', isOpen ? 'align-top' : 'align-center')}>
         <div
-          className={clsx("min-[900px]:mx-auto w-[132px] rounded-[30px] border py-2", getBorderColor(user.type_services))}
+          className={clsx(
+            'w-[132px] rounded-[30px] border py-2 min-[900px]:mx-auto',
+            getBorderColor(user.type_services),
+          )}
         >
           <Text
             Tag="p"

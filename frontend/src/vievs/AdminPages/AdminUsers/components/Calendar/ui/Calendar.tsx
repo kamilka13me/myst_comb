@@ -18,13 +18,13 @@ interface IRangeDate {
 //   calendarIsOpened?: boolean;
 //   setDates?: (dates: IRangeDate[]) => void;
 // }
-interface Props{
+interface Props {
   filterName: string;
-  hendleSetFilterName:(name?: string)=>void
+  hendleSetFilterName: (name?: string) => void;
 }
 
 export const Calendar: FC<Props> = ({ filterName, hendleSetFilterName }) => {
-  const name = 'calendar'
+  const name = 'calendar';
 
   const dates: IRangeDate[] = [
     {
@@ -38,15 +38,15 @@ export const Calendar: FC<Props> = ({ filterName, hendleSetFilterName }) => {
 
   const [date, setDate] = useState<IRangeDate[]>(dates);
 
-  const isName = (): boolean =>{
-    return filterName === name
-  }
+  const isName = (): boolean => {
+    return filterName === name;
+  };
 
-  const openClose =(close: boolean = false): void=>{
-    if(close){
-      hendleSetFilterName()
-    }else hendleSetFilterName(isName() ? 'close': name)
-  }
+  const openClose = (close: boolean = false): void => {
+    if (close) {
+      hendleSetFilterName();
+    } else hendleSetFilterName(isName() ? 'close' : name);
+  };
 
   const handleOnChange = (ranges: RangeKeyDict): void => {
     if (!ranges.selection.startDate || !ranges.selection.endDate) {
@@ -75,7 +75,7 @@ export const Calendar: FC<Props> = ({ filterName, hendleSetFilterName }) => {
           openClose();
         }}
         className={clsx(
-          'flex items-center gap-2 rounded-[30px] border px-3 min-[900px]:px-8 py-3 duration-300 hover:shadow-hover_btn',
+          'flex items-center gap-2 rounded-[30px] border px-3 py-3 duration-300 hover:shadow-hover_btn min-[900px]:px-8',
           filterName === 'calendar'
             ? 'border-base-stroke-btn-act shadow-hover_btn'
             : 'border-[#505050]',
@@ -94,7 +94,7 @@ export const Calendar: FC<Props> = ({ filterName, hendleSetFilterName }) => {
       </button>
 
       {isName() && (
-        <div className="absolute left-0 min-[900px]:right-0 top-[108%] z-20 w-[280px] min-[900px]:w-[250px]">
+        <div className="absolute left-0 top-[108%] z-20 w-[280px] min-[900px]:right-0 min-[900px]:w-[250px]">
           <DateRange
             locale={uk}
             className="w-full rounded-[30px] p-4"
