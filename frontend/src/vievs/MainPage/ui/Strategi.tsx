@@ -56,10 +56,16 @@ const Strategi = () => {
           font="serif"
           text="Стратегічні напрямки фонду"
           color="base/text_accent"
-          textType="Desktop/H2"
+          textType="H2"
           Tag="h2"
         />
-        <ButtonLink variant="textBlue" to="/404" text="Відкрите обговорення" />
+        <div className="hidden md:block">
+          <ButtonLink
+            variant="textBlue"
+            to="/404"
+            text="Відкрите обговорення"
+          />
+        </div>
       </header>
 
       <div className="mt-10 grid grid-cols-2 border-t-2 border-t-[#DCDCDC] pt-10">

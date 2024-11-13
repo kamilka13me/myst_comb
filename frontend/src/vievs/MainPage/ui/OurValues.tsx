@@ -83,18 +83,18 @@ const Values = ({ color, text, Svg, index, textColor }: ValuesProps) => {
 const OurValues = () => {
   return (
     <div className="flex w-full justify-center">
-      <div className="mx-10 my-10 flex w-full max-w-[1128px] flex-col items-center justify-center">
-        <div className="w-full">
+      <div className="mx-auto my-10 flex w-full max-w-[1128px] flex-col items-center justify-center md:mx-10">
+        <div className="flex w-full justify-center md:block">
           <Text
             Tag="h1"
-            textType="Desktop/H2"
+            textType="H2"
             font="serif"
             text="Наші цінності"
             color="base/text_accent"
             className="mb-[35px]"
           />
         </div>
-        <div className="flex flex-wrap justify-between gap-6">
+        <div className="flex flex-wrap justify-center gap-6 md:justify-between">
           {ValuesData.map((value, index) => (
             <Values
               key={index}
