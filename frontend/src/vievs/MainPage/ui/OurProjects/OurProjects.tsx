@@ -1,5 +1,5 @@
 import React from 'react';
-import Rye from '@/shared/assets/img/rye1.png';
+// import Rye from '@/shared/assets/img/rye1.png';
 import Cultbit from '@/shared/assets/img/Cultbit1.png';
 import UIP from '@/shared/assets/img/Unique_individuals_photo1.png';
 import { Text } from '@/shared/ui/Text';
@@ -17,13 +17,13 @@ const items: BoxProps[] = [
     title: 'Cultbit: Інтелектуальна пригода у форматі AR',
     subTitle: 'Це як PokemonGo, тільки у всесвіті української культури.',
   },
-  {
-    src: Rye,
-    subTitle:
-      'Ми сприяємо соціалізації та зниженню психічного напруження родин переселенців через реалізацію заходів культурно-мистецького спрямування.',
-    title:
-      'Жито: проєкт соціальної адаптації внутрішньо переміщеним особам засобами мистецтва',
-  },
+  // {
+  //   src: Rye,
+  //   subTitle:
+  //     'Ми сприяємо соціалізації та зниженню психічного напруження родин переселенців через реалізацію заходів культурно-мистецького спрямування.',
+  //   title:
+  //     'Жито: проєкт соціальної адаптації внутрішньо переміщеним особам засобами мистецтва',
+  // },
 ];
 
 const OurProjects: React.FC = () => {

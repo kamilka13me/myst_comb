@@ -1,6 +1,7 @@
 'use client';
 // import LogoDark from '@/shared/assets/icons/LogoDark.svg?react';
 import LogoWhite from '@/shared/assets/icons/LogoWhite.svg?react';
+import LogoDark from '@/shared/assets/icons/LogoDark.svg?react';
 import ButtonMenu from '@/shared/assets/icons/buttonMenu.svg?react';
 import { ButtonLink } from '@/shared/ui/ButtonLink';
 import { Icon } from '@/shared/ui/Icon';
@@ -8,22 +9,34 @@ import { LanguageSwitcher } from '@/shared/ui/LanguageSwitcher';
 import { VStack } from '@/shared/ui/Stack';
 import { Text } from '@/shared/ui/Text';
 import { usePathname } from 'next/navigation';
+import useMediaQuery from '../../../../app/portfolio/hooks/useMediaQuery';
+import Link from 'next/link';
 
 const Header = () => {
   const pathname = usePathname();
+  const isPhone = useMediaQuery('(max-width: 640px)');
 
-  if (pathname === '/') {
-    return (
-      <div>
-        <div>header</div>
-      </div>
-    );
-  }
+  // if (pathname === '/') {
+  //   return (
+  //     <div>
+  //       <div>header</div>
+  //     </div>
+  //   );
+  // }
   return (
-    <header className={`z-30 mt-6 flex w-full justify-center px-5 lg:px-20`}>
+    <header
+      className={`${pathname === '/' ? 'absolute mt-[60px] px-[60px]' : ''} z-30 mt-6 flex w-full justify-center px-5 lg:px-20`}
+    >
       <div className="w-full max-w-[1340px]">
         <VStack justify="between" align="center">
-          <Icon Svg={LogoWhite} height={42} width={162} />
+          <Link href="/">
+            <Icon
+              Svg={pathname === '/' ? LogoDark : LogoWhite}
+              // Svg={pathname === '/' ? LogoWhite : LogoDark}
+              height={isPhone ? 28 : 42}
+              width={isPhone ? 110 : 162}
+            />
+          </Link>
           <nav className="hidden items-center gap-9 lg:flex">
             {/* Language switcher */}
             <LanguageSwitcher languages={['УКР', 'ENG']} />
@@ -41,13 +54,13 @@ const Header = () => {
               color="base/text_dark"
               className="font-semibold"
             />
-            <Text
+            {/* <Text
               Tag="h5"
               text="Новини"
               textType="Desktop/Button-menu"
               color="base/text_dark"
               className="font-semibold"
-            />
+            /> */}
             <Text
               Tag="h5"
               text="Про нас"
@@ -63,7 +76,7 @@ const Header = () => {
             to="/404"
             className="hidden lg:flex"
           />
-          <button>
+          <button className="lg:hidden">
             <Icon Svg={ButtonMenu} height={48} width={48} />
           </button>
         </VStack>

@@ -3,9 +3,14 @@
 import { useState } from 'react';
 import { ButtonLink } from '@/shared/ui/ButtonLink';
 import { Text } from '@/shared/ui/Text';
+import useMediaQuery from '../../../../app/portfolio/hooks/useMediaQuery';
 
 const Strategi = () => {
+  const isPhone = useMediaQuery('(max-width: 1000px)');
   const [strategi, setStrategi] = useState<string>('Зростання');
+  const [isGrowOpen, setGrowOpen] = useState(true);
+  const [isPopularOpen, setPopularOpen] = useState(false);
+  const [isReformOpen, setReformOpen] = useState(false);
 
   // Об'єкт зі стратегіями
   const strategiData: Record<
@@ -48,7 +53,196 @@ const Strategi = () => {
   const changeStrategi = (strategi: string) => {
     setStrategi(strategi);
   };
+  if (isPhone) {
+    return (
+      <div>
+        <div className="px-5 py-[120px]">
+          <Text
+            font="serif"
+            text="Стратегічні напрямки фонду"
+            color="base/text_accent"
+            textType="H2"
+            Tag="h2"
+          />
+          {/* strategi */}
+          <div>
+            <div
+              className="mt-10 border-t-2 border-base-text_light pt-10"
+              onClick={() => setGrowOpen(!isGrowOpen)}
+            >
+              <div className="flex items-center text-center">
+                <Text
+                  Tag="h5"
+                  text={`0${1}`}
+                  textType="Desktop/title-s"
+                  color={
+                    isGrowOpen ? 'icons_symbols/blue_500' : 'base/text_light_2'
+                  }
+                  className="font-medium"
+                />
+                <Text
+                  Tag="h5"
+                  text="Зростання"
+                  textType="H3"
+                  color={
+                    isGrowOpen ? 'icons_symbols/blue_500' : 'base/text_accent'
+                  }
+                  className="ml-10 font-medium"
+                />
+              </div>
+            </div>
+            {isGrowOpen && (
+              <div className="bg-red flex flex-col">
+                <Text
+                  Tag="p"
+                  textType="Title/L-S"
+                  text={strategiData['Зростання'].title}
+                  className="ml-[63px] mt-6"
+                />
+                {/* block */}
+                <div className="mt-6 flex items-center gap-4">
+                  <ButtonLink variant="ArrowVectorGray" to="/404" />
 
+                  <div className="text-xs font-normal leading-125 tracking-[-0.18px] text-base-text_dark">
+                    <span className="font-semibold">
+                      {strategiData['Зростання'].pointsHead[0]}
+                    </span>
+                    {strategiData['Зростання'].points[0]}
+                  </div>
+                </div>
+                {/* block */}
+                <div className="mt-6 flex items-center gap-4">
+                  <ButtonLink variant="ArrowVectorGray" to="/404" />
+
+                  <div className="text-xs font-normal leading-125 tracking-[-0.18px] text-base-text_dark">
+                    <span className="font-semibold">
+                      {strategiData['Зростання'].pointsHead[1]}
+                    </span>
+                    {strategiData['Зростання'].points[1]}
+                  </div>
+                </div>
+                {/* block */}
+                <div className="mt-6 flex items-center gap-4">
+                  <ButtonLink variant="ArrowVectorGray" to="/404" />
+
+                  <div className="text-xs font-normal leading-125 tracking-[-0.18px] text-base-text_dark">
+                    <span className="font-semibold">
+                      {strategiData['Зростання'].pointsHead[2]}
+                    </span>
+                    {strategiData['Зростання'].points[2]}
+                  </div>
+                </div>
+              </div>
+            )}
+          </div>
+          {/* strategi */}
+          <div>
+            <div
+              className="mt-10 border-t-2 border-base-text_light pt-10"
+              onClick={() => setPopularOpen(!isPopularOpen)}
+            >
+              <div className="flex items-center text-center">
+                <Text
+                  Tag="h5"
+                  text={`0${2}`}
+                  textType="Desktop/title-s"
+                  color={
+                    isPopularOpen
+                      ? 'icons_symbols/blue_500'
+                      : 'base/text_light_2'
+                  }
+                  className="font-medium"
+                />
+                <Text
+                  Tag="h5"
+                  text="Популяризація"
+                  textType="H3"
+                  color={
+                    isPopularOpen
+                      ? 'icons_symbols/blue_500'
+                      : 'base/text_accent'
+                  }
+                  className="ml-10 font-medium"
+                />
+              </div>
+            </div>
+            {isPopularOpen && (
+              <div className="bg-red flex flex-col">
+                <Text
+                  Tag="p"
+                  textType="Title/L-S"
+                  text={strategiData['Популяризація'].title}
+                  className="ml-[63px] mt-6"
+                />
+                {/* block */}
+                <div className="mt-6 flex items-center gap-4">
+                  <ButtonLink variant="ArrowVectorGray" to="/404" />
+
+                  <div className="text-xs font-normal leading-125 tracking-[-0.18px] text-base-text_dark">
+                    <span className="font-semibold">
+                      {strategiData['Популяризація'].pointsHead[0]}
+                    </span>
+                    {strategiData['Популяризація'].points[0]}
+                  </div>
+                </div>
+                {/* block */}
+                <div className="mt-6 flex items-center gap-4">
+                  <ButtonLink variant="ArrowVectorGray" to="/404" />
+
+                  <div className="text-xs font-normal leading-125 tracking-[-0.18px] text-base-text_dark">
+                    <span className="font-semibold">
+                      {strategiData['Популяризація'].pointsHead[1]}
+                    </span>
+                    {strategiData['Популяризація'].points[1]}
+                  </div>
+                </div>
+              </div>
+            )}
+          </div>
+          {/* strategi */}
+          <div>
+            <div
+              className="mt-10 border-t-2 border-base-text_light pt-10"
+              onClick={() => setReformOpen(!isReformOpen)}
+            >
+              <div className="flex items-center text-center">
+                <Text
+                  Tag="h5"
+                  text={`0${3}`}
+                  textType="Desktop/title-s"
+                  color={
+                    isReformOpen
+                      ? 'icons_symbols/blue_500'
+                      : 'base/text_light_2'
+                  }
+                  className="font-medium"
+                />
+                <Text
+                  Tag="h5"
+                  text="Реформа"
+                  textType="H3"
+                  color={
+                    isReformOpen ? 'icons_symbols/blue_500' : 'base/text_accent'
+                  }
+                  className="ml-10 font-medium"
+                />
+              </div>
+            </div>
+            {isReformOpen && (
+              <div className="bg-red flex flex-col">
+                <Text
+                  Tag="p"
+                  textType="Title/L-S"
+                  text={strategiData['Реформа'].title}
+                  className="ml-[63px] mt-6"
+                />
+              </div>
+            )}
+          </div>
+        </div>
+      </div>
+    );
+  }
   return (
     <section className="mt-[180px] px-10 py-10">
       <header className="flex items-center justify-between">

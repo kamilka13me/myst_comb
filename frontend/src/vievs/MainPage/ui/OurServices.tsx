@@ -49,7 +49,9 @@ const ServiceBrick: React.FC<ServiceBrickProps> = ({
         style={{ opacity }}
       />
       <div className="relative flex h-full flex-col justify-between p-10">
-        <Icon Svg={img} width={100} height={100} />
+        <div className="h-[80px] w-[80px]">
+          <Icon Svg={img} width={100} height={100} />
+        </div>
         <VStack>
           <p
             className={`max-w-[408px] break-words font-ibm-plex-sans text-2xl font-medium leading-10 text-${titleColor}`}

@@ -1,4 +1,5 @@
 import type { Config } from 'tailwindcss';
+import plugin from 'tailwindcss/plugin';
 
 const config: Config = {
   content: [
@@ -52,11 +53,29 @@ const config: Config = {
         '7xl': '70px',
       },
       lineHeight: {
+        '125': '125%',
         '135': '135%',
         '115': '115%',
       },
+      keyframes: {
+        slide: {
+          '0%': { transform: 'translateX(-100%)' },
+          '100%': { transform: 'translateX(100vw)' },
+        },
+      },
+      animation: {
+        slide: 'slide 1s linear infinite', // 5s - час анімації
+      },
     },
   },
-  plugins: [],
+  plugins: [
+    plugin(function ({ addUtilities }) {
+      addUtilities({
+        '.animate-slide': {
+          animation: 'slide 10s linear infinite',
+        },
+      });
+    }),
+  ],
 };
 export default config;
