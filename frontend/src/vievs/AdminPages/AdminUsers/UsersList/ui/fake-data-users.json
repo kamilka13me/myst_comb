@@ -1,0 +1,53 @@
+{
+  "users":[
+    {
+      "id": "1001",
+      "name": "Віктор Шевченко",
+      "date": "12.03.2024",
+      "media": [
+        {"name":"Скульптура",
+        "idColor": "blue"
+        },
+        {
+          "name": "Текстильне мистецтво",
+          "idColor": "orange"
+        }, 
+        {
+          "name": "Digital-art",
+          "idColor": "purple"
+        }
+      ],
+      "email": "emailemail@gmail.com",
+      "type_services": "Рев’ю"
+    },
+    {
+      "id": "1002",
+      "name": "Віктор Шевченко-Шевченко",
+      "date": "12.03.2024",
+      "media": [
+        {
+          "name":"Архітектура",
+          "idColor":"orange"
+        },
+        {
+          "name":"Скульптура",
+          "idColor":"yellow"
+        },
+        {
+          "name": "Ілюстрація",
+          "idColor": "purple"
+        }
+      ],
+      "email": "emailemail@gmail.com",
+      "type_services": "Обговорення"
+    },
+    {
+      "id": "1003",
+      "name": "Іван Шевченко",
+      "date": "12.03.2024",
+      "media": [{"name":"Графічний дизайн", "idColor":"yellow"}],
+      "email": "emailemail@gmail.com",
+      "type_services": "Англійська"
+    }
+  ]
+}

@@ -32,7 +32,15 @@ const config: Config = {
         'base-text_light': '#DCDCDC',
         'base-text_dark': '#474747',
         'base-text': '#E8E8E8',
+        'icons-symbols-blue-200': '#9E92EE',
         'icons_symbols-blue_500': '#2C05F2',
+        'icons-symbols-mint-500': '#0F9',
+        'icons-symbols-purple-300': '#Eb99FF',
+        'icons-symbols-purple-400': '#D633FF',
+        'icons-symbols-orange-200': '#ffb899',
+        'icons-symbols-orange-500': '#FF4E00',
+        'icons-symbols-yellow-500': '#E7FF00',
+        'icons-symbols-yellow-300': '#F1FF66',
         'white-translucent': 'rgba(255, 255, 255, 0.03)',
         'base-title': 'rgba(255, 255, 255, 0.03)',
       },
@@ -65,6 +73,10 @@ const config: Config = {
       },
       animation: {
         slide: 'slide 10s linear infinite', // 5s - час анімації
+      },
+      boxShadow: {
+        hover_btn: '0 2px 2px 0 rgba(0, 0, 0, 0.25)',
+        'user-card': '0 4px 4px 0 rgba(0, 0, 0, 0.25)',
       },
     },
   },
