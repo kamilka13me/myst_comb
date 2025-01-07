@@ -59,12 +59,12 @@ const config: Config = {
       },
       keyframes: {
         slide: {
-          '0%': { transform: 'translateX(-100%)' },
-          '100%': { transform: 'translateX(100vw)' },
+          '0%': { transform: 'translateX(-10vw)' },
+          '100%': { transform: 'translateX(110vw)' },
         },
       },
       animation: {
-        slide: 'slide 1s linear infinite', // 5s - час анімації
+        slide: 'slide 10s linear infinite', // 5s - час анімації
       },
     },
   },

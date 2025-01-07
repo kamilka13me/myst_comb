@@ -10,7 +10,7 @@ import useMediaQuery from '../../../../app/portfolio/hooks/useMediaQuery';
 const Hero = () => {
   const isPhone = useMediaQuery('(max-width: 640px)');
   return (
-    <VStack className="px-10 py-10">
+    <VStack className="px-2 py-10">
       <div className="flex h-[600px] w-full flex-col items-center justify-center rounded-[30px] bg-white px-5">
         <div className="mb-4 flex max-w-[893px] flex-wrap justify-center">
           <div className="inline-flex w-auto items-baseline">

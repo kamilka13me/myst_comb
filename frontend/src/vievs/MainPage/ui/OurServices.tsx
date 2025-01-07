@@ -43,7 +43,7 @@ const ServiceBrick: React.FC<ServiceBrickProps> = ({
   link,
 }) => {
   return (
-    <VStack className="relative h-[400px] w-full max-w-[549px] rounded-[30px]">
+    <VStack className="relative h-[450px] w-full max-w-[549px] rounded-[30px]">
       <div
         className="absolute h-full w-full rounded-[30px] bg-white"
         style={{ opacity }}

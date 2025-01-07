@@ -5,6 +5,7 @@ import LogoWhite from '@/shared/assets/icons/LogoWhite.svg?react';
 import Facebook from '@/shared/assets/icons/SocialFacebook.svg?react';
 import Instagram from '@/shared/assets/icons/SocialInstagram.svg?react';
 import YouTube from '@/shared/assets/icons/SocialYouTube.svg?react';
+import { ButtonLink } from '@/shared/ui/ButtonLink';
 import { Icon } from '@/shared/ui/Icon';
 import { Text } from '@/shared/ui/Text';
 import Link from 'next/link';
@@ -19,7 +20,6 @@ const Footer = () => {
   const About = [
     { title: 'Проєкти', link: '/404' },
     { title: 'Послуги', link: '/404' },
-    { title: 'Новини', link: '/404' },
     { title: 'Про нас', link: '/404' },
     { title: 'Контакти', link: '/404' },
   ];
@@ -74,9 +74,10 @@ const Footer = () => {
             </div>
           </div>
           {/* <block 3 */}
-          {/* <div className="flex">
-            <DonutChart />
-          </div> */}
+          <div className="flex items-start">
+            {/* <DonutChart /> */}
+            <ButtonLink variant="arrowTextBlue" text="Переглянути звітність" />
+          </div>
           {/* <block 4 */}
           <div className="flex flex-col">
             <Text
