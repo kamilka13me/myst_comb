@@ -12,7 +12,6 @@ import { Text } from '@/shared/ui/Text';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import useMediaQuery from '../../../../app/portfolio/hooks/useMediaQuery';
-import Link from 'next/link';
 import { useState } from 'react';
 
 const Header = () => {
