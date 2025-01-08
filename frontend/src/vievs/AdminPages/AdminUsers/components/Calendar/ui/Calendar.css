@@ -1,0 +1,94 @@
+@import url('react-date-range/dist/styles.css');
+@import url('react-date-range/dist/theme/default.css');
+
+/* CALENDAR */
+
+.rdrMonth {
+  width: 100%;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.rdrMonthAndYearWrapper{
+  height: 40px;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  text-transform: capitalize;
+  line-height: normal;
+  text-align: center;
+  color: #fff;
+}
+
+.rdrNextPrevButton{
+  background: none;
+  margin: 0;
+  opacity: .7;
+  transition: all .3s;
+}
+.rdrNextPrevButton:hover{
+  opacity: 1;
+  background: none;
+}
+.rdrNextButton i{
+  margin: 7px;
+  border-width: 6px 6px 6px 6px;
+  border-color: transparent transparent transparent rgb(44, 5, 242);
+  transform: translate(3px, 0px);
+}
+.rdrPprevButton i{
+  margin: 0;
+  border-width: 6px 6px 6px 6px;
+  border-color: transparent rgb(44, 5, 242) transparent transparent;
+  transform: translate(3px, 0px);
+}
+
+
+.rdrWeekDay{
+  font-weight: 600;
+  font-size: 14px;
+  color: #fff;
+}
+
+.rdrCalendarWrapper {
+  background-color: #151515;
+}
+
+.rdrDayNumber span {
+  font-weight: 400;
+  font-size: 16px;
+  color: #FFFFFF;
+}
+
+.rdrDay:not(.rdrDayPassive) .rdrInRange ~ .rdrDayNumber span, .rdrDay:not(.rdrDayPassive) .rdrStartEdge ~ .rdrDayNumber span, .rdrDay:not(.rdrDayPassive) .rdrEndEdge ~ .rdrDayNumber span, .rdrDay:not(.rdrDayPassive) .rdrSelected ~ .rdrDayNumber span {
+  font-weight: 500;
+}
+
+.rdrDay.rdrDayPassive .rdrDayNumber{
+  opacity: .6;
+}
+.rdrDayToday .rdrDayNumber span:after {
+  background: none !important;
+}
+
+.rdrMonthAndYearPickers {
+  font-weight: 600;
+  font-size: 18px;
+  font-family: "IBM Plex Sans", sans-serif;
+  text-transform:capitalize;
+  line-height: normal;
+}
+
+.rdrStartEdge {
+  border-radius: 50%;
+  background-color: rgb(44, 5, 242);
+}
+
+.rdrEndEdge{
+  border-radius: 50%;
+  background-color: #2d05f281;
+}
+
+.rdrDay {
+  height: 33px;
+}

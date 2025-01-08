@@ -1,9 +1,9 @@
-import { FC, SVGProps, VFC } from 'react';
+import { FC, SVGProps } from 'react';
 
 type SvgProps = Omit<SVGProps<SVGSVGElement>, 'onClick'>;
 
 interface Props extends SvgProps {
-  Svg: VFC<SVGProps<SVGSVGElement>> | string;
+  Svg: FC<SVGProps<SVGSVGElement>> | string;
   className?: string;
 }
 

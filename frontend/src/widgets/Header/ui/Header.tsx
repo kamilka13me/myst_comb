@@ -9,6 +9,7 @@ import { Icon } from '@/shared/ui/Icon';
 import { LanguageSwitcher } from '@/shared/ui/LanguageSwitcher';
 import { VStack } from '@/shared/ui/Stack';
 import { Text } from '@/shared/ui/Text';
+import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import useMediaQuery from '../../../../app/portfolio/hooks/useMediaQuery';
 import Link from 'next/link';
