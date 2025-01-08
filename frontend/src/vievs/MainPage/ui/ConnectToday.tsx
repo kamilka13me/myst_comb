@@ -25,10 +25,10 @@ const ConnectToday = () => {
           />
         </div>
         <div className="flex w-full items-center">
-          <div className="flex min-h-[55px] w-full items-center justify-between rounded-[30px] bg-[#ededed] px-6 py-2">
+          <div className="flex min-h-[55px] w-full items-center justify-between rounded-[30px] bg-[#ededed] px-6">
             <input
               placeholder="Ваш email"
-              className="placeholder:base/stroke_btn_act bg-transparent placeholder:font-normal"
+              className="placeholder:base/stroke_btn_act h-full w-full bg-transparent py-2 placeholder:font-normal focus:outline-none focus:ring-0 active:outline-none"
             />
             <Icon Svg={Arrow} width={28} height={28} />
           </div>

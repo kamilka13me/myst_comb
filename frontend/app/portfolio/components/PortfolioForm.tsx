@@ -1,5 +1,5 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useForm, SubmitHandler } from 'react-hook-form';
 import InputForm from '../../../src/widgets/Input/InputForm';
 import FallingBricks from '../../../src/widgets/CardForm/FillingBringsForm';
@@ -11,6 +11,8 @@ import { Text } from '@/shared/ui/Text';
 // import Dropdown from '../../../src/widgets/DropDown/DropdownForm';
 import { data, dataPhone } from '../helpers/brings-data';
 import PhoneInput from '@/widgets/InputPhone/InputPhone';
+import { apiRequest } from '@/shared/lib/api';
+import { useRouter } from 'next/navigation';
 
 export interface FormInputs {
   firstName: string;
@@ -27,8 +29,16 @@ export interface FormInputs {
 }
 
 export default function PortfolioForm() {
+  const router = useRouter();
   const [clearBricks, setClearBricks] = useState(false);
   const [checkedSubmit, setCheckedSubmit] = useState(false);
+  const [success, setSuccess] = useState(false);
+
+  useEffect(() => {
+    if (success) {
+      router.push('/thank');
+    }
+  }, [success, router]);
 
   const {
     register,
@@ -54,9 +64,20 @@ export default function PortfolioForm() {
     }
   };
 
-  const onSubmit: SubmitHandler<FormInputs> = (data) => {
+  const onSubmit: SubmitHandler<FormInputs> = async (data) => {
     console.log(data);
-
+    try {
+      const createdData = await apiRequest<FormInputs>(
+        'post',
+        '/portfolio',
+        data,
+      );
+      console.log(createdData);
+      setSuccess(true);
+    } catch (error) {
+      console.error('Error creating data:', error);
+      router.push('/thank');
+    }
     reset();
     setValue('selectedBrick', []);
     setClearBricks(true);

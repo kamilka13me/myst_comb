@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import { AdminLoginPage } from '@/vievs/Admin/Login';
+import { AdminLoginPage } from '@/vievs/AdminPages/Login';
 
 export const metadata: Metadata = {
   title: 'admin login',

@@ -31,3 +31,53 @@ id               Int      @id @default(autoincrement())
   selectedBrick    String[] 
   createdAt        DateTime @default(now())
 }
+
+model Course {
+  id              Int      @id @default(autoincrement())
+  firstName       String
+  lastName        String
+  organization    String
+  email           String
+  phone           String
+  profession      String
+  agreeToTelegram Boolean?
+  agreeToViber    Boolean?
+  agreeToProcess  Boolean?
+  selectedBrick   String[]  // Prisma зберігає масиви
+  services        String
+  description     String
+}
+
+model Discussion {
+  id             Int      @id @default(autoincrement())
+  firstName      String
+  lastName       String
+  organization   String
+  email          String
+  phone          String
+  profession     String
+  agreeToTelegram Boolean? 
+  agreeToViber    Boolean?
+  agreeToProcess  Boolean?
+  selectedBrick   String[]
+  description     String
+  documentNames   String[]  // Массив назв файлів
+  createdAt       DateTime  @default(now())
+}
+
+model Support {
+  id             Int      @id @default(autoincrement())
+  firstName     String
+  lastName      String
+  organization  String
+  email          String   @unique
+  phone          String
+  profession     String
+  expert         String
+  agreeToTelegram Boolean?
+  agreeToViber   Boolean?
+  agreeToProcess Boolean?
+  selectedBrick  String[]
+  selectedSupport String[]
+  services       String
+}

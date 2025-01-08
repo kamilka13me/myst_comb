@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useForm, SubmitHandler } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { ButtonLink } from '@/shared/ui/ButtonLink';
@@ -11,6 +11,8 @@ import { data, dataPhone } from '../../portfolio/helpers/brings-data';
 import { supportData, supportDataPhone } from '../helpers/support-data';
 import { schema } from '../helpers/validation';
 import PhoneInput from '@/widgets/InputPhone/InputPhone';
+import { apiRequest } from '@/shared/lib/api';
+import { useRouter } from 'next/navigation';
 
 export interface FormInputsSupport {
   firstName: string;
@@ -29,8 +31,17 @@ export interface FormInputsSupport {
 }
 
 export default function SupportForm() {
+  const router = useRouter();
+
+  const [success, setSuccess] = useState(false);
   const [clearBricks, setClearBricks] = useState(false);
   const [checkedSubmit, setCheckedSubmit] = useState(false);
+
+  useEffect(() => {
+    if (success) {
+      router.push('/thank');
+    }
+  }, [success, router]);
 
   const {
     register,
@@ -62,7 +73,20 @@ export default function SupportForm() {
     }
   };
 
-  const onSubmit: SubmitHandler<FormInputsSupport> = (data) => {
+  const onSubmit: SubmitHandler<FormInputsSupport> = async (data) => {
+    try {
+      const createdData = await apiRequest<FormInputsSupport>(
+        'post',
+        '/support',
+        data,
+      );
+      console.log(createdData);
+      setSuccess(true);
+    } catch (error) {
+      console.error('Error creating data:', error);
+      router.push('/thank');
+    }
+
     console.log(data);
 
     reset();
