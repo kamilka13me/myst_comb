@@ -52,28 +52,28 @@ const ServiceBrick: React.FC<ServiceBrickProps> = ({
         <div className="h-[80px] w-[80px]">
           <Icon Svg={img} width={100} height={100} />
         </div>
-        <VStack>
+        <Link href={link ? link : '#'}>
           <p
             className={`max-w-[408px] break-words font-ibm-plex-sans text-2xl font-medium leading-10 text-${titleColor}`}
           >
             {title}
           </p>
-        </VStack>
+        </Link>
         <VStack align="end">
           <p
             className={`max-w-[392px] text-s font-normal leading-135 tracking-[-0.18px] text-${textColor}`}
           >
             {text}
           </p>
-          {link ? (
-            <Icon
-              Svg={ArrowInCircle}
-              width={45}
-              height={45}
-              className="ml-8 min-w-[45px]"
-            />
-          ) : (
-            ''
+          {link && (
+            <Link href={link}>
+              <Icon
+                Svg={ArrowInCircle}
+                width={45}
+                height={45}
+                className="ml-8 min-w-[45px]"
+              />
+            </Link>
           )}
         </VStack>
       </div>
@@ -98,7 +98,7 @@ const OurServices = () => {
       titleColor: 'base-bg-block',
       textColor: 'base-text',
       img: Bricks,
-      link: 'linkTo',
+      link: '/support',
     },
     {
       opacity: '0.05',
@@ -107,7 +107,7 @@ const OurServices = () => {
       titleColor: 'base-bg-block',
       textColor: 'base-text',
       img: Heart,
-      link: 'linkTo',
+      link: '/portfolio',
     },
     {
       opacity: '0.05',
@@ -116,7 +116,7 @@ const OurServices = () => {
       titleColor: 'base-bg-block',
       textColor: 'base-text',
       img: SphereSqure,
-      link: 'linkTo',
+      link: '/courses',
     },
   ];
 

@@ -1,4 +1,6 @@
-import React, { useState } from 'react';
+'use client';
+
+import React, { useEffect, useState } from 'react';
 import { useForm, SubmitHandler } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { ButtonLink } from '@/shared/ui/ButtonLink';
@@ -10,6 +12,8 @@ import FallingBricks from '../../../src/widgets/CardForm/FillingBringsForm';
 import { data, dataPhone } from '../../portfolio/helpers/brings-data';
 import { schema } from '../helpers/validation';
 import PhoneInput from '@/widgets/InputPhone/InputPhone';
+import { apiRequest } from '@/shared/lib/api';
+import { useRouter } from 'next/navigation';
 
 export interface FormInputsCourses {
   firstName: string;
@@ -27,8 +31,16 @@ export interface FormInputsCourses {
 }
 
 export default function CoursesForm() {
+  const router = useRouter();
   const [clearBricks, setClearBricks] = useState(false);
+  const [success, setSuccess] = useState(false);
   const [checkedSubmit, setCheckedSubmit] = useState(false);
+
+  useEffect(() => {
+    if (success) {
+      router.push('/thank');
+    }
+  }, [success, router]);
 
   const {
     register,
@@ -56,8 +68,21 @@ export default function CoursesForm() {
     }
   };
 
-  const onSubmit: SubmitHandler<FormInputsCourses> = (data) => {
+  const onSubmit: SubmitHandler<FormInputsCourses> = async (data) => {
     console.log(data);
+
+    try {
+      const createdData = await apiRequest<FormInputsCourses>(
+        'post',
+        '/courses',
+        data,
+      );
+      console.log(createdData);
+      setSuccess(true);
+    } catch (error) {
+      console.error('Error creating data:', error);
+      router.push('/thank');
+    }
 
     reset();
     setValue('selectedBrick', []);
