@@ -37,20 +37,24 @@ const Header = () => {
             <nav className="hidden items-center gap-9 lg:flex">
               {/* Language switcher */}
               <LanguageSwitcher languages={['УКР', 'ENG']} />
-              <Text
-                Tag="h5"
-                text="Проєкти"
-                textType="Desktop/Button-menu"
-                color="base/text_dark"
-                className="font-semibold"
-              />
-              <Text
-                Tag="h5"
-                text="Послуги"
-                textType="Desktop/Button-menu"
-                color="base/text_dark"
-                className="font-semibold"
-              />
+              <Link href={'#projects'}>
+                <Text
+                  Tag="h5"
+                  text="Проєкти"
+                  textType="Desktop/Button-menu"
+                  color="base/text_dark"
+                  className="font-semibold"
+                />
+              </Link>
+              <Link href={'#services'}>
+                <Text
+                  Tag="h5"
+                  text="Послуги"
+                  textType="Desktop/Button-menu"
+                  color="base/text_dark"
+                  className="font-semibold"
+                />
+              </Link>
               {/* <Text
               Tag="h5"
               text="Новини"
@@ -58,13 +62,15 @@ const Header = () => {
               color="base/text_dark"
               className="font-semibold"
             /> */}
-              <Text
-                Tag="h5"
-                text="Про нас"
-                textType="Desktop/Button-menu"
-                color="base/text_dark"
-                className="font-semibold"
-              />
+              <Link href={'#about'}>
+                <Text
+                  Tag="h5"
+                  text="Про нас"
+                  textType="Desktop/Button-menu"
+                  color="base/text_dark"
+                  className="font-semibold"
+                />
+              </Link>
             </nav>
 
             <ButtonLink

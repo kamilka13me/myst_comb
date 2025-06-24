@@ -1,0 +1,18 @@
+{
+  "type": "object",
+  "properties": {
+    "success": {
+      "type": "boolean",
+      "example": false
+    },
+    "message": {
+      "type": "string",
+      "example": "Email or password missing"
+    },
+    "code": {
+      "type": "number",
+      "example": "AUTH_MISSING_FIELDS"
+    }
+  },
+  "required": ["success", "message", "code"]
+}

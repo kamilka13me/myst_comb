@@ -74,7 +74,7 @@ export default function CoursesForm() {
     try {
       const createdData = await apiRequest<FormInputsCourses>(
         'post',
-        '/courses',
+        '/api/forms/courses',
         data,
       );
       console.log(createdData);

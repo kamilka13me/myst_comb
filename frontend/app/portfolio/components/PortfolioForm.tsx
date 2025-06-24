@@ -69,7 +69,7 @@ export default function PortfolioForm() {
     try {
       const createdData = await apiRequest<FormInputs>(
         'post',
-        '/portfolio',
+        '/api/forms/portfolio',
         data,
       );
       console.log(createdData);

@@ -25,7 +25,7 @@ const HowWeWork = () => {
       <ButtonLink
         variant="arrowTextBlue"
         text="Перейти до послуг"
-        to="/404"
+        to="#services"
         className="mt-10"
       />
     </div>

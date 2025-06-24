@@ -55,7 +55,7 @@ const Strategi = () => {
   };
   if (isPhone) {
     return (
-      <div>
+      <div id="about">
         <div className="px-5 py-[120px]">
           <Text
             font="serif"
@@ -101,7 +101,7 @@ const Strategi = () => {
                 />
                 {/* block */}
                 <div className="mt-6 flex items-center gap-4">
-                  <ButtonLink variant="ArrowVectorGray" to="/404" />
+                  <ButtonLink variant="ArrowVectorGray" to="#about" />
 
                   <div className="text-xs font-normal leading-125 tracking-[-0.18px] text-base-text_dark">
                     <span className="font-semibold">
@@ -112,7 +112,7 @@ const Strategi = () => {
                 </div>
                 {/* block */}
                 <div className="mt-6 flex items-center gap-4">
-                  <ButtonLink variant="ArrowVectorGray" to="/404" />
+                  <ButtonLink variant="ArrowVectorGray" to="#about" />
 
                   <div className="text-xs font-normal leading-125 tracking-[-0.18px] text-base-text_dark">
                     <span className="font-semibold">
@@ -123,7 +123,7 @@ const Strategi = () => {
                 </div>
                 {/* block */}
                 <div className="mt-6 flex items-center gap-4">
-                  <ButtonLink variant="ArrowVectorGray" to="/404" />
+                  <ButtonLink variant="ArrowVectorGray" to="#about" />
 
                   <div className="text-xs font-normal leading-125 tracking-[-0.18px] text-base-text_dark">
                     <span className="font-semibold">
@@ -176,7 +176,7 @@ const Strategi = () => {
                 />
                 {/* block */}
                 <div className="mt-6 flex items-center gap-4">
-                  <ButtonLink variant="ArrowVectorGray" to="/404" />
+                  <ButtonLink variant="ArrowVectorGray" to="#about" />
 
                   <div className="text-xs font-normal leading-125 tracking-[-0.18px] text-base-text_dark">
                     <span className="font-semibold">
@@ -187,7 +187,7 @@ const Strategi = () => {
                 </div>
                 {/* block */}
                 <div className="mt-6 flex items-center gap-4">
-                  <ButtonLink variant="ArrowVectorGray" to="/404" />
+                  <ButtonLink variant="ArrowVectorGray" to="#about" />
 
                   <div className="text-xs font-normal leading-125 tracking-[-0.18px] text-base-text_dark">
                     <span className="font-semibold">
@@ -244,7 +244,7 @@ const Strategi = () => {
     );
   }
   return (
-    <section className="mt-[180px] px-10 py-10">
+    <section id="about" className="mt-[180px] px-10 py-10">
       <header className="flex items-center justify-between">
         <Text
           font="serif"
@@ -256,7 +256,7 @@ const Strategi = () => {
         <div className="hidden md:block">
           <ButtonLink
             variant="textBlue"
-            to="/404"
+            to="/discussion"
             text="Відкрите обговорення"
           />
         </div>
@@ -308,7 +308,7 @@ const Strategi = () => {
               </h6>
               {strategiData[strategi].points.map((point, index) => (
                 <div key={index} className="flex items-center">
-                  <ButtonLink variant="ArrowVectorGray" to="/404" />
+                  <ButtonLink variant="ArrowVectorGray" to="#about" />
 
                   <div className="text-s font-normal leading-135 tracking-[-0.18px] text-base-text_dark">
                     <span className="font-semibold">
