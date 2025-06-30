@@ -1,0 +1,83 @@
+2025-06-30 04:04:39: sandbox_i25393639533
+2025-06-30 04:04:39: eyJhY3Rpb24iOiJwYXkiLCJhbW91bnQiOjEwMDAsImN1cnJlbmN5IjoiVUFIIiwiZGVzY3JpcHRpb24iOiLQsdC70LDQs9C+0LTRltC50L3QuNC5INCx0LXQt9C/0L7QstC+0YDQvtGC0L3RltC5INCy0L3QtdGB0L7QuiIsIm9yZGVyX2lkIjoib3JkZXJfMTc1MTI0NTQ3OTE4MCIsInZlcnNpb24iOjMsInNhbmRib3giOjEsImxhbmd1YWdlIjoidWsiLCJwdWJsaWNfa2V5Ijoic2FuZGJveF9pMjUzOTM2Mzk1MzMifQ==
+2025-06-30 04:05:04: sandbox_i25393639533
+2025-06-30 04:05:04: eyJhY3Rpb24iOiJwYXkiLCJhbW91bnQiOjEwMDAsImN1cnJlbmN5IjoiVUFIIiwiZGVzY3JpcHRpb24iOiLQsdC70LDQs9C+0LTRltC50L3QuNC5INCx0LXQt9C/0L7QstC+0YDQvtGC0L3RltC5INCy0L3QtdGB0L7QuiIsIm9yZGVyX2lkIjoib3JkZXJfMTc1MTI0NTUwNDY0NyIsInZlcnNpb24iOjMsInNhbmRib3giOjEsImxhbmd1YWdlIjoidWsiLCJwdWJsaWNfa2V5Ijoic2FuZGJveF9pMjUzOTM2Mzk1MzMifQ==
+2025-06-30 04:05:32: Loaded environment from default .env
+2025-06-30 04:05:32: Form service running on port http://localhost:5003
+2025-06-30 04:05:32: Docs avaliable on http://localhost:5003/api/docs
+2025-06-30 04:05:32: MongoDB connected
+2025-06-30 04:05:41: {
+2025-06-30 04:05:41:   amount: '1000',
+2025-06-30 04:05:41:   description: 'благодійний безповоротній внесок',
+2025-06-30 04:05:41:   selectedType: 'once'
+2025-06-30 04:05:41: }
+2025-06-30 04:05:57: {
+2025-06-30 04:05:57:   amount: '1000',
+2025-06-30 04:05:57:   description: 'благодійний безповоротній внесок',
+2025-06-30 04:05:57:   selectedType: 'subscription'
+2025-06-30 04:05:57: }
+2025-06-30 04:08:44: Loaded environment from default .env
+2025-06-30 04:08:44: Form service running on port http://localhost:5003
+2025-06-30 04:08:44: Docs avaliable on http://localhost:5003/api/docs
+2025-06-30 04:08:44: MongoDB connected
+2025-06-30 04:11:15: Loaded environment from default .env
+2025-06-30 04:11:15: Form service running on port http://localhost:5003
+2025-06-30 04:11:15: Docs avaliable on http://localhost:5003/api/docs
+2025-06-30 04:11:15: MongoDB connected
+2025-06-30 04:12:59: Loaded environment from default .env
+2025-06-30 04:12:59: Form service running on port http://localhost:5003
+2025-06-30 04:12:59: Docs avaliable on http://localhost:5003/api/docs
+2025-06-30 04:12:59: MongoDB connected
+2025-06-30 04:14:08: Loaded environment from default .env
+2025-06-30 04:14:08: Form service running on port http://localhost:5003
+2025-06-30 04:14:08: Docs avaliable on http://localhost:5003/api/docs
+2025-06-30 04:14:08: MongoDB connected
+2025-06-30 04:17:04: Loaded environment from default .env
+2025-06-30 04:17:05: Loaded environment from default .env
+2025-06-30 04:17:05: Form service running on port http://localhost:5003
+2025-06-30 04:17:05: Docs avaliable on http://localhost:5003/api/docs
+2025-06-30 04:17:05: MongoDB connected
+2025-06-30 04:26:31: Loaded environment from default .env
+2025-06-30 04:26:31: Form service running on port http://localhost:5003
+2025-06-30 04:26:31: Docs avaliable on http://localhost:5003/api/docs
+2025-06-30 04:26:31: MongoDB connected
+2025-06-30 04:27:22: Loaded environment from default .env
+2025-06-30 04:27:22: Form service running on port http://localhost:5003
+2025-06-30 04:27:22: Docs avaliable on http://localhost:5003/api/docs
+2025-06-30 04:27:22: MongoDB connected
+2025-06-30 04:28:29: Loaded environment from default .env
+2025-06-30 04:28:29: Form service running on port http://localhost:5003
+2025-06-30 04:28:29: Docs avaliable on http://localhost:5003/api/docs
+2025-06-30 04:28:29: MongoDB connected
+2025-06-30 04:30:52: Loaded environment from default .env
+2025-06-30 04:30:52: Form service running on port http://localhost:5003
+2025-06-30 04:30:52: Docs avaliable on http://localhost:5003/api/docs
+2025-06-30 04:30:52: MongoDB connected
+2025-06-30 04:45:10: Loaded environment from default .env
+2025-06-30 04:45:10: Form service running on port http://localhost:5003
+2025-06-30 04:45:10: Docs avaliable on http://localhost:5003/api/docs
+2025-06-30 04:45:10: MongoDB connected
+2025-06-30 04:53:41: Loaded environment from default .env
+2025-06-30 04:53:41: Form service running on port http://localhost:5003
+2025-06-30 04:53:41: Docs avaliable on http://localhost:5003/api/docs
+2025-06-30 04:53:41: MongoDB connected
+2025-06-30 04:55:07: Loaded environment from default .env
+2025-06-30 04:55:07: Form service running on port http://localhost:5003
+2025-06-30 04:55:07: Docs avaliable on http://localhost:5003/api/docs
+2025-06-30 04:55:07: MongoDB connected
+2025-06-30 05:01:15: Loaded environment from default .env
+2025-06-30 05:01:15: Form service running on port http://localhost:5003
+2025-06-30 05:01:15: Docs avaliable on http://localhost:5003/api/docs
+2025-06-30 05:01:15: MongoDB connected
+2025-06-30 05:08:43: Loaded environment from default .env
+2025-06-30 05:08:43: Form service running on port http://localhost:5003
+2025-06-30 05:08:43: Docs avaliable on http://localhost:5003/api/docs
+2025-06-30 05:08:43: MongoDB connected
+2025-06-30 05:10:06: Loaded environment from default .env
+2025-06-30 05:10:06: Form service running on port http://localhost:5003
+2025-06-30 05:10:06: Docs avaliable on http://localhost:5003/api/docs
+2025-06-30 05:10:06: MongoDB connected
+2025-06-30 05:10:55: Loaded environment from default .env
+2025-06-30 05:10:55: Form service running on port http://localhost:5003
+2025-06-30 05:10:55: Docs avaliable on http://localhost:5003/api/docs
+2025-06-30 05:10:55: MongoDB connected

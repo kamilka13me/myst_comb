@@ -37,7 +37,7 @@ const Header = () => {
             <nav className="hidden items-center gap-9 lg:flex">
               {/* Language switcher */}
               <LanguageSwitcher languages={['УКР', 'ENG']} />
-              <Link href={'#projects'}>
+              <Link href={'/#projects'}>
                 <Text
                   Tag="h5"
                   text="Проєкти"
@@ -46,7 +46,7 @@ const Header = () => {
                   className="font-semibold"
                 />
               </Link>
-              <Link href={'#services'}>
+              <Link href={'/#services'}>
                 <Text
                   Tag="h5"
                   text="Послуги"
@@ -62,7 +62,7 @@ const Header = () => {
               color="base/text_dark"
               className="font-semibold"
             /> */}
-              <Link href={'#about'}>
+              <Link href={'/#about'}>
                 <Text
                   Tag="h5"
                   text="Про нас"
@@ -76,7 +76,7 @@ const Header = () => {
             <ButtonLink
               variant="arrowTextBlue"
               text="Підтримати фонд"
-              to="/404"
+              to="/payment"
               className="hidden lg:flex"
             />
             <button

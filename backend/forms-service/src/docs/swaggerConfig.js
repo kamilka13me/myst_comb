@@ -1,9 +1,14 @@
 import fs from "fs";
 import path from "path";
 import swaggerJSDoc from "swagger-jsdoc";
+import { fileURLToPath } from "url";
 
-// Папка, де зберігаються всі JSON схеми
-const schemasDir = path.join(process.cwd(), "src", "docs", "schemas");
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+// Шлях до папки schemas відносно файлу
+const schemasDir = path.join(__dirname, "schemas");
+const scrDir = path.join(__dirname, "..");
 
 // Зчитуємо всі JSON-файли та парсимо їх
 const schemas = fs.readdirSync(schemasDir).reduce((acc, file) => {
@@ -26,16 +31,16 @@ const options = {
       version: "1.0.0",
       description: "Документація API для сервісу авторизації",
     },
-    servers: [{ url: "http://localhost:5001/api/forms/" }],
+    servers: [{ url: `http://localhost:${process.env.PORT}/api/forms/` }],
     components: {
       schemas: schemas,
     },
   },
   apis: [
-    "./src//routes/*.js",
-    "./src//models/*.js",
-    "./src/controllers/*.js",
-    "./src/utils/*.js",
+    `${scrDir}/routes/*.js`,
+    `${scrDir}/models/*.js`,
+    `${scrDir}/controllers/*.js`,
+    `${scrDir}/utils/*.js`,
   ],
 };
 // console.log(schemasDir);

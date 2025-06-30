@@ -1,0 +1,26 @@
+{
+  "name": "mist_comb",
+  "version": "1.0.0",
+  "main": "gateway.js",
+  "type": "module",
+  "scripts": {
+    "start": "cross-env NODE_ENV=production  node gateway.js",
+    "pm2": "pm2 start ecosystem.config.cjs",
+    "dev": "nodemon gateway.js",
+    "test": "cross-env NODE_ENV=test  jest"
+  },
+  "author": "kamilka13me",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "axios": "^1.10.0",
+    "cross-env": "^7.0.3",
+    "deepmerge": "^4.3.1",
+    "dotenv": "^16.6.0",
+    "express": "^5.1.0",
+    "http-proxy": "^1.18.1",
+    "http-proxy-middleware": "^3.0.5",
+    "nodemon": "^3.1.10",
+    "pm2": "^6.0.8"
+  }
+}

@@ -1,0 +1,923 @@
+2025-06-30 04:53:42: Error: listen EADDRINUSE: address already in use :::5001
+2025-06-30 04:53:42:     at Server.setupListenHandle [as _listen2] (node:net:1939:16)
+2025-06-30 04:53:42:     at listenInCluster (node:net:1996:12)
+2025-06-30 04:53:42:     at Server.listen (node:net:2101:7)
+2025-06-30 04:53:42:     at file:///C:/Users/Soulucion/Documents/myst_comb/backend/auth-service/src/server.js:8:8
+2025-06-30 04:53:42:     at ModuleJob.run (node:internal/modules/esm/module_job:274:25)
+2025-06-30 04:53:42:     at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26) {
+2025-06-30 04:53:42:   code: 'EADDRINUSE',
+2025-06-30 04:53:42:   errno: -4091,
+2025-06-30 04:53:42:   syscall: 'listen',
+2025-06-30 04:53:42:   address: '::',
+2025-06-30 04:53:42:   port: 5001
+2025-06-30 04:53:42: }
+2025-06-30 04:53:43: Error: listen EADDRINUSE: address already in use :::5001
+2025-06-30 04:53:43:     at Server.setupListenHandle [as _listen2] (node:net:1939:16)
+2025-06-30 04:53:43:     at listenInCluster (node:net:1996:12)
+2025-06-30 04:53:43:     at Server.listen (node:net:2101:7)
+2025-06-30 04:53:43:     at file:///C:/Users/Soulucion/Documents/myst_comb/backend/auth-service/src/server.js:8:8
+2025-06-30 04:53:43:     at ModuleJob.run (node:internal/modules/esm/module_job:274:25)
+2025-06-30 04:53:43:     at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26) {
+2025-06-30 04:53:43:   code: 'EADDRINUSE',
+2025-06-30 04:53:43:   errno: -4091,
+2025-06-30 04:53:43:   syscall: 'listen',
+2025-06-30 04:53:43:   address: '::',
+2025-06-30 04:53:43:   port: 5001
+2025-06-30 04:53:43: }
+2025-06-30 04:53:44: Error: listen EADDRINUSE: address already in use :::5001
+2025-06-30 04:53:44:     at Server.setupListenHandle [as _listen2] (node:net:1939:16)
+2025-06-30 04:53:44:     at listenInCluster (node:net:1996:12)
+2025-06-30 04:53:44:     at Server.listen (node:net:2101:7)
+2025-06-30 04:53:44:     at file:///C:/Users/Soulucion/Documents/myst_comb/backend/auth-service/src/server.js:8:8
+2025-06-30 04:53:44:     at ModuleJob.run (node:internal/modules/esm/module_job:274:25)
+2025-06-30 04:53:44:     at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26) {
+2025-06-30 04:53:44:   code: 'EADDRINUSE',
+2025-06-30 04:53:44:   errno: -4091,
+2025-06-30 04:53:44:   syscall: 'listen',
+2025-06-30 04:53:44:   address: '::',
+2025-06-30 04:53:44:   port: 5001
+2025-06-30 04:53:44: }
+2025-06-30 04:53:45: Error: listen EADDRINUSE: address already in use :::5001
+2025-06-30 04:53:45:     at Server.setupListenHandle [as _listen2] (node:net:1939:16)
+2025-06-30 04:53:45:     at listenInCluster (node:net:1996:12)
+2025-06-30 04:53:45:     at Server.listen (node:net:2101:7)
+2025-06-30 04:53:45:     at file:///C:/Users/Soulucion/Documents/myst_comb/backend/auth-service/src/server.js:8:8
+2025-06-30 04:53:45:     at ModuleJob.run (node:internal/modules/esm/module_job:274:25)
+2025-06-30 04:53:45:     at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26) {
+2025-06-30 04:53:45:   code: 'EADDRINUSE',
+2025-06-30 04:53:45:   errno: -4091,
+2025-06-30 04:53:45:   syscall: 'listen',
+2025-06-30 04:53:45:   address: '::',
+2025-06-30 04:53:45:   port: 5001
+2025-06-30 04:53:45: }
+2025-06-30 04:53:46: Error: listen EADDRINUSE: address already in use :::5001
+2025-06-30 04:53:46:     at Server.setupListenHandle [as _listen2] (node:net:1939:16)
+2025-06-30 04:53:46:     at listenInCluster (node:net:1996:12)
+2025-06-30 04:53:46:     at Server.listen (node:net:2101:7)
+2025-06-30 04:53:46:     at file:///C:/Users/Soulucion/Documents/myst_comb/backend/auth-service/src/server.js:8:8
+2025-06-30 04:53:46:     at ModuleJob.run (node:internal/modules/esm/module_job:274:25)
+2025-06-30 04:53:46:     at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26) {
+2025-06-30 04:53:46:   code: 'EADDRINUSE',
+2025-06-30 04:53:46:   errno: -4091,
+2025-06-30 04:53:46:   syscall: 'listen',
+2025-06-30 04:53:46:   address: '::',
+2025-06-30 04:53:46:   port: 5001
+2025-06-30 04:53:46: }
+2025-06-30 04:53:47: Error: listen EADDRINUSE: address already in use :::5001
+2025-06-30 04:53:47:     at Server.setupListenHandle [as _listen2] (node:net:1939:16)
+2025-06-30 04:53:47:     at listenInCluster (node:net:1996:12)
+2025-06-30 04:53:47:     at Server.listen (node:net:2101:7)
+2025-06-30 04:53:47:     at file:///C:/Users/Soulucion/Documents/myst_comb/backend/auth-service/src/server.js:8:8
+2025-06-30 04:53:47:     at ModuleJob.run (node:internal/modules/esm/module_job:274:25)
+2025-06-30 04:53:47:     at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26) {
+2025-06-30 04:53:47:   code: 'EADDRINUSE',
+2025-06-30 04:53:47:   errno: -4091,
+2025-06-30 04:53:47:   syscall: 'listen',
+2025-06-30 04:53:47:   address: '::',
+2025-06-30 04:53:47:   port: 5001
+2025-06-30 04:53:47: }
+2025-06-30 04:53:49: Error: listen EADDRINUSE: address already in use :::5001
+2025-06-30 04:53:49:     at Server.setupListenHandle [as _listen2] (node:net:1939:16)
+2025-06-30 04:53:49:     at listenInCluster (node:net:1996:12)
+2025-06-30 04:53:49:     at Server.listen (node:net:2101:7)
+2025-06-30 04:53:49:     at file:///C:/Users/Soulucion/Documents/myst_comb/backend/auth-service/src/server.js:8:8
+2025-06-30 04:53:49:     at ModuleJob.run (node:internal/modules/esm/module_job:274:25)
+2025-06-30 04:53:49:     at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26) {
+2025-06-30 04:53:49:   code: 'EADDRINUSE',
+2025-06-30 04:53:49:   errno: -4091,
+2025-06-30 04:53:49:   syscall: 'listen',
+2025-06-30 04:53:49:   address: '::',
+2025-06-30 04:53:49:   port: 5001
+2025-06-30 04:53:49: }
+2025-06-30 04:53:50: Error: listen EADDRINUSE: address already in use :::5001
+2025-06-30 04:53:50:     at Server.setupListenHandle [as _listen2] (node:net:1939:16)
+2025-06-30 04:53:50:     at listenInCluster (node:net:1996:12)
+2025-06-30 04:53:50:     at Server.listen (node:net:2101:7)
+2025-06-30 04:53:50:     at file:///C:/Users/Soulucion/Documents/myst_comb/backend/auth-service/src/server.js:8:8
+2025-06-30 04:53:50:     at ModuleJob.run (node:internal/modules/esm/module_job:274:25)
+2025-06-30 04:53:50:     at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26) {
+2025-06-30 04:53:50:   code: 'EADDRINUSE',
+2025-06-30 04:53:50:   errno: -4091,
+2025-06-30 04:53:50:   syscall: 'listen',
+2025-06-30 04:53:50:   address: '::',
+2025-06-30 04:53:50:   port: 5001
+2025-06-30 04:53:50: }
+2025-06-30 04:53:52: Error: listen EADDRINUSE: address already in use :::5001
+2025-06-30 04:53:52:     at Server.setupListenHandle [as _listen2] (node:net:1939:16)
+2025-06-30 04:53:52:     at listenInCluster (node:net:1996:12)
+2025-06-30 04:53:52:     at Server.listen (node:net:2101:7)
+2025-06-30 04:53:52:     at file:///C:/Users/Soulucion/Documents/myst_comb/backend/auth-service/src/server.js:8:8
+2025-06-30 04:53:52:     at ModuleJob.run (node:internal/modules/esm/module_job:274:25)
+2025-06-30 04:53:52:     at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26) {
+2025-06-30 04:53:52:   code: 'EADDRINUSE',
+2025-06-30 04:53:52:   errno: -4091,
+2025-06-30 04:53:52:   syscall: 'listen',
+2025-06-30 04:53:52:   address: '::',
+2025-06-30 04:53:52:   port: 5001
+2025-06-30 04:53:52: }
+2025-06-30 04:53:53: Error: listen EADDRINUSE: address already in use :::5001
+2025-06-30 04:53:53:     at Server.setupListenHandle [as _listen2] (node:net:1939:16)
+2025-06-30 04:53:53:     at listenInCluster (node:net:1996:12)
+2025-06-30 04:53:53:     at Server.listen (node:net:2101:7)
+2025-06-30 04:53:53:     at file:///C:/Users/Soulucion/Documents/myst_comb/backend/auth-service/src/server.js:8:8
+2025-06-30 04:53:53:     at ModuleJob.run (node:internal/modules/esm/module_job:274:25)
+2025-06-30 04:53:53:     at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26) {
+2025-06-30 04:53:53:   code: 'EADDRINUSE',
+2025-06-30 04:53:53:   errno: -4091,
+2025-06-30 04:53:53:   syscall: 'listen',
+2025-06-30 04:53:53:   address: '::',
+2025-06-30 04:53:53:   port: 5001
+2025-06-30 04:53:53: }
+2025-06-30 04:53:54: Error: listen EADDRINUSE: address already in use :::5001
+2025-06-30 04:53:54:     at Server.setupListenHandle [as _listen2] (node:net:1939:16)
+2025-06-30 04:53:54:     at listenInCluster (node:net:1996:12)
+2025-06-30 04:53:54:     at Server.listen (node:net:2101:7)
+2025-06-30 04:53:54:     at file:///C:/Users/Soulucion/Documents/myst_comb/backend/auth-service/src/server.js:8:8
+2025-06-30 04:53:54:     at ModuleJob.run (node:internal/modules/esm/module_job:274:25)
+2025-06-30 04:53:54:     at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26) {
+2025-06-30 04:53:54:   code: 'EADDRINUSE',
+2025-06-30 04:53:54:   errno: -4091,
+2025-06-30 04:53:54:   syscall: 'listen',
+2025-06-30 04:53:54:   address: '::',
+2025-06-30 04:53:54:   port: 5001
+2025-06-30 04:53:54: }
+2025-06-30 04:53:55: Error: listen EADDRINUSE: address already in use :::5001
+2025-06-30 04:53:55:     at Server.setupListenHandle [as _listen2] (node:net:1939:16)
+2025-06-30 04:53:55:     at listenInCluster (node:net:1996:12)
+2025-06-30 04:53:55:     at Server.listen (node:net:2101:7)
+2025-06-30 04:53:55:     at file:///C:/Users/Soulucion/Documents/myst_comb/backend/auth-service/src/server.js:8:8
+2025-06-30 04:53:55:     at ModuleJob.run (node:internal/modules/esm/module_job:274:25)
+2025-06-30 04:53:55:     at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26) {
+2025-06-30 04:53:55:   code: 'EADDRINUSE',
+2025-06-30 04:53:55:   errno: -4091,
+2025-06-30 04:53:55:   syscall: 'listen',
+2025-06-30 04:53:55:   address: '::',
+2025-06-30 04:53:55:   port: 5001
+2025-06-30 04:53:55: }
+2025-06-30 04:53:56: Error: listen EADDRINUSE: address already in use :::5001
+2025-06-30 04:53:56:     at Server.setupListenHandle [as _listen2] (node:net:1939:16)
+2025-06-30 04:53:56:     at listenInCluster (node:net:1996:12)
+2025-06-30 04:53:56:     at Server.listen (node:net:2101:7)
+2025-06-30 04:53:56:     at file:///C:/Users/Soulucion/Documents/myst_comb/backend/auth-service/src/server.js:8:8
+2025-06-30 04:53:56:     at ModuleJob.run (node:internal/modules/esm/module_job:274:25)
+2025-06-30 04:53:56:     at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26) {
+2025-06-30 04:53:56:   code: 'EADDRINUSE',
+2025-06-30 04:53:56:   errno: -4091,
+2025-06-30 04:53:56:   syscall: 'listen',
+2025-06-30 04:53:56:   address: '::',
+2025-06-30 04:53:56:   port: 5001
+2025-06-30 04:53:56: }
+2025-06-30 04:53:57: Error: listen EADDRINUSE: address already in use :::5001
+2025-06-30 04:53:57:     at Server.setupListenHandle [as _listen2] (node:net:1939:16)
+2025-06-30 04:53:57:     at listenInCluster (node:net:1996:12)
+2025-06-30 04:53:57:     at Server.listen (node:net:2101:7)
+2025-06-30 04:53:57:     at file:///C:/Users/Soulucion/Documents/myst_comb/backend/auth-service/src/server.js:8:8
+2025-06-30 04:53:57:     at ModuleJob.run (node:internal/modules/esm/module_job:274:25)
+2025-06-30 04:53:57:     at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26) {
+2025-06-30 04:53:57:   code: 'EADDRINUSE',
+2025-06-30 04:53:57:   errno: -4091,
+2025-06-30 04:53:57:   syscall: 'listen',
+2025-06-30 04:53:57:   address: '::',
+2025-06-30 04:53:57:   port: 5001
+2025-06-30 04:53:57: }
+2025-06-30 04:53:58: Error: listen EADDRINUSE: address already in use :::5001
+2025-06-30 04:53:58:     at Server.setupListenHandle [as _listen2] (node:net:1939:16)
+2025-06-30 04:53:58:     at listenInCluster (node:net:1996:12)
+2025-06-30 04:53:58:     at Server.listen (node:net:2101:7)
+2025-06-30 04:53:58:     at file:///C:/Users/Soulucion/Documents/myst_comb/backend/auth-service/src/server.js:8:8
+2025-06-30 04:53:58:     at ModuleJob.run (node:internal/modules/esm/module_job:274:25)
+2025-06-30 04:53:58:     at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26) {
+2025-06-30 04:53:58:   code: 'EADDRINUSE',
+2025-06-30 04:53:58:   errno: -4091,
+2025-06-30 04:53:58:   syscall: 'listen',
+2025-06-30 04:53:58:   address: '::',
+2025-06-30 04:53:58:   port: 5001
+2025-06-30 04:53:58: }
+2025-06-30 04:53:59: Error: listen EADDRINUSE: address already in use :::5001
+2025-06-30 04:53:59:     at Server.setupListenHandle [as _listen2] (node:net:1939:16)
+2025-06-30 04:53:59:     at listenInCluster (node:net:1996:12)
+2025-06-30 04:53:59:     at Server.listen (node:net:2101:7)
+2025-06-30 04:53:59:     at file:///C:/Users/Soulucion/Documents/myst_comb/backend/auth-service/src/server.js:8:8
+2025-06-30 04:53:59:     at ModuleJob.run (node:internal/modules/esm/module_job:274:25)
+2025-06-30 04:53:59:     at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26) {
+2025-06-30 04:53:59:   code: 'EADDRINUSE',
+2025-06-30 04:53:59:   errno: -4091,
+2025-06-30 04:53:59:   syscall: 'listen',
+2025-06-30 04:53:59:   address: '::',
+2025-06-30 04:53:59:   port: 5001
+2025-06-30 04:53:59: }
+2025-06-30 04:54:00: Error: listen EADDRINUSE: address already in use :::5001
+2025-06-30 04:54:00:     at Server.setupListenHandle [as _listen2] (node:net:1939:16)
+2025-06-30 04:54:00:     at listenInCluster (node:net:1996:12)
+2025-06-30 04:54:00:     at Server.listen (node:net:2101:7)
+2025-06-30 04:54:00:     at file:///C:/Users/Soulucion/Documents/myst_comb/backend/auth-service/src/server.js:8:8
+2025-06-30 04:54:00:     at ModuleJob.run (node:internal/modules/esm/module_job:274:25)
+2025-06-30 04:54:00:     at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26) {
+2025-06-30 04:54:00:   code: 'EADDRINUSE',
+2025-06-30 04:54:00:   errno: -4091,
+2025-06-30 04:54:00:   syscall: 'listen',
+2025-06-30 04:54:00:   address: '::',
+2025-06-30 04:54:00:   port: 5001
+2025-06-30 04:54:00: }
+2025-06-30 04:54:02: Error: listen EADDRINUSE: address already in use :::5001
+2025-06-30 04:54:02:     at Server.setupListenHandle [as _listen2] (node:net:1939:16)
+2025-06-30 04:54:02:     at listenInCluster (node:net:1996:12)
+2025-06-30 04:54:02:     at Server.listen (node:net:2101:7)
+2025-06-30 04:54:02:     at file:///C:/Users/Soulucion/Documents/myst_comb/backend/auth-service/src/server.js:8:8
+2025-06-30 04:54:02:     at ModuleJob.run (node:internal/modules/esm/module_job:274:25)
+2025-06-30 04:54:02:     at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26) {
+2025-06-30 04:54:02:   code: 'EADDRINUSE',
+2025-06-30 04:54:02:   errno: -4091,
+2025-06-30 04:54:02:   syscall: 'listen',
+2025-06-30 04:54:02:   address: '::',
+2025-06-30 04:54:02:   port: 5001
+2025-06-30 04:54:02: }
+2025-06-30 04:54:03: Error: listen EADDRINUSE: address already in use :::5001
+2025-06-30 04:54:03:     at Server.setupListenHandle [as _listen2] (node:net:1939:16)
+2025-06-30 04:54:03:     at listenInCluster (node:net:1996:12)
+2025-06-30 04:54:03:     at Server.listen (node:net:2101:7)
+2025-06-30 04:54:03:     at file:///C:/Users/Soulucion/Documents/myst_comb/backend/auth-service/src/server.js:8:8
+2025-06-30 04:54:03:     at ModuleJob.run (node:internal/modules/esm/module_job:274:25)
+2025-06-30 04:54:03:     at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26) {
+2025-06-30 04:54:03:   code: 'EADDRINUSE',
+2025-06-30 04:54:03:   errno: -4091,
+2025-06-30 04:54:03:   syscall: 'listen',
+2025-06-30 04:54:03:   address: '::',
+2025-06-30 04:54:03:   port: 5001
+2025-06-30 04:54:03: }
+2025-06-30 04:54:04: Error: listen EADDRINUSE: address already in use :::5001
+2025-06-30 04:54:04:     at Server.setupListenHandle [as _listen2] (node:net:1939:16)
+2025-06-30 04:54:04:     at listenInCluster (node:net:1996:12)
+2025-06-30 04:54:04:     at Server.listen (node:net:2101:7)
+2025-06-30 04:54:04:     at file:///C:/Users/Soulucion/Documents/myst_comb/backend/auth-service/src/server.js:8:8
+2025-06-30 04:54:04:     at ModuleJob.run (node:internal/modules/esm/module_job:274:25)
+2025-06-30 04:54:04:     at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26) {
+2025-06-30 04:54:04:   code: 'EADDRINUSE',
+2025-06-30 04:54:04:   errno: -4091,
+2025-06-30 04:54:04:   syscall: 'listen',
+2025-06-30 04:54:04:   address: '::',
+2025-06-30 04:54:04:   port: 5001
+2025-06-30 04:54:04: }
+2025-06-30 04:54:05: Error: listen EADDRINUSE: address already in use :::5001
+2025-06-30 04:54:05:     at Server.setupListenHandle [as _listen2] (node:net:1939:16)
+2025-06-30 04:54:05:     at listenInCluster (node:net:1996:12)
+2025-06-30 04:54:05:     at Server.listen (node:net:2101:7)
+2025-06-30 04:54:05:     at file:///C:/Users/Soulucion/Documents/myst_comb/backend/auth-service/src/server.js:8:8
+2025-06-30 04:54:05:     at ModuleJob.run (node:internal/modules/esm/module_job:274:25)
+2025-06-30 04:54:05:     at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26) {
+2025-06-30 04:54:05:   code: 'EADDRINUSE',
+2025-06-30 04:54:05:   errno: -4091,
+2025-06-30 04:54:05:   syscall: 'listen',
+2025-06-30 04:54:05:   address: '::',
+2025-06-30 04:54:05:   port: 5001
+2025-06-30 04:54:05: }
+2025-06-30 04:54:06: Error: listen EADDRINUSE: address already in use :::5001
+2025-06-30 04:54:06:     at Server.setupListenHandle [as _listen2] (node:net:1939:16)
+2025-06-30 04:54:06:     at listenInCluster (node:net:1996:12)
+2025-06-30 04:54:06:     at Server.listen (node:net:2101:7)
+2025-06-30 04:54:06:     at file:///C:/Users/Soulucion/Documents/myst_comb/backend/auth-service/src/server.js:8:8
+2025-06-30 04:54:06:     at ModuleJob.run (node:internal/modules/esm/module_job:274:25)
+2025-06-30 04:54:06:     at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26) {
+2025-06-30 04:54:06:   code: 'EADDRINUSE',
+2025-06-30 04:54:06:   errno: -4091,
+2025-06-30 04:54:06:   syscall: 'listen',
+2025-06-30 04:54:06:   address: '::',
+2025-06-30 04:54:06:   port: 5001
+2025-06-30 04:54:06: }
+2025-06-30 04:54:07: Error: listen EADDRINUSE: address already in use :::5001
+2025-06-30 04:54:07:     at Server.setupListenHandle [as _listen2] (node:net:1939:16)
+2025-06-30 04:54:07:     at listenInCluster (node:net:1996:12)
+2025-06-30 04:54:07:     at Server.listen (node:net:2101:7)
+2025-06-30 04:54:07:     at file:///C:/Users/Soulucion/Documents/myst_comb/backend/auth-service/src/server.js:8:8
+2025-06-30 04:54:07:     at ModuleJob.run (node:internal/modules/esm/module_job:274:25)
+2025-06-30 04:54:07:     at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26) {
+2025-06-30 04:54:07:   code: 'EADDRINUSE',
+2025-06-30 04:54:07:   errno: -4091,
+2025-06-30 04:54:07:   syscall: 'listen',
+2025-06-30 04:54:07:   address: '::',
+2025-06-30 04:54:07:   port: 5001
+2025-06-30 04:54:07: }
+2025-06-30 04:54:08: Error: listen EADDRINUSE: address already in use :::5001
+2025-06-30 04:54:08:     at Server.setupListenHandle [as _listen2] (node:net:1939:16)
+2025-06-30 04:54:08:     at listenInCluster (node:net:1996:12)
+2025-06-30 04:54:08:     at Server.listen (node:net:2101:7)
+2025-06-30 04:54:08:     at file:///C:/Users/Soulucion/Documents/myst_comb/backend/auth-service/src/server.js:8:8
+2025-06-30 04:54:08:     at ModuleJob.run (node:internal/modules/esm/module_job:274:25)
+2025-06-30 04:54:08:     at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26) {
+2025-06-30 04:54:08:   code: 'EADDRINUSE',
+2025-06-30 04:54:08:   errno: -4091,
+2025-06-30 04:54:08:   syscall: 'listen',
+2025-06-30 04:54:08:   address: '::',
+2025-06-30 04:54:08:   port: 5001
+2025-06-30 04:54:08: }
+2025-06-30 04:54:09: Error: listen EADDRINUSE: address already in use :::5001
+2025-06-30 04:54:09:     at Server.setupListenHandle [as _listen2] (node:net:1939:16)
+2025-06-30 04:54:09:     at listenInCluster (node:net:1996:12)
+2025-06-30 04:54:09:     at Server.listen (node:net:2101:7)
+2025-06-30 04:54:09:     at file:///C:/Users/Soulucion/Documents/myst_comb/backend/auth-service/src/server.js:8:8
+2025-06-30 04:54:09:     at ModuleJob.run (node:internal/modules/esm/module_job:274:25)
+2025-06-30 04:54:09:     at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26) {
+2025-06-30 04:54:09:   code: 'EADDRINUSE',
+2025-06-30 04:54:09:   errno: -4091,
+2025-06-30 04:54:09:   syscall: 'listen',
+2025-06-30 04:54:09:   address: '::',
+2025-06-30 04:54:09:   port: 5001
+2025-06-30 04:54:09: }
+2025-06-30 04:54:10: Error: listen EADDRINUSE: address already in use :::5001
+2025-06-30 04:54:10:     at Server.setupListenHandle [as _listen2] (node:net:1939:16)
+2025-06-30 04:54:10:     at listenInCluster (node:net:1996:12)
+2025-06-30 04:54:10:     at Server.listen (node:net:2101:7)
+2025-06-30 04:54:10:     at file:///C:/Users/Soulucion/Documents/myst_comb/backend/auth-service/src/server.js:8:8
+2025-06-30 04:54:10:     at ModuleJob.run (node:internal/modules/esm/module_job:274:25)
+2025-06-30 04:54:10:     at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26) {
+2025-06-30 04:54:10:   code: 'EADDRINUSE',
+2025-06-30 04:54:10:   errno: -4091,
+2025-06-30 04:54:10:   syscall: 'listen',
+2025-06-30 04:54:10:   address: '::',
+2025-06-30 04:54:10:   port: 5001
+2025-06-30 04:54:10: }
+2025-06-30 04:54:11: Error: listen EADDRINUSE: address already in use :::5001
+2025-06-30 04:54:11:     at Server.setupListenHandle [as _listen2] (node:net:1939:16)
+2025-06-30 04:54:11:     at listenInCluster (node:net:1996:12)
+2025-06-30 04:54:11:     at Server.listen (node:net:2101:7)
+2025-06-30 04:54:11:     at file:///C:/Users/Soulucion/Documents/myst_comb/backend/auth-service/src/server.js:8:8
+2025-06-30 04:54:11:     at ModuleJob.run (node:internal/modules/esm/module_job:274:25)
+2025-06-30 04:54:11:     at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26) {
+2025-06-30 04:54:11:   code: 'EADDRINUSE',
+2025-06-30 04:54:11:   errno: -4091,
+2025-06-30 04:54:11:   syscall: 'listen',
+2025-06-30 04:54:11:   address: '::',
+2025-06-30 04:54:11:   port: 5001
+2025-06-30 04:54:11: }
+2025-06-30 04:54:12: Error: listen EADDRINUSE: address already in use :::5001
+2025-06-30 04:54:12:     at Server.setupListenHandle [as _listen2] (node:net:1939:16)
+2025-06-30 04:54:12:     at listenInCluster (node:net:1996:12)
+2025-06-30 04:54:12:     at Server.listen (node:net:2101:7)
+2025-06-30 04:54:12:     at file:///C:/Users/Soulucion/Documents/myst_comb/backend/auth-service/src/server.js:8:8
+2025-06-30 04:54:12:     at ModuleJob.run (node:internal/modules/esm/module_job:274:25)
+2025-06-30 04:54:12:     at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26) {
+2025-06-30 04:54:12:   code: 'EADDRINUSE',
+2025-06-30 04:54:12:   errno: -4091,
+2025-06-30 04:54:12:   syscall: 'listen',
+2025-06-30 04:54:12:   address: '::',
+2025-06-30 04:54:12:   port: 5001
+2025-06-30 04:54:12: }
+2025-06-30 04:54:14: Error: listen EADDRINUSE: address already in use :::5001
+2025-06-30 04:54:14:     at Server.setupListenHandle [as _listen2] (node:net:1939:16)
+2025-06-30 04:54:14:     at listenInCluster (node:net:1996:12)
+2025-06-30 04:54:14:     at Server.listen (node:net:2101:7)
+2025-06-30 04:54:14:     at file:///C:/Users/Soulucion/Documents/myst_comb/backend/auth-service/src/server.js:8:8
+2025-06-30 04:54:14:     at ModuleJob.run (node:internal/modules/esm/module_job:274:25)
+2025-06-30 04:54:14:     at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26) {
+2025-06-30 04:54:14:   code: 'EADDRINUSE',
+2025-06-30 04:54:14:   errno: -4091,
+2025-06-30 04:54:14:   syscall: 'listen',
+2025-06-30 04:54:14:   address: '::',
+2025-06-30 04:54:14:   port: 5001
+2025-06-30 04:54:14: }
+2025-06-30 04:54:15: Error: listen EADDRINUSE: address already in use :::5001
+2025-06-30 04:54:15:     at Server.setupListenHandle [as _listen2] (node:net:1939:16)
+2025-06-30 04:54:15:     at listenInCluster (node:net:1996:12)
+2025-06-30 04:54:15:     at Server.listen (node:net:2101:7)
+2025-06-30 04:54:15:     at file:///C:/Users/Soulucion/Documents/myst_comb/backend/auth-service/src/server.js:8:8
+2025-06-30 04:54:15:     at ModuleJob.run (node:internal/modules/esm/module_job:274:25)
+2025-06-30 04:54:15:     at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26) {
+2025-06-30 04:54:15:   code: 'EADDRINUSE',
+2025-06-30 04:54:15:   errno: -4091,
+2025-06-30 04:54:15:   syscall: 'listen',
+2025-06-30 04:54:15:   address: '::',
+2025-06-30 04:54:15:   port: 5001
+2025-06-30 04:54:15: }
+2025-06-30 04:54:16: Error: listen EADDRINUSE: address already in use :::5001
+2025-06-30 04:54:16:     at Server.setupListenHandle [as _listen2] (node:net:1939:16)
+2025-06-30 04:54:16:     at listenInCluster (node:net:1996:12)
+2025-06-30 04:54:16:     at Server.listen (node:net:2101:7)
+2025-06-30 04:54:16:     at file:///C:/Users/Soulucion/Documents/myst_comb/backend/auth-service/src/server.js:8:8
+2025-06-30 04:54:16:     at ModuleJob.run (node:internal/modules/esm/module_job:274:25)
+2025-06-30 04:54:16:     at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26) {
+2025-06-30 04:54:16:   code: 'EADDRINUSE',
+2025-06-30 04:54:16:   errno: -4091,
+2025-06-30 04:54:16:   syscall: 'listen',
+2025-06-30 04:54:16:   address: '::',
+2025-06-30 04:54:16:   port: 5001
+2025-06-30 04:54:16: }
+2025-06-30 04:54:17: Error: listen EADDRINUSE: address already in use :::5001
+2025-06-30 04:54:17:     at Server.setupListenHandle [as _listen2] (node:net:1939:16)
+2025-06-30 04:54:17:     at listenInCluster (node:net:1996:12)
+2025-06-30 04:54:17:     at Server.listen (node:net:2101:7)
+2025-06-30 04:54:17:     at file:///C:/Users/Soulucion/Documents/myst_comb/backend/auth-service/src/server.js:8:8
+2025-06-30 04:54:17:     at ModuleJob.run (node:internal/modules/esm/module_job:274:25)
+2025-06-30 04:54:17:     at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26) {
+2025-06-30 04:54:17:   code: 'EADDRINUSE',
+2025-06-30 04:54:17:   errno: -4091,
+2025-06-30 04:54:17:   syscall: 'listen',
+2025-06-30 04:54:17:   address: '::',
+2025-06-30 04:54:17:   port: 5001
+2025-06-30 04:54:17: }
+2025-06-30 04:54:18: Error: listen EADDRINUSE: address already in use :::5001
+2025-06-30 04:54:18:     at Server.setupListenHandle [as _listen2] (node:net:1939:16)
+2025-06-30 04:54:18:     at listenInCluster (node:net:1996:12)
+2025-06-30 04:54:18:     at Server.listen (node:net:2101:7)
+2025-06-30 04:54:18:     at file:///C:/Users/Soulucion/Documents/myst_comb/backend/auth-service/src/server.js:8:8
+2025-06-30 04:54:18:     at ModuleJob.run (node:internal/modules/esm/module_job:274:25)
+2025-06-30 04:54:18:     at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26) {
+2025-06-30 04:54:18:   code: 'EADDRINUSE',
+2025-06-30 04:54:18:   errno: -4091,
+2025-06-30 04:54:18:   syscall: 'listen',
+2025-06-30 04:54:18:   address: '::',
+2025-06-30 04:54:18:   port: 5001
+2025-06-30 04:54:18: }
+2025-06-30 04:54:19: Error: listen EADDRINUSE: address already in use :::5001
+2025-06-30 04:54:19:     at Server.setupListenHandle [as _listen2] (node:net:1939:16)
+2025-06-30 04:54:19:     at listenInCluster (node:net:1996:12)
+2025-06-30 04:54:19:     at Server.listen (node:net:2101:7)
+2025-06-30 04:54:19:     at file:///C:/Users/Soulucion/Documents/myst_comb/backend/auth-service/src/server.js:8:8
+2025-06-30 04:54:19:     at ModuleJob.run (node:internal/modules/esm/module_job:274:25)
+2025-06-30 04:54:19:     at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26) {
+2025-06-30 04:54:19:   code: 'EADDRINUSE',
+2025-06-30 04:54:19:   errno: -4091,
+2025-06-30 04:54:19:   syscall: 'listen',
+2025-06-30 04:54:19:   address: '::',
+2025-06-30 04:54:19:   port: 5001
+2025-06-30 04:54:19: }
+2025-06-30 04:54:20: Error: listen EADDRINUSE: address already in use :::5001
+2025-06-30 04:54:20:     at Server.setupListenHandle [as _listen2] (node:net:1939:16)
+2025-06-30 04:54:20:     at listenInCluster (node:net:1996:12)
+2025-06-30 04:54:20:     at Server.listen (node:net:2101:7)
+2025-06-30 04:54:20:     at file:///C:/Users/Soulucion/Documents/myst_comb/backend/auth-service/src/server.js:8:8
+2025-06-30 04:54:20:     at ModuleJob.run (node:internal/modules/esm/module_job:274:25)
+2025-06-30 04:54:20:     at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26) {
+2025-06-30 04:54:20:   code: 'EADDRINUSE',
+2025-06-30 04:54:20:   errno: -4091,
+2025-06-30 04:54:20:   syscall: 'listen',
+2025-06-30 04:54:20:   address: '::',
+2025-06-30 04:54:20:   port: 5001
+2025-06-30 04:54:20: }
+2025-06-30 04:54:21: Error: listen EADDRINUSE: address already in use :::5001
+2025-06-30 04:54:21:     at Server.setupListenHandle [as _listen2] (node:net:1939:16)
+2025-06-30 04:54:21:     at listenInCluster (node:net:1996:12)
+2025-06-30 04:54:21:     at Server.listen (node:net:2101:7)
+2025-06-30 04:54:21:     at file:///C:/Users/Soulucion/Documents/myst_comb/backend/auth-service/src/server.js:8:8
+2025-06-30 04:54:21:     at ModuleJob.run (node:internal/modules/esm/module_job:274:25)
+2025-06-30 04:54:21:     at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26) {
+2025-06-30 04:54:21:   code: 'EADDRINUSE',
+2025-06-30 04:54:21:   errno: -4091,
+2025-06-30 04:54:21:   syscall: 'listen',
+2025-06-30 04:54:21:   address: '::',
+2025-06-30 04:54:21:   port: 5001
+2025-06-30 04:54:21: }
+2025-06-30 04:54:23: Error: listen EADDRINUSE: address already in use :::5001
+2025-06-30 04:54:23:     at Server.setupListenHandle [as _listen2] (node:net:1939:16)
+2025-06-30 04:54:23:     at listenInCluster (node:net:1996:12)
+2025-06-30 04:54:23:     at Server.listen (node:net:2101:7)
+2025-06-30 04:54:23:     at file:///C:/Users/Soulucion/Documents/myst_comb/backend/auth-service/src/server.js:8:8
+2025-06-30 04:54:23:     at ModuleJob.run (node:internal/modules/esm/module_job:274:25)
+2025-06-30 04:54:23:     at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26) {
+2025-06-30 04:54:23:   code: 'EADDRINUSE',
+2025-06-30 04:54:23:   errno: -4091,
+2025-06-30 04:54:23:   syscall: 'listen',
+2025-06-30 04:54:23:   address: '::',
+2025-06-30 04:54:23:   port: 5001
+2025-06-30 04:54:23: }
+2025-06-30 04:54:24: Error: listen EADDRINUSE: address already in use :::5001
+2025-06-30 04:54:24:     at Server.setupListenHandle [as _listen2] (node:net:1939:16)
+2025-06-30 04:54:24:     at listenInCluster (node:net:1996:12)
+2025-06-30 04:54:24:     at Server.listen (node:net:2101:7)
+2025-06-30 04:54:24:     at file:///C:/Users/Soulucion/Documents/myst_comb/backend/auth-service/src/server.js:8:8
+2025-06-30 04:54:24:     at ModuleJob.run (node:internal/modules/esm/module_job:274:25)
+2025-06-30 04:54:24:     at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26) {
+2025-06-30 04:54:24:   code: 'EADDRINUSE',
+2025-06-30 04:54:24:   errno: -4091,
+2025-06-30 04:54:24:   syscall: 'listen',
+2025-06-30 04:54:24:   address: '::',
+2025-06-30 04:54:24:   port: 5001
+2025-06-30 04:54:24: }
+2025-06-30 04:54:25: Error: listen EADDRINUSE: address already in use :::5001
+2025-06-30 04:54:25:     at Server.setupListenHandle [as _listen2] (node:net:1939:16)
+2025-06-30 04:54:25:     at listenInCluster (node:net:1996:12)
+2025-06-30 04:54:25:     at Server.listen (node:net:2101:7)
+2025-06-30 04:54:25:     at file:///C:/Users/Soulucion/Documents/myst_comb/backend/auth-service/src/server.js:8:8
+2025-06-30 04:54:25:     at ModuleJob.run (node:internal/modules/esm/module_job:274:25)
+2025-06-30 04:54:25:     at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26) {
+2025-06-30 04:54:25:   code: 'EADDRINUSE',
+2025-06-30 04:54:25:   errno: -4091,
+2025-06-30 04:54:25:   syscall: 'listen',
+2025-06-30 04:54:25:   address: '::',
+2025-06-30 04:54:25:   port: 5001
+2025-06-30 04:54:25: }
+2025-06-30 04:54:26: Error: listen EADDRINUSE: address already in use :::5001
+2025-06-30 04:54:26:     at Server.setupListenHandle [as _listen2] (node:net:1939:16)
+2025-06-30 04:54:26:     at listenInCluster (node:net:1996:12)
+2025-06-30 04:54:26:     at Server.listen (node:net:2101:7)
+2025-06-30 04:54:26:     at file:///C:/Users/Soulucion/Documents/myst_comb/backend/auth-service/src/server.js:8:8
+2025-06-30 04:54:26:     at ModuleJob.run (node:internal/modules/esm/module_job:274:25)
+2025-06-30 04:54:26:     at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26) {
+2025-06-30 04:54:26:   code: 'EADDRINUSE',
+2025-06-30 04:54:26:   errno: -4091,
+2025-06-30 04:54:26:   syscall: 'listen',
+2025-06-30 04:54:26:   address: '::',
+2025-06-30 04:54:26:   port: 5001
+2025-06-30 04:54:26: }
+2025-06-30 04:54:27: Error: listen EADDRINUSE: address already in use :::5001
+2025-06-30 04:54:27:     at Server.setupListenHandle [as _listen2] (node:net:1939:16)
+2025-06-30 04:54:27:     at listenInCluster (node:net:1996:12)
+2025-06-30 04:54:27:     at Server.listen (node:net:2101:7)
+2025-06-30 04:54:27:     at file:///C:/Users/Soulucion/Documents/myst_comb/backend/auth-service/src/server.js:8:8
+2025-06-30 04:54:27:     at ModuleJob.run (node:internal/modules/esm/module_job:274:25)
+2025-06-30 04:54:27:     at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26) {
+2025-06-30 04:54:27:   code: 'EADDRINUSE',
+2025-06-30 04:54:27:   errno: -4091,
+2025-06-30 04:54:27:   syscall: 'listen',
+2025-06-30 04:54:27:   address: '::',
+2025-06-30 04:54:27:   port: 5001
+2025-06-30 04:54:27: }
+2025-06-30 04:54:28: Error: listen EADDRINUSE: address already in use :::5001
+2025-06-30 04:54:28:     at Server.setupListenHandle [as _listen2] (node:net:1939:16)
+2025-06-30 04:54:28:     at listenInCluster (node:net:1996:12)
+2025-06-30 04:54:28:     at Server.listen (node:net:2101:7)
+2025-06-30 04:54:28:     at file:///C:/Users/Soulucion/Documents/myst_comb/backend/auth-service/src/server.js:8:8
+2025-06-30 04:54:28:     at ModuleJob.run (node:internal/modules/esm/module_job:274:25)
+2025-06-30 04:54:28:     at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26) {
+2025-06-30 04:54:28:   code: 'EADDRINUSE',
+2025-06-30 04:54:28:   errno: -4091,
+2025-06-30 04:54:28:   syscall: 'listen',
+2025-06-30 04:54:28:   address: '::',
+2025-06-30 04:54:28:   port: 5001
+2025-06-30 04:54:28: }
+2025-06-30 04:54:29: Error: listen EADDRINUSE: address already in use :::5001
+2025-06-30 04:54:29:     at Server.setupListenHandle [as _listen2] (node:net:1939:16)
+2025-06-30 04:54:29:     at listenInCluster (node:net:1996:12)
+2025-06-30 04:54:29:     at Server.listen (node:net:2101:7)
+2025-06-30 04:54:29:     at file:///C:/Users/Soulucion/Documents/myst_comb/backend/auth-service/src/server.js:8:8
+2025-06-30 04:54:29:     at ModuleJob.run (node:internal/modules/esm/module_job:274:25)
+2025-06-30 04:54:29:     at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26) {
+2025-06-30 04:54:29:   code: 'EADDRINUSE',
+2025-06-30 04:54:29:   errno: -4091,
+2025-06-30 04:54:29:   syscall: 'listen',
+2025-06-30 04:54:29:   address: '::',
+2025-06-30 04:54:29:   port: 5001
+2025-06-30 04:54:29: }
+2025-06-30 04:54:30: Error: listen EADDRINUSE: address already in use :::5001
+2025-06-30 04:54:30:     at Server.setupListenHandle [as _listen2] (node:net:1939:16)
+2025-06-30 04:54:30:     at listenInCluster (node:net:1996:12)
+2025-06-30 04:54:30:     at Server.listen (node:net:2101:7)
+2025-06-30 04:54:30:     at file:///C:/Users/Soulucion/Documents/myst_comb/backend/auth-service/src/server.js:8:8
+2025-06-30 04:54:30:     at ModuleJob.run (node:internal/modules/esm/module_job:274:25)
+2025-06-30 04:54:30:     at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26) {
+2025-06-30 04:54:30:   code: 'EADDRINUSE',
+2025-06-30 04:54:30:   errno: -4091,
+2025-06-30 04:54:30:   syscall: 'listen',
+2025-06-30 04:54:30:   address: '::',
+2025-06-30 04:54:30:   port: 5001
+2025-06-30 04:54:30: }
+2025-06-30 04:54:31: Error: listen EADDRINUSE: address already in use :::5001
+2025-06-30 04:54:31:     at Server.setupListenHandle [as _listen2] (node:net:1939:16)
+2025-06-30 04:54:31:     at listenInCluster (node:net:1996:12)
+2025-06-30 04:54:31:     at Server.listen (node:net:2101:7)
+2025-06-30 04:54:31:     at file:///C:/Users/Soulucion/Documents/myst_comb/backend/auth-service/src/server.js:8:8
+2025-06-30 04:54:31:     at ModuleJob.run (node:internal/modules/esm/module_job:274:25)
+2025-06-30 04:54:31:     at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26) {
+2025-06-30 04:54:31:   code: 'EADDRINUSE',
+2025-06-30 04:54:31:   errno: -4091,
+2025-06-30 04:54:31:   syscall: 'listen',
+2025-06-30 04:54:31:   address: '::',
+2025-06-30 04:54:31:   port: 5001
+2025-06-30 04:54:31: }
+2025-06-30 04:54:32: Error: listen EADDRINUSE: address already in use :::5001
+2025-06-30 04:54:32:     at Server.setupListenHandle [as _listen2] (node:net:1939:16)
+2025-06-30 04:54:32:     at listenInCluster (node:net:1996:12)
+2025-06-30 04:54:32:     at Server.listen (node:net:2101:7)
+2025-06-30 04:54:32:     at file:///C:/Users/Soulucion/Documents/myst_comb/backend/auth-service/src/server.js:8:8
+2025-06-30 04:54:32:     at ModuleJob.run (node:internal/modules/esm/module_job:274:25)
+2025-06-30 04:54:32:     at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26) {
+2025-06-30 04:54:32:   code: 'EADDRINUSE',
+2025-06-30 04:54:32:   errno: -4091,
+2025-06-30 04:54:32:   syscall: 'listen',
+2025-06-30 04:54:32:   address: '::',
+2025-06-30 04:54:32:   port: 5001
+2025-06-30 04:54:32: }
+2025-06-30 04:54:33: Error: listen EADDRINUSE: address already in use :::5001
+2025-06-30 04:54:33:     at Server.setupListenHandle [as _listen2] (node:net:1939:16)
+2025-06-30 04:54:33:     at listenInCluster (node:net:1996:12)
+2025-06-30 04:54:33:     at Server.listen (node:net:2101:7)
+2025-06-30 04:54:33:     at file:///C:/Users/Soulucion/Documents/myst_comb/backend/auth-service/src/server.js:8:8
+2025-06-30 04:54:33:     at ModuleJob.run (node:internal/modules/esm/module_job:274:25)
+2025-06-30 04:54:33:     at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26) {
+2025-06-30 04:54:33:   code: 'EADDRINUSE',
+2025-06-30 04:54:33:   errno: -4091,
+2025-06-30 04:54:33:   syscall: 'listen',
+2025-06-30 04:54:33:   address: '::',
+2025-06-30 04:54:33:   port: 5001
+2025-06-30 04:54:33: }
+2025-06-30 04:54:34: Error: listen EADDRINUSE: address already in use :::5001
+2025-06-30 04:54:34:     at Server.setupListenHandle [as _listen2] (node:net:1939:16)
+2025-06-30 04:54:34:     at listenInCluster (node:net:1996:12)
+2025-06-30 04:54:34:     at Server.listen (node:net:2101:7)
+2025-06-30 04:54:34:     at file:///C:/Users/Soulucion/Documents/myst_comb/backend/auth-service/src/server.js:8:8
+2025-06-30 04:54:34:     at ModuleJob.run (node:internal/modules/esm/module_job:274:25)
+2025-06-30 04:54:34:     at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26) {
+2025-06-30 04:54:34:   code: 'EADDRINUSE',
+2025-06-30 04:54:34:   errno: -4091,
+2025-06-30 04:54:34:   syscall: 'listen',
+2025-06-30 04:54:34:   address: '::',
+2025-06-30 04:54:34:   port: 5001
+2025-06-30 04:54:34: }
+2025-06-30 04:54:35: Error: listen EADDRINUSE: address already in use :::5001
+2025-06-30 04:54:35:     at Server.setupListenHandle [as _listen2] (node:net:1939:16)
+2025-06-30 04:54:35:     at listenInCluster (node:net:1996:12)
+2025-06-30 04:54:35:     at Server.listen (node:net:2101:7)
+2025-06-30 04:54:35:     at file:///C:/Users/Soulucion/Documents/myst_comb/backend/auth-service/src/server.js:8:8
+2025-06-30 04:54:35:     at ModuleJob.run (node:internal/modules/esm/module_job:274:25)
+2025-06-30 04:54:35:     at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26) {
+2025-06-30 04:54:35:   code: 'EADDRINUSE',
+2025-06-30 04:54:35:   errno: -4091,
+2025-06-30 04:54:35:   syscall: 'listen',
+2025-06-30 04:54:35:   address: '::',
+2025-06-30 04:54:35:   port: 5001
+2025-06-30 04:54:35: }
+2025-06-30 04:54:36: Error: listen EADDRINUSE: address already in use :::5001
+2025-06-30 04:54:36:     at Server.setupListenHandle [as _listen2] (node:net:1939:16)
+2025-06-30 04:54:36:     at listenInCluster (node:net:1996:12)
+2025-06-30 04:54:36:     at Server.listen (node:net:2101:7)
+2025-06-30 04:54:36:     at file:///C:/Users/Soulucion/Documents/myst_comb/backend/auth-service/src/server.js:8:8
+2025-06-30 04:54:36:     at ModuleJob.run (node:internal/modules/esm/module_job:274:25)
+2025-06-30 04:54:36:     at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26) {
+2025-06-30 04:54:36:   code: 'EADDRINUSE',
+2025-06-30 04:54:36:   errno: -4091,
+2025-06-30 04:54:36:   syscall: 'listen',
+2025-06-30 04:54:36:   address: '::',
+2025-06-30 04:54:36:   port: 5001
+2025-06-30 04:54:36: }
+2025-06-30 04:54:38: Error: listen EADDRINUSE: address already in use :::5001
+2025-06-30 04:54:38:     at Server.setupListenHandle [as _listen2] (node:net:1939:16)
+2025-06-30 04:54:38:     at listenInCluster (node:net:1996:12)
+2025-06-30 04:54:38:     at Server.listen (node:net:2101:7)
+2025-06-30 04:54:38:     at file:///C:/Users/Soulucion/Documents/myst_comb/backend/auth-service/src/server.js:8:8
+2025-06-30 04:54:38:     at ModuleJob.run (node:internal/modules/esm/module_job:274:25)
+2025-06-30 04:54:38:     at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26) {
+2025-06-30 04:54:38:   code: 'EADDRINUSE',
+2025-06-30 04:54:38:   errno: -4091,
+2025-06-30 04:54:38:   syscall: 'listen',
+2025-06-30 04:54:38:   address: '::',
+2025-06-30 04:54:38:   port: 5001
+2025-06-30 04:54:38: }
+2025-06-30 04:54:39: Error: listen EADDRINUSE: address already in use :::5001
+2025-06-30 04:54:39:     at Server.setupListenHandle [as _listen2] (node:net:1939:16)
+2025-06-30 04:54:39:     at listenInCluster (node:net:1996:12)
+2025-06-30 04:54:39:     at Server.listen (node:net:2101:7)
+2025-06-30 04:54:39:     at file:///C:/Users/Soulucion/Documents/myst_comb/backend/auth-service/src/server.js:8:8
+2025-06-30 04:54:39:     at ModuleJob.run (node:internal/modules/esm/module_job:274:25)
+2025-06-30 04:54:39:     at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26) {
+2025-06-30 04:54:39:   code: 'EADDRINUSE',
+2025-06-30 04:54:39:   errno: -4091,
+2025-06-30 04:54:39:   syscall: 'listen',
+2025-06-30 04:54:39:   address: '::',
+2025-06-30 04:54:39:   port: 5001
+2025-06-30 04:54:39: }
+2025-06-30 04:54:40: Error: listen EADDRINUSE: address already in use :::5001
+2025-06-30 04:54:40:     at Server.setupListenHandle [as _listen2] (node:net:1939:16)
+2025-06-30 04:54:40:     at listenInCluster (node:net:1996:12)
+2025-06-30 04:54:40:     at Server.listen (node:net:2101:7)
+2025-06-30 04:54:40:     at file:///C:/Users/Soulucion/Documents/myst_comb/backend/auth-service/src/server.js:8:8
+2025-06-30 04:54:40:     at ModuleJob.run (node:internal/modules/esm/module_job:274:25)
+2025-06-30 04:54:40:     at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26) {
+2025-06-30 04:54:40:   code: 'EADDRINUSE',
+2025-06-30 04:54:40:   errno: -4091,
+2025-06-30 04:54:40:   syscall: 'listen',
+2025-06-30 04:54:40:   address: '::',
+2025-06-30 04:54:40:   port: 5001
+2025-06-30 04:54:40: }
+2025-06-30 04:54:41: Error: listen EADDRINUSE: address already in use :::5001
+2025-06-30 04:54:41:     at Server.setupListenHandle [as _listen2] (node:net:1939:16)
+2025-06-30 04:54:41:     at listenInCluster (node:net:1996:12)
+2025-06-30 04:54:41:     at Server.listen (node:net:2101:7)
+2025-06-30 04:54:41:     at file:///C:/Users/Soulucion/Documents/myst_comb/backend/auth-service/src/server.js:8:8
+2025-06-30 04:54:41:     at ModuleJob.run (node:internal/modules/esm/module_job:274:25)
+2025-06-30 04:54:41:     at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26) {
+2025-06-30 04:54:41:   code: 'EADDRINUSE',
+2025-06-30 04:54:41:   errno: -4091,
+2025-06-30 04:54:41:   syscall: 'listen',
+2025-06-30 04:54:41:   address: '::',
+2025-06-30 04:54:41:   port: 5001
+2025-06-30 04:54:41: }
+2025-06-30 04:54:42: Error: listen EADDRINUSE: address already in use :::5001
+2025-06-30 04:54:42:     at Server.setupListenHandle [as _listen2] (node:net:1939:16)
+2025-06-30 04:54:42:     at listenInCluster (node:net:1996:12)
+2025-06-30 04:54:42:     at Server.listen (node:net:2101:7)
+2025-06-30 04:54:42:     at file:///C:/Users/Soulucion/Documents/myst_comb/backend/auth-service/src/server.js:8:8
+2025-06-30 04:54:42:     at ModuleJob.run (node:internal/modules/esm/module_job:274:25)
+2025-06-30 04:54:42:     at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26) {
+2025-06-30 04:54:42:   code: 'EADDRINUSE',
+2025-06-30 04:54:42:   errno: -4091,
+2025-06-30 04:54:42:   syscall: 'listen',
+2025-06-30 04:54:42:   address: '::',
+2025-06-30 04:54:42:   port: 5001
+2025-06-30 04:54:42: }
+2025-06-30 04:54:43: Error: listen EADDRINUSE: address already in use :::5001
+2025-06-30 04:54:43:     at Server.setupListenHandle [as _listen2] (node:net:1939:16)
+2025-06-30 04:54:43:     at listenInCluster (node:net:1996:12)
+2025-06-30 04:54:43:     at Server.listen (node:net:2101:7)
+2025-06-30 04:54:43:     at file:///C:/Users/Soulucion/Documents/myst_comb/backend/auth-service/src/server.js:8:8
+2025-06-30 04:54:43:     at ModuleJob.run (node:internal/modules/esm/module_job:274:25)
+2025-06-30 04:54:43:     at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26) {
+2025-06-30 04:54:43:   code: 'EADDRINUSE',
+2025-06-30 04:54:43:   errno: -4091,
+2025-06-30 04:54:43:   syscall: 'listen',
+2025-06-30 04:54:43:   address: '::',
+2025-06-30 04:54:43:   port: 5001
+2025-06-30 04:54:43: }
+2025-06-30 04:54:44: Error: listen EADDRINUSE: address already in use :::5001
+2025-06-30 04:54:44:     at Server.setupListenHandle [as _listen2] (node:net:1939:16)
+2025-06-30 04:54:44:     at listenInCluster (node:net:1996:12)
+2025-06-30 04:54:44:     at Server.listen (node:net:2101:7)
+2025-06-30 04:54:44:     at file:///C:/Users/Soulucion/Documents/myst_comb/backend/auth-service/src/server.js:8:8
+2025-06-30 04:54:44:     at ModuleJob.run (node:internal/modules/esm/module_job:274:25)
+2025-06-30 04:54:44:     at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26) {
+2025-06-30 04:54:44:   code: 'EADDRINUSE',
+2025-06-30 04:54:44:   errno: -4091,
+2025-06-30 04:54:44:   syscall: 'listen',
+2025-06-30 04:54:44:   address: '::',
+2025-06-30 04:54:44:   port: 5001
+2025-06-30 04:54:44: }
+2025-06-30 04:54:45: Error: listen EADDRINUSE: address already in use :::5001
+2025-06-30 04:54:45:     at Server.setupListenHandle [as _listen2] (node:net:1939:16)
+2025-06-30 04:54:45:     at listenInCluster (node:net:1996:12)
+2025-06-30 04:54:45:     at Server.listen (node:net:2101:7)
+2025-06-30 04:54:45:     at file:///C:/Users/Soulucion/Documents/myst_comb/backend/auth-service/src/server.js:8:8
+2025-06-30 04:54:45:     at ModuleJob.run (node:internal/modules/esm/module_job:274:25)
+2025-06-30 04:54:45:     at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26) {
+2025-06-30 04:54:45:   code: 'EADDRINUSE',
+2025-06-30 04:54:45:   errno: -4091,
+2025-06-30 04:54:45:   syscall: 'listen',
+2025-06-30 04:54:45:   address: '::',
+2025-06-30 04:54:45:   port: 5001
+2025-06-30 04:54:45: }
+2025-06-30 04:54:46: Error: listen EADDRINUSE: address already in use :::5001
+2025-06-30 04:54:46:     at Server.setupListenHandle [as _listen2] (node:net:1939:16)
+2025-06-30 04:54:46:     at listenInCluster (node:net:1996:12)
+2025-06-30 04:54:46:     at Server.listen (node:net:2101:7)
+2025-06-30 04:54:46:     at file:///C:/Users/Soulucion/Documents/myst_comb/backend/auth-service/src/server.js:8:8
+2025-06-30 04:54:46:     at ModuleJob.run (node:internal/modules/esm/module_job:274:25)
+2025-06-30 04:54:46:     at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26) {
+2025-06-30 04:54:46:   code: 'EADDRINUSE',
+2025-06-30 04:54:46:   errno: -4091,
+2025-06-30 04:54:46:   syscall: 'listen',
+2025-06-30 04:54:46:   address: '::',
+2025-06-30 04:54:46:   port: 5001
+2025-06-30 04:54:46: }
+2025-06-30 04:54:47: Error: listen EADDRINUSE: address already in use :::5001
+2025-06-30 04:54:47:     at Server.setupListenHandle [as _listen2] (node:net:1939:16)
+2025-06-30 04:54:47:     at listenInCluster (node:net:1996:12)
+2025-06-30 04:54:47:     at Server.listen (node:net:2101:7)
+2025-06-30 04:54:47:     at file:///C:/Users/Soulucion/Documents/myst_comb/backend/auth-service/src/server.js:8:8
+2025-06-30 04:54:47:     at ModuleJob.run (node:internal/modules/esm/module_job:274:25)
+2025-06-30 04:54:47:     at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26) {
+2025-06-30 04:54:47:   code: 'EADDRINUSE',
+2025-06-30 04:54:47:   errno: -4091,
+2025-06-30 04:54:47:   syscall: 'listen',
+2025-06-30 04:54:47:   address: '::',
+2025-06-30 04:54:47:   port: 5001
+2025-06-30 04:54:47: }
+2025-06-30 04:54:48: Error: listen EADDRINUSE: address already in use :::5001
+2025-06-30 04:54:48:     at Server.setupListenHandle [as _listen2] (node:net:1939:16)
+2025-06-30 04:54:48:     at listenInCluster (node:net:1996:12)
+2025-06-30 04:54:48:     at Server.listen (node:net:2101:7)
+2025-06-30 04:54:48:     at file:///C:/Users/Soulucion/Documents/myst_comb/backend/auth-service/src/server.js:8:8
+2025-06-30 04:54:48:     at ModuleJob.run (node:internal/modules/esm/module_job:274:25)
+2025-06-30 04:54:48:     at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26) {
+2025-06-30 04:54:48:   code: 'EADDRINUSE',
+2025-06-30 04:54:48:   errno: -4091,
+2025-06-30 04:54:48:   syscall: 'listen',
+2025-06-30 04:54:48:   address: '::',
+2025-06-30 04:54:48:   port: 5001
+2025-06-30 04:54:48: }
+2025-06-30 04:54:50: Error: listen EADDRINUSE: address already in use :::5001
+2025-06-30 04:54:50:     at Server.setupListenHandle [as _listen2] (node:net:1939:16)
+2025-06-30 04:54:50:     at listenInCluster (node:net:1996:12)
+2025-06-30 04:54:50:     at Server.listen (node:net:2101:7)
+2025-06-30 04:54:50:     at file:///C:/Users/Soulucion/Documents/myst_comb/backend/auth-service/src/server.js:8:8
+2025-06-30 04:54:50:     at ModuleJob.run (node:internal/modules/esm/module_job:274:25)
+2025-06-30 04:54:50:     at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26) {
+2025-06-30 04:54:50:   code: 'EADDRINUSE',
+2025-06-30 04:54:50:   errno: -4091,
+2025-06-30 04:54:50:   syscall: 'listen',
+2025-06-30 04:54:50:   address: '::',
+2025-06-30 04:54:50:   port: 5001
+2025-06-30 04:54:50: }
+2025-06-30 04:54:51: Error: listen EADDRINUSE: address already in use :::5001
+2025-06-30 04:54:51:     at Server.setupListenHandle [as _listen2] (node:net:1939:16)
+2025-06-30 04:54:51:     at listenInCluster (node:net:1996:12)
+2025-06-30 04:54:51:     at Server.listen (node:net:2101:7)
+2025-06-30 04:54:51:     at file:///C:/Users/Soulucion/Documents/myst_comb/backend/auth-service/src/server.js:8:8
+2025-06-30 04:54:51:     at ModuleJob.run (node:internal/modules/esm/module_job:274:25)
+2025-06-30 04:54:51:     at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26) {
+2025-06-30 04:54:51:   code: 'EADDRINUSE',
+2025-06-30 04:54:51:   errno: -4091,
+2025-06-30 04:54:51:   syscall: 'listen',
+2025-06-30 04:54:51:   address: '::',
+2025-06-30 04:54:51:   port: 5001
+2025-06-30 04:54:51: }
+2025-06-30 04:54:52: Error: listen EADDRINUSE: address already in use :::5001
+2025-06-30 04:54:52:     at Server.setupListenHandle [as _listen2] (node:net:1939:16)
+2025-06-30 04:54:52:     at listenInCluster (node:net:1996:12)
+2025-06-30 04:54:52:     at Server.listen (node:net:2101:7)
+2025-06-30 04:54:52:     at file:///C:/Users/Soulucion/Documents/myst_comb/backend/auth-service/src/server.js:8:8
+2025-06-30 04:54:52:     at ModuleJob.run (node:internal/modules/esm/module_job:274:25)
+2025-06-30 04:54:52:     at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26) {
+2025-06-30 04:54:52:   code: 'EADDRINUSE',
+2025-06-30 04:54:52:   errno: -4091,
+2025-06-30 04:54:52:   syscall: 'listen',
+2025-06-30 04:54:52:   address: '::',
+2025-06-30 04:54:52:   port: 5001
+2025-06-30 04:54:52: }
+2025-06-30 04:54:53: Error: listen EADDRINUSE: address already in use :::5001
+2025-06-30 04:54:53:     at Server.setupListenHandle [as _listen2] (node:net:1939:16)
+2025-06-30 04:54:53:     at listenInCluster (node:net:1996:12)
+2025-06-30 04:54:53:     at Server.listen (node:net:2101:7)
+2025-06-30 04:54:53:     at file:///C:/Users/Soulucion/Documents/myst_comb/backend/auth-service/src/server.js:8:8
+2025-06-30 04:54:53:     at ModuleJob.run (node:internal/modules/esm/module_job:274:25)
+2025-06-30 04:54:53:     at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26) {
+2025-06-30 04:54:53:   code: 'EADDRINUSE',
+2025-06-30 04:54:53:   errno: -4091,
+2025-06-30 04:54:53:   syscall: 'listen',
+2025-06-30 04:54:53:   address: '::',
+2025-06-30 04:54:53:   port: 5001
+2025-06-30 04:54:53: }
+2025-06-30 04:54:54: Error: listen EADDRINUSE: address already in use :::5001
+2025-06-30 04:54:54:     at Server.setupListenHandle [as _listen2] (node:net:1939:16)
+2025-06-30 04:54:54:     at listenInCluster (node:net:1996:12)
+2025-06-30 04:54:54:     at Server.listen (node:net:2101:7)
+2025-06-30 04:54:54:     at file:///C:/Users/Soulucion/Documents/myst_comb/backend/auth-service/src/server.js:8:8
+2025-06-30 04:54:54:     at ModuleJob.run (node:internal/modules/esm/module_job:274:25)
+2025-06-30 04:54:54:     at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26) {
+2025-06-30 04:54:54:   code: 'EADDRINUSE',
+2025-06-30 04:54:54:   errno: -4091,
+2025-06-30 04:54:54:   syscall: 'listen',
+2025-06-30 04:54:54:   address: '::',
+2025-06-30 04:54:54:   port: 5001
+2025-06-30 04:54:54: }
+2025-06-30 04:54:55: Error: listen EADDRINUSE: address already in use :::5001
+2025-06-30 04:54:55:     at Server.setupListenHandle [as _listen2] (node:net:1939:16)
+2025-06-30 04:54:55:     at listenInCluster (node:net:1996:12)
+2025-06-30 04:54:55:     at Server.listen (node:net:2101:7)
+2025-06-30 04:54:55:     at file:///C:/Users/Soulucion/Documents/myst_comb/backend/auth-service/src/server.js:8:8
+2025-06-30 04:54:55:     at ModuleJob.run (node:internal/modules/esm/module_job:274:25)
+2025-06-30 04:54:55:     at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26) {
+2025-06-30 04:54:55:   code: 'EADDRINUSE',
+2025-06-30 04:54:55:   errno: -4091,
+2025-06-30 04:54:55:   syscall: 'listen',
+2025-06-30 04:54:55:   address: '::',
+2025-06-30 04:54:55:   port: 5001
+2025-06-30 04:54:55: }
+2025-06-30 04:54:56: Error: listen EADDRINUSE: address already in use :::5001
+2025-06-30 04:54:56:     at Server.setupListenHandle [as _listen2] (node:net:1939:16)
+2025-06-30 04:54:56:     at listenInCluster (node:net:1996:12)
+2025-06-30 04:54:56:     at Server.listen (node:net:2101:7)
+2025-06-30 04:54:56:     at file:///C:/Users/Soulucion/Documents/myst_comb/backend/auth-service/src/server.js:8:8
+2025-06-30 04:54:56:     at ModuleJob.run (node:internal/modules/esm/module_job:274:25)
+2025-06-30 04:54:56:     at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26) {
+2025-06-30 04:54:56:   code: 'EADDRINUSE',
+2025-06-30 04:54:56:   errno: -4091,
+2025-06-30 04:54:56:   syscall: 'listen',
+2025-06-30 04:54:56:   address: '::',
+2025-06-30 04:54:56:   port: 5001
+2025-06-30 04:54:56: }
+2025-06-30 04:54:57: Error: listen EADDRINUSE: address already in use :::5001
+2025-06-30 04:54:57:     at Server.setupListenHandle [as _listen2] (node:net:1939:16)
+2025-06-30 04:54:57:     at listenInCluster (node:net:1996:12)
+2025-06-30 04:54:57:     at Server.listen (node:net:2101:7)
+2025-06-30 04:54:57:     at file:///C:/Users/Soulucion/Documents/myst_comb/backend/auth-service/src/server.js:8:8
+2025-06-30 04:54:57:     at ModuleJob.run (node:internal/modules/esm/module_job:274:25)
+2025-06-30 04:54:57:     at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26) {
+2025-06-30 04:54:57:   code: 'EADDRINUSE',
+2025-06-30 04:54:57:   errno: -4091,
+2025-06-30 04:54:57:   syscall: 'listen',
+2025-06-30 04:54:57:   address: '::',
+2025-06-30 04:54:57:   port: 5001
+2025-06-30 04:54:57: }
+2025-06-30 04:54:58: Error: listen EADDRINUSE: address already in use :::5001
+2025-06-30 04:54:58:     at Server.setupListenHandle [as _listen2] (node:net:1939:16)
+2025-06-30 04:54:58:     at listenInCluster (node:net:1996:12)
+2025-06-30 04:54:58:     at Server.listen (node:net:2101:7)
+2025-06-30 04:54:58:     at file:///C:/Users/Soulucion/Documents/myst_comb/backend/auth-service/src/server.js:8:8
+2025-06-30 04:54:58:     at ModuleJob.run (node:internal/modules/esm/module_job:274:25)
+2025-06-30 04:54:58:     at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26) {
+2025-06-30 04:54:58:   code: 'EADDRINUSE',
+2025-06-30 04:54:58:   errno: -4091,
+2025-06-30 04:54:58:   syscall: 'listen',
+2025-06-30 04:54:58:   address: '::',
+2025-06-30 04:54:58:   port: 5001
+2025-06-30 04:54:58: }
+2025-06-30 04:54:59: Error: listen EADDRINUSE: address already in use :::5001
+2025-06-30 04:54:59:     at Server.setupListenHandle [as _listen2] (node:net:1939:16)
+2025-06-30 04:54:59:     at listenInCluster (node:net:1996:12)
+2025-06-30 04:54:59:     at Server.listen (node:net:2101:7)
+2025-06-30 04:54:59:     at file:///C:/Users/Soulucion/Documents/myst_comb/backend/auth-service/src/server.js:8:8
+2025-06-30 04:54:59:     at ModuleJob.run (node:internal/modules/esm/module_job:274:25)
+2025-06-30 04:54:59:     at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26) {
+2025-06-30 04:54:59:   code: 'EADDRINUSE',
+2025-06-30 04:54:59:   errno: -4091,
+2025-06-30 04:54:59:   syscall: 'listen',
+2025-06-30 04:54:59:   address: '::',
+2025-06-30 04:54:59:   port: 5001
+2025-06-30 04:54:59: }

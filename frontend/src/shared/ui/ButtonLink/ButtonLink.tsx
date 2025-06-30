@@ -35,6 +35,7 @@ interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
   variant: VariantTypes;
   className?: string;
   disabled?: boolean;
+  long?: boolean;
   type?: 'button' | 'submit' | 'reset';
   arrowTextBlueStyles?: string;
 }
@@ -48,6 +49,7 @@ const ButtonLink = forwardRef<HTMLButtonElement, Props>((props, ref) => {
     to,
     size,
     disabled = false,
+    long = false,
     className,
     arrowTextBlueStyles,
     type = 'button',
@@ -91,14 +93,15 @@ const ButtonLink = forwardRef<HTMLButtonElement, Props>((props, ref) => {
         </div>
       )}
       {variant === 'arrowTextBlue' && (
-        <div className="flex items-center">
+        <div className={`flex items-center ${long && 'w-full'}`}>
           {text && (
             <span
-              className={`rounded-[30px] bg-[#2C05F2] px-[19.5px] py-[12.5px] font-sans ${arrowTextBlueStyles}`}
+              className={`rounded-[30px] bg-[#2C05F2] px-[19.5px] py-[12.5px] font-sans ${arrowTextBlueStyles} ${long && 'w-full'}`}
             >
               <Text
                 textType="Desktop/Button"
                 text={text}
+                align={long ? 'center' : 'left'}
                 color="base/BG_block"
                 Tag="p"
               />

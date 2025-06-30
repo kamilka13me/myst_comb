@@ -8,10 +8,6 @@ const __dirname = path.dirname(__filename);
 
 // Шлях до папки schemas відносно файлу
 const schemasDir = path.join(__dirname, "schemas");
-const scrDir = path.join(__dirname, "..");
-
-// Папка, де зберігаються всі JSON схеми
-// const schemasDir = path.join(process.cwd(), "src", "docs", "schemas");
 
 // Зчитуємо всі JSON-файли та парсимо їх
 const schemas = fs.readdirSync(schemasDir).reduce((acc, file) => {
@@ -34,16 +30,16 @@ const options = {
       version: "1.0.0",
       description: "Документація API для сервісу авторизації",
     },
-    servers: [{ url: `http://localhost:${process.env.PORT}/api/auth/` }],
+    servers: [{ url: "http://localhost:5001/api/forms/" }],
     components: {
       schemas: schemas,
     },
   },
   apis: [
-    `${scrDir}/routes/*.js`,
-    `${scrDir}/models/*.js`,
-    `${scrDir}/controllers/*.js`,
-    `${scrDir}/utils/*.js`,
+    "./src//routes/*.js",
+    "./src//models/*.js",
+    "./src/controllers/*.js",
+    "./src/utils/*.js",
   ],
 };
 // console.log(schemasDir);

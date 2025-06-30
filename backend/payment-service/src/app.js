@@ -1,6 +1,4 @@
 import express from "express";
-import authRoutes from "./routes/auth.routes.js";
-import sessionsRoutes from "./routes/session.routes.js";
 import dotenv from "dotenv";
 import { connectDB } from "./config/db.js";
 import fs from "fs";
@@ -11,16 +9,17 @@ import morganMiddleware from "./logger/morgan.js";
 import morgan from "morgan";
 import swaggerSpec from "./docs/swaggerConfig.js";
 import cookieParser from "cookie-parser";
+import { createPayment } from "./controllers/liqpay.controller.js";
 
 const envFile = `.env${process.env.NODE_ENV ? `.${process.env.NODE_ENV}` : ""}`;
 
-// if (fs.existsSync(envFile)) {
-//   dotenv.config({ path: envFile });
-//   console.log(`Loaded environment from ${envFile}`);
-// } else {
-//   dotenv.config(); // fallback на .env
-//   console.log("Loaded environment from default .env");
-// }
+if (fs.existsSync(envFile)) {
+  dotenv.config({ path: envFile });
+  console.log(`Loaded environment from ${envFile}`);
+} else {
+  dotenv.config(); // fallback на .env
+  console.log("Loaded environment from default .env");
+}
 
 connectDB();
 
@@ -56,7 +55,6 @@ app.use((err, req, res, next) => {
 });
 app.use(validateBody);
 
-app.use("/api/auth", authRoutes);
-app.use("/api/sessions", sessionsRoutes);
+app.use("/api/liqpay", createPayment);
 
 export default app;

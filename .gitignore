@@ -27,6 +27,8 @@ yarn-error.log*
 
 # local env files
 .env*.local
+.env.test
+.env.development
 
 # vercel
 .vercel
@@ -37,6 +39,8 @@ next-env.d.ts
 
 # Залежності
 **/node_modules/
+
+**/uploads
 
 # Логи
 npm-debug.log

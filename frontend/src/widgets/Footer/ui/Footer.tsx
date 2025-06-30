@@ -18,10 +18,10 @@ const Footer = () => {
   //   return <div>no redy yet</div>;
   // }
   const About = [
-    { title: 'Проєкти', link: '/404' },
-    { title: 'Послуги', link: '/404' },
-    { title: 'Про нас', link: '/404' },
-    { title: 'Контакти', link: '/404' },
+    { title: 'Проєкти', link: '/#projects' },
+    { title: 'Послуги', link: '/#services' },
+    { title: 'Про нас', link: '/#about' },
+    // { title: 'Контакти', link: '/404' },
   ];
 
   return (

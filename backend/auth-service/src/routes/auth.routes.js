@@ -15,6 +15,10 @@ router.post("/logout", logout);
 
 router.get("/refresh-token", RefreshAccesToken);
 
+router.get("/", (req, res) => {
+  res.status(200).json({ message: "work" });
+});
+
 router.post("/sessions/delete", deleteSessions);
 
 export default router;
