@@ -21,6 +21,8 @@ interface IRangeDate {
 interface Props {
   filterName: string;
   hendleSetFilterName: (name?: string) => void;
+  onChangeDateFrom?: (val: string) => void;
+  onChangeDateTo?: (val: string) => void;
 }
 
 export const Calendar: FC<Props> = ({ filterName, hendleSetFilterName }) => {

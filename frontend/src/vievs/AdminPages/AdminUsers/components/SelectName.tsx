@@ -11,6 +11,7 @@ import InputSerch from './InputSerch';
 interface Props {
   filterName: string;
   hendleSetFilterName: (name?: string) => void;
+  onChange: (val: string) => void;
 }
 
 export default function SelectName({

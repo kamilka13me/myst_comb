@@ -9,6 +9,7 @@ import checkbox from '@/shared/assets/icons/checkbox.svg?react';
 interface Props {
   filterName: string;
   hendleSetFilterName: (name?: string) => void;
+  onChange: (val: string) => void;
 }
 
 export default function SelectTypeServices({

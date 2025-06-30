@@ -8,6 +8,8 @@ import { createKey } from '@/shared/hooks/createKey';
 interface Props {
   filterName: string;
   hendleSetFilterName: (name?: string) => void;
+  onChangeDateFrom: (val: string) => void;
+  onChangeDateTo: (val: string) => void;
 }
 
 export default function SelectDate({
