@@ -77,7 +77,7 @@ export default function SupportForm() {
     try {
       const createdData = await apiRequest<FormInputsSupport>(
         'post',
-        '/support',
+        '/forms/support',
         data,
       );
       console.log(createdData);

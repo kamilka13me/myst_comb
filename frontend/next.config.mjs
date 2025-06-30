@@ -4,7 +4,7 @@ const nextConfig = {
     return [
       {
         source: '/api/:path*',
-        destination: 'http://localhost:8001/:path*',
+        destination: 'http://alicesocial.pp.ua:5000/api/:path*',
       },
     ];
   },

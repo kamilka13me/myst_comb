@@ -1,0 +1,205 @@
+2025-06-30 02:51:59: [dotenv@16.6.0] injecting env (0) from .env
+2025-06-30 02:51:59: 🚀 Gateway listening on http://localhost:5000
+2025-06-30 02:51:59: 🔀 Route: /api/auth/ → http://localhost:5001 (префікс зберігається)
+2025-06-30 02:51:59: 🔀 Route: /service2 → http://localhost:5002 (префікс обрізається)
+2025-06-30 02:51:59: 🔀 Route: /service3 → http://localhost:5003 (префікс обрізається)
+2025-06-30 02:52:05: (node:30008) [DEP0060] DeprecationWarning: The `util._extend` API is deprecated. Please use Object.assign() instead.
+2025-06-30 02:52:05: (Use `node --trace-deprecation ...` to show where the warning was created)
+2025-06-30 02:54:32: [dotenv@16.6.0] injecting env (0) from .env
+2025-06-30 02:54:32: 🚀 Gateway listening on http://localhost:5000
+2025-06-30 02:54:32: 🔀 Route: /api/auth/ → http://localhost:5001 (префікс зберігається)
+2025-06-30 02:54:32: 🔀 Route: /service2 → http://localhost:5002 (префікс обрізається)
+2025-06-30 02:54:32: 🔀 Route: /service3 → http://localhost:5003 (префікс обрізається)
+2025-06-30 02:54:34: (node:26432) [DEP0060] DeprecationWarning: The `util._extend` API is deprecated. Please use Object.assign() instead.
+2025-06-30 02:54:34: (Use `node --trace-deprecation ...` to show where the warning was created)
+2025-06-30 02:55:18: [dotenv@16.6.0] injecting env (0) from .env
+2025-06-30 02:55:18: 🚀 Gateway listening on http://localhost:5000
+2025-06-30 02:55:18: 🔀 Route: /api/auth/  → http://localhost:5001 (префікс зберігається)
+2025-06-30 02:55:18: 🔀 Route: /service2    → http://localhost:5002 (префікс обрізається)
+2025-06-30 02:55:18: 🔀 Route: /service3    → http://localhost:5003 (префікс обрізається)
+2025-06-30 02:55:23: (node:27928) [DEP0060] DeprecationWarning: The `util._extend` API is deprecated. Please use Object.assign() instead.
+2025-06-30 02:55:23: (Use `node --trace-deprecation ...` to show where the warning was created)
+2025-06-30 02:55:44: [dotenv@16.6.0] injecting env (0) from .env
+2025-06-30 02:55:44: 🚀 Gateway listening on http://localhost:5000
+2025-06-30 02:55:44: 🔀 Route: /api/auth/  → http://localhost:5001 (префікс зберігається)
+2025-06-30 02:55:44: 🔀 Route: /service2    → http://localhost:5002 (префікс обрізається)
+2025-06-30 02:55:44: 🔀 Route: /service3    → http://localhost:5003 (префікс обрізається)
+2025-06-30 02:55:53: [dotenv@16.6.0] injecting env (0) from .env
+2025-06-30 02:55:53: 🚀 Gateway listening on http://localhost:5000
+2025-06-30 02:55:53: 🔀 Route: /api/auth/  → http://localhost:5001 (префікс зберігається)
+2025-06-30 02:55:53: 🔀 Route: /service2    → http://localhost:5002 (префікс обрізається)
+2025-06-30 02:55:53: 🔀 Route: /service3    → http://localhost:5003 (префікс обрізається)
+2025-06-30 02:56:11: 🚀 Gateway listening on http://localhost:5000
+2025-06-30 02:56:11: 🔀 Route: /api/auth/  → http://localhost:5001 (префікс зберігається)
+2025-06-30 02:56:11: 🔀 Route: /service2    → http://localhost:5002 (префікс обрізається)
+2025-06-30 02:56:11: 🔀 Route: /service3    → http://localhost:5003 (префікс обрізається)
+2025-06-30 02:56:12: 🚀 Gateway listening on http://localhost:5000
+2025-06-30 02:56:12: 🔀 Route: /api/auth/  → http://localhost:5001 (префікс зберігається)
+2025-06-30 02:56:12: 🔀 Route: /service2    → http://localhost:5002 (префікс обрізається)
+2025-06-30 02:56:12: 🔀 Route: /service3    → http://localhost:5003 (префікс обрізається)
+2025-06-30 02:56:16: (node:5572) [DEP0060] DeprecationWarning: The `util._extend` API is deprecated. Please use Object.assign() instead.
+2025-06-30 02:56:16: (Use `node --trace-deprecation ...` to show where the warning was created)
+2025-06-30 02:57:28: 🚀 Gateway listening on http://localhost:5000
+2025-06-30 02:57:28: 🔀 Route: /api/auth/  → http://localhost:5001 (префікс зберігається)
+2025-06-30 02:57:28: 🔀 Route: /service2    → http://localhost:5002 (префікс обрізається)
+2025-06-30 02:57:28: 🔀 Route: /service3    → http://localhost:5003 (префікс обрізається)
+2025-06-30 03:55:08: 🚀 API Gateway listening on http://localhost:5000
+2025-06-30 03:55:08: 🔁 Mapping: /api/auth → http://localhost:5001/api/auth/api/auth
+2025-06-30 03:55:08: 🔁 Mapping: /api/sessions → http://localhost:5001/api/sessions/api/sessions
+2025-06-30 03:55:08: 🔁 Mapping: /api/forms → http://localhost:5002/api/forms/api/forms
+2025-06-30 03:55:08: 🔁 Mapping: /api/liqpay → http://localhost:5003/api/liqpay/api/liqpay
+2025-06-30 03:55:14: (node:30504) [DEP0060] DeprecationWarning: The `util._extend` API is deprecated. Please use Object.assign() instead.
+2025-06-30 03:55:14: (Use `node --trace-deprecation ...` to show where the warning was created)
+2025-06-30 03:57:22: 🚀 API Gateway listening on http://localhost:5000
+2025-06-30 03:57:22: 🔁 Mapping: /api/auth → http://localhost:5001/api/auth/api/auth
+2025-06-30 03:57:22: 🔁 Mapping: /api/sessions → http://localhost:5001/api/sessions/api/sessions
+2025-06-30 03:57:22: 🔁 Mapping: /api/forms → http://localhost:5002/api/forms/api/forms
+2025-06-30 03:57:22: 🔁 Mapping: /api/liqpay → http://localhost:5003/api/liqpay/api/liqpay
+2025-06-30 03:57:33: 🚀 API Gateway listening on http://localhost:5000
+2025-06-30 03:57:33: 🔁 Mapping: /api/auth → http://localhost:5001/api/auth/api/auth
+2025-06-30 03:57:33: 🔁 Mapping: /api/sessions → http://localhost:5001/api/sessions/api/sessions
+2025-06-30 03:57:33: 🔁 Mapping: /api/forms → http://localhost:5002/api/forms/api/forms
+2025-06-30 03:57:33: 🔁 Mapping: /api/liqpay → http://localhost:5003/api/liqpay/api/liqpay
+2025-06-30 03:57:34: 🚀 API Gateway listening on http://localhost:5000
+2025-06-30 03:57:34: 🔁 Mapping: /api/auth → http://localhost:5001/api/auth/api/auth
+2025-06-30 03:57:34: 🔁 Mapping: /api/sessions → http://localhost:5001/api/sessions/api/sessions
+2025-06-30 03:57:34: 🔁 Mapping: /api/forms → http://localhost:5002/api/forms/api/forms
+2025-06-30 03:57:34: 🔁 Mapping: /api/liqpay → http://localhost:5003/api/liqpay/api/liqpay
+2025-06-30 03:57:38: (node:20428) [DEP0060] DeprecationWarning: The `util._extend` API is deprecated. Please use Object.assign() instead.
+2025-06-30 03:57:38: (Use `node --trace-deprecation ...` to show where the warning was created)
+2025-06-30 03:57:50: 🚀 API Gateway listening on http://localhost:5000
+2025-06-30 03:57:50: 🔁 Mapping: /api/auth → http://localhost:5001/api/auth/api/auth
+2025-06-30 03:57:50: 🔁 Mapping: /api/sessions → http://localhost:5001/api/sessions/api/sessions
+2025-06-30 03:57:50: 🔁 Mapping: /api/forms → http://localhost:5002/api/forms/api/forms
+2025-06-30 03:57:50: 🔁 Mapping: /api/liqpay → http://localhost:5003/api/liqpay/api/liqpay
+2025-06-30 03:57:54: (node:7224) [DEP0060] DeprecationWarning: The `util._extend` API is deprecated. Please use Object.assign() instead.
+2025-06-30 03:57:54: (Use `node --trace-deprecation ...` to show where the warning was created)
+2025-06-30 03:58:07: 🚀 API Gateway listening on http://localhost:5000
+2025-06-30 03:58:07: 🔁 Mapping: /api/auth → http://localhost:5001/api/auth/api/auth
+2025-06-30 03:58:07: 🔁 Mapping: /api/sessions → http://localhost:5001/api/sessions/api/sessions
+2025-06-30 03:58:07: 🔁 Mapping: /api/forms → http://localhost:5002/api/forms/api/forms
+2025-06-30 03:58:07: 🔁 Mapping: /api/liqpay → http://localhost:5003/api/liqpay/api/liqpay
+2025-06-30 03:59:04: 🚀 API Gateway listening on http://localhost:5000
+2025-06-30 03:59:04: 🔁 Mapping: /api/auth → http://localhost:5001/api/auth/api/auth
+2025-06-30 03:59:04: 🔁 Mapping: /api/sessions → http://localhost:5001/api/sessions/api/sessions
+2025-06-30 03:59:04: 🔁 Mapping: /api/forms → http://localhost:5002/api/forms/api/forms
+2025-06-30 03:59:04: 🔁 Mapping: /api/liqpay → http://localhost:5003/api/liqpay/api/liqpay
+2025-06-30 03:59:18: 🚀 API Gateway listening on http://localhost:5000
+2025-06-30 03:59:18: 🔁 Mapping: /api/auth → http://localhost:5001/api/auth/api/auth
+2025-06-30 03:59:18: 🔁 Mapping: /api/sessions → http://localhost:5001/api/sessions/api/sessions
+2025-06-30 03:59:18: 🔁 Mapping: /api/forms → http://localhost:5002/api/forms/api/forms
+2025-06-30 03:59:18: 🔁 Mapping: /api/liqpay → http://localhost:5003/api/liqpay/api/liqpay
+2025-06-30 03:59:31: (node:5308) [DEP0060] DeprecationWarning: The `util._extend` API is deprecated. Please use Object.assign() instead.
+2025-06-30 03:59:31: (Use `node --trace-deprecation ...` to show where the warning was created)
+2025-06-30 04:05:31: 🚀 API Gateway listening on http://localhost:5000
+2025-06-30 04:05:31: 🔁 Mapping: /api/auth → http://localhost:5001/api/auth/api/auth
+2025-06-30 04:05:31: 🔁 Mapping: /api/sessions → http://localhost:5001/api/sessions/api/sessions
+2025-06-30 04:05:31: 🔁 Mapping: /api/forms → http://localhost:5002/api/forms/api/forms
+2025-06-30 04:05:31: 🔁 Mapping: /api/liqpay → http://localhost:5003/api/liqpay/api/liqpay
+2025-06-30 04:05:41: (node:31192) [DEP0060] DeprecationWarning: The `util._extend` API is deprecated. Please use Object.assign() instead.
+2025-06-30 04:05:41: (Use `node --trace-deprecation ...` to show where the warning was created)
+2025-06-30 04:08:44: 🚀 API Gateway listening on http://localhost:5000
+2025-06-30 04:08:44: 🔁 Mapping: /api/auth → http://localhost:5001/api/auth/api/auth
+2025-06-30 04:08:44: 🔁 Mapping: /api/sessions → http://localhost:5001/api/sessions/api/sessions
+2025-06-30 04:08:44: 🔁 Mapping: /api/forms → http://localhost:5002/api/forms/api/forms
+2025-06-30 04:08:44: 🔁 Mapping: /api/liqpay → http://localhost:5003/api/liqpay/api/liqpay
+2025-06-30 04:09:13: (node:31924) [DEP0060] DeprecationWarning: The `util._extend` API is deprecated. Please use Object.assign() instead.
+2025-06-30 04:09:13: (Use `node --trace-deprecation ...` to show where the warning was created)
+2025-06-30 04:11:14: 🚀 API Gateway listening on http://localhost:5000
+2025-06-30 04:11:14: 🔁 Mapping: /api/auth → http://localhost:5001/api/auth/api/auth
+2025-06-30 04:11:14: 🔁 Mapping: /api/sessions → http://localhost:5001/api/sessions/api/sessions
+2025-06-30 04:11:14: 🔁 Mapping: /api/forms → http://localhost:5002/api/forms/api/forms
+2025-06-30 04:11:14: 🔁 Mapping: /api/liqpay → http://localhost:5003/api/liqpay/api/liqpay
+2025-06-30 04:11:22: (node:24832) [DEP0060] DeprecationWarning: The `util._extend` API is deprecated. Please use Object.assign() instead.
+2025-06-30 04:11:22: (Use `node --trace-deprecation ...` to show where the warning was created)
+2025-06-30 04:12:58: 🚀 API Gateway listening on http://localhost:5000
+2025-06-30 04:12:58: 🔁 Mapping: /api/auth → http://localhost:5001/api/auth/api/auth
+2025-06-30 04:12:58: 🔁 Mapping: /api/sessions → http://localhost:5001/api/sessions/api/sessions
+2025-06-30 04:12:58: 🔁 Mapping: /api/forms → http://localhost:5002/api/forms/api/forms
+2025-06-30 04:12:58: 🔁 Mapping: /api/liqpay → http://localhost:5003/api/liqpay/api/liqpay
+2025-06-30 04:12:59: (node:10968) [DEP0060] DeprecationWarning: The `util._extend` API is deprecated. Please use Object.assign() instead.
+2025-06-30 04:12:59: (Use `node --trace-deprecation ...` to show where the warning was created)
+2025-06-30 04:14:07: 🚀 API Gateway listening on http://localhost:5000
+2025-06-30 04:14:07: 🔁 Mapping: /api/auth → http://localhost:5001/api/auth/api/auth
+2025-06-30 04:14:07: 🔁 Mapping: /api/sessions → http://localhost:5001/api/sessions/api/sessions
+2025-06-30 04:14:07: 🔁 Mapping: /api/forms → http://localhost:5002/api/forms/api/forms
+2025-06-30 04:14:07: 🔁 Mapping: /api/liqpay → http://localhost:5003/api/liqpay/api/liqpay
+2025-06-30 04:14:13: (node:11524) [DEP0060] DeprecationWarning: The `util._extend` API is deprecated. Please use Object.assign() instead.
+2025-06-30 04:14:13: (Use `node --trace-deprecation ...` to show where the warning was created)
+2025-06-30 04:17:03: 🚀 API Gateway listening on http://localhost:5000
+2025-06-30 04:17:03: 🔁 Mapping: /api/auth → http://localhost:5001/api/auth/api/auth
+2025-06-30 04:17:03: 🔁 Mapping: /api/sessions → http://localhost:5001/api/sessions/api/sessions
+2025-06-30 04:17:03: 🔁 Mapping: /api/forms → http://localhost:5002/api/forms/api/forms
+2025-06-30 04:17:03: 🔁 Mapping: /api/liqpay → http://localhost:5003/api/liqpay/api/liqpay
+2025-06-30 04:17:04: 🚀 API Gateway listening on http://localhost:5000
+2025-06-30 04:17:04: 🔁 Mapping: /api/auth → http://localhost:5001/api/auth/api/auth
+2025-06-30 04:17:04: 🔁 Mapping: /api/sessions → http://localhost:5001/api/sessions/api/sessions
+2025-06-30 04:17:04: 🔁 Mapping: /api/forms → http://localhost:5002/api/forms/api/forms
+2025-06-30 04:17:04: 🔁 Mapping: /api/liqpay → http://localhost:5003/api/liqpay/api/liqpay
+2025-06-30 04:26:31: 🚀 API Gateway listening on http://localhost:5000
+2025-06-30 04:26:31: 🔁 Mapping: /api/auth → http://localhost:5001/api/auth/api/auth
+2025-06-30 04:26:31: 🔁 Mapping: /api/sessions → http://localhost:5001/api/sessions/api/sessions
+2025-06-30 04:26:31: 🔁 Mapping: /api/forms → http://localhost:5002/api/forms/api/forms
+2025-06-30 04:26:31: 🔁 Mapping: /api/liqpay → http://localhost:5003/api/liqpay/api/liqpay
+2025-06-30 04:27:21: 🚀 API Gateway listening on http://localhost:5000
+2025-06-30 04:27:21: 🔁 Mapping: /api/auth → http://localhost:5001/api/auth/api/auth
+2025-06-30 04:27:21: 🔁 Mapping: /api/sessions → http://localhost:5001/api/sessions/api/sessions
+2025-06-30 04:27:21: 🔁 Mapping: /api/forms → http://localhost:5002/api/forms/api/forms
+2025-06-30 04:27:21: 🔁 Mapping: /api/liqpay → http://localhost:5003/api/liqpay/api/liqpay
+2025-06-30 04:28:28: 🚀 API Gateway listening on http://localhost:5000
+2025-06-30 04:28:28: 🔁 Mapping: /api/auth → http://localhost:5001/api/auth/api/auth
+2025-06-30 04:28:28: 🔁 Mapping: /api/sessions → http://localhost:5001/api/sessions/api/sessions
+2025-06-30 04:28:28: 🔁 Mapping: /api/forms → http://localhost:5002/api/forms/api/forms
+2025-06-30 04:28:28: 🔁 Mapping: /api/liqpay → http://localhost:5003/api/liqpay/api/liqpay
+2025-06-30 04:30:52: 🚀 API Gateway listening on http://localhost:5000
+2025-06-30 04:30:52: 🔁 Mapping: /api/auth → http://localhost:5001/api/auth/api/auth
+2025-06-30 04:30:52: 🔁 Mapping: /api/sessions → http://localhost:5001/api/sessions/api/sessions
+2025-06-30 04:30:52: 🔁 Mapping: /api/forms → http://localhost:5002/api/forms/api/forms
+2025-06-30 04:30:52: 🔁 Mapping: /api/liqpay → http://localhost:5003/api/liqpay/api/liqpay
+2025-06-30 04:33:36: (node:28364) [DEP0060] DeprecationWarning: The `util._extend` API is deprecated. Please use Object.assign() instead.
+2025-06-30 04:33:36: (Use `node --trace-deprecation ...` to show where the warning was created)
+2025-06-30 04:45:09: 🚀 API Gateway listening on http://localhost:5000
+2025-06-30 04:45:09: 🔁 Mapping: /api/auth → http://localhost:5001/api/auth/api/auth
+2025-06-30 04:45:09: 🔁 Mapping: /api/sessions → http://localhost:5001/api/sessions/api/sessions
+2025-06-30 04:45:09: 🔁 Mapping: /api/forms → http://localhost:5002/api/forms/api/forms
+2025-06-30 04:45:09: 🔁 Mapping: /api/liqpay → http://localhost:5003/api/liqpay/api/liqpay
+2025-06-30 04:46:25: (node:27928) [DEP0060] DeprecationWarning: The `util._extend` API is deprecated. Please use Object.assign() instead.
+2025-06-30 04:46:25: (Use `node --trace-deprecation ...` to show where the warning was created)
+2025-06-30 04:53:41: 🚀 API Gateway listening on http://localhost:5000
+2025-06-30 04:53:41: 🔁 Mapping: /api/auth → http://localhost:5001/api/auth/api/auth
+2025-06-30 04:53:41: 🔁 Mapping: /api/sessions → http://localhost:5001/api/sessions/api/sessions
+2025-06-30 04:53:41: 🔁 Mapping: /api/forms → http://localhost:5002/api/forms/api/forms
+2025-06-30 04:53:41: 🔁 Mapping: /api/liqpay → http://localhost:5003/api/liqpay/api/liqpay
+2025-06-30 04:53:49: (node:25468) [DEP0060] DeprecationWarning: The `util._extend` API is deprecated. Please use Object.assign() instead.
+2025-06-30 04:53:49: (Use `node --trace-deprecation ...` to show where the warning was created)
+2025-06-30 04:55:06: 🚀 API Gateway listening on http://localhost:5000
+2025-06-30 04:55:06: 🔁 Mapping: /api/auth → http://localhost:5001/api/auth/api/auth
+2025-06-30 04:55:06: 🔁 Mapping: /api/sessions → http://localhost:5001/api/sessions/api/sessions
+2025-06-30 04:55:06: 🔁 Mapping: /api/forms → http://localhost:5002/api/forms/api/forms
+2025-06-30 04:55:06: 🔁 Mapping: /api/liqpay → http://localhost:5003/api/liqpay/api/liqpay
+2025-06-30 04:55:10: (node:27228) [DEP0060] DeprecationWarning: The `util._extend` API is deprecated. Please use Object.assign() instead.
+2025-06-30 04:55:10: (Use `node --trace-deprecation ...` to show where the warning was created)
+2025-06-30 05:01:14: 🚀 API Gateway listening on http://localhost:5000
+2025-06-30 05:01:14: 🔁 Mapping: /api/auth → http://localhost:5001/api/auth/api/auth
+2025-06-30 05:01:14: 🔁 Mapping: /api/sessions → http://localhost:5001/api/sessions/api/sessions
+2025-06-30 05:01:14: 🔁 Mapping: /api/forms → http://localhost:5002/api/forms/api/forms
+2025-06-30 05:01:14: 🔁 Mapping: /api/liqpay → http://localhost:5003/api/liqpay/api/liqpay
+2025-06-30 05:01:19: (node:28896) [DEP0060] DeprecationWarning: The `util._extend` API is deprecated. Please use Object.assign() instead.
+2025-06-30 05:01:19: (Use `node --trace-deprecation ...` to show where the warning was created)
+2025-06-30 05:08:42: 🚀 API Gateway listening on http://localhost:5000
+2025-06-30 05:08:42: 🔁 Mapping: /api/auth → http://localhost:5001/api/auth/api/auth
+2025-06-30 05:08:42: 🔁 Mapping: /api/sessions → http://localhost:5001/api/sessions/api/sessions
+2025-06-30 05:08:42: 🔁 Mapping: /api/forms → http://localhost:5002/api/forms/api/forms
+2025-06-30 05:08:42: 🔁 Mapping: /api/liqpay → http://localhost:5003/api/liqpay/api/liqpay
+2025-06-30 05:10:05: 🚀 API Gateway listening on http://localhost:5000
+2025-06-30 05:10:05: 🔁 Mapping: /api/auth → http://localhost:5001/api/auth/api/auth
+2025-06-30 05:10:05: 🔁 Mapping: /api/sessions → http://localhost:5001/api/sessions/api/sessions
+2025-06-30 05:10:05: 🔁 Mapping: /api/forms → http://localhost:5002/api/forms/api/forms
+2025-06-30 05:10:05: 🔁 Mapping: /api/liqpay → http://localhost:5003/api/liqpay/api/liqpay
+2025-06-30 05:10:54: 🚀 API Gateway listening on http://localhost:5000
+2025-06-30 05:10:54: 🔁 Mapping: /api/auth → http://localhost:5001/api/auth/api/auth
+2025-06-30 05:10:54: 🔁 Mapping: /api/sessions → http://localhost:5001/api/sessions/api/sessions
+2025-06-30 05:10:54: 🔁 Mapping: /api/forms → http://localhost:5002/api/forms/api/forms
+2025-06-30 05:10:54: 🔁 Mapping: /api/liqpay → http://localhost:5003/api/liqpay/api/liqpay
+2025-06-30 05:14:54: (node:17784) [DEP0060] DeprecationWarning: The `util._extend` API is deprecated. Please use Object.assign() instead.
+2025-06-30 05:14:54: (Use `node --trace-deprecation ...` to show where the warning was created)

@@ -1,0 +1,28 @@
+{
+  "type": "object",
+  "properties": {
+    "user": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "example": "683ee831128bc32682553185"
+        },
+        "email": {
+          "type": "string",
+          "example": "user@example.com"
+        },
+        "username": {
+          "type": "string",
+          "example": "string"
+        }
+      },
+      "required": ["id", "email", "username"]
+    },
+    "accessToken": {
+      "type": "string",
+      "example": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."
+    }
+  },
+  "required": ["user", "accessToken"]
+}

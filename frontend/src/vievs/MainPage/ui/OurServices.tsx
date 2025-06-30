@@ -122,7 +122,10 @@ const OurServices = () => {
 
   return (
     <HStack className="relative z-20 mt-44 px-5 md:px-[156px]">
-      <div className="flex w-full flex-col justify-between md:flex-row md:items-center">
+      <div
+        id="services"
+        className="flex w-full flex-col justify-between md:flex-row md:items-center"
+      >
         <Text
           text="Послуги, які  ми надаємо"
           textType="H2"
@@ -131,7 +134,7 @@ const OurServices = () => {
         />
         {/* btn */}
         <Link
-          href="/services"
+          href="/discussion"
           className="mt-6 flex items-center justify-between gap-6 md:mt-0 md:justify-end"
         >
           <span className="items-center font-ibm-plex-sans text-base text-xs font-medium leading-tight text-white">

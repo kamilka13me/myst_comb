@@ -12,6 +12,7 @@ import { Item, useSelectedFiltersStore } from '@/store/useSelectedFiltersStore';
 interface Props {
   filterName: string;
   hendleSetFilterName: (name?: string) => void;
+  onChange: (val: string) => void;
 }
 
 export default function SelectEmail({

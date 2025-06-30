@@ -28,7 +28,7 @@ const items: BoxProps[] = [
 
 const OurProjects: React.FC = () => {
   return (
-    <section className="w-full p-5">
+    <section id="projects" className="w-full p-5">
       <Text
         Tag="h2"
         text="Наші проекти"
